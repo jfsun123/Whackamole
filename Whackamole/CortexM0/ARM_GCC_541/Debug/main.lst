@@ -1,0 +1,1505 @@
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB32:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * EX2_String
+   4:main.c        ****  *
+   5:main.c        ****  * A simple function to cycle the color table
+   6:main.c        ****  * through the string.
+   7:main.c        ****  *
+   8:main.c        ****  * ========================================
+   9:main.c        **** */
+  10:main.c        **** #include "project.h"
+  11:main.c        **** 
+  12:main.c        **** void SlowColorBlend(uint32 delay, uint32 time);
+  13:main.c        **** 
+  14:main.c        **** int main(void)
+  15:main.c        **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 70B5     		push	{r4, r5, r6, lr}
+  33              		.cfi_def_cfa_offset 16
+  34              		.cfi_offset 4, -16
+  35              		.cfi_offset 5, -12
+  36              		.cfi_offset 6, -8
+  37              		.cfi_offset 14, -4
+  16:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  38              		.loc 1 16 0
+  39              		.syntax divided
+  40              	@ 16 "main.c" 1
+  41 0002 62B6     		CPSIE   i
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 2
+
+
+  42              	@ 0 "" 2
+  17:main.c        ****     StripLights_Start();
+  43              		.loc 1 17 0
+  44              		.thumb
+  45              		.syntax unified
+  46 0004 FFF7FEFF 		bl	StripLights_Start
+  47              	.LVL0:
+  18:main.c        ****     
+  19:main.c        ****     StripLights_Dim(0);
+  48              		.loc 1 19 0
+  49 0008 0020     		movs	r0, #0
+  50 000a FFF7FEFF 		bl	StripLights_Dim
+  51              	.LVL1:
+  20:main.c        **** 
+  21:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  22:main.c        ****     
+  23:main.c        ****     uint32 led = 0;
+  24:main.c        ****     uint32 color = StripLights_RED;
+  52              		.loc 1 24 0
+  53 000e 4820     		movs	r0, #72
+  54 0010 FFF7FEFF 		bl	StripLights_getColor
+  55              	.LVL2:
+  56 0014 0500     		movs	r5, r0
+  57              	.LVL3:
+  58              	.L2:
+  59              	.LBB2:
+  25:main.c        ****     for(;;)
+  26:main.c        ****     {
+  27:main.c        **** 
+  28:main.c        ****         uint8 button = Pin_Flex_Read();
+  60              		.loc 1 28 0
+  61 0016 FFF7FEFF 		bl	Pin_Flex_Read
+  62              	.LVL4:
+  29:main.c        ****         Pin_LED_Write(button);
+  63              		.loc 1 29 0
+  64 001a FFF7FEFF 		bl	Pin_LED_Write
+  65              	.LVL5:
+  30:main.c        ****         for(led = 0; led <= 30; led++){
+  66              		.loc 1 30 0
+  67 001e 0024     		movs	r4, #0
+  68 0020 0CE0     		b	.L3
+  69              	.LVL6:
+  70              	.L5:
+  31:main.c        ****             
+  32:main.c        ****             StripLights_Pixel(led, 0, color);
+  71              		.loc 1 32 0
+  72 0022 2A00     		movs	r2, r5
+  73 0024 0021     		movs	r1, #0
+  74 0026 2000     		movs	r0, r4
+  75 0028 FFF7FEFF 		bl	StripLights_Pixel
+  76              	.LVL7:
+  77              	.L4:
+  33:main.c        ****             while( StripLights_Ready() == 0);
+  78              		.loc 1 33 0 discriminator 1
+  79 002c FFF7FEFF 		bl	StripLights_Ready
+  80              	.LVL8:
+  81 0030 0028     		cmp	r0, #0
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 3
+
+
+  82 0032 FBD0     		beq	.L4
+  34:main.c        **** 	
+  35:main.c        ****             StripLights_Trigger(1);
+  83              		.loc 1 35 0 discriminator 2
+  84 0034 0120     		movs	r0, #1
+  85 0036 FFF7FEFF 		bl	StripLights_Trigger
+  86              	.LVL9:
+  30:main.c        ****             
+  87              		.loc 1 30 0 discriminator 2
+  88 003a 0134     		adds	r4, r4, #1
+  89              	.LVL10:
+  90              	.L3:
+  30:main.c        ****             
+  91              		.loc 1 30 0 is_stmt 0 discriminator 1
+  92 003c 1E2C     		cmp	r4, #30
+  93 003e F0D9     		bls	.L5
+  36:main.c        ****             
+  37:main.c        ****         }
+  38:main.c        ****         CyDelay(10);
+  94              		.loc 1 38 0 is_stmt 1
+  95 0040 0A20     		movs	r0, #10
+  96 0042 FFF7FEFF 		bl	CyDelay
+  97              	.LVL11:
+  39:main.c        ****         button = Pin_Flex_Read();
+  98              		.loc 1 39 0
+  99 0046 FFF7FEFF 		bl	Pin_Flex_Read
+ 100              	.LVL12:
+  40:main.c        ****         if(button){
+ 101              		.loc 1 40 0
+ 102 004a 0028     		cmp	r0, #0
+ 103 004c 04D0     		beq	.L6
+  41:main.c        ****             color = StripLights_GREEN;
+ 104              		.loc 1 41 0
+ 105 004e 5E20     		movs	r0, #94
+ 106              	.LVL13:
+ 107 0050 FFF7FEFF 		bl	StripLights_getColor
+ 108              	.LVL14:
+ 109 0054 0500     		movs	r5, r0
+ 110              	.LVL15:
+ 111 0056 DEE7     		b	.L2
+ 112              	.LVL16:
+ 113              	.L6:
+  42:main.c        ****         }
+  43:main.c        ****         else{
+  44:main.c        ****             color = StripLights_RED;
+ 114              		.loc 1 44 0
+ 115 0058 4820     		movs	r0, #72
+ 116              	.LVL17:
+ 117 005a FFF7FEFF 		bl	StripLights_getColor
+ 118              	.LVL18:
+ 119 005e 0500     		movs	r5, r0
+ 120              	.LVL19:
+ 121 0060 D9E7     		b	.L2
+ 122              	.LBE2:
+ 123              		.cfi_endproc
+ 124              	.LFE32:
+ 125              		.size	main, .-main
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 4
+
+
+ 126              		.global	__aeabi_uidiv
+ 127              		.global	__aeabi_uidivmod
+ 128 0062 C046     		.section	.text.SlowColorBlend,"ax",%progbits
+ 129              		.align	2
+ 130              		.global	SlowColorBlend
+ 131              		.code	16
+ 132              		.thumb_func
+ 133              		.type	SlowColorBlend, %function
+ 134              	SlowColorBlend:
+ 135              	.LFB33:
+  45:main.c        ****         }
+  46:main.c        ****     }
+  47:main.c        **** }
+  48:main.c        **** 
+  49:main.c        **** /************************************************
+  50:main.c        ****  *                    SlowColorBlend()
+  51:main.c        ****  *
+  52:main.c        ****  *  Slowly migate all the LEDs through the color
+  53:main.c        ****  *  table.
+  54:main.c        ****  *
+  55:main.c        ****  ************************************************/
+  56:main.c        **** void SlowColorBlend(uint32 delay, uint32 time)
+  57:main.c        **** {
+ 136              		.loc 1 57 0
+ 137              		.cfi_startproc
+ 138              		@ args = 0, pretend = 0, frame = 8
+ 139              		@ frame_needed = 0, uses_anonymous_args = 0
+ 140              	.LVL20:
+ 141 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 142              		.cfi_def_cfa_offset 20
+ 143              		.cfi_offset 4, -20
+ 144              		.cfi_offset 5, -16
+ 145              		.cfi_offset 6, -12
+ 146              		.cfi_offset 7, -8
+ 147              		.cfi_offset 14, -4
+ 148 0002 4746     		mov	r7, r8
+ 149 0004 80B4     		push	{r7}
+ 150              		.cfi_def_cfa_offset 24
+ 151              		.cfi_offset 8, -24
+ 152 0006 82B0     		sub	sp, sp, #8
+ 153              		.cfi_def_cfa_offset 32
+ 154 0008 0190     		str	r0, [sp, #4]
+ 155              	.LVL21:
+  58:main.c        ****     uint32 timeCnt = 0; 
+  59:main.c        ****     uint32 led = 0;
+  60:main.c        ****     uint32 x = 0;
+ 156              		.loc 1 60 0
+ 157 000a 0023     		movs	r3, #0
+ 158 000c 9846     		mov	r8, r3
+ 159              	.LVL22:
+ 160              	.L13:
+  61:main.c        ****     uint32 pct = 0;
+  62:main.c        ****     uint32 fromColor, toColor, color;
+  63:main.c        ****     extern const uint32 StripLights_CLUT[ ];
+  64:main.c        **** 
+  65:main.c        ****     
+  66:main.c        **** 
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 5
+
+
+  67:main.c        ****     for(;;)
+  68:main.c        ****     {   
+  69:main.c        ****         while(1)
+  70:main.c        ****         {
+  71:main.c        ****            
+  72:main.c        ****             for(pct = 0; pct < 100; pct += 4)
+ 161              		.loc 1 72 0
+ 162 000e 0023     		movs	r3, #0
+ 163 0010 0093     		str	r3, [sp]
+ 164 0012 2EE0     		b	.L9
+ 165              	.LVL23:
+ 166              	.L10:
+  73:main.c        ****             {
+  74:main.c        ****                 for(led = 0; led <= StripLights_MAX_X; led++)
+  75:main.c        ****                 {
+  76:main.c        ****  
+  77:main.c        ****                     fromColor =  StripLights_CLUT[(x + 0 + ((led * StripLights_COLOR_WHEEL_SIZE)/St
+ 167              		.loc 1 77 0 discriminator 3
+ 168 0014 7B00     		lsls	r3, r7, #1
+ 169 0016 DB19     		adds	r3, r3, r7
+ 170 0018 D800     		lsls	r0, r3, #3
+ 171 001a 0E21     		movs	r1, #14
+ 172 001c FFF7FEFF 		bl	__aeabi_uidiv
+ 173              	.LVL24:
+ 174 0020 4044     		add	r0, r0, r8
+ 175 0022 0400     		movs	r4, r0
+ 176 0024 1821     		movs	r1, #24
+ 177 0026 FFF7FEFF 		bl	__aeabi_uidivmod
+ 178              	.LVL25:
+ 179 002a 154E     		ldr	r6, .L15
+ 180 002c 8900     		lsls	r1, r1, #2
+ 181 002e 8D59     		ldr	r5, [r1, r6]
+ 182              	.LVL26:
+  78:main.c        ****                     toColor =  StripLights_CLUT[(x + 1 + ((led * StripLights_COLOR_WHEEL_SIZE)/Stri
+ 183              		.loc 1 78 0 discriminator 3
+ 184 0030 601C     		adds	r0, r4, #1
+ 185 0032 1821     		movs	r1, #24
+ 186 0034 FFF7FEFF 		bl	__aeabi_uidivmod
+ 187              	.LVL27:
+ 188 0038 8900     		lsls	r1, r1, #2
+ 189 003a 8959     		ldr	r1, [r1, r6]
+ 190              	.LVL28:
+  79:main.c        ****                     
+  80:main.c        ****                     color = StripLights_RgbBlend(fromColor, toColor, pct);                  
+ 191              		.loc 1 80 0 discriminator 3
+ 192 003c 009A     		ldr	r2, [sp]
+ 193 003e 2800     		movs	r0, r5
+ 194 0040 FFF7FEFF 		bl	StripLights_RgbBlend
+ 195              	.LVL29:
+ 196 0044 0200     		movs	r2, r0
+ 197              	.LVL30:
+  81:main.c        ****                     StripLights_Pixel(led, 0, color );
+ 198              		.loc 1 81 0 discriminator 3
+ 199 0046 0021     		movs	r1, #0
+ 200 0048 3800     		movs	r0, r7
+ 201              	.LVL31:
+ 202 004a FFF7FEFF 		bl	StripLights_Pixel
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 6
+
+
+ 203              	.LVL32:
+  74:main.c        ****                 {
+ 204              		.loc 1 74 0 discriminator 3
+ 205 004e 0137     		adds	r7, r7, #1
+ 206              	.LVL33:
+ 207 0050 00E0     		b	.L12
+ 208              	.LVL34:
+ 209              	.L14:
+ 210 0052 0027     		movs	r7, #0
+ 211              	.LVL35:
+ 212              	.L12:
+  74:main.c        ****                 {
+ 213              		.loc 1 74 0 is_stmt 0 discriminator 1
+ 214 0054 0D2F     		cmp	r7, #13
+ 215 0056 DDD9     		bls	.L10
+ 216              	.L11:
+  82:main.c        ****                 }
+  83:main.c        ****                 
+  84:main.c        ****                 while( StripLights_Ready() == 0);
+ 217              		.loc 1 84 0 is_stmt 1 discriminator 1
+ 218 0058 FFF7FEFF 		bl	StripLights_Ready
+ 219              	.LVL36:
+ 220 005c 0028     		cmp	r0, #0
+ 221 005e FBD0     		beq	.L11
+  85:main.c        **** 	
+  86:main.c        ****                 StripLights_Trigger(1);
+ 222              		.loc 1 86 0 discriminator 2
+ 223 0060 0120     		movs	r0, #1
+ 224 0062 FFF7FEFF 		bl	StripLights_Trigger
+ 225              	.LVL37:
+  87:main.c        ****                 
+  88:main.c        ****                 CyDelay(delay);
+ 226              		.loc 1 88 0 discriminator 2
+ 227 0066 0198     		ldr	r0, [sp, #4]
+ 228 0068 FFF7FEFF 		bl	CyDelay
+ 229              	.LVL38:
+  72:main.c        ****             {
+ 230              		.loc 1 72 0 discriminator 2
+ 231 006c 009B     		ldr	r3, [sp]
+ 232 006e 0433     		adds	r3, r3, #4
+ 233 0070 0093     		str	r3, [sp]
+ 234              	.LVL39:
+ 235              	.L9:
+  72:main.c        ****             {
+ 236              		.loc 1 72 0 is_stmt 0 discriminator 1
+ 237 0072 009B     		ldr	r3, [sp]
+ 238 0074 632B     		cmp	r3, #99
+ 239 0076 ECD9     		bls	.L14
+  89:main.c        **** 
+  90:main.c        ****             }
+  91:main.c        ****             x++;  // Advance through color wheel
+ 240              		.loc 1 91 0 is_stmt 1
+ 241 0078 0123     		movs	r3, #1
+ 242 007a 9C46     		mov	ip, r3
+ 243 007c E044     		add	r8, r8, ip
+ 244              	.LVL40:
+  92:main.c        ****         }
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 7
+
+
+ 245              		.loc 1 92 0
+ 246 007e C6E7     		b	.L13
+ 247              	.L16:
+ 248              		.align	2
+ 249              	.L15:
+ 250 0080 00000000 		.word	StripLights_CLUT
+ 251              		.cfi_endproc
+ 252              	.LFE33:
+ 253              		.size	SlowColorBlend, .-SlowColorBlend
+ 254              		.text
+ 255              	.Letext0:
+ 256              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 257              		.file 3 "Generated_Source\\PSoC4/Pin_Flex.h"
+ 258              		.file 4 "Generated_Source\\PSoC4/Pin_LED.h"
+ 259              		.file 5 "Generated_Source\\PSoC4/StripLights.h"
+ 260              		.file 6 "Generated_Source\\PSoC4/CyLib.h"
+ 261              		.section	.debug_info,"",%progbits
+ 262              	.Ldebug_info0:
+ 263 0000 54030000 		.4byte	0x354
+ 264 0004 0400     		.2byte	0x4
+ 265 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 266 000a 04       		.byte	0x4
+ 267 000b 01       		.uleb128 0x1
+ 268 000c 45010000 		.4byte	.LASF35
+ 269 0010 0C       		.byte	0xc
+ 270 0011 EA010000 		.4byte	.LASF36
+ 271 0015 A0000000 		.4byte	.LASF37
+ 272 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 273 001d 00000000 		.4byte	0
+ 274 0021 00000000 		.4byte	.Ldebug_line0
+ 275 0025 02       		.uleb128 0x2
+ 276 0026 01       		.byte	0x1
+ 277 0027 06       		.byte	0x6
+ 278 0028 52020000 		.4byte	.LASF0
+ 279 002c 02       		.uleb128 0x2
+ 280 002d 01       		.byte	0x1
+ 281 002e 08       		.byte	0x8
+ 282 002f 6C000000 		.4byte	.LASF1
+ 283 0033 02       		.uleb128 0x2
+ 284 0034 02       		.byte	0x2
+ 285 0035 05       		.byte	0x5
+ 286 0036 E8000000 		.4byte	.LASF2
+ 287 003a 02       		.uleb128 0x2
+ 288 003b 02       		.byte	0x2
+ 289 003c 07       		.byte	0x7
+ 290 003d 29000000 		.4byte	.LASF3
+ 291 0041 02       		.uleb128 0x2
+ 292 0042 04       		.byte	0x4
+ 293 0043 05       		.byte	0x5
+ 294 0044 26020000 		.4byte	.LASF4
+ 295 0048 02       		.uleb128 0x2
+ 296 0049 04       		.byte	0x4
+ 297 004a 07       		.byte	0x7
+ 298 004b 88000000 		.4byte	.LASF5
+ 299 004f 02       		.uleb128 0x2
+ 300 0050 08       		.byte	0x8
+ 301 0051 05       		.byte	0x5
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 8
+
+
+ 302 0052 DC010000 		.4byte	.LASF6
+ 303 0056 02       		.uleb128 0x2
+ 304 0057 08       		.byte	0x8
+ 305 0058 07       		.byte	0x7
+ 306 0059 29010000 		.4byte	.LASF7
+ 307 005d 03       		.uleb128 0x3
+ 308 005e 04       		.byte	0x4
+ 309 005f 05       		.byte	0x5
+ 310 0060 696E7400 		.ascii	"int\000"
+ 311 0064 02       		.uleb128 0x2
+ 312 0065 04       		.byte	0x4
+ 313 0066 07       		.byte	0x7
+ 314 0067 04010000 		.4byte	.LASF8
+ 315 006b 04       		.uleb128 0x4
+ 316 006c 20020000 		.4byte	.LASF9
+ 317 0070 02       		.byte	0x2
+ 318 0071 D201     		.2byte	0x1d2
+ 319 0073 2C000000 		.4byte	0x2c
+ 320 0077 04       		.uleb128 0x4
+ 321 0078 F8000000 		.4byte	.LASF10
+ 322 007c 02       		.byte	0x2
+ 323 007d D401     		.2byte	0x1d4
+ 324 007f 48000000 		.4byte	0x48
+ 325 0083 04       		.uleb128 0x4
+ 326 0084 9A000000 		.4byte	.LASF11
+ 327 0088 02       		.byte	0x2
+ 328 0089 D701     		.2byte	0x1d7
+ 329 008b 41000000 		.4byte	0x41
+ 330 008f 02       		.uleb128 0x2
+ 331 0090 04       		.byte	0x4
+ 332 0091 04       		.byte	0x4
+ 333 0092 60000000 		.4byte	.LASF12
+ 334 0096 02       		.uleb128 0x2
+ 335 0097 08       		.byte	0x8
+ 336 0098 04       		.byte	0x4
+ 337 0099 E1000000 		.4byte	.LASF13
+ 338 009d 02       		.uleb128 0x2
+ 339 009e 01       		.byte	0x1
+ 340 009f 08       		.byte	0x8
+ 341 00a0 00000000 		.4byte	.LASF14
+ 342 00a4 02       		.uleb128 0x2
+ 343 00a5 04       		.byte	0x4
+ 344 00a6 07       		.byte	0x7
+ 345 00a7 D3010000 		.4byte	.LASF15
+ 346 00ab 02       		.uleb128 0x2
+ 347 00ac 08       		.byte	0x8
+ 348 00ad 04       		.byte	0x4
+ 349 00ae 46020000 		.4byte	.LASF16
+ 350 00b2 05       		.uleb128 0x5
+ 351 00b3 FF000000 		.4byte	.LASF38
+ 352 00b7 01       		.byte	0x1
+ 353 00b8 0E       		.byte	0xe
+ 354 00b9 5D000000 		.4byte	0x5d
+ 355 00bd 00000000 		.4byte	.LFB32
+ 356 00c1 62000000 		.4byte	.LFE32-.LFB32
+ 357 00c5 01       		.uleb128 0x1
+ 358 00c6 9C       		.byte	0x9c
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 9
+
+
+ 359 00c7 C0010000 		.4byte	0x1c0
+ 360 00cb 06       		.uleb128 0x6
+ 361 00cc 6C656400 		.ascii	"led\000"
+ 362 00d0 01       		.byte	0x1
+ 363 00d1 17       		.byte	0x17
+ 364 00d2 77000000 		.4byte	0x77
+ 365 00d6 00000000 		.4byte	.LLST0
+ 366 00da 07       		.uleb128 0x7
+ 367 00db F2000000 		.4byte	.LASF17
+ 368 00df 01       		.byte	0x1
+ 369 00e0 18       		.byte	0x18
+ 370 00e1 77000000 		.4byte	0x77
+ 371 00e5 2B000000 		.4byte	.LLST1
+ 372 00e9 08       		.uleb128 0x8
+ 373 00ea 16000000 		.4byte	.LBB2
+ 374 00ee 4C000000 		.4byte	.LBE2-.LBB2
+ 375 00f2 93010000 		.4byte	0x193
+ 376 00f6 07       		.uleb128 0x7
+ 377 00f7 3F020000 		.4byte	.LASF18
+ 378 00fb 01       		.byte	0x1
+ 379 00fc 1C       		.byte	0x1c
+ 380 00fd 6B000000 		.4byte	0x6b
+ 381 0101 6A000000 		.4byte	.LLST2
+ 382 0105 09       		.uleb128 0x9
+ 383 0106 1A000000 		.4byte	.LVL4
+ 384 010a E9020000 		.4byte	0x2e9
+ 385 010e 09       		.uleb128 0x9
+ 386 010f 1E000000 		.4byte	.LVL5
+ 387 0113 F4020000 		.4byte	0x2f4
+ 388 0117 0A       		.uleb128 0xa
+ 389 0118 2C000000 		.4byte	.LVL7
+ 390 011c FF020000 		.4byte	0x2ff
+ 391 0120 36010000 		.4byte	0x136
+ 392 0124 0B       		.uleb128 0xb
+ 393 0125 01       		.uleb128 0x1
+ 394 0126 50       		.byte	0x50
+ 395 0127 02       		.uleb128 0x2
+ 396 0128 74       		.byte	0x74
+ 397 0129 00       		.sleb128 0
+ 398 012a 0B       		.uleb128 0xb
+ 399 012b 01       		.uleb128 0x1
+ 400 012c 51       		.byte	0x51
+ 401 012d 01       		.uleb128 0x1
+ 402 012e 30       		.byte	0x30
+ 403 012f 0B       		.uleb128 0xb
+ 404 0130 01       		.uleb128 0x1
+ 405 0131 52       		.byte	0x52
+ 406 0132 02       		.uleb128 0x2
+ 407 0133 75       		.byte	0x75
+ 408 0134 00       		.sleb128 0
+ 409 0135 00       		.byte	0
+ 410 0136 09       		.uleb128 0x9
+ 411 0137 30000000 		.4byte	.LVL8
+ 412 013b 0A030000 		.4byte	0x30a
+ 413 013f 0A       		.uleb128 0xa
+ 414 0140 3A000000 		.4byte	.LVL9
+ 415 0144 15030000 		.4byte	0x315
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 10
+
+
+ 416 0148 52010000 		.4byte	0x152
+ 417 014c 0B       		.uleb128 0xb
+ 418 014d 01       		.uleb128 0x1
+ 419 014e 50       		.byte	0x50
+ 420 014f 01       		.uleb128 0x1
+ 421 0150 31       		.byte	0x31
+ 422 0151 00       		.byte	0
+ 423 0152 0A       		.uleb128 0xa
+ 424 0153 46000000 		.4byte	.LVL11
+ 425 0157 20030000 		.4byte	0x320
+ 426 015b 65010000 		.4byte	0x165
+ 427 015f 0B       		.uleb128 0xb
+ 428 0160 01       		.uleb128 0x1
+ 429 0161 50       		.byte	0x50
+ 430 0162 01       		.uleb128 0x1
+ 431 0163 3A       		.byte	0x3a
+ 432 0164 00       		.byte	0
+ 433 0165 09       		.uleb128 0x9
+ 434 0166 4A000000 		.4byte	.LVL12
+ 435 016a E9020000 		.4byte	0x2e9
+ 436 016e 0A       		.uleb128 0xa
+ 437 016f 54000000 		.4byte	.LVL14
+ 438 0173 2B030000 		.4byte	0x32b
+ 439 0177 82010000 		.4byte	0x182
+ 440 017b 0B       		.uleb128 0xb
+ 441 017c 01       		.uleb128 0x1
+ 442 017d 50       		.byte	0x50
+ 443 017e 02       		.uleb128 0x2
+ 444 017f 08       		.byte	0x8
+ 445 0180 5E       		.byte	0x5e
+ 446 0181 00       		.byte	0
+ 447 0182 0C       		.uleb128 0xc
+ 448 0183 5E000000 		.4byte	.LVL18
+ 449 0187 2B030000 		.4byte	0x32b
+ 450 018b 0B       		.uleb128 0xb
+ 451 018c 01       		.uleb128 0x1
+ 452 018d 50       		.byte	0x50
+ 453 018e 02       		.uleb128 0x2
+ 454 018f 08       		.byte	0x8
+ 455 0190 48       		.byte	0x48
+ 456 0191 00       		.byte	0
+ 457 0192 00       		.byte	0
+ 458 0193 09       		.uleb128 0x9
+ 459 0194 08000000 		.4byte	.LVL0
+ 460 0198 36030000 		.4byte	0x336
+ 461 019c 0A       		.uleb128 0xa
+ 462 019d 0E000000 		.4byte	.LVL1
+ 463 01a1 41030000 		.4byte	0x341
+ 464 01a5 AF010000 		.4byte	0x1af
+ 465 01a9 0B       		.uleb128 0xb
+ 466 01aa 01       		.uleb128 0x1
+ 467 01ab 50       		.byte	0x50
+ 468 01ac 01       		.uleb128 0x1
+ 469 01ad 30       		.byte	0x30
+ 470 01ae 00       		.byte	0
+ 471 01af 0C       		.uleb128 0xc
+ 472 01b0 14000000 		.4byte	.LVL2
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 11
+
+
+ 473 01b4 2B030000 		.4byte	0x32b
+ 474 01b8 0B       		.uleb128 0xb
+ 475 01b9 01       		.uleb128 0x1
+ 476 01ba 50       		.byte	0x50
+ 477 01bb 02       		.uleb128 0x2
+ 478 01bc 08       		.byte	0x8
+ 479 01bd 48       		.byte	0x48
+ 480 01be 00       		.byte	0
+ 481 01bf 00       		.byte	0
+ 482 01c0 0D       		.uleb128 0xd
+ 483 01c1 3C000000 		.4byte	.LASF39
+ 484 01c5 01       		.byte	0x1
+ 485 01c6 38       		.byte	0x38
+ 486 01c7 00000000 		.4byte	.LFB33
+ 487 01cb 84000000 		.4byte	.LFE33-.LFB33
+ 488 01cf 01       		.uleb128 0x1
+ 489 01d0 9C       		.byte	0x9c
+ 490 01d1 C4020000 		.4byte	0x2c4
+ 491 01d5 0E       		.uleb128 0xe
+ 492 01d6 66000000 		.4byte	.LASF19
+ 493 01da 01       		.byte	0x1
+ 494 01db 38       		.byte	0x38
+ 495 01dc 77000000 		.4byte	0x77
+ 496 01e0 93000000 		.4byte	.LLST3
+ 497 01e4 0E       		.uleb128 0xe
+ 498 01e5 40010000 		.4byte	.LASF20
+ 499 01e9 01       		.byte	0x1
+ 500 01ea 38       		.byte	0x38
+ 501 01eb 77000000 		.4byte	0x77
+ 502 01ef B2000000 		.4byte	.LLST4
+ 503 01f3 0F       		.uleb128 0xf
+ 504 01f4 18020000 		.4byte	.LASF21
+ 505 01f8 01       		.byte	0x1
+ 506 01f9 3A       		.byte	0x3a
+ 507 01fa 77000000 		.4byte	0x77
+ 508 01fe 00       		.byte	0
+ 509 01ff 06       		.uleb128 0x6
+ 510 0200 6C656400 		.ascii	"led\000"
+ 511 0204 01       		.byte	0x1
+ 512 0205 3B       		.byte	0x3b
+ 513 0206 77000000 		.4byte	0x77
+ 514 020a D3000000 		.4byte	.LLST5
+ 515 020e 06       		.uleb128 0x6
+ 516 020f 7800     		.ascii	"x\000"
+ 517 0211 01       		.byte	0x1
+ 518 0212 3C       		.byte	0x3c
+ 519 0213 77000000 		.4byte	0x77
+ 520 0217 FD000000 		.4byte	.LLST6
+ 521 021b 06       		.uleb128 0x6
+ 522 021c 70637400 		.ascii	"pct\000"
+ 523 0220 01       		.byte	0x1
+ 524 0221 3D       		.byte	0x3d
+ 525 0222 77000000 		.4byte	0x77
+ 526 0226 1C010000 		.4byte	.LLST7
+ 527 022a 07       		.uleb128 0x7
+ 528 022b 1F010000 		.4byte	.LASF22
+ 529 022f 01       		.byte	0x1
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 12
+
+
+ 530 0230 3E       		.byte	0x3e
+ 531 0231 77000000 		.4byte	0x77
+ 532 0235 53010000 		.4byte	.LLST8
+ 533 0239 07       		.uleb128 0x7
+ 534 023a D9000000 		.4byte	.LASF23
+ 535 023e 01       		.byte	0x1
+ 536 023f 3E       		.byte	0x3e
+ 537 0240 77000000 		.4byte	0x77
+ 538 0244 66010000 		.4byte	.LLST9
+ 539 0248 07       		.uleb128 0x7
+ 540 0249 F2000000 		.4byte	.LASF17
+ 541 024d 01       		.byte	0x1
+ 542 024e 3E       		.byte	0x3e
+ 543 024f 77000000 		.4byte	0x77
+ 544 0253 79010000 		.4byte	.LLST10
+ 545 0257 10       		.uleb128 0x10
+ 546 0258 5E020000 		.4byte	.LASF24
+ 547 025c 01       		.byte	0x1
+ 548 025d 3F       		.byte	0x3f
+ 549 025e D4020000 		.4byte	0x2d4
+ 550 0262 0A       		.uleb128 0xa
+ 551 0263 44000000 		.4byte	.LVL29
+ 552 0267 4C030000 		.4byte	0x34c
+ 553 026b 7D020000 		.4byte	0x27d
+ 554 026f 0B       		.uleb128 0xb
+ 555 0270 01       		.uleb128 0x1
+ 556 0271 50       		.byte	0x50
+ 557 0272 02       		.uleb128 0x2
+ 558 0273 75       		.byte	0x75
+ 559 0274 00       		.sleb128 0
+ 560 0275 0B       		.uleb128 0xb
+ 561 0276 01       		.uleb128 0x1
+ 562 0277 52       		.byte	0x52
+ 563 0278 03       		.uleb128 0x3
+ 564 0279 7D       		.byte	0x7d
+ 565 027a 00       		.sleb128 0
+ 566 027b 06       		.byte	0x6
+ 567 027c 00       		.byte	0
+ 568 027d 0A       		.uleb128 0xa
+ 569 027e 4E000000 		.4byte	.LVL32
+ 570 0282 FF020000 		.4byte	0x2ff
+ 571 0286 96020000 		.4byte	0x296
+ 572 028a 0B       		.uleb128 0xb
+ 573 028b 01       		.uleb128 0x1
+ 574 028c 50       		.byte	0x50
+ 575 028d 02       		.uleb128 0x2
+ 576 028e 77       		.byte	0x77
+ 577 028f 00       		.sleb128 0
+ 578 0290 0B       		.uleb128 0xb
+ 579 0291 01       		.uleb128 0x1
+ 580 0292 51       		.byte	0x51
+ 581 0293 01       		.uleb128 0x1
+ 582 0294 30       		.byte	0x30
+ 583 0295 00       		.byte	0
+ 584 0296 09       		.uleb128 0x9
+ 585 0297 5C000000 		.4byte	.LVL36
+ 586 029b 0A030000 		.4byte	0x30a
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 13
+
+
+ 587 029f 0A       		.uleb128 0xa
+ 588 02a0 66000000 		.4byte	.LVL37
+ 589 02a4 15030000 		.4byte	0x315
+ 590 02a8 B2020000 		.4byte	0x2b2
+ 591 02ac 0B       		.uleb128 0xb
+ 592 02ad 01       		.uleb128 0x1
+ 593 02ae 50       		.byte	0x50
+ 594 02af 01       		.uleb128 0x1
+ 595 02b0 31       		.byte	0x31
+ 596 02b1 00       		.byte	0
+ 597 02b2 0C       		.uleb128 0xc
+ 598 02b3 6C000000 		.4byte	.LVL38
+ 599 02b7 20030000 		.4byte	0x320
+ 600 02bb 0B       		.uleb128 0xb
+ 601 02bc 01       		.uleb128 0x1
+ 602 02bd 50       		.byte	0x50
+ 603 02be 03       		.uleb128 0x3
+ 604 02bf 91       		.byte	0x91
+ 605 02c0 64       		.sleb128 -28
+ 606 02c1 06       		.byte	0x6
+ 607 02c2 00       		.byte	0
+ 608 02c3 00       		.byte	0
+ 609 02c4 11       		.uleb128 0x11
+ 610 02c5 CF020000 		.4byte	0x2cf
+ 611 02c9 CF020000 		.4byte	0x2cf
+ 612 02cd 12       		.uleb128 0x12
+ 613 02ce 00       		.byte	0
+ 614 02cf 13       		.uleb128 0x13
+ 615 02d0 77000000 		.4byte	0x77
+ 616 02d4 13       		.uleb128 0x13
+ 617 02d5 C4020000 		.4byte	0x2c4
+ 618 02d9 10       		.uleb128 0x10
+ 619 02da 5E020000 		.4byte	.LASF24
+ 620 02de 01       		.byte	0x1
+ 621 02df 3F       		.byte	0x3f
+ 622 02e0 E4020000 		.4byte	0x2e4
+ 623 02e4 13       		.uleb128 0x13
+ 624 02e5 C4020000 		.4byte	0x2c4
+ 625 02e9 14       		.uleb128 0x14
+ 626 02ea 7A000000 		.4byte	.LASF25
+ 627 02ee 7A000000 		.4byte	.LASF25
+ 628 02f2 03       		.byte	0x3
+ 629 02f3 32       		.byte	0x32
+ 630 02f4 14       		.uleb128 0x14
+ 631 02f5 11010000 		.4byte	.LASF26
+ 632 02f9 11010000 		.4byte	.LASF26
+ 633 02fd 04       		.byte	0x4
+ 634 02fe 33       		.byte	0x33
+ 635 02ff 14       		.uleb128 0x14
+ 636 0300 05000000 		.4byte	.LASF27
+ 637 0304 05000000 		.4byte	.LASF27
+ 638 0308 05       		.byte	0x5
+ 639 0309 23       		.byte	0x23
+ 640 030a 14       		.uleb128 0x14
+ 641 030b 06020000 		.4byte	.LASF28
+ 642 030f 06020000 		.4byte	.LASF28
+ 643 0313 05       		.byte	0x5
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 14
+
+
+ 644 0314 1B       		.byte	0x1b
+ 645 0315 14       		.uleb128 0x14
+ 646 0316 6F020000 		.4byte	.LASF29
+ 647 031a 6F020000 		.4byte	.LASF29
+ 648 031e 05       		.byte	0x5
+ 649 031f 1A       		.byte	0x1a
+ 650 0320 14       		.uleb128 0x14
+ 651 0321 83020000 		.4byte	.LASF30
+ 652 0325 83020000 		.4byte	.LASF30
+ 653 0329 06       		.byte	0x6
+ 654 032a D9       		.byte	0xd9
+ 655 032b 14       		.uleb128 0x14
+ 656 032c 4B000000 		.4byte	.LASF31
+ 657 0330 4B000000 		.4byte	.LASF31
+ 658 0334 05       		.byte	0x5
+ 659 0335 27       		.byte	0x27
+ 660 0336 14       		.uleb128 0x14
+ 661 0337 17000000 		.4byte	.LASF32
+ 662 033b 17000000 		.4byte	.LASF32
+ 663 033f 05       		.byte	0x5
+ 664 0340 15       		.byte	0x15
+ 665 0341 14       		.uleb128 0x14
+ 666 0342 2F020000 		.4byte	.LASF33
+ 667 0346 2F020000 		.4byte	.LASF33
+ 668 034a 05       		.byte	0x5
+ 669 034b 26       		.byte	0x26
+ 670 034c 14       		.uleb128 0x14
+ 671 034d F1010000 		.4byte	.LASF34
+ 672 0351 F1010000 		.4byte	.LASF34
+ 673 0355 05       		.byte	0x5
+ 674 0356 2A       		.byte	0x2a
+ 675 0357 00       		.byte	0
+ 676              		.section	.debug_abbrev,"",%progbits
+ 677              	.Ldebug_abbrev0:
+ 678 0000 01       		.uleb128 0x1
+ 679 0001 11       		.uleb128 0x11
+ 680 0002 01       		.byte	0x1
+ 681 0003 25       		.uleb128 0x25
+ 682 0004 0E       		.uleb128 0xe
+ 683 0005 13       		.uleb128 0x13
+ 684 0006 0B       		.uleb128 0xb
+ 685 0007 03       		.uleb128 0x3
+ 686 0008 0E       		.uleb128 0xe
+ 687 0009 1B       		.uleb128 0x1b
+ 688 000a 0E       		.uleb128 0xe
+ 689 000b 55       		.uleb128 0x55
+ 690 000c 17       		.uleb128 0x17
+ 691 000d 11       		.uleb128 0x11
+ 692 000e 01       		.uleb128 0x1
+ 693 000f 10       		.uleb128 0x10
+ 694 0010 17       		.uleb128 0x17
+ 695 0011 00       		.byte	0
+ 696 0012 00       		.byte	0
+ 697 0013 02       		.uleb128 0x2
+ 698 0014 24       		.uleb128 0x24
+ 699 0015 00       		.byte	0
+ 700 0016 0B       		.uleb128 0xb
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 15
+
+
+ 701 0017 0B       		.uleb128 0xb
+ 702 0018 3E       		.uleb128 0x3e
+ 703 0019 0B       		.uleb128 0xb
+ 704 001a 03       		.uleb128 0x3
+ 705 001b 0E       		.uleb128 0xe
+ 706 001c 00       		.byte	0
+ 707 001d 00       		.byte	0
+ 708 001e 03       		.uleb128 0x3
+ 709 001f 24       		.uleb128 0x24
+ 710 0020 00       		.byte	0
+ 711 0021 0B       		.uleb128 0xb
+ 712 0022 0B       		.uleb128 0xb
+ 713 0023 3E       		.uleb128 0x3e
+ 714 0024 0B       		.uleb128 0xb
+ 715 0025 03       		.uleb128 0x3
+ 716 0026 08       		.uleb128 0x8
+ 717 0027 00       		.byte	0
+ 718 0028 00       		.byte	0
+ 719 0029 04       		.uleb128 0x4
+ 720 002a 16       		.uleb128 0x16
+ 721 002b 00       		.byte	0
+ 722 002c 03       		.uleb128 0x3
+ 723 002d 0E       		.uleb128 0xe
+ 724 002e 3A       		.uleb128 0x3a
+ 725 002f 0B       		.uleb128 0xb
+ 726 0030 3B       		.uleb128 0x3b
+ 727 0031 05       		.uleb128 0x5
+ 728 0032 49       		.uleb128 0x49
+ 729 0033 13       		.uleb128 0x13
+ 730 0034 00       		.byte	0
+ 731 0035 00       		.byte	0
+ 732 0036 05       		.uleb128 0x5
+ 733 0037 2E       		.uleb128 0x2e
+ 734 0038 01       		.byte	0x1
+ 735 0039 3F       		.uleb128 0x3f
+ 736 003a 19       		.uleb128 0x19
+ 737 003b 03       		.uleb128 0x3
+ 738 003c 0E       		.uleb128 0xe
+ 739 003d 3A       		.uleb128 0x3a
+ 740 003e 0B       		.uleb128 0xb
+ 741 003f 3B       		.uleb128 0x3b
+ 742 0040 0B       		.uleb128 0xb
+ 743 0041 27       		.uleb128 0x27
+ 744 0042 19       		.uleb128 0x19
+ 745 0043 49       		.uleb128 0x49
+ 746 0044 13       		.uleb128 0x13
+ 747 0045 8701     		.uleb128 0x87
+ 748 0047 19       		.uleb128 0x19
+ 749 0048 11       		.uleb128 0x11
+ 750 0049 01       		.uleb128 0x1
+ 751 004a 12       		.uleb128 0x12
+ 752 004b 06       		.uleb128 0x6
+ 753 004c 40       		.uleb128 0x40
+ 754 004d 18       		.uleb128 0x18
+ 755 004e 9742     		.uleb128 0x2117
+ 756 0050 19       		.uleb128 0x19
+ 757 0051 01       		.uleb128 0x1
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 16
+
+
+ 758 0052 13       		.uleb128 0x13
+ 759 0053 00       		.byte	0
+ 760 0054 00       		.byte	0
+ 761 0055 06       		.uleb128 0x6
+ 762 0056 34       		.uleb128 0x34
+ 763 0057 00       		.byte	0
+ 764 0058 03       		.uleb128 0x3
+ 765 0059 08       		.uleb128 0x8
+ 766 005a 3A       		.uleb128 0x3a
+ 767 005b 0B       		.uleb128 0xb
+ 768 005c 3B       		.uleb128 0x3b
+ 769 005d 0B       		.uleb128 0xb
+ 770 005e 49       		.uleb128 0x49
+ 771 005f 13       		.uleb128 0x13
+ 772 0060 02       		.uleb128 0x2
+ 773 0061 17       		.uleb128 0x17
+ 774 0062 00       		.byte	0
+ 775 0063 00       		.byte	0
+ 776 0064 07       		.uleb128 0x7
+ 777 0065 34       		.uleb128 0x34
+ 778 0066 00       		.byte	0
+ 779 0067 03       		.uleb128 0x3
+ 780 0068 0E       		.uleb128 0xe
+ 781 0069 3A       		.uleb128 0x3a
+ 782 006a 0B       		.uleb128 0xb
+ 783 006b 3B       		.uleb128 0x3b
+ 784 006c 0B       		.uleb128 0xb
+ 785 006d 49       		.uleb128 0x49
+ 786 006e 13       		.uleb128 0x13
+ 787 006f 02       		.uleb128 0x2
+ 788 0070 17       		.uleb128 0x17
+ 789 0071 00       		.byte	0
+ 790 0072 00       		.byte	0
+ 791 0073 08       		.uleb128 0x8
+ 792 0074 0B       		.uleb128 0xb
+ 793 0075 01       		.byte	0x1
+ 794 0076 11       		.uleb128 0x11
+ 795 0077 01       		.uleb128 0x1
+ 796 0078 12       		.uleb128 0x12
+ 797 0079 06       		.uleb128 0x6
+ 798 007a 01       		.uleb128 0x1
+ 799 007b 13       		.uleb128 0x13
+ 800 007c 00       		.byte	0
+ 801 007d 00       		.byte	0
+ 802 007e 09       		.uleb128 0x9
+ 803 007f 898201   		.uleb128 0x4109
+ 804 0082 00       		.byte	0
+ 805 0083 11       		.uleb128 0x11
+ 806 0084 01       		.uleb128 0x1
+ 807 0085 31       		.uleb128 0x31
+ 808 0086 13       		.uleb128 0x13
+ 809 0087 00       		.byte	0
+ 810 0088 00       		.byte	0
+ 811 0089 0A       		.uleb128 0xa
+ 812 008a 898201   		.uleb128 0x4109
+ 813 008d 01       		.byte	0x1
+ 814 008e 11       		.uleb128 0x11
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 17
+
+
+ 815 008f 01       		.uleb128 0x1
+ 816 0090 31       		.uleb128 0x31
+ 817 0091 13       		.uleb128 0x13
+ 818 0092 01       		.uleb128 0x1
+ 819 0093 13       		.uleb128 0x13
+ 820 0094 00       		.byte	0
+ 821 0095 00       		.byte	0
+ 822 0096 0B       		.uleb128 0xb
+ 823 0097 8A8201   		.uleb128 0x410a
+ 824 009a 00       		.byte	0
+ 825 009b 02       		.uleb128 0x2
+ 826 009c 18       		.uleb128 0x18
+ 827 009d 9142     		.uleb128 0x2111
+ 828 009f 18       		.uleb128 0x18
+ 829 00a0 00       		.byte	0
+ 830 00a1 00       		.byte	0
+ 831 00a2 0C       		.uleb128 0xc
+ 832 00a3 898201   		.uleb128 0x4109
+ 833 00a6 01       		.byte	0x1
+ 834 00a7 11       		.uleb128 0x11
+ 835 00a8 01       		.uleb128 0x1
+ 836 00a9 31       		.uleb128 0x31
+ 837 00aa 13       		.uleb128 0x13
+ 838 00ab 00       		.byte	0
+ 839 00ac 00       		.byte	0
+ 840 00ad 0D       		.uleb128 0xd
+ 841 00ae 2E       		.uleb128 0x2e
+ 842 00af 01       		.byte	0x1
+ 843 00b0 3F       		.uleb128 0x3f
+ 844 00b1 19       		.uleb128 0x19
+ 845 00b2 03       		.uleb128 0x3
+ 846 00b3 0E       		.uleb128 0xe
+ 847 00b4 3A       		.uleb128 0x3a
+ 848 00b5 0B       		.uleb128 0xb
+ 849 00b6 3B       		.uleb128 0x3b
+ 850 00b7 0B       		.uleb128 0xb
+ 851 00b8 27       		.uleb128 0x27
+ 852 00b9 19       		.uleb128 0x19
+ 853 00ba 8701     		.uleb128 0x87
+ 854 00bc 19       		.uleb128 0x19
+ 855 00bd 11       		.uleb128 0x11
+ 856 00be 01       		.uleb128 0x1
+ 857 00bf 12       		.uleb128 0x12
+ 858 00c0 06       		.uleb128 0x6
+ 859 00c1 40       		.uleb128 0x40
+ 860 00c2 18       		.uleb128 0x18
+ 861 00c3 9642     		.uleb128 0x2116
+ 862 00c5 19       		.uleb128 0x19
+ 863 00c6 01       		.uleb128 0x1
+ 864 00c7 13       		.uleb128 0x13
+ 865 00c8 00       		.byte	0
+ 866 00c9 00       		.byte	0
+ 867 00ca 0E       		.uleb128 0xe
+ 868 00cb 05       		.uleb128 0x5
+ 869 00cc 00       		.byte	0
+ 870 00cd 03       		.uleb128 0x3
+ 871 00ce 0E       		.uleb128 0xe
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 18
+
+
+ 872 00cf 3A       		.uleb128 0x3a
+ 873 00d0 0B       		.uleb128 0xb
+ 874 00d1 3B       		.uleb128 0x3b
+ 875 00d2 0B       		.uleb128 0xb
+ 876 00d3 49       		.uleb128 0x49
+ 877 00d4 13       		.uleb128 0x13
+ 878 00d5 02       		.uleb128 0x2
+ 879 00d6 17       		.uleb128 0x17
+ 880 00d7 00       		.byte	0
+ 881 00d8 00       		.byte	0
+ 882 00d9 0F       		.uleb128 0xf
+ 883 00da 34       		.uleb128 0x34
+ 884 00db 00       		.byte	0
+ 885 00dc 03       		.uleb128 0x3
+ 886 00dd 0E       		.uleb128 0xe
+ 887 00de 3A       		.uleb128 0x3a
+ 888 00df 0B       		.uleb128 0xb
+ 889 00e0 3B       		.uleb128 0x3b
+ 890 00e1 0B       		.uleb128 0xb
+ 891 00e2 49       		.uleb128 0x49
+ 892 00e3 13       		.uleb128 0x13
+ 893 00e4 1C       		.uleb128 0x1c
+ 894 00e5 0B       		.uleb128 0xb
+ 895 00e6 00       		.byte	0
+ 896 00e7 00       		.byte	0
+ 897 00e8 10       		.uleb128 0x10
+ 898 00e9 34       		.uleb128 0x34
+ 899 00ea 00       		.byte	0
+ 900 00eb 03       		.uleb128 0x3
+ 901 00ec 0E       		.uleb128 0xe
+ 902 00ed 3A       		.uleb128 0x3a
+ 903 00ee 0B       		.uleb128 0xb
+ 904 00ef 3B       		.uleb128 0x3b
+ 905 00f0 0B       		.uleb128 0xb
+ 906 00f1 49       		.uleb128 0x49
+ 907 00f2 13       		.uleb128 0x13
+ 908 00f3 3F       		.uleb128 0x3f
+ 909 00f4 19       		.uleb128 0x19
+ 910 00f5 3C       		.uleb128 0x3c
+ 911 00f6 19       		.uleb128 0x19
+ 912 00f7 00       		.byte	0
+ 913 00f8 00       		.byte	0
+ 914 00f9 11       		.uleb128 0x11
+ 915 00fa 01       		.uleb128 0x1
+ 916 00fb 01       		.byte	0x1
+ 917 00fc 49       		.uleb128 0x49
+ 918 00fd 13       		.uleb128 0x13
+ 919 00fe 01       		.uleb128 0x1
+ 920 00ff 13       		.uleb128 0x13
+ 921 0100 00       		.byte	0
+ 922 0101 00       		.byte	0
+ 923 0102 12       		.uleb128 0x12
+ 924 0103 21       		.uleb128 0x21
+ 925 0104 00       		.byte	0
+ 926 0105 00       		.byte	0
+ 927 0106 00       		.byte	0
+ 928 0107 13       		.uleb128 0x13
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 19
+
+
+ 929 0108 26       		.uleb128 0x26
+ 930 0109 00       		.byte	0
+ 931 010a 49       		.uleb128 0x49
+ 932 010b 13       		.uleb128 0x13
+ 933 010c 00       		.byte	0
+ 934 010d 00       		.byte	0
+ 935 010e 14       		.uleb128 0x14
+ 936 010f 2E       		.uleb128 0x2e
+ 937 0110 00       		.byte	0
+ 938 0111 3F       		.uleb128 0x3f
+ 939 0112 19       		.uleb128 0x19
+ 940 0113 3C       		.uleb128 0x3c
+ 941 0114 19       		.uleb128 0x19
+ 942 0115 6E       		.uleb128 0x6e
+ 943 0116 0E       		.uleb128 0xe
+ 944 0117 03       		.uleb128 0x3
+ 945 0118 0E       		.uleb128 0xe
+ 946 0119 3A       		.uleb128 0x3a
+ 947 011a 0B       		.uleb128 0xb
+ 948 011b 3B       		.uleb128 0x3b
+ 949 011c 0B       		.uleb128 0xb
+ 950 011d 00       		.byte	0
+ 951 011e 00       		.byte	0
+ 952 011f 00       		.byte	0
+ 953              		.section	.debug_loc,"",%progbits
+ 954              	.Ldebug_loc0:
+ 955              	.LLST0:
+ 956 0000 0E000000 		.4byte	.LVL1
+ 957 0004 16000000 		.4byte	.LVL3
+ 958 0008 0200     		.2byte	0x2
+ 959 000a 30       		.byte	0x30
+ 960 000b 9F       		.byte	0x9f
+ 961 000c 1E000000 		.4byte	.LVL5
+ 962 0010 22000000 		.4byte	.LVL6
+ 963 0014 0200     		.2byte	0x2
+ 964 0016 30       		.byte	0x30
+ 965 0017 9F       		.byte	0x9f
+ 966 0018 22000000 		.4byte	.LVL6
+ 967 001c 62000000 		.4byte	.LFE32
+ 968 0020 0100     		.2byte	0x1
+ 969 0022 54       		.byte	0x54
+ 970 0023 00000000 		.4byte	0
+ 971 0027 00000000 		.4byte	0
+ 972              	.LLST1:
+ 973 002b 16000000 		.4byte	.LVL3
+ 974 002f 19000000 		.4byte	.LVL4-1
+ 975 0033 0100     		.2byte	0x1
+ 976 0035 50       		.byte	0x50
+ 977 0036 19000000 		.4byte	.LVL4-1
+ 978 003a 56000000 		.4byte	.LVL15
+ 979 003e 0100     		.2byte	0x1
+ 980 0040 55       		.byte	0x55
+ 981 0041 56000000 		.4byte	.LVL15
+ 982 0045 58000000 		.4byte	.LVL16
+ 983 0049 0100     		.2byte	0x1
+ 984 004b 50       		.byte	0x50
+ 985 004c 58000000 		.4byte	.LVL16
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 20
+
+
+ 986 0050 60000000 		.4byte	.LVL19
+ 987 0054 0100     		.2byte	0x1
+ 988 0056 55       		.byte	0x55
+ 989 0057 60000000 		.4byte	.LVL19
+ 990 005b 62000000 		.4byte	.LFE32
+ 991 005f 0100     		.2byte	0x1
+ 992 0061 50       		.byte	0x50
+ 993 0062 00000000 		.4byte	0
+ 994 0066 00000000 		.4byte	0
+ 995              	.LLST2:
+ 996 006a 1A000000 		.4byte	.LVL4
+ 997 006e 1D000000 		.4byte	.LVL5-1
+ 998 0072 0100     		.2byte	0x1
+ 999 0074 50       		.byte	0x50
+ 1000 0075 4A000000 		.4byte	.LVL12
+ 1001 0079 50000000 		.4byte	.LVL13
+ 1002 007d 0100     		.2byte	0x1
+ 1003 007f 50       		.byte	0x50
+ 1004 0080 58000000 		.4byte	.LVL16
+ 1005 0084 5A000000 		.4byte	.LVL17
+ 1006 0088 0100     		.2byte	0x1
+ 1007 008a 50       		.byte	0x50
+ 1008 008b 00000000 		.4byte	0
+ 1009 008f 00000000 		.4byte	0
+ 1010              	.LLST3:
+ 1011 0093 00000000 		.4byte	.LVL20
+ 1012 0097 0E000000 		.4byte	.LVL22
+ 1013 009b 0100     		.2byte	0x1
+ 1014 009d 50       		.byte	0x50
+ 1015 009e 0E000000 		.4byte	.LVL22
+ 1016 00a2 84000000 		.4byte	.LFE33
+ 1017 00a6 0200     		.2byte	0x2
+ 1018 00a8 91       		.byte	0x91
+ 1019 00a9 64       		.sleb128 -28
+ 1020 00aa 00000000 		.4byte	0
+ 1021 00ae 00000000 		.4byte	0
+ 1022              	.LLST4:
+ 1023 00b2 00000000 		.4byte	.LVL20
+ 1024 00b6 0E000000 		.4byte	.LVL22
+ 1025 00ba 0100     		.2byte	0x1
+ 1026 00bc 51       		.byte	0x51
+ 1027 00bd 0E000000 		.4byte	.LVL22
+ 1028 00c1 84000000 		.4byte	.LFE33
+ 1029 00c5 0400     		.2byte	0x4
+ 1030 00c7 F3       		.byte	0xf3
+ 1031 00c8 01       		.uleb128 0x1
+ 1032 00c9 51       		.byte	0x51
+ 1033 00ca 9F       		.byte	0x9f
+ 1034 00cb 00000000 		.4byte	0
+ 1035 00cf 00000000 		.4byte	0
+ 1036              	.LLST5:
+ 1037 00d3 0A000000 		.4byte	.LVL21
+ 1038 00d7 0E000000 		.4byte	.LVL22
+ 1039 00db 0200     		.2byte	0x2
+ 1040 00dd 30       		.byte	0x30
+ 1041 00de 9F       		.byte	0x9f
+ 1042 00df 14000000 		.4byte	.LVL23
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 21
+
+
+ 1043 00e3 52000000 		.4byte	.LVL34
+ 1044 00e7 0100     		.2byte	0x1
+ 1045 00e9 57       		.byte	0x57
+ 1046 00ea 54000000 		.4byte	.LVL35
+ 1047 00ee 72000000 		.4byte	.LVL39
+ 1048 00f2 0100     		.2byte	0x1
+ 1049 00f4 57       		.byte	0x57
+ 1050 00f5 00000000 		.4byte	0
+ 1051 00f9 00000000 		.4byte	0
+ 1052              	.LLST6:
+ 1053 00fd 0A000000 		.4byte	.LVL21
+ 1054 0101 0E000000 		.4byte	.LVL22
+ 1055 0105 0200     		.2byte	0x2
+ 1056 0107 30       		.byte	0x30
+ 1057 0108 9F       		.byte	0x9f
+ 1058 0109 0E000000 		.4byte	.LVL22
+ 1059 010d 84000000 		.4byte	.LFE33
+ 1060 0111 0100     		.2byte	0x1
+ 1061 0113 58       		.byte	0x58
+ 1062 0114 00000000 		.4byte	0
+ 1063 0118 00000000 		.4byte	0
+ 1064              	.LLST7:
+ 1065 011c 0A000000 		.4byte	.LVL21
+ 1066 0120 14000000 		.4byte	.LVL23
+ 1067 0124 0200     		.2byte	0x2
+ 1068 0126 30       		.byte	0x30
+ 1069 0127 9F       		.byte	0x9f
+ 1070 0128 14000000 		.4byte	.LVL23
+ 1071 012c 52000000 		.4byte	.LVL34
+ 1072 0130 0200     		.2byte	0x2
+ 1073 0132 7D       		.byte	0x7d
+ 1074 0133 00       		.sleb128 0
+ 1075 0134 52000000 		.4byte	.LVL34
+ 1076 0138 54000000 		.4byte	.LVL35
+ 1077 013c 0100     		.2byte	0x1
+ 1078 013e 53       		.byte	0x53
+ 1079 013f 54000000 		.4byte	.LVL35
+ 1080 0143 84000000 		.4byte	.LFE33
+ 1081 0147 0200     		.2byte	0x2
+ 1082 0149 7D       		.byte	0x7d
+ 1083 014a 00       		.sleb128 0
+ 1084 014b 00000000 		.4byte	0
+ 1085 014f 00000000 		.4byte	0
+ 1086              	.LLST8:
+ 1087 0153 30000000 		.4byte	.LVL26
+ 1088 0157 52000000 		.4byte	.LVL34
+ 1089 015b 0100     		.2byte	0x1
+ 1090 015d 55       		.byte	0x55
+ 1091 015e 00000000 		.4byte	0
+ 1092 0162 00000000 		.4byte	0
+ 1093              	.LLST9:
+ 1094 0166 3C000000 		.4byte	.LVL28
+ 1095 016a 43000000 		.4byte	.LVL29-1
+ 1096 016e 0100     		.2byte	0x1
+ 1097 0170 51       		.byte	0x51
+ 1098 0171 00000000 		.4byte	0
+ 1099 0175 00000000 		.4byte	0
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 22
+
+
+ 1100              	.LLST10:
+ 1101 0179 46000000 		.4byte	.LVL30
+ 1102 017d 4A000000 		.4byte	.LVL31
+ 1103 0181 0100     		.2byte	0x1
+ 1104 0183 50       		.byte	0x50
+ 1105 0184 4A000000 		.4byte	.LVL31
+ 1106 0188 4D000000 		.4byte	.LVL32-1
+ 1107 018c 0100     		.2byte	0x1
+ 1108 018e 52       		.byte	0x52
+ 1109 018f 00000000 		.4byte	0
+ 1110 0193 00000000 		.4byte	0
+ 1111              		.section	.debug_aranges,"",%progbits
+ 1112 0000 24000000 		.4byte	0x24
+ 1113 0004 0200     		.2byte	0x2
+ 1114 0006 00000000 		.4byte	.Ldebug_info0
+ 1115 000a 04       		.byte	0x4
+ 1116 000b 00       		.byte	0
+ 1117 000c 0000     		.2byte	0
+ 1118 000e 0000     		.2byte	0
+ 1119 0010 00000000 		.4byte	.LFB32
+ 1120 0014 62000000 		.4byte	.LFE32-.LFB32
+ 1121 0018 00000000 		.4byte	.LFB33
+ 1122 001c 84000000 		.4byte	.LFE33-.LFB33
+ 1123 0020 00000000 		.4byte	0
+ 1124 0024 00000000 		.4byte	0
+ 1125              		.section	.debug_ranges,"",%progbits
+ 1126              	.Ldebug_ranges0:
+ 1127 0000 00000000 		.4byte	.LFB32
+ 1128 0004 62000000 		.4byte	.LFE32
+ 1129 0008 00000000 		.4byte	.LFB33
+ 1130 000c 84000000 		.4byte	.LFE33
+ 1131 0010 00000000 		.4byte	0
+ 1132 0014 00000000 		.4byte	0
+ 1133              		.section	.debug_line,"",%progbits
+ 1134              	.Ldebug_line0:
+ 1135 0000 08010000 		.section	.debug_str,"MS",%progbits,1
+ 1135      02007800 
+ 1135      00000201 
+ 1135      FB0E0D00 
+ 1135      01010101 
+ 1136              	.LASF14:
+ 1137 0000 63686172 		.ascii	"char\000"
+ 1137      00
+ 1138              	.LASF27:
+ 1139 0005 53747269 		.ascii	"StripLights_Pixel\000"
+ 1139      704C6967 
+ 1139      6874735F 
+ 1139      50697865 
+ 1139      6C00
+ 1140              	.LASF32:
+ 1141 0017 53747269 		.ascii	"StripLights_Start\000"
+ 1141      704C6967 
+ 1141      6874735F 
+ 1141      53746172 
+ 1141      7400
+ 1142              	.LASF3:
+ 1143 0029 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 23
+
+
+ 1143      7420756E 
+ 1143      7369676E 
+ 1143      65642069 
+ 1143      6E7400
+ 1144              	.LASF39:
+ 1145 003c 536C6F77 		.ascii	"SlowColorBlend\000"
+ 1145      436F6C6F 
+ 1145      72426C65 
+ 1145      6E6400
+ 1146              	.LASF31:
+ 1147 004b 53747269 		.ascii	"StripLights_getColor\000"
+ 1147      704C6967 
+ 1147      6874735F 
+ 1147      67657443 
+ 1147      6F6C6F72 
+ 1148              	.LASF12:
+ 1149 0060 666C6F61 		.ascii	"float\000"
+ 1149      7400
+ 1150              	.LASF19:
+ 1151 0066 64656C61 		.ascii	"delay\000"
+ 1151      7900
+ 1152              	.LASF1:
+ 1153 006c 756E7369 		.ascii	"unsigned char\000"
+ 1153      676E6564 
+ 1153      20636861 
+ 1153      7200
+ 1154              	.LASF25:
+ 1155 007a 50696E5F 		.ascii	"Pin_Flex_Read\000"
+ 1155      466C6578 
+ 1155      5F526561 
+ 1155      6400
+ 1156              	.LASF5:
+ 1157 0088 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1157      20756E73 
+ 1157      69676E65 
+ 1157      6420696E 
+ 1157      7400
+ 1158              	.LASF11:
+ 1159 009a 696E7433 		.ascii	"int32\000"
+ 1159      3200
+ 1160              	.LASF37:
+ 1161 00a0 433A5C55 		.ascii	"C:\\Users\\James Sun\\Desktop\\FunWithLEDs\\EX2_1St"
+ 1161      73657273 
+ 1161      5C4A616D 
+ 1161      65732053 
+ 1161      756E5C44 
+ 1162 00ce 72696E67 		.ascii	"ring.cydsn\000"
+ 1162      2E637964 
+ 1162      736E00
+ 1163              	.LASF23:
+ 1164 00d9 746F436F 		.ascii	"toColor\000"
+ 1164      6C6F7200 
+ 1165              	.LASF13:
+ 1166 00e1 646F7562 		.ascii	"double\000"
+ 1166      6C6500
+ 1167              	.LASF2:
+ 1168 00e8 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 24
+
+
+ 1168      7420696E 
+ 1168      7400
+ 1169              	.LASF17:
+ 1170 00f2 636F6C6F 		.ascii	"color\000"
+ 1170      7200
+ 1171              	.LASF10:
+ 1172 00f8 75696E74 		.ascii	"uint32\000"
+ 1172      333200
+ 1173              	.LASF38:
+ 1174 00ff 6D61696E 		.ascii	"main\000"
+ 1174      00
+ 1175              	.LASF8:
+ 1176 0104 756E7369 		.ascii	"unsigned int\000"
+ 1176      676E6564 
+ 1176      20696E74 
+ 1176      00
+ 1177              	.LASF26:
+ 1178 0111 50696E5F 		.ascii	"Pin_LED_Write\000"
+ 1178      4C45445F 
+ 1178      57726974 
+ 1178      6500
+ 1179              	.LASF22:
+ 1180 011f 66726F6D 		.ascii	"fromColor\000"
+ 1180      436F6C6F 
+ 1180      7200
+ 1181              	.LASF7:
+ 1182 0129 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1182      206C6F6E 
+ 1182      6720756E 
+ 1182      7369676E 
+ 1182      65642069 
+ 1183              	.LASF20:
+ 1184 0140 74696D65 		.ascii	"time\000"
+ 1184      00
+ 1185              	.LASF35:
+ 1186 0145 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1186      43313120 
+ 1186      352E342E 
+ 1186      31203230 
+ 1186      31363036 
+ 1187 0178 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1187      20726576 
+ 1187      6973696F 
+ 1187      6E203233 
+ 1187      37373135 
+ 1188 01ab 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1188      66756E63 
+ 1188      74696F6E 
+ 1188      2D736563 
+ 1188      74696F6E 
+ 1189              	.LASF15:
+ 1190 01d3 73697A65 		.ascii	"sizetype\000"
+ 1190      74797065 
+ 1190      00
+ 1191              	.LASF6:
+ 1192 01dc 6C6F6E67 		.ascii	"long long int\000"
+ 1192      206C6F6E 
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 25
+
+
+ 1192      6720696E 
+ 1192      7400
+ 1193              	.LASF36:
+ 1194 01ea 6D61696E 		.ascii	"main.c\000"
+ 1194      2E6300
+ 1195              	.LASF34:
+ 1196 01f1 53747269 		.ascii	"StripLights_RgbBlend\000"
+ 1196      704C6967 
+ 1196      6874735F 
+ 1196      52676242 
+ 1196      6C656E64 
+ 1197              	.LASF28:
+ 1198 0206 53747269 		.ascii	"StripLights_Ready\000"
+ 1198      704C6967 
+ 1198      6874735F 
+ 1198      52656164 
+ 1198      7900
+ 1199              	.LASF21:
+ 1200 0218 74696D65 		.ascii	"timeCnt\000"
+ 1200      436E7400 
+ 1201              	.LASF9:
+ 1202 0220 75696E74 		.ascii	"uint8\000"
+ 1202      3800
+ 1203              	.LASF4:
+ 1204 0226 6C6F6E67 		.ascii	"long int\000"
+ 1204      20696E74 
+ 1204      00
+ 1205              	.LASF33:
+ 1206 022f 53747269 		.ascii	"StripLights_Dim\000"
+ 1206      704C6967 
+ 1206      6874735F 
+ 1206      44696D00 
+ 1207              	.LASF18:
+ 1208 023f 62757474 		.ascii	"button\000"
+ 1208      6F6E00
+ 1209              	.LASF16:
+ 1210 0246 6C6F6E67 		.ascii	"long double\000"
+ 1210      20646F75 
+ 1210      626C6500 
+ 1211              	.LASF0:
+ 1212 0252 7369676E 		.ascii	"signed char\000"
+ 1212      65642063 
+ 1212      68617200 
+ 1213              	.LASF24:
+ 1214 025e 53747269 		.ascii	"StripLights_CLUT\000"
+ 1214      704C6967 
+ 1214      6874735F 
+ 1214      434C5554 
+ 1214      00
+ 1215              	.LASF29:
+ 1216 026f 53747269 		.ascii	"StripLights_Trigger\000"
+ 1216      704C6967 
+ 1216      6874735F 
+ 1216      54726967 
+ 1216      67657200 
+ 1217              	.LASF30:
+ 1218 0283 43794465 		.ascii	"CyDelay\000"
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cci23mF1.s 			page 26
+
+
+ 1218      6C617900 
+ 1219              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
