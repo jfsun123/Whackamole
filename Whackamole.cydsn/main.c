@@ -8,26 +8,33 @@
  * ========================================
 */
 #include "project.h"
+#include <stdlib.h>
+#include <time.h>
 
 void SlowColorBlend(uint32 delay, uint32 time);
+void SetBlockColor(int block_number, uint32 color);
 
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
+    srand(time(NULL)); // seed the randomness with time
     StripLights_Start();
-    
     StripLights_Dim(0);
-
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
     
-    uint32 led = 0;
     uint32 color = StripLights_RED;
     for(;;)
     {
-
+        int random = rand() % 4; //random number between 0 and 3
         uint8 button = Pin_Flex_Read();
-        Pin_LED_Write(button);
-        for(led = 0; led <= 30; led++){
+        if(button){
+            color = StripLights_GREEN;
+        }
+        else{
+            color = StripLights_RED;
+        }
+        
+        SetBlockColor(1, color);
+        /*for(uint32 led = 0; led <= 30; led++){
             
             StripLights_Pixel(led, 0, color);
             while( StripLights_Ready() == 0);
@@ -35,16 +42,28 @@ int main(void)
             StripLights_Trigger(1);
             
         }
-        CyDelay(10);
-        button = Pin_Flex_Read();
-        if(button){
-            color = StripLights_GREEN;
-        }
-        else{
-            color = StripLights_RED;
-        }
+        CyDelay(10);*/
+        
+
     }
 }
+
+/**
+    This function will set the lights inside the block number to be a certain color.
+    Changes are assumemd to be the first 20 LEDs, so make sure that each block has exactly 20 LEDS
+    Block number starts from 1, not 0
+*/
+void SetBlockColor(int block_number, uint32 color){
+    uint32 starting_led_index = (block_number - 1) * 20;
+    uint32 ending_led_index = (block_number) * 20;
+    for (uint32 led = starting_led_index; led < ending_led_index; led++){
+        StripLights_Pixel(led, 0, color);
+        while(StripLights_Ready() == 0);
+        StripLights_Trigger(1);
+    }
+    CyDelay(10);
+}
+
 
 /************************************************
  *                    SlowColorBlend()
