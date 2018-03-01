@@ -174,6 +174,13 @@
 <v>Whackamole\Whackamole\PSoC 4 Architecture TRM</v>
 <v>Whackamole\Whackamole\PSoC 4200 Family Datasheet</v>
 <v>Whackamole\Whackamole\System Reference Guides</v>
+<v>Whackamole\Whackamole\System Reference Guides\cy_boot_v5_60</v>
+<v>Whackamole\Whackamole\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Whackamole\Whackamole\cy_pins_v2_20</v>
+<v>Whackamole\Whackamole\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Whackamole\Whackamole\Gnd_v1_0.pdf</v>
+<v>Whackamole\Whackamole\Power_v1_0.pdf</v>
+<v>Whackamole\Whackamole\StripLights_v3_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Whackamole</v>
@@ -181,6 +188,13 @@
 <v>Whackamole\Whackamole\PSoC 4 Architecture TRM</v>
 <v>Whackamole\Whackamole\PSoC 4200 Family Datasheet</v>
 <v>Whackamole\Whackamole\System Reference Guides</v>
+<v>Whackamole\Whackamole\System Reference Guides\cy_boot_v5_60</v>
+<v>Whackamole\Whackamole\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Whackamole\Whackamole\cy_pins_v2_20</v>
+<v>Whackamole\Whackamole\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Whackamole\Whackamole\Gnd_v1_0.pdf</v>
+<v>Whackamole\Whackamole\Power_v1_0.pdf</v>
+<v>Whackamole\Whackamole\StripLights_v3_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
