@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Whackamole</v>
+<v>Whackamole\Whackamole</v>
+<v>Whackamole\Whackamole\TopDesign</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Pins</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Analog</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Clocks</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Interrupts</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\System</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Directives</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Flash Security</v>
+<v>Whackamole\Whackamole\Header Files</v>
+<v>Whackamole\Whackamole\Header Files\cyapicallbacks.h</v>
+<v>Whackamole\Whackamole\Source Files</v>
+<v>Whackamole\Whackamole\Source Files\main.c</v>
+<v>Whackamole\Whackamole\Generated_Source</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Whackamole</v>
+<v>Whackamole\Whackamole</v>
+<v>Whackamole\Whackamole\TopDesign</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Pins</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Analog</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Clocks</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Interrupts</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\System</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Directives</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Flash Security</v>
+<v>Whackamole\Whackamole\Header Files</v>
+<v>Whackamole\Whackamole\Header Files\cyapicallbacks.h</v>
+<v>Whackamole\Whackamole\Source Files</v>
+<v>Whackamole\Whackamole\Source Files\main.c</v>
+<v>Whackamole\Whackamole\Generated_Source</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\Board_LED</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\Button</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\cy_boot</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\cy_lfclk</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\S0</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\StripLights</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\StripLights_cisr</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\StripLights_fisr</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\StripLights_HFCLK</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\StripLights_StringSel</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\cycodeshareexport.ld</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\cycodeshareimport.ld</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\cycodeshareimport.scat</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\cydevice_trm.h</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\cydisabledsheets.h</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4\cyfitter.h</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Whackamole</v>
+<v>Whackamole\Whackamole</v>
+<v>Whackamole\Whackamole\TopDesign</v>
+<v>Whackamole\Whackamole\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Whackamole</v>
+<v>Whackamole\Whackamole</v>
+<v>Whackamole\Whackamole\TopDesign</v>
+<v>Whackamole\Whackamole\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Whackamole</v>
+<v>Whackamole\Whackamole</v>
+<v>Whackamole\Whackamole\CortexM0</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Board_LED.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Board_LED_PM.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Button.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Button_PM.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\S0.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\S0_PM.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_cisr.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fisr.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fonts.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_HFCLK.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel_PM.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Whackamole.elf</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Whackamole.hex</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Whackamole.map</v>
+<v>Whackamole\Whackamole\Whackamole.gpdsc</v>
+<v>Whackamole\Whackamole\Whackamole.rpt</v>
+<v>Whackamole\Whackamole\Whackamole_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Whackamole</v>
+<v>Whackamole\Whackamole</v>
+<v>Whackamole\Whackamole\CortexM0</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Board_LED.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Board_LED_PM.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Button.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Button_PM.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\S0.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\S0_PM.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_cisr.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fisr.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fonts.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_HFCLK.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel_PM.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Whackamole.elf</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Whackamole.hex</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Whackamole.map</v>
+<v>Whackamole\Whackamole\Whackamole.gpdsc</v>
+<v>Whackamole\Whackamole\Whackamole.rpt</v>
+<v>Whackamole\Whackamole\Whackamole_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Whackamole</v>
+<v>Whackamole\Whackamole</v>
+<v>Whackamole\Whackamole\PSoC 4 Architecture TRM</v>
+<v>Whackamole\Whackamole\PSoC 4200 Family Datasheet</v>
+<v>Whackamole\Whackamole\System Reference Guides</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Whackamole</v>
+<v>Whackamole\Whackamole</v>
+<v>Whackamole\Whackamole\PSoC 4 Architecture TRM</v>
+<v>Whackamole\Whackamole\PSoC 4200 Family Datasheet</v>
+<v>Whackamole\Whackamole\System Reference Guides</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="6c335137-fa19-46ce-bc2d-2fbeb6d5f2a2">
+<CyGuid_70084457-cd6a-4593-9ed0-7f6eeb432dc2 type_name="CyDesigner.Common.ProjMgmt.GUI.CyDependenciesCustomData" version="1">
+<dictName v=".\Whackamole.cydsn\Whackamole.cyprj">
+<listName />
+</dictName>
+</CyGuid_70084457-cd6a-4593-9ed0-7f6eeb432dc2>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Whackamole.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Whackamole.cydsn\main.c" />
+<name v=".\Whackamole.cydsn\Whackamole.cydwr" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1055, 495" SelectedTabbedMdiWindow="273980e7-9998-44fc-a598-105a51250775"><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\TopDesign\TopDesign.cysch" Guid="273980e7-9998-44fc-a598-105a51250775" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\main.c" Guid="51aeffae-51cc-48d8-b91f-ebeca1fa1852" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Whackamole.cydwr" Guid="4a83b723-26ea-46c8-a489-74f2b414ae0b" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f77fb5c3-ee99-4682-88d0-d4adfec42b80" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

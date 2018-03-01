@@ -1,0 +1,8 @@
+C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Whackamole.cyprj|4a14d864-440b-4ba0-a67b-aca23ecb4841
+C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\WS281xLib.cylib\WS281xLib.cyprj|812c48a4-d0b5-41cd-931d-397fbc775c55
+C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|13273b82-367e-441b-9703-bc2898952bf0
+C:\Users\James Sun\Documents\PSoC Creator\4.1\Downloads ( 4.1).cylib\Downloads ( 4.1).cyprj|e3aa3f22-9863-4757-8da7-adfd4d27c117
+C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|14d0d9fc-233f-44c8-81f8-40acf0537553
+C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a7f5aa7b-a9aa-44a4-b4fa-afc6e76920f3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a020bcdb-52f8-481b-a25d-e666e8b3f283
+C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|5ffd877f-e762-480b-ac5c-c449e20fe5b9
