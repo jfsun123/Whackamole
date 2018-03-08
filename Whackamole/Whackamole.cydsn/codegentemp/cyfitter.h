@@ -127,6 +127,18 @@
 #define Button__PORT 0u
 #define Button__PS CYREG_PRT0_PS
 #define Button__SHIFT 7u
+#define Button__SNAP CYREG_PRT0_INTSTAT
+
+/* ISR_Write */
+#define ISR_Write__INTC_CLR_EN_REG CYREG_CM0_ICER
+#define ISR_Write__INTC_CLR_PD_REG CYREG_CM0_ICPR
+#define ISR_Write__INTC_MASK 0x01u
+#define ISR_Write__INTC_NUMBER 0u
+#define ISR_Write__INTC_PRIOR_MASK 0xC0u
+#define ISR_Write__INTC_PRIOR_NUM 3u
+#define ISR_Write__INTC_PRIOR_REG CYREG_CM0_IPR0
+#define ISR_Write__INTC_SET_EN_REG CYREG_CM0_ISER
+#define ISR_Write__INTC_SET_PD_REG CYREG_CM0_ISPR
 
 /* S0 */
 #define S0__0__DM__MASK 0x7000u
@@ -271,9 +283,9 @@
 /* StripLights_cisr */
 #define StripLights_cisr__INTC_CLR_EN_REG CYREG_CM0_ICER
 #define StripLights_cisr__INTC_CLR_PD_REG CYREG_CM0_ICPR
-#define StripLights_cisr__INTC_MASK 0x01u
-#define StripLights_cisr__INTC_NUMBER 0u
-#define StripLights_cisr__INTC_PRIOR_MASK 0xC0u
+#define StripLights_cisr__INTC_MASK 0x02u
+#define StripLights_cisr__INTC_NUMBER 1u
+#define StripLights_cisr__INTC_PRIOR_MASK 0xC000u
 #define StripLights_cisr__INTC_PRIOR_NUM 3u
 #define StripLights_cisr__INTC_PRIOR_REG CYREG_CM0_IPR0
 #define StripLights_cisr__INTC_SET_EN_REG CYREG_CM0_ISER

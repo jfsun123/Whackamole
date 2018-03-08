@@ -127,6 +127,18 @@
 .set Button__PORT, 0
 .set Button__PS, CYREG_PRT0_PS
 .set Button__SHIFT, 7
+.set Button__SNAP, CYREG_PRT0_INTSTAT
+
+/* ISR_Write */
+.set ISR_Write__INTC_CLR_EN_REG, CYREG_CM0_ICER
+.set ISR_Write__INTC_CLR_PD_REG, CYREG_CM0_ICPR
+.set ISR_Write__INTC_MASK, 0x01
+.set ISR_Write__INTC_NUMBER, 0
+.set ISR_Write__INTC_PRIOR_MASK, 0xC0
+.set ISR_Write__INTC_PRIOR_NUM, 3
+.set ISR_Write__INTC_PRIOR_REG, CYREG_CM0_IPR0
+.set ISR_Write__INTC_SET_EN_REG, CYREG_CM0_ISER
+.set ISR_Write__INTC_SET_PD_REG, CYREG_CM0_ISPR
 
 /* S0 */
 .set S0__0__DM__MASK, 0x7000
@@ -271,9 +283,9 @@
 /* StripLights_cisr */
 .set StripLights_cisr__INTC_CLR_EN_REG, CYREG_CM0_ICER
 .set StripLights_cisr__INTC_CLR_PD_REG, CYREG_CM0_ICPR
-.set StripLights_cisr__INTC_MASK, 0x01
-.set StripLights_cisr__INTC_NUMBER, 0
-.set StripLights_cisr__INTC_PRIOR_MASK, 0xC0
+.set StripLights_cisr__INTC_MASK, 0x02
+.set StripLights_cisr__INTC_NUMBER, 1
+.set StripLights_cisr__INTC_PRIOR_MASK, 0xC000
 .set StripLights_cisr__INTC_PRIOR_NUM, 3
 .set StripLights_cisr__INTC_PRIOR_REG, CYREG_CM0_IPR0
 .set StripLights_cisr__INTC_SET_EN_REG, CYREG_CM0_ISER

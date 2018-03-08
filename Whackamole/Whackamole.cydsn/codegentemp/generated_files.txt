@@ -13,10 +13,6 @@
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\cyfitteriar.inc" value="HEADER;;;;;" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\cyfitter.h" value="HEADER;;;;;" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\cydisabledsheets.h" value="HEADER;;;;;" />
-  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Button.c" value="SOURCE_C;CortexM0;;;;Button" />
-  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Button.h" value="HEADER;;;;;Button" />
-  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Button_aliases.h" value="HEADER;;;;;Button" />
-  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Button_PM.c" value="SOURCE_C;CortexM0;;;;Button" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Board_LED.c" value="SOURCE_C;CortexM0;;;;Board_LED" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Board_LED.h" value="HEADER;;;;;Board_LED" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Board_LED_aliases.h" value="HEADER;;;;;Board_LED" />
@@ -29,6 +25,11 @@
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\S0.h" value="HEADER;;;;;S0" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\S0_aliases.h" value="HEADER;;;;;S0" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\S0_PM.c" value="SOURCE_C;CortexM0;;;;S0" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\ISR_Write.c" value="SOURCE_C;CortexM0;;;;ISR_Write" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\ISR_Write.h" value="HEADER;;;;;ISR_Write" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Button.c" value="SOURCE_C;CortexM0;;;;Button" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Button.h" value="HEADER;;;;;Button" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Button_aliases.h" value="HEADER;;;;;Button" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\StripLights_HFCLK.c" value="SOURCE_C;CortexM0;;;;StripLights_HFCLK" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\StripLights_HFCLK.h" value="HEADER;;;;;StripLights_HFCLK" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\StripLights_cisr.c" value="SOURCE_C;CortexM0;;;;StripLights_cisr" />

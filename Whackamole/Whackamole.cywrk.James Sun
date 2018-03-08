@@ -13,9 +13,81 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Whackamole\Whackamole">
 <ExpandedNodeIds>
 <v>Whackamole</v>
+<v>Whackamole\Master</v>
+<v>Whackamole\Master\TopDesign</v>
+<v>Whackamole\Master\Master.cydwr</v>
+<v>Whackamole\Master\Master.cydwr\Pins</v>
+<v>Whackamole\Master\Master.cydwr\Analog</v>
+<v>Whackamole\Master\Master.cydwr\Clocks</v>
+<v>Whackamole\Master\Master.cydwr\Interrupts</v>
+<v>Whackamole\Master\Master.cydwr\System</v>
+<v>Whackamole\Master\Master.cydwr\Directives</v>
+<v>Whackamole\Master\Master.cydwr\Flash Security</v>
+<v>Whackamole\Master\Header Files</v>
+<v>Whackamole\Master\Header Files\cyapicallbacks.h</v>
+<v>Whackamole\Master\Header Files\main.h</v>
+<v>Whackamole\Master\Source Files</v>
+<v>Whackamole\Master\Source Files\main.c</v>
+<v>Whackamole\Master\Generated_Source\PSoC4</v>
+<v>Whackamole\Master\SCB_I2cCommMaster.pdf</v>
+<v>Whackamole\Slave</v>
+<v>Whackamole\Slave\TopDesign</v>
+<v>Whackamole\Slave\Slave.cydwr</v>
+<v>Whackamole\Slave\Slave.cydwr\Pins</v>
+<v>Whackamole\Slave\Slave.cydwr\Analog</v>
+<v>Whackamole\Slave\Slave.cydwr\Clocks</v>
+<v>Whackamole\Slave\Slave.cydwr\Interrupts</v>
+<v>Whackamole\Slave\Slave.cydwr\System</v>
+<v>Whackamole\Slave\Slave.cydwr\Directives</v>
+<v>Whackamole\Slave\Slave.cydwr\Flash Security</v>
+<v>Whackamole\Slave\Header Files</v>
+<v>Whackamole\Slave\Header Files\cyapicallbacks.h</v>
+<v>Whackamole\Slave\Header Files\main.h</v>
+<v>Whackamole\Slave\Source Files</v>
+<v>Whackamole\Slave\Source Files\main.c</v>
+<v>Whackamole\Slave\BCP_Master_I2cCmd.iic</v>
+<v>Whackamole\Slave\SCB_I2cCommSlave.pdf</v>
+<v>Whackamole\Whackamole</v>
+<v>Whackamole\Whackamole\TopDesign</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Pins</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Analog</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Clocks</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Interrupts</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\System</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Directives</v>
+<v>Whackamole\Whackamole\Whackamole.cydwr\Flash Security</v>
+<v>Whackamole\Whackamole\Header Files</v>
+<v>Whackamole\Whackamole\Header Files\cyapicallbacks.h</v>
+<v>Whackamole\Whackamole\Source Files</v>
+<v>Whackamole\Whackamole\Source Files\main.c</v>
+<v>Whackamole\Whackamole\Generated_Source\PSoC4</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Whackamole\Master\Source Files\main.c</v>
+<v>Whackamole\Master\Generated_Source</v>
+<v>Whackamole\Master\SCB_I2cCommMaster.pdf</v>
+<v>Whackamole\Slave</v>
+<v>Whackamole\Slave\TopDesign</v>
+<v>Whackamole\Slave\Slave.cydwr</v>
+<v>Whackamole\Slave\Slave.cydwr\Pins</v>
+<v>Whackamole\Slave\Slave.cydwr\Analog</v>
+<v>Whackamole\Slave\Slave.cydwr\Clocks</v>
+<v>Whackamole\Slave\Slave.cydwr\Interrupts</v>
+<v>Whackamole\Slave\Slave.cydwr\System</v>
+<v>Whackamole\Slave\Slave.cydwr\Directives</v>
+<v>Whackamole\Slave\Slave.cydwr\Flash Security</v>
+<v>Whackamole\Slave\Header Files</v>
+<v>Whackamole\Slave\Header Files\cyapicallbacks.h</v>
+<v>Whackamole\Slave\Header Files\main.h</v>
+<v>Whackamole\Slave\Source Files</v>
+<v>Whackamole\Slave\Source Files\main.c</v>
+<v>Whackamole\Slave\BCP_Master_I2cCmd.iic</v>
+<v>Whackamole\Slave\Generated_Source</v>
+<v>Whackamole\Slave\SCB_I2cCommSlave.pdf</v>
 <v>Whackamole\Whackamole</v>
 <v>Whackamole\Whackamole\TopDesign</v>
 <v>Whackamole\Whackamole\Whackamole.cydwr</v>
@@ -31,64 +103,186 @@
 <v>Whackamole\Whackamole\Source Files</v>
 <v>Whackamole\Whackamole\Source Files\main.c</v>
 <v>Whackamole\Whackamole\Generated_Source</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4</v>
-</ExpandedNodeIds>
-<VisibleNodeIds>
-<v>Whackamole</v>
-<v>Whackamole\Whackamole</v>
-<v>Whackamole\Whackamole\TopDesign</v>
-<v>Whackamole\Whackamole\Whackamole.cydwr</v>
-<v>Whackamole\Whackamole\Whackamole.cydwr\Pins</v>
-<v>Whackamole\Whackamole\Whackamole.cydwr\Analog</v>
-<v>Whackamole\Whackamole\Whackamole.cydwr\Clocks</v>
-<v>Whackamole\Whackamole\Whackamole.cydwr\Interrupts</v>
-<v>Whackamole\Whackamole\Whackamole.cydwr\System</v>
-<v>Whackamole\Whackamole\Whackamole.cydwr\Directives</v>
-<v>Whackamole\Whackamole\Whackamole.cydwr\Flash Security</v>
-<v>Whackamole\Whackamole\Header Files</v>
-<v>Whackamole\Whackamole\Header Files\cyapicallbacks.h</v>
-<v>Whackamole\Whackamole\Source Files</v>
-<v>Whackamole\Whackamole\Source Files\main.c</v>
-<v>Whackamole\Whackamole\Generated_Source</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\Board_LED</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\Button</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\cy_boot</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\cy_lfclk</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\S0</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\StripLights</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\StripLights_cisr</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\StripLights_fisr</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\StripLights_HFCLK</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\StripLights_StringSel</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\cycodeshareexport.ld</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\cycodeshareimport.ld</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\cycodeshareimport.scat</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\cydevice_trm.h</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\cydisabledsheets.h</v>
-<v>Whackamole\Whackamole\Generated_Source\PSoC4\cyfitter.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Whackamole</v>
+<v>Whackamole\Master</v>
+<v>Whackamole\Master\TopDesign</v>
+<v>Whackamole\Master\TopDesign\PSoC4</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4000</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4000\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4000S</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4000S\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4100S</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4100S\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200 BLE</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200 BLE\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200L</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200L\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200M</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200M\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC Analog Coprocessor</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC Analog Coprocessor\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\TopDesign.cysch</v>
+<v>Whackamole\Slave</v>
+<v>Whackamole\Slave\TopDesign</v>
+<v>Whackamole\Slave\TopDesign\PSoC4</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4000</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4000\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4000S</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4000S\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4100S</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4100S\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200 BLE</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200 BLE\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200L</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200L\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200M</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200M\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC Analog Coprocessor</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC Analog Coprocessor\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\TopDesign.cysch</v>
 <v>Whackamole\Whackamole</v>
 <v>Whackamole\Whackamole\TopDesign</v>
 <v>Whackamole\Whackamole\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Whackamole</v>
-<v>Whackamole\Whackamole</v>
-<v>Whackamole\Whackamole\TopDesign</v>
-<v>Whackamole\Whackamole\TopDesign\TopDesign.cysch</v>
+<v>Whackamole\Master</v>
+<v>Whackamole\Master\TopDesign</v>
+<v>Whackamole\Master\TopDesign\PSoC4</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4000</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4000\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4000S</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4000S\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4100S</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4100S\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200 BLE</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200 BLE\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200L</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200L\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200M</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC 4200M\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC Analog Coprocessor</v>
+<v>Whackamole\Master\TopDesign\PSoC4\PSoC Analog Coprocessor\TopDesign.ctl</v>
+<v>Whackamole\Master\TopDesign\TopDesign.cysch</v>
+<v>Whackamole\Slave</v>
+<v>Whackamole\Slave\TopDesign</v>
+<v>Whackamole\Slave\TopDesign\PSoC4</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4000</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4000\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4000S</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4000S\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4100S</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4100S\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200 BLE</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200 BLE\TopDesign.ctl</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200L</v>
+<v>Whackamole\Slave\TopDesign\PSoC4\PSoC 4200L\TopDesign.ctl</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Whackamole</v>
+<v>Whackamole\Master</v>
+<v>Whackamole\Master\CortexM0</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_BOOT.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_I2C.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_I2C_BOOT.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_I2C_INT.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_I2C_MASTER.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_SCB_IRQ.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_SCBCLK.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_scl.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_scl_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_sda.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_sda_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_GREEN.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_GREEN_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_RED.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_RED_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.elf</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.hex</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.map</v>
+<v>Whackamole\Master\Master.gpdsc</v>
+<v>Whackamole\Master\Master.rpt</v>
+<v>Whackamole\Master\Master_timing.html</v>
+<v>Whackamole\Slave</v>
+<v>Whackamole\Slave\CortexM0</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Button.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Button_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_BOOT.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C_BOOT.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C_INT.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C_SLAVE.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_SCB_IRQ.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_SCBCLK.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_scl.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_scl_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_sda.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_sda_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_BLUE.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_BLUE_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_GREEN.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_GREEN_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_RED.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_RED_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\S0.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\S0_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_cisr.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fisr.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fonts.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_HFCLK.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Slave.elf</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Slave.hex</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Slave.map</v>
+<v>Whackamole\Slave\Slave.gpdsc</v>
+<v>Whackamole\Slave\Slave.rpt</v>
+<v>Whackamole\Slave\Slave_timing.html</v>
 <v>Whackamole\Whackamole</v>
 <v>Whackamole\Whackamole\CortexM0</v>
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541</v>
@@ -97,7 +291,6 @@
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Board_LED.lst</v>
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Board_LED_PM.lst</v>
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Button.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Button_PM.lst</v>
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -107,6 +300,7 @@
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\ISR_Write.lst</v>
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\S0.lst</v>
 <v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\S0_PM.lst</v>
@@ -126,40 +320,41 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Whackamole</v>
-<v>Whackamole\Whackamole</v>
-<v>Whackamole\Whackamole\CortexM0</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Board_LED.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Board_LED_PM.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Button.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Button_PM.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\S0.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\S0_PM.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_cisr.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fisr.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fonts.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_HFCLK.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel_PM.lst</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Whackamole.elf</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Whackamole.hex</v>
-<v>Whackamole\Whackamole\CortexM0\ARM_GCC_541\Debug\Whackamole.map</v>
-<v>Whackamole\Whackamole\Whackamole.gpdsc</v>
-<v>Whackamole\Whackamole\Whackamole.rpt</v>
-<v>Whackamole\Whackamole\Whackamole_timing.html</v>
+<v>Whackamole\Master</v>
+<v>Whackamole\Master\CortexM0</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_BOOT.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_I2C.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_I2C_BOOT.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_I2C_INT.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_I2C_MASTER.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_SCB_IRQ.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_SCBCLK.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_scl.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_scl_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_sda.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CM_sda_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_GREEN.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_GREEN_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_RED.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_RED_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.elf</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.hex</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.map</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -170,12 +365,46 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Whackamole</v>
+<v>Whackamole\Master</v>
+<v>Whackamole\Master\PSoC 4 Architecture TRM</v>
+<v>Whackamole\Master\PSoC 4200 Family Datasheet</v>
+<v>Whackamole\Master\System Reference Guides</v>
+<v>Whackamole\Master\System Reference Guides\cy_boot_v5_60</v>
+<v>Whackamole\Master\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Whackamole\Master\cy_pins_v2_20</v>
+<v>Whackamole\Master\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Whackamole\Master\LED_v1_0</v>
+<v>Whackamole\Master\LED_v1_0\LED_v1_0.pdf</v>
+<v>Whackamole\Master\Power_v1_0</v>
+<v>Whackamole\Master\Power_v1_0\Power_v1_0.pdf</v>
+<v>Whackamole\Master\Resistor_v1_0</v>
+<v>Whackamole\Master\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Whackamole\Master\SCB_P4_v3_20.pdf</v>
+<v>Whackamole\Slave</v>
+<v>Whackamole\Slave\PSoC 4 Architecture TRM</v>
+<v>Whackamole\Slave\PSoC 4200 Family Datasheet</v>
+<v>Whackamole\Slave\System Reference Guides</v>
+<v>Whackamole\Slave\System Reference Guides\cy_boot_v5_60</v>
+<v>Whackamole\Slave\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Whackamole\Slave\cy_pins_v2_20</v>
+<v>Whackamole\Slave\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Whackamole\Slave\Gnd_v1_0.pdf</v>
+<v>Whackamole\Slave\LED_v1_0</v>
+<v>Whackamole\Slave\LED_v1_0\LED_v1_0.pdf</v>
+<v>Whackamole\Slave\Power_v1_0</v>
+<v>Whackamole\Slave\Power_v1_0\Power_v1_0.pdf</v>
+<v>Whackamole\Slave\Resistor_v1_0</v>
+<v>Whackamole\Slave\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Whackamole\Slave\SCB_P4_v3_20.pdf</v>
+<v>Whackamole\Slave\StripLights_v3_0.pdf</v>
 <v>Whackamole\Whackamole</v>
 <v>Whackamole\Whackamole\PSoC 4 Architecture TRM</v>
 <v>Whackamole\Whackamole\PSoC 4200 Family Datasheet</v>
 <v>Whackamole\Whackamole\System Reference Guides</v>
 <v>Whackamole\Whackamole\System Reference Guides\cy_boot_v5_60</v>
 <v>Whackamole\Whackamole\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Whackamole\Whackamole\cy_isr_v1_70.pdf</v>
+<v>Whackamole\Whackamole\cy_pins_v1_90.pdf</v>
 <v>Whackamole\Whackamole\cy_pins_v2_20</v>
 <v>Whackamole\Whackamole\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Whackamole\Whackamole\Gnd_v1_0.pdf</v>
@@ -184,17 +413,41 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Whackamole</v>
+<v>Whackamole\Master</v>
+<v>Whackamole\Master\PSoC 4 Architecture TRM</v>
+<v>Whackamole\Master\PSoC 4200 Family Datasheet</v>
+<v>Whackamole\Master\System Reference Guides</v>
+<v>Whackamole\Master\System Reference Guides\cy_boot_v5_60</v>
+<v>Whackamole\Master\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Whackamole\Master\cy_pins_v2_20</v>
+<v>Whackamole\Master\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Whackamole\Master\LED_v1_0</v>
+<v>Whackamole\Master\LED_v1_0\LED_v1_0.pdf</v>
+<v>Whackamole\Master\Power_v1_0</v>
+<v>Whackamole\Master\Power_v1_0\Power_v1_0.pdf</v>
+<v>Whackamole\Master\Resistor_v1_0</v>
+<v>Whackamole\Master\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Whackamole\Master\SCB_P4_v3_20.pdf</v>
+<v>Whackamole\Slave</v>
+<v>Whackamole\Slave\PSoC 4 Architecture TRM</v>
+<v>Whackamole\Slave\PSoC 4200 Family Datasheet</v>
+<v>Whackamole\Slave\System Reference Guides</v>
+<v>Whackamole\Slave\System Reference Guides\cy_boot_v5_60</v>
+<v>Whackamole\Slave\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Whackamole\Slave\cy_pins_v2_20</v>
+<v>Whackamole\Slave\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Whackamole\Slave\Gnd_v1_0.pdf</v>
+<v>Whackamole\Slave\LED_v1_0</v>
+<v>Whackamole\Slave\LED_v1_0\LED_v1_0.pdf</v>
+<v>Whackamole\Slave\Power_v1_0</v>
+<v>Whackamole\Slave\Power_v1_0\Power_v1_0.pdf</v>
+<v>Whackamole\Slave\Resistor_v1_0</v>
+<v>Whackamole\Slave\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Whackamole\Slave\SCB_P4_v3_20.pdf</v>
+<v>Whackamole\Slave\StripLights_v3_0.pdf</v>
 <v>Whackamole\Whackamole</v>
 <v>Whackamole\Whackamole\PSoC 4 Architecture TRM</v>
 <v>Whackamole\Whackamole\PSoC 4200 Family Datasheet</v>
-<v>Whackamole\Whackamole\System Reference Guides</v>
-<v>Whackamole\Whackamole\System Reference Guides\cy_boot_v5_60</v>
-<v>Whackamole\Whackamole\System Reference Guides\cy_lfclk_v1_20</v>
-<v>Whackamole\Whackamole\cy_pins_v2_20</v>
-<v>Whackamole\Whackamole\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Whackamole\Whackamole\Gnd_v1_0.pdf</v>
-<v>Whackamole\Whackamole\Power_v1_0.pdf</v>
-<v>Whackamole\Whackamole\StripLights_v3_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -203,6 +456,9 @@
 <dataGuid v="6c335137-fa19-46ce-bc2d-2fbeb6d5f2a2">
 <CyGuid_70084457-cd6a-4593-9ed0-7f6eeb432dc2 type_name="CyDesigner.Common.ProjMgmt.GUI.CyDependenciesCustomData" version="1">
 <dictName v=".\Whackamole.cydsn\Whackamole.cyprj">
+<listName />
+</dictName>
+<dictName v=".\SCB_I2cCommSlave01.cydsn\SCB_I2cCommSlave01.cyprj">
 <listName />
 </dictName>
 </CyGuid_70084457-cd6a-4593-9ed0-7f6eeb432dc2>
@@ -216,9 +472,16 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Whackamole.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Slave.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Slave.cydsn\main.c" />
+<name v=".\Slave.cydsn\Slave.cydwr" />
+<name v=".\Master.cydsn\Master.cydwr" />
+<name v=".\Master.cydsn\main.c" />
+<name v=".\Master.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Whackamole.cydsn\main.c" />
 <name v=".\Whackamole.cydsn\Whackamole.cydwr" />
+<name v=".\Whackamole.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Whackamole.cydsn\Generated_Source\PSoC4\Board_LED.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -226,7 +489,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1055, 495" SelectedTabbedMdiWindow="273980e7-9998-44fc-a598-105a51250775"><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\TopDesign\TopDesign.cysch" Guid="273980e7-9998-44fc-a598-105a51250775" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\main.c" Guid="51aeffae-51cc-48d8-b91f-ebeca1fa1852" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Whackamole.cydwr" Guid="4a83b723-26ea-46c8-a489-74f2b414ae0b" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f77fb5c3-ee99-4682-88d0-d4adfec42b80" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1055, 495" SelectedTabbedMdiWindow="fb8c1c9c-994f-40ed-83aa-7d94f86019f8"><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\TopDesign\TopDesign.cysch" Guid="bc510118-4a36-4bf6-9413-58153620fd08" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\main.c" Guid="68c9caa2-6af2-435c-9751-a7b9d51eebfe" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\Slave.cydwr" Guid="e3739c79-f15a-460e-ab70-2780728bb10a" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\Master.cydwr" Guid="011437dd-904e-4b85-b0a4-93756dcb2ef5" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\main.c" Guid="2e352803-8c3e-4d3a-a002-9fbe4c9fac39" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\TopDesign\TopDesign.cysch" Guid="fb8c1c9c-994f-40ed-83aa-7d94f86019f8" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\main.c" Guid="3e1285b5-7218-4ffe-af5c-221e0cd6f376" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Whackamole.cydwr" Guid="ad1a4ab8-d610-4eae-be86-b9f7264cede0" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\TopDesign\TopDesign.cysch" Guid="632b1cff-6509-45af-b931-3ac20202e538" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Generated_Source\PSoC4\Board_LED.c" Guid="2869007e-ab71-4149-be6f-7469a0d9644f" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

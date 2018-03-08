@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.125ms
+Loading plugins phase: Elapsed time ==> 0s.140ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Whackamole.cyprj -d CY8C4245AXI-483 -s C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 0s.625ms
+Elaboration phase: Elapsed time ==> 1s.000ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.031ms
+HDL generation phase: Elapsed time ==> 0s.062ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\James
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Tue Feb 27 21:03:52 2018
+Tue Mar 06 19:51:48 2018
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Whackamole.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Tue Feb 27 21:03:52 2018
+Tue Mar 06 19:51:48 2018
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\demux_v1_10\demux_v1_10.v'
@@ -90,7 +90,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\James
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Tue Feb 27 21:03:52 2018
+Tue Mar 06 19:51:48 2018
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -123,7 +123,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\James
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Tue Feb 27 21:03:52 2018
+Tue Mar 06 19:51:49 2018
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -203,8 +203,7 @@ Deleted 0 Synthesized equations/components.
 ------------------------------------------------------
 Alias Detection
 ------------------------------------------------------
-Aliasing one to tmpOE__Button_net_0
-Aliasing tmpOE__Board_LED_net_0 to tmpOE__Button_net_0
+Aliasing one to tmpOE__Board_LED_net_0
 Aliasing \StripLights:Net_7\ to zero
 Aliasing \StripLights:StringSel:clk\ to zero
 Aliasing \StripLights:StringSel:rst\ to zero
@@ -233,69 +232,70 @@ Aliasing \StripLights:B_WS2811:pwmCntl\\R\ to zero
 Aliasing \StripLights:B_WS2811:pwmCntl\\S\ to \StripLights:B_WS2811:dataOut\\R\
 Aliasing \StripLights:B_WS2811:dshifter:cs_addr_2\ to zero
 Aliasing \StripLights:B_WS2811:pwm8:cs_addr_2\ to zero
-Aliasing \StripLights:B_WS2811:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ to tmpOE__Button_net_0
-Aliasing tmpOE__S0_net_0 to tmpOE__Button_net_0
-Removing Lhs of wire one[6] = tmpOE__Button_net_0[1]
-Removing Lhs of wire tmpOE__Board_LED_net_0[9] = tmpOE__Button_net_0[1]
-Removing Lhs of wire \StripLights:Net_7\[18] = zero[2]
-Removing Rhs of wire \StripLights:saddr_3\[26] = \StripLights:StringSel:control_out_3\[67]
-Removing Rhs of wire \StripLights:saddr_3\[26] = \StripLights:StringSel:control_3\[81]
-Removing Rhs of wire \StripLights:saddr_2\[27] = \StripLights:StringSel:control_out_2\[66]
-Removing Rhs of wire \StripLights:saddr_2\[27] = \StripLights:StringSel:control_2\[82]
-Removing Rhs of wire \StripLights:saddr_1\[28] = \StripLights:StringSel:control_out_1\[65]
-Removing Rhs of wire \StripLights:saddr_1\[28] = \StripLights:StringSel:control_1\[83]
-Removing Rhs of wire \StripLights:saddr_0\[29] = \StripLights:StringSel:control_out_0\[64]
-Removing Rhs of wire \StripLights:saddr_0\[29] = \StripLights:StringSel:control_0\[84]
-Removing Rhs of wire \StripLights:Net_64\[30] = \StripLights:B_WS2811:dataOut\[91]
-Removing Rhs of wire Net_4[46] = \StripLights:demux_1:tmp__demux_1_0_reg\[25]
-Removing Lhs of wire \StripLights:StringSel:clk\[62] = zero[2]
-Removing Lhs of wire \StripLights:StringSel:rst\[63] = zero[2]
-Removing Rhs of wire \StripLights:B_WS2811:status_7\[102] = \StripLights:B_WS2811:enable\[110]
-Removing Lhs of wire \StripLights:B_WS2811:status_7\[102] = \StripLights:B_WS2811:control_0\[100]
-Removing Rhs of wire \StripLights:B_WS2811:status_6\[103] = \StripLights:B_WS2811:xferCmpt\[118]
-Removing Lhs of wire \StripLights:B_WS2811:status_5\[104] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:status_4\[105] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:status_3\[106] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:status_2\[107] = zero[2]
-Removing Rhs of wire \StripLights:B_WS2811:status_1\[108] = \StripLights:B_WS2811:fifoNotFull\[117]
-Removing Rhs of wire \StripLights:B_WS2811:status_0\[109] = \StripLights:B_WS2811:fifoEmpty\[116]
-Removing Lhs of wire \StripLights:B_WS2811:fifo_irq_en\[113] = \StripLights:B_WS2811:control_3\[97]
-Removing Lhs of wire \StripLights:B_WS2811:xfrCmpt_irq_en\[114] = \StripLights:B_WS2811:control_4\[96]
-Removing Lhs of wire \StripLights:B_WS2811:next_row\[115] = \StripLights:B_WS2811:control_5\[95]
-Removing Lhs of wire \StripLights:B_WS2811:add_vv_vv_MODGEN_1_2\[122] = \StripLights:B_WS2811:MODULE_1:g2:a0:s_2\[222]
-Removing Lhs of wire \StripLights:B_WS2811:add_vv_vv_MODGEN_1_1\[124] = \StripLights:B_WS2811:MODULE_1:g2:a0:s_1\[223]
-Removing Lhs of wire \StripLights:B_WS2811:add_vv_vv_MODGEN_1_0\[126] = \StripLights:B_WS2811:MODULE_1:g2:a0:s_0\[224]
-Removing Lhs of wire \StripLights:B_WS2811:dataOut\\R\[131] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:dataOut\\S\[132] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:xferCmpt\\R\[133] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:xferCmpt\\S\[134] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:bitCount_2\\R\[135] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:bitCount_2\\S\[136] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:state_1\\R\[137] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:state_1\\S\[138] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:state_0\\R\[139] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:state_0\\S\[140] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:bitCount_1\\R\[141] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:bitCount_1\\S\[142] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:bitCount_0\\R\[143] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:bitCount_0\\S\[144] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:dpAddr_1\\R\[145] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:dpAddr_1\\S\[146] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:dpAddr_0\\R\[147] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:dpAddr_0\\S\[148] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:pwmCntl\\R\[149] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:pwmCntl\\S\[150] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:dshifter:cs_addr_2\[152] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:pwm8:cs_addr_2\[183] = zero[2]
-Removing Lhs of wire \StripLights:B_WS2811:MODULE_1:g2:a0:a_2\[213] = \StripLights:B_WS2811:MODIN1_2\[214]
-Removing Lhs of wire \StripLights:B_WS2811:MODIN1_2\[214] = \StripLights:B_WS2811:bitCount_2\[119]
-Removing Lhs of wire \StripLights:B_WS2811:MODULE_1:g2:a0:a_1\[215] = \StripLights:B_WS2811:MODIN1_1\[216]
-Removing Lhs of wire \StripLights:B_WS2811:MODIN1_1\[216] = \StripLights:B_WS2811:bitCount_1\[123]
-Removing Lhs of wire \StripLights:B_WS2811:MODULE_1:g2:a0:a_0\[217] = \StripLights:B_WS2811:MODIN1_0\[218]
-Removing Lhs of wire \StripLights:B_WS2811:MODIN1_0\[218] = \StripLights:B_WS2811:bitCount_0\[125]
-Removing Lhs of wire \StripLights:B_WS2811:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[227] = tmpOE__Button_net_0[1]
-Removing Lhs of wire \StripLights:B_WS2811:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[228] = tmpOE__Button_net_0[1]
-Removing Lhs of wire tmpOE__S0_net_0[232] = tmpOE__Button_net_0[1]
+Aliasing \StripLights:B_WS2811:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ to tmpOE__Board_LED_net_0
+Aliasing tmpOE__S0_net_0 to tmpOE__Board_LED_net_0
+Aliasing tmpOE__Button_net_0 to tmpOE__Board_LED_net_0
+Removing Lhs of wire one[6] = tmpOE__Board_LED_net_0[1]
+Removing Lhs of wire \StripLights:Net_7\[12] = zero[2]
+Removing Rhs of wire \StripLights:saddr_3\[20] = \StripLights:StringSel:control_out_3\[61]
+Removing Rhs of wire \StripLights:saddr_3\[20] = \StripLights:StringSel:control_3\[75]
+Removing Rhs of wire \StripLights:saddr_2\[21] = \StripLights:StringSel:control_out_2\[60]
+Removing Rhs of wire \StripLights:saddr_2\[21] = \StripLights:StringSel:control_2\[76]
+Removing Rhs of wire \StripLights:saddr_1\[22] = \StripLights:StringSel:control_out_1\[59]
+Removing Rhs of wire \StripLights:saddr_1\[22] = \StripLights:StringSel:control_1\[77]
+Removing Rhs of wire \StripLights:saddr_0\[23] = \StripLights:StringSel:control_out_0\[58]
+Removing Rhs of wire \StripLights:saddr_0\[23] = \StripLights:StringSel:control_0\[78]
+Removing Rhs of wire \StripLights:Net_64\[24] = \StripLights:B_WS2811:dataOut\[85]
+Removing Rhs of wire Net_4[40] = \StripLights:demux_1:tmp__demux_1_0_reg\[19]
+Removing Lhs of wire \StripLights:StringSel:clk\[56] = zero[2]
+Removing Lhs of wire \StripLights:StringSel:rst\[57] = zero[2]
+Removing Rhs of wire \StripLights:B_WS2811:status_7\[96] = \StripLights:B_WS2811:enable\[104]
+Removing Lhs of wire \StripLights:B_WS2811:status_7\[96] = \StripLights:B_WS2811:control_0\[94]
+Removing Rhs of wire \StripLights:B_WS2811:status_6\[97] = \StripLights:B_WS2811:xferCmpt\[112]
+Removing Lhs of wire \StripLights:B_WS2811:status_5\[98] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:status_4\[99] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:status_3\[100] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:status_2\[101] = zero[2]
+Removing Rhs of wire \StripLights:B_WS2811:status_1\[102] = \StripLights:B_WS2811:fifoNotFull\[111]
+Removing Rhs of wire \StripLights:B_WS2811:status_0\[103] = \StripLights:B_WS2811:fifoEmpty\[110]
+Removing Lhs of wire \StripLights:B_WS2811:fifo_irq_en\[107] = \StripLights:B_WS2811:control_3\[91]
+Removing Lhs of wire \StripLights:B_WS2811:xfrCmpt_irq_en\[108] = \StripLights:B_WS2811:control_4\[90]
+Removing Lhs of wire \StripLights:B_WS2811:next_row\[109] = \StripLights:B_WS2811:control_5\[89]
+Removing Lhs of wire \StripLights:B_WS2811:add_vv_vv_MODGEN_1_2\[116] = \StripLights:B_WS2811:MODULE_1:g2:a0:s_2\[216]
+Removing Lhs of wire \StripLights:B_WS2811:add_vv_vv_MODGEN_1_1\[118] = \StripLights:B_WS2811:MODULE_1:g2:a0:s_1\[217]
+Removing Lhs of wire \StripLights:B_WS2811:add_vv_vv_MODGEN_1_0\[120] = \StripLights:B_WS2811:MODULE_1:g2:a0:s_0\[218]
+Removing Lhs of wire \StripLights:B_WS2811:dataOut\\R\[125] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:dataOut\\S\[126] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:xferCmpt\\R\[127] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:xferCmpt\\S\[128] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:bitCount_2\\R\[129] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:bitCount_2\\S\[130] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:state_1\\R\[131] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:state_1\\S\[132] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:state_0\\R\[133] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:state_0\\S\[134] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:bitCount_1\\R\[135] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:bitCount_1\\S\[136] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:bitCount_0\\R\[137] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:bitCount_0\\S\[138] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:dpAddr_1\\R\[139] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:dpAddr_1\\S\[140] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:dpAddr_0\\R\[141] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:dpAddr_0\\S\[142] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:pwmCntl\\R\[143] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:pwmCntl\\S\[144] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:dshifter:cs_addr_2\[146] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:pwm8:cs_addr_2\[177] = zero[2]
+Removing Lhs of wire \StripLights:B_WS2811:MODULE_1:g2:a0:a_2\[207] = \StripLights:B_WS2811:MODIN1_2\[208]
+Removing Lhs of wire \StripLights:B_WS2811:MODIN1_2\[208] = \StripLights:B_WS2811:bitCount_2\[113]
+Removing Lhs of wire \StripLights:B_WS2811:MODULE_1:g2:a0:a_1\[209] = \StripLights:B_WS2811:MODIN1_1\[210]
+Removing Lhs of wire \StripLights:B_WS2811:MODIN1_1\[210] = \StripLights:B_WS2811:bitCount_1\[117]
+Removing Lhs of wire \StripLights:B_WS2811:MODULE_1:g2:a0:a_0\[211] = \StripLights:B_WS2811:MODIN1_0\[212]
+Removing Lhs of wire \StripLights:B_WS2811:MODIN1_0\[212] = \StripLights:B_WS2811:bitCount_0\[119]
+Removing Lhs of wire \StripLights:B_WS2811:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[221] = tmpOE__Board_LED_net_0[1]
+Removing Lhs of wire \StripLights:B_WS2811:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[222] = tmpOE__Board_LED_net_0[1]
+Removing Lhs of wire tmpOE__S0_net_0[226] = tmpOE__Board_LED_net_0[1]
+Removing Lhs of wire tmpOE__Button_net_0[234] = tmpOE__Board_LED_net_0[1]
 
 ------------------------------------------------------
 Aliased 0 equations, 61 wires.
@@ -307,8 +307,8 @@ Circuit simplification
 
 Substituting virtuals - pass 1:
 
-Note:  Expanding virtual equation for 'tmpOE__Button_net_0' (cost = 0):
-tmpOE__Button_net_0 <=  ('1') ;
+Note:  Expanding virtual equation for 'tmpOE__Board_LED_net_0' (cost = 0):
+tmpOE__Board_LED_net_0 <=  ('1') ;
 
 Note:  Expanding virtual equation for '\StripLights:B_WS2811:zeroBit\' (cost = 0):
 \StripLights:B_WS2811:zeroBit\ <= (not \StripLights:B_WS2811:zeroCmp\);
@@ -372,14 +372,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Whackamole.cyprj" -dcpsoc3 Whackamole.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.059ms
+Warp synthesis phase: Elapsed time ==> 1s.515ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.1.0.3210, Family: PSoC3, Started at: Tuesday, 27 February 2018 21:03:53
+cyp3fit: V4.1.0.3210, Family: PSoC3, Started at: Tuesday, 06 March 2018 19:51:49
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Whackamole.cyprj -d CY8C4245AXI-483 Whackamole.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.008ms
+Design parsing phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -406,45 +406,6 @@ Design Equations
     ------------------------------------------------------------
     Pin listing
     ------------------------------------------------------------
-
-    Pin : Name = Button(0)
-        Attributes:
-            In Group/Port: True
-            In Sync Option: NOSYNC
-            Out Sync Option: AUTO
-            Interrupt generated: False
-            Interrupt mode: NONE
-            Drive mode: RES_PULL_UP
-            VTrip: CMOS
-            Slew: FAST
-            Input Sync needed: False
-            Output Sync needed: False
-            SC shield enabled: False
-            POR State: ANY
-            LCD Mode: COMMON
-            Register Mode: RegComb
-            CaSense Mode: NEITHER
-            Treat as pin: True
-            Is OE Registered: False
-            Uses Analog: False
-            Can contain Digital: True
-            Is SIO: False
-            SIO Output Buf: NONREGULATED
-            SIO Input Buf: SINGLE_ENDED
-            SIO HiFreq: LOW
-            SIO Hyst: DISABLED
-            SIO Vtrip: MULTIPLIER_0_5
-            SIO Multiplier Index: 0
-            SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL
-            Initial Value: 1
-            IO Voltage: 0
-        PORT MAP (
-            pa_out => Button(0)__PA ,
-            pad => Button(0)_PAD );
-        Properties:
-        {
-        }
 
     Pin : Name = Board_LED(0)
         Attributes:
@@ -476,7 +437,7 @@ Design Equations
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
             Required Capabilities: DIGITAL
-            Initial Value: 0
+            Initial Value: 1
             IO Voltage: 0
         PORT MAP (
             pa_out => Board_LED(0)__PA ,
@@ -522,6 +483,45 @@ Design Equations
             pin_input => Net_4 ,
             annotation => Net_1 ,
             pad => S0(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = Button(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: SYNC
+            Out Sync Option: AUTO
+            Interrupt generated: True
+            Interrupt mode: FALLING
+            Drive mode: RES_PULL_UP
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: True
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: False
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL, ROUTABLE, PORT_INTERRUPT
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => Button(0)__PA ,
+            pad => Button(0)_PAD );
         Properties:
         {
         }
@@ -920,6 +920,15 @@ Design Equations
             int_type = "00"
             is_nmi = 0
         }
+
+    interrupt: Name =ISR_Write
+        PORT MAP (
+            interrupt => Net_23 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
     </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Technology mapping summary" expanded>
@@ -931,7 +940,7 @@ Technology mapping summary
 Resource Type                 : Used : Free :  Max :  % Used
 ============================================================
 Digital Clocks                :    1 :    3 :    4 : 25.00 %
-Interrupts                    :    2 :   30 :   32 :  6.25 %
+Interrupts                    :    3 :   29 :   32 :  9.38 %
 IO                            :    5 :   31 :   36 : 13.89 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CapSense                      :    0 :    1 :    1 :  0.00 %
@@ -954,8 +963,8 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    1 :    1 :  0.00 %
   8-bit IDAC                  :    0 :    1 :    1 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.093ms
-Tech Mapping phase: Elapsed time ==> 0s.117ms
+Technology Mapping: Elapsed time ==> 0s.140ms
+Tech Mapping phase: Elapsed time ==> 0s.172ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -963,21 +972,21 @@ Tech Mapping phase: Elapsed time ==> 0s.117ms
 
 Cell                                : Block                              
 =========================================================================
-Button(0)                           : [IOP=(0)][IoId=(7)]                
 Board_LED(0)                        : [IOP=(0)][IoId=(2)]                
 S0(0)                               : [IOP=(0)][IoId=(4)]                
+Button(0)                           : [IOP=(0)][IoId=(7)]                
 ClockGenBlock                       : CLK_GEN_[FFB(CLK_GEN,0)]           
 
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Elapsed time ==> 0.1351559s
+Elapsed time ==> 0.1849740s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.265ms
+Analog Placement phase: Elapsed time ==> 0s.374ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0007032 secs
+Route success=True, Iterations=1 Elapsed=0.0010251 secs
 </CYPRESSTAG>
 Analog Routing phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
@@ -994,7 +1003,7 @@ Analog Code Generation phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.2 sec.
+I2076: Total run-time: 0.4 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -1087,7 +1096,7 @@ controlcell: Name =\StripLights:StringSel:Sync:ctrl_reg\
     Clock Enable: True
 
 UDB [UDB=(1,0)] contents:
-LAB@[UDB=(1,0)][LB=0] #macrocells=3, #inputs=10, #pterms=8
+LAB@[UDB=(1,0)][LB=0] #macrocells=3, #inputs=9, #pterms=8
 {
     [McSlotId=0]:     MacroCell: Name=\StripLights:B_WS2811:state_1\, Mode=(D-Register) @ [UDB=(1,0)][LB=0][MC=0]
         Total # of inputs        : 9
@@ -1139,20 +1148,20 @@ LAB@[UDB=(1,0)][LB=0] #macrocells=3, #inputs=10, #pterms=8
         {
         }
 
-    [McSlotId=2]:     MacroCell: Name=\StripLights:B_WS2811:dpAddr_0\, Mode=(D-Register) @ [UDB=(1,0)][LB=0][MC=2]
-        Total # of inputs        : 3
+    [McSlotId=2]:     MacroCell: Name=\StripLights:B_WS2811:bitCount_0\, Mode=(T-Register) @ [UDB=(1,0)][LB=0][MC=2]
+        Total # of inputs        : 4
         Total # of product terms : 2
         List of special equations: 
             Clock  = (\StripLights:Net_18_digital\) => Global
             Clock Enable: True
         Main Equation            : 2 pterms
         (
-              !\StripLights:B_WS2811:state_1\ * 
-              \StripLights:B_WS2811:state_0\
-            + \StripLights:B_WS2811:state_0\ * 
-              \StripLights:B_WS2811:dpAddr_0\
+              \StripLights:B_WS2811:pwmTC\ * \StripLights:B_WS2811:state_1\ * 
+              !\StripLights:B_WS2811:state_0\
+            + !\StripLights:B_WS2811:state_1\ * 
+              \StripLights:B_WS2811:bitCount_0\
         );
-        Output = \StripLights:B_WS2811:dpAddr_0\ (fanout=2)
+        Output = \StripLights:B_WS2811:bitCount_0\ (fanout=6)
         Properties               : 
         {
         }
@@ -1160,7 +1169,7 @@ LAB@[UDB=(1,0)][LB=0] #macrocells=3, #inputs=10, #pterms=8
     [McSlotId=3]: (empty)
 }
 
-LAB@[UDB=(1,0)][LB=1] #macrocells=3, #inputs=12, #pterms=6
+LAB@[UDB=(1,0)][LB=1] #macrocells=3, #inputs=11, #pterms=7
 {
     [McSlotId=0]:     MacroCell: Name=\StripLights:B_WS2811:dpAddr_1\, Mode=(D-Register) @ [UDB=(1,0)][LB=1][MC=0]
         Total # of inputs        : 7
@@ -1188,7 +1197,25 @@ LAB@[UDB=(1,0)][LB=1] #macrocells=3, #inputs=12, #pterms=6
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\StripLights:Net_159\, Mode=(Combinatorial) @ [UDB=(1,0)][LB=1][MC=1]
+    [McSlotId=1]:     MacroCell: Name=\StripLights:B_WS2811:dpAddr_0\, Mode=(D-Register) @ [UDB=(1,0)][LB=1][MC=1]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\StripLights:Net_18_digital\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\StripLights:B_WS2811:state_1\ * 
+              \StripLights:B_WS2811:state_0\
+            + \StripLights:B_WS2811:state_0\ * 
+              \StripLights:B_WS2811:dpAddr_0\
+        );
+        Output = \StripLights:B_WS2811:dpAddr_0\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\StripLights:Net_159\, Mode=(Combinatorial) @ [UDB=(1,0)][LB=1][MC=2]
         Total # of inputs        : 3
         Total # of product terms : 1
             Clock Enable: True
@@ -1199,21 +1226,6 @@ LAB@[UDB=(1,0)][LB=1] #macrocells=3, #inputs=12, #pterms=6
               \StripLights:B_WS2811:status_0\
         );
         Output = \StripLights:Net_159\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=Net_5, Mode=(Combinatorial) @ [UDB=(1,0)][LB=1][MC=2]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \StripLights:B_WS2811:control_4\ * 
-              \StripLights:B_WS2811:control_0\ * 
-              \StripLights:B_WS2811:status_6\
-        );
-        Output = Net_5 (fanout=1)
         Properties               : 
         {
         }
@@ -1290,7 +1302,7 @@ controlcell: Name =\StripLights:B_WS2811:ctrl\
     Clock Enable: True
 
 UDB [UDB=(1,1)] contents:
-LAB@[UDB=(1,1)][LB=0] #macrocells=4, #inputs=9, #pterms=8
+LAB@[UDB=(1,1)][LB=0] #macrocells=4, #inputs=11, #pterms=7
 {
     [McSlotId=0]:     MacroCell: Name=\StripLights:B_WS2811:pwmCntl\, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=0]
         Total # of inputs        : 5
@@ -1348,20 +1360,17 @@ LAB@[UDB=(1,1)][LB=0] #macrocells=4, #inputs=9, #pterms=8
         {
         }
 
-    [McSlotId=3]:     MacroCell: Name=\StripLights:B_WS2811:bitCount_0\, Mode=(T-Register) @ [UDB=(1,1)][LB=0][MC=3]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (\StripLights:Net_18_digital\) => Global
+    [McSlotId=3]:     MacroCell: Name=Net_5, Mode=(Combinatorial) @ [UDB=(1,1)][LB=0][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 1
             Clock Enable: True
-        Main Equation            : 2 pterms
+        Main Equation            : 1 pterm
         (
-              \StripLights:B_WS2811:pwmTC\ * \StripLights:B_WS2811:state_1\ * 
-              !\StripLights:B_WS2811:state_0\
-            + !\StripLights:B_WS2811:state_1\ * 
-              \StripLights:B_WS2811:bitCount_0\
+              \StripLights:B_WS2811:control_4\ * 
+              \StripLights:B_WS2811:control_0\ * 
+              \StripLights:B_WS2811:status_6\
         );
-        Output = \StripLights:B_WS2811:bitCount_0\ (fanout=6)
+        Output = Net_5 (fanout=1)
         Properties               : 
         {
         }
@@ -1452,6 +1461,15 @@ datapathcell: Name =\StripLights:B_WS2811:pwm8:u0\
 
 Intr container @ [IntrContainer=(0)]: 
   Intr@ [IntrContainer=(0)][IntrId=(0)] 
+    interrupt: Name =ISR_Write
+        PORT MAP (
+            interrupt => Net_23 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(1)] 
     interrupt: Name =\StripLights:cisr\
         PORT MAP (
             interrupt => Net_5 );
@@ -1469,7 +1487,74 @@ Intr container @ [IntrContainer=(0)]:
             int_type = "00"
             is_nmi = 0
         }
-Port 0 contains the following IO cells:
+Port 0 generates interrupt for logical port:
+    logicalport: Name =Button
+        PORT MAP (
+            in_clock_en => tmpOE__Board_LED_net_0 ,
+            in_reset => zero ,
+            out_clock_en => tmpOE__Board_LED_net_0 ,
+            out_reset => zero ,
+            interrupt => Net_23 ,
+            in_clock => ClockBlock_HFClk );
+        Properties:
+        {
+            drive_mode = "010"
+            ibuf_enabled = "1"
+            id = "1425177d-0d0e-4468-8bcc-e638e5509a9b"
+            init_dr_st = "1"
+            input_buffer_sel = ""
+            input_clk_en = 0
+            input_sync = "1"
+            input_sync_mode = "0"
+            intr_mode = "10"
+            invert_in_clock = 0
+            invert_in_clock_en = 0
+            invert_in_reset = 0
+            invert_out_clock = 0
+            invert_out_clock_en = 0
+            invert_out_reset = 0
+            io_voltage = ""
+            layout_mode = "CONTIGUOUS"
+            oe_conn = "0"
+            oe_reset = 0
+            oe_sync = "0"
+            output_clk_en = 0
+            output_clock_mode = "0"
+            output_conn = "0"
+            output_mode = "0"
+            output_reset = 0
+            output_sync = "0"
+            ovt_hyst_trim = ""
+            ovt_needed = ""
+            ovt_slew_control = ""
+            pa_in_clock = -1
+            pa_in_clock_en = -1
+            pa_in_reset = -1
+            pa_out_clock = -1
+            pa_out_clock_en = -1
+            pa_out_reset = -1
+            pin_aliases = ""
+            pin_mode = "I"
+            por_state = 4
+            port_alias_group = ""
+            port_alias_required = 0
+            sio_group_cnt = 0
+            sio_hifreq = ""
+            sio_hyst = "0"
+            sio_ibuf = "00000000"
+            sio_info = "00"
+            sio_obuf = "00000000"
+            sio_refsel = "00000000"
+            sio_vohsel = ""
+            sio_vtrip = "00000000"
+            slew_rate = "0"
+            spanning = 0
+            sw_only = 0
+            use_annotation = "1"
+            vtrip = "00"
+            width = 1
+        }
+    and contains the following IO cells:
 [IoId=2]: 
 Pin : Name = Board_LED(0)
     Attributes:
@@ -1501,7 +1586,7 @@ Pin : Name = Board_LED(0)
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
         Required Capabilities: DIGITAL
-        Initial Value: 0
+        Initial Value: 1
         IO Voltage: 0
     PORT MAP (
         pa_out => Board_LED(0)__PA ,
@@ -1556,21 +1641,21 @@ Pin : Name = S0(0)
 Pin : Name = Button(0)
     Attributes:
         In Group/Port: True
-        In Sync Option: NOSYNC
+        In Sync Option: SYNC
         Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
+        Interrupt generated: True
+        Interrupt mode: FALLING
         Drive mode: RES_PULL_UP
         VTrip: CMOS
         Slew: FAST
-        Input Sync needed: False
+        Input Sync needed: True
         Output Sync needed: False
         SC shield enabled: False
         POR State: ANY
         LCD Mode: COMMON
         Register Mode: RegComb
         CaSense Mode: NEITHER
-        Treat as pin: True
+        Treat as pin: False
         Is OE Registered: False
         Uses Analog: False
         Can contain Digital: True
@@ -1582,7 +1667,7 @@ Pin : Name = Button(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL
+        Required Capabilities: DIGITAL, ROUTABLE, PORT_INTERRUPT
         Initial Value: 1
         IO Voltage: 0
     PORT MAP (
@@ -1648,38 +1733,38 @@ Port | Pin | Fixed |      Type |       Drive Mode |         Name | Connections
 -----+-----+-------+-----------+------------------+--------------+------------
    0 |   2 |     * |      NONE |         CMOS_OUT | Board_LED(0) | 
      |   4 |     * |      NONE |         CMOS_OUT |        S0(0) | In(Net_4)
-     |   7 |     * |      NONE |      RES_PULL_UP |    Button(0) | 
+     |   7 |     * |   FALLING |      RES_PULL_UP |    Button(0) | 
 ------------------------------------------------------------------------------
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.015ms
-Digital Placement phase: Elapsed time ==> 0s.473ms
+Digital component placer commit/Report: Elapsed time ==> 0s.031ms
+Digital Placement phase: Elapsed time ==> 0s.718ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\dev\psoc4/psoc4a/route_arch-rrg.cydata" --vh2-path "Whackamole_r.vh2" --pcf-path "Whackamole.pco" --des-name "Whackamole" --dsf-path "Whackamole.dsf" --sdc-path "Whackamole.sdc" --lib-path "Whackamole_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.604ms
+Digital Routing phase: Elapsed time ==> 0s.953ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.156ms
+Bitstream Generation phase: Elapsed time ==> 0s.218ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.015ms
+Bitstream Verification phase: Elapsed time ==> 0s.031ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Whackamole_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.241ms
+Static timing analysis phase: Elapsed time ==> 0s.281ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.193ms
+Design database save phase: Elapsed time ==> 0s.249ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 2s.128ms
+cydsfit: Elapsed time ==> 3s.078ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 2s.128ms
-API generation phase: Elapsed time ==> 1s.001ms
-Dependency generation phase: Elapsed time ==> 0s.015ms
-Cleanup phase: Elapsed time ==> 0s.015ms
+Fitter phase: Elapsed time ==> 3s.078ms
+API generation phase: Elapsed time ==> 1s.375ms
+Dependency generation phase: Elapsed time ==> 0s.031ms
+Cleanup phase: Elapsed time ==> 0s.000ms
