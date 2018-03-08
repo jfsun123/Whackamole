@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
   28:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x00, 0x00, 0x00, 0x00,// (space)
   29:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x00, 0x5F, 0x00, 0x00,// !
   30:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x07, 0x00, 0x07, 0x00,// "
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 2
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 2
 
 
   31:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x14, 0x7F, 0x14, 0x7F, 0x14,// #
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
   85:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x03, 0x04, 0x78, 0x04, 0x03,// Y
   86:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x61, 0x51, 0x49, 0x45, 0x43,// Z
   87:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x00, 0x7F, 0x41, 0x41,// [
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 3
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 3
 
 
   88:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x02, 0x04, 0x08, 0x10, 0x20,// "\"
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
   28              		.loc 1 141 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 4
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 4
 
 
   31              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
   71 0034 1A60     		str	r2, [r3]
   72              	.L1:
  156:Generated_Source\PSoC4/StripLights_fonts.c ****            break;
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 5
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 5
 
 
  157:Generated_Source\PSoC4/StripLights_fonts.c ****     }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  189:Generated_Source\PSoC4/StripLights_fonts.c ****         if(fg == StripLights_COLORWHEEL_FONT)
  190:Generated_Source\PSoC4/StripLights_fonts.c ****         {
  191:Generated_Source\PSoC4/StripLights_fonts.c ****             StripLights_PutChar(xpos, ypos, theString[strPos], StripLights_ColorInc(1), bg);
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 6
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 6
 
 
  192:Generated_Source\PSoC4/StripLights_fonts.c ****         }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  106              		.cfi_offset 14, -4
  107 0002 5F46     		mov	r7, fp
  108 0004 5646     		mov	r6, r10
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 7
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 7
 
 
  109 0006 4D46     		mov	r5, r9
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  252:Generated_Source\PSoC4/StripLights_fonts.c ****             if((y >= 0) && (x >= 0))
  146              		.loc 1 252 0
  147 0030 002D     		cmp	r5, #0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 8
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 8
 
 
  148 0032 16DB     		blt	.L10
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  250:Generated_Source\PSoC4/StripLights_fonts.c ****         {
  188              		.loc 1 250 0 discriminator 2
  189 0066 0135     		adds	r5, r5, #1
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 9
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 9
 
 
  190              	.LVL16:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  237              		.align	2
  238              		.global	StripLights_PrintString
  239              		.code	16
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 10
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 10
 
 
  240              		.thumb_func
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  290 0030 FFF7FEFF 		bl	StripLights_PutChar
  291              	.LVL31:
  292 0034 06E0     		b	.L20
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 11
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 11
 
 
  293              	.L19:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  339 0074 5E5D     		ldrb	r6, [r3, r5]
  340 0076 002E     		cmp	r6, #0
  341 0078 CED1     		bne	.L22
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 12
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 12
 
 
  342              	.LVL37:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  393 0002 00       		.byte	0
  394 0003 00       		.byte	0
  395 0004 00       		.byte	0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 13
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 13
 
 
  396 0005 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  450 003b 08       		.byte	8
  451 003c 00       		.byte	0
  452 003d 50       		.byte	80
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 14
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 14
 
 
  453 003e 30       		.byte	48
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  507 0074 71       		.byte	113
  508 0075 09       		.byte	9
  509 0076 05       		.byte	5
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 15
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 15
 
 
  510 0077 03       		.byte	3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  564 00ad 49       		.byte	73
  565 00ae 36       		.byte	54
  566 00af 3E       		.byte	62
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 16
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 16
 
 
  567 00b0 41       		.byte	65
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  621 00e6 7F       		.byte	127
  622 00e7 04       		.byte	4
  623 00e8 08       		.byte	8
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 17
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 17
 
 
  624 00e9 10       		.byte	16
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  678 011f 78       		.byte	120
  679 0120 04       		.byte	4
  680 0121 03       		.byte	3
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 18
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 18
 
 
  681 0122 61       		.byte	97
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  735 0158 7F       		.byte	127
  736 0159 38       		.byte	56
  737 015a 54       		.byte	84
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 19
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 19
 
 
  738 015b 54       		.byte	84
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  792 0191 14       		.byte	20
  793 0192 14       		.byte	20
  794 0193 14       		.byte	20
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 20
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 20
 
 
  795 0194 08       		.byte	8
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  849 01ca 41       		.byte	65
  850 01cb 00       		.byte	0
  851 01cc 00       		.byte	0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 21
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 21
 
 
  852 01cd 00       		.byte	0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  906 0042 04       		.byte	0x4
  907 0043 05       		.byte	0x5
  908 0044 6C020000 		.4byte	.LASF4
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 22
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 22
 
 
  909 0048 02       		.uleb128 0x2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  963 00ae 7A020000 		.4byte	.LASF16
  964 00b2 05       		.uleb128 0x5
  965 00b3 04       		.byte	0x4
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 23
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 23
 
 
  966 00b4 9D000000 		.4byte	0x9d
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1020 0130 E9       		.byte	0xe9
  1021 0131 77000000 		.4byte	0x77
  1022 0135 02       		.uleb128 0x2
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 24
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 24
 
 
  1023 0136 91       		.byte	0x91
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1077 01a6 0E       		.uleb128 0xe
  1078 01a7 01       		.uleb128 0x1
  1079 01a8 52       		.byte	0x52
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 25
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 25
 
 
  1080 01a9 03       		.uleb128 0x3
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1134 0209 9E010000 		.4byte	.LLST12
  1135 020d 09       		.uleb128 0x9
  1136 020e 666700   		.ascii	"fg\000"
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 26
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 26
 
 
  1137 0211 01       		.byte	0x1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1191 0276 02       		.uleb128 0x2
  1192 0277 76       		.byte	0x76
  1193 0278 00       		.sleb128 0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 27
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 27
 
 
  1194 0279 0E       		.uleb128 0xe
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1248 02c1 00       		.sleb128 0
  1249 02c2 0E       		.uleb128 0xe
  1250 02c3 01       		.uleb128 0x1
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 28
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 28
 
 
  1251 02c4 51       		.byte	0x51
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1305 0303 0D030000 		.4byte	0x30d
  1306 0307 05       		.uleb128 0x5
  1307 0308 03       		.byte	0x3
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 29
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 29
 
 
  1308 0309 00000000 		.4byte	StripLights_fontPtr
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1362 0382 A4020000 		.4byte	.LASF35
  1363 0386 03       		.byte	0x3
  1364 0387 25       		.byte	0x25
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 30
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 30
 
 
  1365 0388 14       		.uleb128 0x14
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1419 002e 3A       		.uleb128 0x3a
  1420 002f 0B       		.uleb128 0xb
  1421 0030 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 31
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 31
 
 
  1422 0031 05       		.uleb128 0x5
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1476 0068 08       		.uleb128 0x8
  1477 0069 05       		.uleb128 0x5
  1478 006a 00       		.byte	0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 32
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 32
 
 
  1479 006b 03       		.uleb128 0x3
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1533 00a1 17       		.uleb128 0x17
  1534 00a2 00       		.byte	0
  1535 00a3 00       		.byte	0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 33
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 33
 
 
  1536 00a4 0C       		.uleb128 0xc
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1590 00e1 13       		.uleb128 0x13
  1591 00e2 3F       		.uleb128 0x3f
  1592 00e3 19       		.uleb128 0x19
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 34
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 34
 
 
  1593 00e4 02       		.uleb128 0x2
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1647 000b 30000000 		.4byte	.LVL7
  1648 000f 9C000000 		.4byte	.LFE34
  1649 0013 0400     		.2byte	0x4
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 35
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 35
 
 
  1650 0015 F3       		.byte	0xf3
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1704 0097 30000000 		.4byte	.LVL7
  1705 009b 80000000 		.4byte	.LVL22
  1706 009f 0100     		.2byte	0x1
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 36
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 36
 
 
  1707 00a1 56       		.byte	0x56
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1761 0133 00000000 		.4byte	0
  1762 0137 00000000 		.4byte	0
  1763              	.LLST8:
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 37
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 37
 
 
  1764 013b 2E000000 		.4byte	.LVL6
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1818 01ce 98000000 		.4byte	.LVL42
  1819 01d2 0100     		.2byte	0x1
  1820 01d4 58       		.byte	0x58
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 38
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 38
 
 
  1821 01d5 98000000 		.4byte	.LVL42
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1875 0004 0200     		.2byte	0x2
  1876 0006 00000000 		.4byte	.Ldebug_info0
  1877 000a 04       		.byte	0x4
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 39
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 39
 
 
  1878 000b 00       		.byte	0
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1911      6C00
  1912              	.LASF3:
  1913 0054 73686F72 		.ascii	"short unsigned int\000"
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 40
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 40
 
 
  1913      7420756E 
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1939      704C6967 
  1939      6874735F 
  1939      44726177 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 41
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 41
 
 
  1939      4C696E65 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 1
  1961      00
  1962              	.LASF18:
  1963 020a 53747269 		.ascii	"StripLights_PutChar\000"
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccSG6Qtf.s 			page 42
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc1cUw2T.s 			page 42
 
 
  1963      704C6967 

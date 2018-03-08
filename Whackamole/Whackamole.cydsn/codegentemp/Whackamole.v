@@ -1,6 +1,6 @@
 // ======================================================================
 // Whackamole.v generated from TopDesign.cysch
-// 03/06/2018 at 19:51
+// 03/07/2018 at 20:22
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -171,7 +171,7 @@
 `include "C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\WS281xLib.cylib\B_WS2811_v1_3\B_WS2811_v1_3.v"
 `endif
 
-// StripLights_v3_0(Channels=1, ClockSpeedKhz=800, Coord_Wrap=0, Display_Memory=0, Flip_X_Coord=false, Flip_Y_Coord=false, Gamma_Correction=true, Grid_16x16_Columns=2, Grid_16x16_Rows=1, LED_Config=1, LedChannels=1, LEDs_per_Strip=30, Speed=1, String_Wrap_Length=15, Swap_X_Y=false, Transfer_Method=1, WS281x_Type=2, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=StripLights_v3_0, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=StripLights, CY_INSTANCE_SHORT_NAME=StripLights, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=StripLights, )
+// StripLights_v3_0(Channels=1, ClockSpeedKhz=800, Coord_Wrap=0, Display_Memory=0, Flip_X_Coord=false, Flip_Y_Coord=false, Gamma_Correction=true, Grid_16x16_Columns=2, Grid_16x16_Rows=1, LED_Config=1, LedChannels=1, LEDs_per_Strip=240, Speed=1, String_Wrap_Length=60, Swap_X_Y=false, Transfer_Method=1, WS281x_Type=2, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=StripLights_v3_0, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=StripLights, CY_INSTANCE_SHORT_NAME=StripLights, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=StripLights, )
 module StripLights_v3_0_0 (
     rdy,
     S0,
@@ -638,7 +638,6 @@ endmodule
 // top
 module top ;
 
-    electrical  Net_24;
           wire  Net_20;
           wire  Net_19;
           wire  Net_18;
@@ -656,7 +655,6 @@ module top ;
           wire  Net_6;
           wire  Net_4;
           wire  Net_5;
-          wire  Net_23;
     electrical  Net_1;
     electrical  Net_22;
     electrical  Net_3;
@@ -860,27 +858,21 @@ module top ;
 
 	assign tmpOE__S0_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-
-	cy_isr_v1_0
-		#(.int_type(2'b10))
-		ISR_Write
-		 (.int_signal(Net_23));
-
-
 	wire [0:0] tmpOE__Button_net;
 	wire [0:0] tmpFB_0__Button_net;
 	wire [0:0] tmpIO_0__Button_net;
+	wire [0:0] tmpINTERRUPT_0__Button_net;
 	electrical [0:0] tmpSIOVREF__Button_net;
 
 	cy_psoc3_pins_v1_10
-		#(.id("1425177d-0d0e-4468-8bcc-e638e5509a9b"),
+		#(.id("1c6e71bc-267d-4981-a0ca-f5bd53a0b7c5"),
 		  .drive_mode(3'b010),
 		  .ibuf_enabled(1'b1),
 		  .init_dr_st(1'b1),
 		  .input_clk_en(0),
-		  .input_sync(1'b1),
+		  .input_sync(1'b0),
 		  .input_sync_mode(1'b0),
-		  .intr_mode(2'b10),
+		  .intr_mode(2'b00),
 		  .invert_in_clock(0),
 		  .invert_in_clock_en(0),
 		  .invert_in_reset(0),
@@ -908,25 +900,30 @@ module top ;
 		  .pin_mode("I"),
 		  .por_state(4),
 		  .sio_group_cnt(0),
-		  .sio_hyst(1'b0),
+		  .sio_hyst(1'b1),
 		  .sio_ibuf(""),
 		  .sio_info(2'b00),
 		  .sio_obuf(""),
 		  .sio_refsel(""),
 		  .sio_vtrip(""),
+		  .sio_hifreq(""),
+		  .sio_vohsel(""),
 		  .slew_rate(1'b0),
 		  .spanning(0),
+		  .use_annotation(1'b0),
 		  .vtrip(2'b00),
 		  .width(1),
-		  .use_annotation(1'b1))
+		  .ovt_hyst_trim(1'b0),
+		  .ovt_needed(1'b0),
+		  .ovt_slew_control(2'b00),
+		  .input_buffer_sel(2'b00))
 		Button
 		 (.oe(tmpOE__Button_net),
 		  .y({1'b0}),
 		  .fb({tmpFB_0__Button_net[0:0]}),
 		  .io({tmpIO_0__Button_net[0:0]}),
 		  .siovref(tmpSIOVREF__Button_net),
-		  .interrupt({Net_23}),
-		  .annotation({Net_24}),
+		  .interrupt({tmpINTERRUPT_0__Button_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -935,6 +932,306 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__Button_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__flex0_net;
+	wire [0:0] tmpFB_0__flex0_net;
+	wire [0:0] tmpIO_0__flex0_net;
+	wire [0:0] tmpINTERRUPT_0__flex0_net;
+	electrical [0:0] tmpSIOVREF__flex0_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba"),
+		  .drive_mode(3'b010),
+		  .ibuf_enabled(1'b1),
+		  .init_dr_st(1'b1),
+		  .input_clk_en(0),
+		  .input_sync(1'b0),
+		  .input_sync_mode(1'b0),
+		  .intr_mode(2'b00),
+		  .invert_in_clock(0),
+		  .invert_in_clock_en(0),
+		  .invert_in_reset(0),
+		  .invert_out_clock(0),
+		  .invert_out_clock_en(0),
+		  .invert_out_reset(0),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .oe_reset(0),
+		  .oe_sync(1'b0),
+		  .output_clk_en(0),
+		  .output_clock_mode(1'b0),
+		  .output_conn(1'b0),
+		  .output_mode(1'b0),
+		  .output_reset(0),
+		  .output_sync(1'b0),
+		  .pa_in_clock(-1),
+		  .pa_in_clock_en(-1),
+		  .pa_in_reset(-1),
+		  .pa_out_clock(-1),
+		  .pa_out_clock_en(-1),
+		  .pa_out_reset(-1),
+		  .pin_aliases(""),
+		  .pin_mode("I"),
+		  .por_state(4),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b1),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .sio_hifreq(""),
+		  .sio_vohsel(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .use_annotation(1'b0),
+		  .vtrip(2'b00),
+		  .width(1),
+		  .ovt_hyst_trim(1'b0),
+		  .ovt_needed(1'b0),
+		  .ovt_slew_control(2'b00),
+		  .input_buffer_sel(2'b00))
+		flex0
+		 (.oe(tmpOE__flex0_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__flex0_net[0:0]}),
+		  .io({tmpIO_0__flex0_net[0:0]}),
+		  .siovref(tmpSIOVREF__flex0_net),
+		  .interrupt({tmpINTERRUPT_0__flex0_net[0:0]}),
+		  .in_clock({1'b0}),
+		  .in_clock_en({1'b1}),
+		  .in_reset({1'b0}),
+		  .out_clock({1'b0}),
+		  .out_clock_en({1'b1}),
+		  .out_reset({1'b0}));
+
+	assign tmpOE__flex0_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__flex1_net;
+	wire [0:0] tmpFB_0__flex1_net;
+	wire [0:0] tmpIO_0__flex1_net;
+	wire [0:0] tmpINTERRUPT_0__flex1_net;
+	electrical [0:0] tmpSIOVREF__flex1_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("881bd0b1-26be-43c2-894b-2bffc67f2497"),
+		  .drive_mode(3'b010),
+		  .ibuf_enabled(1'b1),
+		  .init_dr_st(1'b1),
+		  .input_clk_en(0),
+		  .input_sync(1'b0),
+		  .input_sync_mode(1'b0),
+		  .intr_mode(2'b00),
+		  .invert_in_clock(0),
+		  .invert_in_clock_en(0),
+		  .invert_in_reset(0),
+		  .invert_out_clock(0),
+		  .invert_out_clock_en(0),
+		  .invert_out_reset(0),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .oe_reset(0),
+		  .oe_sync(1'b0),
+		  .output_clk_en(0),
+		  .output_clock_mode(1'b0),
+		  .output_conn(1'b0),
+		  .output_mode(1'b0),
+		  .output_reset(0),
+		  .output_sync(1'b0),
+		  .pa_in_clock(-1),
+		  .pa_in_clock_en(-1),
+		  .pa_in_reset(-1),
+		  .pa_out_clock(-1),
+		  .pa_out_clock_en(-1),
+		  .pa_out_reset(-1),
+		  .pin_aliases(""),
+		  .pin_mode("I"),
+		  .por_state(4),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b1),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .sio_hifreq(""),
+		  .sio_vohsel(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .use_annotation(1'b0),
+		  .vtrip(2'b00),
+		  .width(1),
+		  .ovt_hyst_trim(1'b0),
+		  .ovt_needed(1'b0),
+		  .ovt_slew_control(2'b00),
+		  .input_buffer_sel(2'b00))
+		flex1
+		 (.oe(tmpOE__flex1_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__flex1_net[0:0]}),
+		  .io({tmpIO_0__flex1_net[0:0]}),
+		  .siovref(tmpSIOVREF__flex1_net),
+		  .interrupt({tmpINTERRUPT_0__flex1_net[0:0]}),
+		  .in_clock({1'b0}),
+		  .in_clock_en({1'b1}),
+		  .in_reset({1'b0}),
+		  .out_clock({1'b0}),
+		  .out_clock_en({1'b1}),
+		  .out_reset({1'b0}));
+
+	assign tmpOE__flex1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__flex2_net;
+	wire [0:0] tmpFB_0__flex2_net;
+	wire [0:0] tmpIO_0__flex2_net;
+	wire [0:0] tmpINTERRUPT_0__flex2_net;
+	electrical [0:0] tmpSIOVREF__flex2_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("e40f677b-862c-4d3c-94ea-9b1bc93ba846"),
+		  .drive_mode(3'b010),
+		  .ibuf_enabled(1'b1),
+		  .init_dr_st(1'b1),
+		  .input_clk_en(0),
+		  .input_sync(1'b0),
+		  .input_sync_mode(1'b0),
+		  .intr_mode(2'b00),
+		  .invert_in_clock(0),
+		  .invert_in_clock_en(0),
+		  .invert_in_reset(0),
+		  .invert_out_clock(0),
+		  .invert_out_clock_en(0),
+		  .invert_out_reset(0),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .oe_reset(0),
+		  .oe_sync(1'b0),
+		  .output_clk_en(0),
+		  .output_clock_mode(1'b0),
+		  .output_conn(1'b0),
+		  .output_mode(1'b0),
+		  .output_reset(0),
+		  .output_sync(1'b0),
+		  .pa_in_clock(-1),
+		  .pa_in_clock_en(-1),
+		  .pa_in_reset(-1),
+		  .pa_out_clock(-1),
+		  .pa_out_clock_en(-1),
+		  .pa_out_reset(-1),
+		  .pin_aliases(""),
+		  .pin_mode("I"),
+		  .por_state(4),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b1),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .sio_hifreq(""),
+		  .sio_vohsel(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .use_annotation(1'b0),
+		  .vtrip(2'b00),
+		  .width(1),
+		  .ovt_hyst_trim(1'b0),
+		  .ovt_needed(1'b0),
+		  .ovt_slew_control(2'b00),
+		  .input_buffer_sel(2'b00))
+		flex2
+		 (.oe(tmpOE__flex2_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__flex2_net[0:0]}),
+		  .io({tmpIO_0__flex2_net[0:0]}),
+		  .siovref(tmpSIOVREF__flex2_net),
+		  .interrupt({tmpINTERRUPT_0__flex2_net[0:0]}),
+		  .in_clock({1'b0}),
+		  .in_clock_en({1'b1}),
+		  .in_reset({1'b0}),
+		  .out_clock({1'b0}),
+		  .out_clock_en({1'b1}),
+		  .out_reset({1'b0}));
+
+	assign tmpOE__flex2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__flex3_net;
+	wire [0:0] tmpFB_0__flex3_net;
+	wire [0:0] tmpIO_0__flex3_net;
+	wire [0:0] tmpINTERRUPT_0__flex3_net;
+	electrical [0:0] tmpSIOVREF__flex3_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("f3345cbc-c0f3-4757-b01b-0f94686ba5d8"),
+		  .drive_mode(3'b010),
+		  .ibuf_enabled(1'b1),
+		  .init_dr_st(1'b1),
+		  .input_clk_en(0),
+		  .input_sync(1'b0),
+		  .input_sync_mode(1'b0),
+		  .intr_mode(2'b00),
+		  .invert_in_clock(0),
+		  .invert_in_clock_en(0),
+		  .invert_in_reset(0),
+		  .invert_out_clock(0),
+		  .invert_out_clock_en(0),
+		  .invert_out_reset(0),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .oe_reset(0),
+		  .oe_sync(1'b0),
+		  .output_clk_en(0),
+		  .output_clock_mode(1'b0),
+		  .output_conn(1'b0),
+		  .output_mode(1'b0),
+		  .output_reset(0),
+		  .output_sync(1'b0),
+		  .pa_in_clock(-1),
+		  .pa_in_clock_en(-1),
+		  .pa_in_reset(-1),
+		  .pa_out_clock(-1),
+		  .pa_out_clock_en(-1),
+		  .pa_out_reset(-1),
+		  .pin_aliases(""),
+		  .pin_mode("I"),
+		  .por_state(4),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b1),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .sio_hifreq(""),
+		  .sio_vohsel(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .use_annotation(1'b0),
+		  .vtrip(2'b00),
+		  .width(1),
+		  .ovt_hyst_trim(1'b0),
+		  .ovt_needed(1'b0),
+		  .ovt_slew_control(2'b00),
+		  .input_buffer_sel(2'b00))
+		flex3
+		 (.oe(tmpOE__flex3_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__flex3_net[0:0]}),
+		  .io({tmpIO_0__flex3_net[0:0]}),
+		  .siovref(tmpSIOVREF__flex3_net),
+		  .interrupt({tmpINTERRUPT_0__flex3_net[0:0]}),
+		  .in_clock({1'b0}),
+		  .in_clock_en({1'b1}),
+		  .in_reset({1'b0}),
+		  .out_clock({1'b0}),
+		  .out_clock_en({1'b1}),
+		  .out_reset({1'b0}));
+
+	assign tmpOE__flex3_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 
 

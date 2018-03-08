@@ -57,6 +57,7 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Button.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Button.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Button_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Button_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Board_LED.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Board_LED.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Board_LED_aliases.h</File>
@@ -107,8 +108,22 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_StringSel.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_StringSel.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_StringSel_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Write.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ISR_Write.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex0.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex0.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex0_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex2_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex3.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex3.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex3_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\flex3_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Export\ARM_GCC_Generic">

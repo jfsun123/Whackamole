@@ -1,12 +1,16 @@
 -- Project:   C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Whackamole.cyprj
--- Generated: 03/06/2018 19:51:52
+-- Generated: 03/07/2018 20:22:51
 -- PSoC Creator  4.1 Update 1
 
 ENTITY Whackamole IS
     PORT(
         Board_LED(0)_PAD : OUT std_ulogic;
         S0(0)_PAD : OUT std_ulogic;
-        Button(0)_PAD : IN std_ulogic);
+        Button(0)_PAD : IN std_ulogic;
+        flex0(0)_PAD : IN std_ulogic;
+        flex1(0)_PAD : IN std_ulogic;
+        flex2(0)_PAD : IN std_ulogic;
+        flex3(0)_PAD : IN std_ulogic);
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 3.3e0;
 END Whackamole;
@@ -22,14 +26,13 @@ ARCHITECTURE __DEFAULT__ OF Whackamole IS
     SIGNAL ClockBlock_LFClk : bit;
     SIGNAL ClockBlock_Routed1 : bit;
     SIGNAL ClockBlock_SysClk : bit;
-    SIGNAL Net_23 : bit;
     SIGNAL Net_4 : bit;
     ATTRIBUTE placement_force OF Net_4 : SIGNAL IS "U(0,1,A)0";
     SIGNAL Net_5 : bit;
-    ATTRIBUTE placement_force OF Net_5 : SIGNAL IS "U(1,1,A)3";
+    ATTRIBUTE placement_force OF Net_5 : SIGNAL IS "U(1,0,B)2";
     SIGNAL S0(0)__PA : bit;
     SIGNAL \StripLights:B_WS2811:bitCount_0\ : bit;
-    ATTRIBUTE placement_force OF \StripLights:B_WS2811:bitCount_0\ : SIGNAL IS "U(1,0,A)2";
+    ATTRIBUTE placement_force OF \StripLights:B_WS2811:bitCount_0\ : SIGNAL IS "U(1,1,A)3";
     SIGNAL \StripLights:B_WS2811:bitCount_1\ : bit;
     ATTRIBUTE placement_force OF \StripLights:B_WS2811:bitCount_1\ : SIGNAL IS "U(1,1,B)0";
     SIGNAL \StripLights:B_WS2811:bitCount_2\ : bit;
@@ -43,7 +46,7 @@ ARCHITECTURE __DEFAULT__ OF Whackamole IS
     SIGNAL \StripLights:B_WS2811:control_6\ : bit;
     SIGNAL \StripLights:B_WS2811:control_7\ : bit;
     SIGNAL \StripLights:B_WS2811:dpAddr_0\ : bit;
-    ATTRIBUTE placement_force OF \StripLights:B_WS2811:dpAddr_0\ : SIGNAL IS "U(1,0,B)1";
+    ATTRIBUTE placement_force OF \StripLights:B_WS2811:dpAddr_0\ : SIGNAL IS "U(1,0,A)2";
     SIGNAL \StripLights:B_WS2811:dpAddr_1\ : bit;
     ATTRIBUTE placement_force OF \StripLights:B_WS2811:dpAddr_1\ : SIGNAL IS "U(1,0,B)0";
     SIGNAL \StripLights:B_WS2811:oneCmp\ : bit;
@@ -61,7 +64,7 @@ ARCHITECTURE __DEFAULT__ OF Whackamole IS
     ATTRIBUTE placement_force OF \StripLights:B_WS2811:status_6\ : SIGNAL IS "U(1,1,A)2";
     SIGNAL \StripLights:B_WS2811:zeroCmp\ : bit;
     SIGNAL \StripLights:Net_159\ : bit;
-    ATTRIBUTE placement_force OF \StripLights:Net_159\ : SIGNAL IS "U(1,0,B)2";
+    ATTRIBUTE placement_force OF \StripLights:Net_159\ : SIGNAL IS "U(1,0,B)1";
     SIGNAL \StripLights:Net_18_digital\ : bit;
     ATTRIBUTE global_signal OF \StripLights:Net_18_digital\ : SIGNAL IS true;
     SIGNAL \StripLights:Net_64\ : bit;
@@ -79,6 +82,10 @@ ARCHITECTURE __DEFAULT__ OF Whackamole IS
     SIGNAL __ZERO__ : bit;
     ATTRIBUTE GROUND OF __ZERO__ : SIGNAL IS true;
     SIGNAL dclk_to_genclk : bit;
+    SIGNAL flex0(0)__PA : bit;
+    SIGNAL flex1(0)__PA : bit;
+    SIGNAL flex2(0)__PA : bit;
+    SIGNAL flex3(0)__PA : bit;
     SIGNAL tmpOE__Board_LED_net_0 : bit;
     ATTRIBUTE POWER OF tmpOE__Board_LED_net_0 : SIGNAL IS true;
     SIGNAL zero : bit;
@@ -89,16 +96,23 @@ ARCHITECTURE __DEFAULT__ OF Whackamole IS
     ATTRIBUTE Location OF Board_LED(0) : LABEL IS "P0[2]";
     ATTRIBUTE lib_model OF S0(0) : LABEL IS "iocell2";
     ATTRIBUTE Location OF S0(0) : LABEL IS "P0[4]";
-    ATTRIBUTE Location OF Button : LABEL IS "F(PICU,0)";
     ATTRIBUTE lib_model OF Button(0) : LABEL IS "iocell3";
     ATTRIBUTE Location OF Button(0) : LABEL IS "P0[7]";
+    ATTRIBUTE lib_model OF flex0(0) : LABEL IS "iocell4";
+    ATTRIBUTE Location OF flex0(0) : LABEL IS "P2[6]";
+    ATTRIBUTE lib_model OF flex1(0) : LABEL IS "iocell5";
+    ATTRIBUTE Location OF flex1(0) : LABEL IS "P3[6]";
+    ATTRIBUTE lib_model OF flex2(0) : LABEL IS "iocell6";
+    ATTRIBUTE Location OF flex2(0) : LABEL IS "P3[4]";
+    ATTRIBUTE lib_model OF flex3(0) : LABEL IS "iocell7";
+    ATTRIBUTE Location OF flex3(0) : LABEL IS "P3[0]";
     ATTRIBUTE lib_model OF Net_4 : LABEL IS "macrocell1";
     ATTRIBUTE Location OF Net_4 : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \StripLights:Net_159\ : LABEL IS "macrocell2";
     ATTRIBUTE Location OF \StripLights:Net_159\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF Net_5 : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF Net_5 : LABEL IS "U(1,1)";
-    ATTRIBUTE Location OF \StripLights:cisr\ : LABEL IS "[IntrContainer=(0)][IntrId=(1)]";
+    ATTRIBUTE Location OF Net_5 : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \StripLights:cisr\ : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
     ATTRIBUTE Location OF \StripLights:fisr\ : LABEL IS "[IntrContainer=(0)][IntrId=(2)]";
     ATTRIBUTE lib_model OF \StripLights:StringSel:Sync:ctrl_reg\ : LABEL IS "controlcell1";
     ATTRIBUTE Location OF \StripLights:StringSel:Sync:ctrl_reg\ : LABEL IS "U(0,1)";
@@ -110,7 +124,6 @@ ARCHITECTURE __DEFAULT__ OF Whackamole IS
     ATTRIBUTE Location OF \StripLights:B_WS2811:dshifter:u0\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \StripLights:B_WS2811:pwm8:u0\ : LABEL IS "datapathcell2";
     ATTRIBUTE Location OF \StripLights:B_WS2811:pwm8:u0\ : LABEL IS "U(1,1)";
-    ATTRIBUTE Location OF ISR_Write : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
     ATTRIBUTE lib_model OF \StripLights:Net_64\ : LABEL IS "macrocell4";
     ATTRIBUTE Location OF \StripLights:Net_64\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \StripLights:B_WS2811:status_6\ : LABEL IS "macrocell5";
@@ -124,7 +137,7 @@ ARCHITECTURE __DEFAULT__ OF Whackamole IS
     ATTRIBUTE lib_model OF \StripLights:B_WS2811:bitCount_1\ : LABEL IS "macrocell9";
     ATTRIBUTE Location OF \StripLights:B_WS2811:bitCount_1\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \StripLights:B_WS2811:bitCount_0\ : LABEL IS "macrocell10";
-    ATTRIBUTE Location OF \StripLights:B_WS2811:bitCount_0\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \StripLights:B_WS2811:bitCount_0\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \StripLights:B_WS2811:dpAddr_1\ : LABEL IS "macrocell11";
     ATTRIBUTE Location OF \StripLights:B_WS2811:dpAddr_1\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \StripLights:B_WS2811:dpAddr_0\ : LABEL IS "macrocell12";
@@ -678,13 +691,13 @@ BEGIN
         GENERIC MAP(
             drive_mode => "010",
             ibuf_enabled => "1",
-            id => "1425177d-0d0e-4468-8bcc-e638e5509a9b",
+            id => "1c6e71bc-267d-4981-a0ca-f5bd53a0b7c5",
             init_dr_st => "1",
-            input_buffer_sel => "",
+            input_buffer_sel => "00",
             input_clk_en => 0,
-            input_sync => "1",
+            input_sync => "0",
             input_sync_mode => "0",
-            intr_mode => "10",
+            intr_mode => "00",
             invert_in_clock => 0,
             invert_in_clock_en => 0,
             invert_in_reset => 0,
@@ -702,9 +715,9 @@ BEGIN
             output_mode => "0",
             output_reset => 0,
             output_sync => "0",
-            ovt_hyst_trim => "",
-            ovt_needed => "",
-            ovt_slew_control => "",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
             pa_in_clock => -1,
             pa_in_clock_en => -1,
             pa_in_reset => -1,
@@ -717,18 +730,18 @@ BEGIN
             port_alias_group => "",
             port_alias_required => 0,
             sio_group_cnt => 0,
-            sio_hifreq => "",
-            sio_hyst => "0",
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
             sio_ibuf => "00000000",
             sio_info => "00",
             sio_obuf => "00000000",
             sio_refsel => "00000000",
-            sio_vohsel => "",
+            sio_vohsel => "00000000",
             sio_vtrip => "00000000",
             slew_rate => "0",
             spanning => 0,
             sw_only => 0,
-            use_annotation => "1",
+            use_annotation => "0",
             vtrip => "00",
             width => 1,
             in_clk_inv => 0,
@@ -743,23 +756,381 @@ BEGIN
             in_clock_en => open,
             in_reset => open,
             out_clock_en => open,
-            out_reset => open,
-            interrupt => Net_23,
-            in_clock => open);
+            out_reset => open);
 
     Button(0):iocell
         GENERIC MAP(
-            in_sync_mode => 2,
+            in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
             logicalport => "Button",
             logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000001000000000000000000000000000000000101")
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
             pa_out => Button(0)__PA,
             oe => open,
             pad_in => Button(0)_PAD,
-            in_clock => ClockBlock_HFClk,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    flex0:logicalport
+        GENERIC MAP(
+            drive_mode => "010",
+            ibuf_enabled => "1",
+            id => "8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
+            init_dr_st => "1",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    flex0(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "flex0",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
+        PORT MAP(
+            pa_out => flex0(0)__PA,
+            oe => open,
+            pad_in => flex0(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    flex1:logicalport
+        GENERIC MAP(
+            drive_mode => "010",
+            ibuf_enabled => "1",
+            id => "881bd0b1-26be-43c2-894b-2bffc67f2497",
+            init_dr_st => "1",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    flex1(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "flex1",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
+        PORT MAP(
+            pa_out => flex1(0)__PA,
+            oe => open,
+            pad_in => flex1(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    flex2:logicalport
+        GENERIC MAP(
+            drive_mode => "010",
+            ibuf_enabled => "1",
+            id => "e40f677b-862c-4d3c-94ea-9b1bc93ba846",
+            init_dr_st => "1",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    flex2(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "flex2",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
+        PORT MAP(
+            pa_out => flex2(0)__PA,
+            oe => open,
+            pad_in => flex2(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    flex3:logicalport
+        GENERIC MAP(
+            drive_mode => "010",
+            ibuf_enabled => "1",
+            id => "f3345cbc-c0f3-4757-b01b-0f94686ba5d8",
+            init_dr_st => "1",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    flex3(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "flex3",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
+        PORT MAP(
+            pa_out => flex3(0)__PA,
+            oe => open,
+            pad_in => flex3(0)_PAD,
+            in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
             out_clock => open,
@@ -942,14 +1313,6 @@ BEGIN
             z0_comb => \StripLights:B_WS2811:pwmTC\,
             cl1_comb => \StripLights:B_WS2811:oneCmp\,
             busclk => ClockBlock_HFClk);
-
-    ISR_Write:interrupt
-        GENERIC MAP(
-            int_type => "10",
-            is_nmi => 0)
-        PORT MAP(
-            interrupt => Net_23,
-            clock => ClockBlock_HFClk);
 
     \StripLights:Net_64\:macrocell
         GENERIC MAP(

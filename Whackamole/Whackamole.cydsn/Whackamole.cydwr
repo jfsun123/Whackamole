@@ -10,10 +10,14 @@
   <Data key="DataVersionKey" value="2" />
   <Group key="DWRInstGuidMapping">
     <Group key="Pin">
-      <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Button" />
+      <Data key="1c6e71bc-267d-4981-a0ca-f5bd53a0b7c5" value="Button" />
+      <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="flex0" />
+      <Data key="881bd0b1-26be-43c2-894b-2bffc67f2497" value="flex1" />
       <Data key="1425177d-0d0e-4468-8bcc-e638e5509a9b" value="Button" />
       <Data key="bba5050a-94bc-4231-80a9-574f7dd1df40" value="S0" />
+      <Data key="e40f677b-862c-4d3c-94ea-9b1bc93ba846" value="flex2" />
       <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Board_LED" />
+      <Data key="f3345cbc-c0f3-4757-b01b-0f94686ba5d8" value="flex3" />
     </Group>
   </Group>
   <Group key="FlashSecurity">
@@ -1223,9 +1227,19 @@
     </Group>
   </Group>
   <Group key="Pin2">
-    <Group key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba">
+    <Group key="1c6e71bc-267d-4981-a0ca-f5bd53a0b7c5">
       <Group key="0">
         <Data key="Port Format" value="0,7" />
+      </Group>
+    </Group>
+    <Group key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba">
+      <Group key="0">
+        <Data key="Port Format" value="2,6" />
+      </Group>
+    </Group>
+    <Group key="881bd0b1-26be-43c2-894b-2bffc67f2497">
+      <Group key="0">
+        <Data key="Port Format" value="3,6" />
       </Group>
     </Group>
     <Group key="1425177d-0d0e-4468-8bcc-e638e5509a9b">
@@ -1238,9 +1252,19 @@
         <Data key="Port Format" value="0,4" />
       </Group>
     </Group>
+    <Group key="e40f677b-862c-4d3c-94ea-9b1bc93ba846">
+      <Group key="0">
+        <Data key="Port Format" value="3,4" />
+      </Group>
+    </Group>
     <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
       <Group key="0">
         <Data key="Port Format" value="0,2" />
+      </Group>
+    </Group>
+    <Group key="f3345cbc-c0f3-4757-b01b-0f94686ba5d8">
+      <Group key="0">
+        <Data key="Port Format" value="3,0" />
       </Group>
     </Group>
   </Group>

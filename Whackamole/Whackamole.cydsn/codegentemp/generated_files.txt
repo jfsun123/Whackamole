@@ -25,11 +25,26 @@
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\S0.h" value="HEADER;;;;;S0" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\S0_aliases.h" value="HEADER;;;;;S0" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\S0_PM.c" value="SOURCE_C;CortexM0;;;;S0" />
-  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\ISR_Write.c" value="SOURCE_C;CortexM0;;;;ISR_Write" />
-  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\ISR_Write.h" value="HEADER;;;;;ISR_Write" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Button.c" value="SOURCE_C;CortexM0;;;;Button" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Button.h" value="HEADER;;;;;Button" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Button_aliases.h" value="HEADER;;;;;Button" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\Button_PM.c" value="SOURCE_C;CortexM0;;;;Button" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex0.c" value="SOURCE_C;CortexM0;;;;flex0" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex0.h" value="HEADER;;;;;flex0" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex0_aliases.h" value="HEADER;;;;;flex0" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex0_PM.c" value="SOURCE_C;CortexM0;;;;flex0" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex1.c" value="SOURCE_C;CortexM0;;;;flex1" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex1.h" value="HEADER;;;;;flex1" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex1_aliases.h" value="HEADER;;;;;flex1" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex1_PM.c" value="SOURCE_C;CortexM0;;;;flex1" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex2.c" value="SOURCE_C;CortexM0;;;;flex2" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex2.h" value="HEADER;;;;;flex2" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex2_aliases.h" value="HEADER;;;;;flex2" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex2_PM.c" value="SOURCE_C;CortexM0;;;;flex2" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex3.c" value="SOURCE_C;CortexM0;;;;flex3" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex3.h" value="HEADER;;;;;flex3" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex3_aliases.h" value="HEADER;;;;;flex3" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\flex3_PM.c" value="SOURCE_C;CortexM0;;;;flex3" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\StripLights_HFCLK.c" value="SOURCE_C;CortexM0;;;;StripLights_HFCLK" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\StripLights_HFCLK.h" value="HEADER;;;;;StripLights_HFCLK" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\codegentemp\StripLights_cisr.c" value="SOURCE_C;CortexM0;;;;StripLights_cisr" />

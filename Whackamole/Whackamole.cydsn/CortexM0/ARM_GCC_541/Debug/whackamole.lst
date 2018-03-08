@@ -1,0 +1,2262 @@
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"whackamole.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.SetTileColor,"ax",%progbits
+  20              		.align	2
+  21              		.global	SetTileColor
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	SetTileColor, %function
+  25              	SetTileColor:
+  26              	.LFB34:
+  27              		.file 1 "whackamole.c"
+   1:whackamole.c  **** /* ========================================
+   2:whackamole.c  **** Code for Whackamole game
+   3:whackamole.c  ****  * ========================================
+   4:whackamole.c  **** */
+   5:whackamole.c  **** 
+   6:whackamole.c  **** #include "whackamole.h"
+   7:whackamole.c  **** 
+   8:whackamole.c  **** /**
+   9:whackamole.c  **** Play a testing game of whackamole on 2x2 block
+  10:whackamole.c  **** 
+  11:whackamole.c  **** */
+  12:whackamole.c  **** void Whackamole(){
+  13:whackamole.c  ****     srand(time(NULL)); // seed the randomness with time
+  14:whackamole.c  ****     int random;
+  15:whackamole.c  ****     ResetBlock();
+  16:whackamole.c  ****     
+  17:whackamole.c  ****     
+  18:whackamole.c  ****     for(;;){
+  19:whackamole.c  ****         flex0 = flex0_Read();
+  20:whackamole.c  ****         flex1 = flex1_Read();
+  21:whackamole.c  ****         flex2 = flex2_Read();
+  22:whackamole.c  ****         flex3 = flex3_Read();
+  23:whackamole.c  ****         random = rand() % 4;
+  24:whackamole.c  ****         
+  25:whackamole.c  ****         
+  26:whackamole.c  ****         
+  27:whackamole.c  ****     }
+  28:whackamole.c  **** }
+  29:whackamole.c  **** 
+  30:whackamole.c  **** 
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 2
+
+
+  31:whackamole.c  **** 
+  32:whackamole.c  **** /**
+  33:whackamole.c  **** Runs the LED pattern where light moves along the line
+  34:whackamole.c  **** And then goes back, changes colors every time it gets to an edge
+  35:whackamole.c  **** */
+  36:whackamole.c  **** void RunPattern(){
+  37:whackamole.c  ****     //start the pattern at red
+  38:whackamole.c  ****     uint32 current_color = StripLights_RED;
+  39:whackamole.c  ****     for(;;){
+  40:whackamole.c  ****         //going forward
+  41:whackamole.c  ****         for(int i = 0; i < 15; i++){
+  42:whackamole.c  ****             //reset the colors for both strips
+  43:whackamole.c  ****         	SetTileColor(0, 0);
+  44:whackamole.c  ****         	SetTileColor(1, 0);
+  45:whackamole.c  ****             CyDelay(10);
+  46:whackamole.c  ****         	StripLights_Pixel(i, 0, current_color);
+  47:whackamole.c  ****         	StripLights_Pixel(i, 1, current_color);
+  48:whackamole.c  ****         	while (StripLights_Ready() == 0);
+  49:whackamole.c  ****         	StripLights_Trigger(1);
+  50:whackamole.c  ****         }
+  51:whackamole.c  ****         current_color = IncrementColor(current_color);
+  52:whackamole.c  ****         //coming back
+  53:whackamole.c  ****         for(int i = 13; i >= 1; i--){
+  54:whackamole.c  ****             SetTileColor(0, 0);
+  55:whackamole.c  ****         	SetTileColor(1, 0);
+  56:whackamole.c  ****             CyDelay(10);
+  57:whackamole.c  ****         	StripLights_Pixel(i, 0, current_color);
+  58:whackamole.c  ****         	StripLights_Pixel(i, 1, current_color);
+  59:whackamole.c  ****         	while (StripLights_Ready() == 0);
+  60:whackamole.c  ****         	StripLights_Trigger(1);
+  61:whackamole.c  ****         }
+  62:whackamole.c  ****         current_color = IncrementColor(current_color);
+  63:whackamole.c  ****     }
+  64:whackamole.c  **** }
+  65:whackamole.c  **** 
+  66:whackamole.c  **** /**
+  67:whackamole.c  **** This function will set the lights inside the block number to be a certain color.
+  68:whackamole.c  **** Changes are assumemd to be the first 60 LEDs, 
+  69:whackamole.c  **** The block number is set to be the "y" coordinate in the top down design
+  70:whackamole.c  **** Remember to put a CyDelay after setting colors
+  71:whackamole.c  **** */
+  72:whackamole.c  **** void SetTileColor(int tile_number, uint32 color) {
+  28              		.loc 1 72 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 70B5     		push	{r4, r5, r6, lr}
+  34              		.cfi_def_cfa_offset 16
+  35              		.cfi_offset 4, -16
+  36              		.cfi_offset 5, -12
+  37              		.cfi_offset 6, -8
+  38              		.cfi_offset 14, -4
+  39 0002 0600     		movs	r6, r0
+  40 0004 0D00     		movs	r5, r1
+  41              	.LVL1:
+  42              	.LBB2:
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 3
+
+
+  73:whackamole.c  **** 	for (uint32 led = 0; led < LEDS_PER_TILE; led++) {
+  43              		.loc 1 73 0
+  44 0006 0024     		movs	r4, #0
+  45 0008 0CE0     		b	.L2
+  46              	.LVL2:
+  47              	.L4:
+  74:whackamole.c  **** 		StripLights_Pixel(led, tile_number, color);
+  48              		.loc 1 74 0
+  49 000a 2A00     		movs	r2, r5
+  50 000c 3100     		movs	r1, r6
+  51 000e 2000     		movs	r0, r4
+  52 0010 FFF7FEFF 		bl	StripLights_Pixel
+  53              	.LVL3:
+  54              	.L3:
+  75:whackamole.c  ****         while (StripLights_Ready() == 0);
+  55              		.loc 1 75 0 discriminator 1
+  56 0014 FFF7FEFF 		bl	StripLights_Ready
+  57              	.LVL4:
+  58 0018 0028     		cmp	r0, #0
+  59 001a FBD0     		beq	.L3
+  76:whackamole.c  **** 	    StripLights_Trigger(1);
+  60              		.loc 1 76 0 discriminator 2
+  61 001c 0120     		movs	r0, #1
+  62 001e FFF7FEFF 		bl	StripLights_Trigger
+  63              	.LVL5:
+  73:whackamole.c  **** 		StripLights_Pixel(led, tile_number, color);
+  64              		.loc 1 73 0 discriminator 2
+  65 0022 0134     		adds	r4, r4, #1
+  66              	.LVL6:
+  67              	.L2:
+  73:whackamole.c  **** 		StripLights_Pixel(led, tile_number, color);
+  68              		.loc 1 73 0 is_stmt 0 discriminator 1
+  69 0024 3B2C     		cmp	r4, #59
+  70 0026 F0D9     		bls	.L4
+  71              	.LBE2:
+  77:whackamole.c  **** 	}
+  78:whackamole.c  **** 	CyDelay(10);
+  72              		.loc 1 78 0 is_stmt 1
+  73 0028 0A20     		movs	r0, #10
+  74 002a FFF7FEFF 		bl	CyDelay
+  75              	.LVL7:
+  79:whackamole.c  **** }
+  76              		.loc 1 79 0
+  77              		@ sp needed
+  78              	.LVL8:
+  79              	.LVL9:
+  80              	.LVL10:
+  81 002e 70BD     		pop	{r4, r5, r6, pc}
+  82              		.cfi_endproc
+  83              	.LFE34:
+  84              		.size	SetTileColor, .-SetTileColor
+  85              		.section	.text.IncrementColor,"ax",%progbits
+  86              		.align	2
+  87              		.global	IncrementColor
+  88              		.code	16
+  89              		.thumb_func
+  90              		.type	IncrementColor, %function
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 4
+
+
+  91              	IncrementColor:
+  92              	.LFB35:
+  80:whackamole.c  **** 
+  81:whackamole.c  **** /**
+  82:whackamole.c  **** This function will "increment" the color such that it goes through the rainbow
+  83:whackamole.c  **** Then it will return the color as a uint32
+  84:whackamole.c  **** */
+  85:whackamole.c  **** uint32 IncrementColor(uint32 color){
+  93              		.loc 1 85 0
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 8
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  97              	.LVL11:
+  98 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  99              		.cfi_def_cfa_offset 20
+ 100              		.cfi_offset 4, -20
+ 101              		.cfi_offset 5, -16
+ 102              		.cfi_offset 6, -12
+ 103              		.cfi_offset 7, -8
+ 104              		.cfi_offset 14, -4
+ 105 0002 83B0     		sub	sp, sp, #12
+ 106              		.cfi_def_cfa_offset 32
+ 107 0004 0600     		movs	r6, r0
+  86:whackamole.c  ****     //the colors of the rainbow
+  87:whackamole.c  **** 	uint32 color1 = StripLights_RED;
+ 108              		.loc 1 87 0
+ 109 0006 4820     		movs	r0, #72
+ 110              	.LVL12:
+ 111 0008 FFF7FEFF 		bl	StripLights_getColor
+ 112              	.LVL13:
+ 113 000c 0700     		movs	r7, r0
+ 114              	.LVL14:
+  88:whackamole.c  **** 	uint32 color2 = StripLights_ORANGE;
+ 115              		.loc 1 88 0
+ 116 000e 1420     		movs	r0, #20
+ 117              	.LVL15:
+ 118 0010 FFF7FEFF 		bl	StripLights_getColor
+ 119              	.LVL16:
+ 120 0014 0400     		movs	r4, r0
+ 121              	.LVL17:
+  89:whackamole.c  ****     uint32 color3 = StripLights_YELLOW;
+ 122              		.loc 1 89 0
+ 123 0016 0120     		movs	r0, #1
+ 124              	.LVL18:
+ 125 0018 FFF7FEFF 		bl	StripLights_getColor
+ 126              	.LVL19:
+ 127 001c 0500     		movs	r5, r0
+ 128              	.LVL20:
+  90:whackamole.c  ****     uint32 color4 = StripLights_GREEN;
+ 129              		.loc 1 90 0
+ 130 001e 5E20     		movs	r0, #94
+ 131              	.LVL21:
+ 132 0020 FFF7FEFF 		bl	StripLights_getColor
+ 133              	.LVL22:
+ 134 0024 0090     		str	r0, [sp]
+ 135              	.LVL23:
+  91:whackamole.c  ****     uint32 color5 = StripLights_BLUE;
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 5
+
+
+ 136              		.loc 1 91 0
+ 137 0026 1B20     		movs	r0, #27
+ 138              	.LVL24:
+ 139 0028 FFF7FEFF 		bl	StripLights_getColor
+ 140              	.LVL25:
+ 141 002c 0190     		str	r0, [sp, #4]
+ 142              	.LVL26:
+  92:whackamole.c  ****     uint32 color6 = StripLights_VIOLET;
+ 143              		.loc 1 92 0
+ 144 002e 5C20     		movs	r0, #92
+ 145              	.LVL27:
+ 146 0030 FFF7FEFF 		bl	StripLights_getColor
+ 147              	.LVL28:
+  93:whackamole.c  ****     
+  94:whackamole.c  ****     if(color == color1)return color2;
+ 148              		.loc 1 94 0
+ 149 0034 B742     		cmp	r7, r6
+ 150 0036 0AD0     		beq	.L7
+  95:whackamole.c  ****     else if(color == color2)return color3;
+ 151              		.loc 1 95 0
+ 152 0038 B442     		cmp	r4, r6
+ 153 003a 0AD0     		beq	.L8
+  96:whackamole.c  ****     else if(color == color3)return color4;
+ 154              		.loc 1 96 0
+ 155 003c B542     		cmp	r5, r6
+ 156 003e 0AD0     		beq	.L9
+  97:whackamole.c  ****     else if(color == color4)return color5;
+ 157              		.loc 1 97 0
+ 158 0040 009B     		ldr	r3, [sp]
+ 159 0042 B342     		cmp	r3, r6
+ 160 0044 09D0     		beq	.L10
+  98:whackamole.c  ****     else if(color == color5)return color6;
+ 161              		.loc 1 98 0
+ 162 0046 019B     		ldr	r3, [sp, #4]
+ 163 0048 B342     		cmp	r3, r6
+ 164 004a 08D1     		bne	.L11
+ 165 004c 08E0     		b	.L6
+ 166              	.L7:
+  94:whackamole.c  ****     else if(color == color2)return color3;
+ 167              		.loc 1 94 0
+ 168 004e 2000     		movs	r0, r4
+ 169              	.LVL29:
+ 170 0050 06E0     		b	.L6
+ 171              	.LVL30:
+ 172              	.L8:
+  95:whackamole.c  ****     else if(color == color3)return color4;
+ 173              		.loc 1 95 0
+ 174 0052 2800     		movs	r0, r5
+ 175              	.LVL31:
+ 176 0054 04E0     		b	.L6
+ 177              	.LVL32:
+ 178              	.L9:
+  96:whackamole.c  ****     else if(color == color4)return color5;
+ 179              		.loc 1 96 0
+ 180 0056 0098     		ldr	r0, [sp]
+ 181              	.LVL33:
+ 182 0058 02E0     		b	.L6
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 6
+
+
+ 183              	.LVL34:
+ 184              	.L10:
+  97:whackamole.c  ****     else if(color == color5)return color6;
+ 185              		.loc 1 97 0
+ 186 005a 0198     		ldr	r0, [sp, #4]
+ 187              	.LVL35:
+ 188 005c 00E0     		b	.L6
+ 189              	.LVL36:
+ 190              	.L11:
+  99:whackamole.c  ****     else return color1;
+ 191              		.loc 1 99 0
+ 192 005e 3800     		movs	r0, r7
+ 193              	.LVL37:
+ 194              	.L6:
+ 100:whackamole.c  **** }
+ 195              		.loc 1 100 0
+ 196 0060 03B0     		add	sp, sp, #12
+ 197              	.LVL38:
+ 198              		@ sp needed
+ 199              	.LVL39:
+ 200              	.LVL40:
+ 201              	.LVL41:
+ 202              	.LVL42:
+ 203 0062 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 204              		.cfi_endproc
+ 205              	.LFE35:
+ 206              		.size	IncrementColor, .-IncrementColor
+ 207              		.section	.text.RunPattern,"ax",%progbits
+ 208              		.align	2
+ 209              		.global	RunPattern
+ 210              		.code	16
+ 211              		.thumb_func
+ 212              		.type	RunPattern, %function
+ 213              	RunPattern:
+ 214              	.LFB33:
+  36:whackamole.c  ****     //start the pattern at red
+ 215              		.loc 1 36 0
+ 216              		.cfi_startproc
+ 217              		@ args = 0, pretend = 0, frame = 0
+ 218              		@ frame_needed = 0, uses_anonymous_args = 0
+ 219 0000 70B5     		push	{r4, r5, r6, lr}
+ 220              		.cfi_def_cfa_offset 16
+ 221              		.cfi_offset 4, -16
+ 222              		.cfi_offset 5, -12
+ 223              		.cfi_offset 6, -8
+ 224              		.cfi_offset 14, -4
+  38:whackamole.c  ****     for(;;){
+ 225              		.loc 1 38 0
+ 226 0002 4820     		movs	r0, #72
+ 227 0004 FFF7FEFF 		bl	StripLights_getColor
+ 228              	.LVL43:
+ 229 0008 0500     		movs	r5, r0
+ 230              	.LVL44:
+ 231              	.L19:
+ 232              	.LBB3:
+  41:whackamole.c  ****             //reset the colors for both strips
+ 233              		.loc 1 41 0
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 7
+
+
+ 234 000a 0024     		movs	r4, #0
+ 235 000c 1CE0     		b	.L13
+ 236              	.LVL45:
+ 237              	.L15:
+  43:whackamole.c  ****         	SetTileColor(1, 0);
+ 238              		.loc 1 43 0
+ 239 000e 0021     		movs	r1, #0
+ 240 0010 0020     		movs	r0, #0
+ 241 0012 FFF7FEFF 		bl	SetTileColor
+ 242              	.LVL46:
+  44:whackamole.c  ****             CyDelay(10);
+ 243              		.loc 1 44 0
+ 244 0016 0021     		movs	r1, #0
+ 245 0018 0120     		movs	r0, #1
+ 246 001a FFF7FEFF 		bl	SetTileColor
+ 247              	.LVL47:
+  45:whackamole.c  ****         	StripLights_Pixel(i, 0, current_color);
+ 248              		.loc 1 45 0
+ 249 001e 0A20     		movs	r0, #10
+ 250 0020 FFF7FEFF 		bl	CyDelay
+ 251              	.LVL48:
+  46:whackamole.c  ****         	StripLights_Pixel(i, 1, current_color);
+ 252              		.loc 1 46 0
+ 253 0024 2A00     		movs	r2, r5
+ 254 0026 0021     		movs	r1, #0
+ 255 0028 2000     		movs	r0, r4
+ 256 002a FFF7FEFF 		bl	StripLights_Pixel
+ 257              	.LVL49:
+  47:whackamole.c  ****         	while (StripLights_Ready() == 0);
+ 258              		.loc 1 47 0
+ 259 002e 2A00     		movs	r2, r5
+ 260 0030 0121     		movs	r1, #1
+ 261 0032 2000     		movs	r0, r4
+ 262 0034 FFF7FEFF 		bl	StripLights_Pixel
+ 263              	.LVL50:
+ 264              	.L14:
+  48:whackamole.c  ****         	StripLights_Trigger(1);
+ 265              		.loc 1 48 0 discriminator 1
+ 266 0038 FFF7FEFF 		bl	StripLights_Ready
+ 267              	.LVL51:
+ 268 003c 0028     		cmp	r0, #0
+ 269 003e FBD0     		beq	.L14
+  49:whackamole.c  ****         }
+ 270              		.loc 1 49 0 discriminator 2
+ 271 0040 0120     		movs	r0, #1
+ 272 0042 FFF7FEFF 		bl	StripLights_Trigger
+ 273              	.LVL52:
+  41:whackamole.c  ****             //reset the colors for both strips
+ 274              		.loc 1 41 0 discriminator 2
+ 275 0046 0134     		adds	r4, r4, #1
+ 276              	.LVL53:
+ 277              	.L13:
+  41:whackamole.c  ****             //reset the colors for both strips
+ 278              		.loc 1 41 0 is_stmt 0 discriminator 1
+ 279 0048 0E2C     		cmp	r4, #14
+ 280 004a E0DD     		ble	.L15
+ 281              	.LBE3:
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 8
+
+
+  51:whackamole.c  ****         //coming back
+ 282              		.loc 1 51 0 is_stmt 1
+ 283 004c 2800     		movs	r0, r5
+ 284 004e FFF7FEFF 		bl	IncrementColor
+ 285              	.LVL54:
+ 286 0052 0500     		movs	r5, r0
+ 287              	.LVL55:
+ 288              	.LBB4:
+  53:whackamole.c  ****             SetTileColor(0, 0);
+ 289              		.loc 1 53 0
+ 290 0054 0D24     		movs	r4, #13
+ 291              	.LVL56:
+ 292 0056 1CE0     		b	.L16
+ 293              	.LVL57:
+ 294              	.L18:
+  54:whackamole.c  ****         	SetTileColor(1, 0);
+ 295              		.loc 1 54 0
+ 296 0058 0021     		movs	r1, #0
+ 297 005a 0020     		movs	r0, #0
+ 298 005c FFF7FEFF 		bl	SetTileColor
+ 299              	.LVL58:
+  55:whackamole.c  ****             CyDelay(10);
+ 300              		.loc 1 55 0
+ 301 0060 0021     		movs	r1, #0
+ 302 0062 0120     		movs	r0, #1
+ 303 0064 FFF7FEFF 		bl	SetTileColor
+ 304              	.LVL59:
+  56:whackamole.c  ****         	StripLights_Pixel(i, 0, current_color);
+ 305              		.loc 1 56 0
+ 306 0068 0A20     		movs	r0, #10
+ 307 006a FFF7FEFF 		bl	CyDelay
+ 308              	.LVL60:
+  57:whackamole.c  ****         	StripLights_Pixel(i, 1, current_color);
+ 309              		.loc 1 57 0
+ 310 006e 2A00     		movs	r2, r5
+ 311 0070 0021     		movs	r1, #0
+ 312 0072 2000     		movs	r0, r4
+ 313 0074 FFF7FEFF 		bl	StripLights_Pixel
+ 314              	.LVL61:
+  58:whackamole.c  ****         	while (StripLights_Ready() == 0);
+ 315              		.loc 1 58 0
+ 316 0078 2A00     		movs	r2, r5
+ 317 007a 0121     		movs	r1, #1
+ 318 007c 2000     		movs	r0, r4
+ 319 007e FFF7FEFF 		bl	StripLights_Pixel
+ 320              	.LVL62:
+ 321              	.L17:
+  59:whackamole.c  ****         	StripLights_Trigger(1);
+ 322              		.loc 1 59 0 discriminator 1
+ 323 0082 FFF7FEFF 		bl	StripLights_Ready
+ 324              	.LVL63:
+ 325 0086 0028     		cmp	r0, #0
+ 326 0088 FBD0     		beq	.L17
+  60:whackamole.c  ****         }
+ 327              		.loc 1 60 0 discriminator 2
+ 328 008a 0120     		movs	r0, #1
+ 329 008c FFF7FEFF 		bl	StripLights_Trigger
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 9
+
+
+ 330              	.LVL64:
+  53:whackamole.c  ****             SetTileColor(0, 0);
+ 331              		.loc 1 53 0 discriminator 2
+ 332 0090 013C     		subs	r4, r4, #1
+ 333              	.LVL65:
+ 334              	.L16:
+  53:whackamole.c  ****             SetTileColor(0, 0);
+ 335              		.loc 1 53 0 is_stmt 0 discriminator 1
+ 336 0092 002C     		cmp	r4, #0
+ 337 0094 E0DC     		bgt	.L18
+ 338              	.LBE4:
+  62:whackamole.c  ****     }
+ 339              		.loc 1 62 0 is_stmt 1
+ 340 0096 2800     		movs	r0, r5
+ 341 0098 FFF7FEFF 		bl	IncrementColor
+ 342              	.LVL66:
+ 343 009c 0500     		movs	r5, r0
+ 344              	.LVL67:
+  63:whackamole.c  **** }
+ 345              		.loc 1 63 0
+ 346 009e B4E7     		b	.L19
+ 347              		.cfi_endproc
+ 348              	.LFE33:
+ 349              		.size	RunPattern, .-RunPattern
+ 350              		.section	.text.ResetBlock,"ax",%progbits
+ 351              		.align	2
+ 352              		.global	ResetBlock
+ 353              		.code	16
+ 354              		.thumb_func
+ 355              		.type	ResetBlock, %function
+ 356              	ResetBlock:
+ 357              	.LFB36:
+ 101:whackamole.c  **** 
+ 102:whackamole.c  **** //Resets all the tile colors to blank
+ 103:whackamole.c  **** void ResetBlock(){
+ 358              		.loc 1 103 0
+ 359              		.cfi_startproc
+ 360              		@ args = 0, pretend = 0, frame = 0
+ 361              		@ frame_needed = 0, uses_anonymous_args = 0
+ 362 0000 10B5     		push	{r4, lr}
+ 363              		.cfi_def_cfa_offset 8
+ 364              		.cfi_offset 4, -8
+ 365              		.cfi_offset 14, -4
+ 104:whackamole.c  ****     SetTileColor(0, 0);
+ 366              		.loc 1 104 0
+ 367 0002 0021     		movs	r1, #0
+ 368 0004 0020     		movs	r0, #0
+ 369 0006 FFF7FEFF 		bl	SetTileColor
+ 370              	.LVL68:
+ 105:whackamole.c  ****     SetTileColor(1, 0);
+ 371              		.loc 1 105 0
+ 372 000a 0021     		movs	r1, #0
+ 373 000c 0120     		movs	r0, #1
+ 374 000e FFF7FEFF 		bl	SetTileColor
+ 375              	.LVL69:
+ 106:whackamole.c  ****     SetTileColor(2, 0);
+ 376              		.loc 1 106 0
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 10
+
+
+ 377 0012 0021     		movs	r1, #0
+ 378 0014 0220     		movs	r0, #2
+ 379 0016 FFF7FEFF 		bl	SetTileColor
+ 380              	.LVL70:
+ 107:whackamole.c  ****     SetTileColor(3, 0);
+ 381              		.loc 1 107 0
+ 382 001a 0021     		movs	r1, #0
+ 383 001c 0320     		movs	r0, #3
+ 384 001e FFF7FEFF 		bl	SetTileColor
+ 385              	.LVL71:
+ 108:whackamole.c  **** }
+ 386              		.loc 1 108 0
+ 387              		@ sp needed
+ 388 0022 10BD     		pop	{r4, pc}
+ 389              		.cfi_endproc
+ 390              	.LFE36:
+ 391              		.size	ResetBlock, .-ResetBlock
+ 392              		.section	.text.Whackamole,"ax",%progbits
+ 393              		.align	2
+ 394              		.global	Whackamole
+ 395              		.code	16
+ 396              		.thumb_func
+ 397              		.type	Whackamole, %function
+ 398              	Whackamole:
+ 399              	.LFB32:
+  12:whackamole.c  ****     srand(time(NULL)); // seed the randomness with time
+ 400              		.loc 1 12 0
+ 401              		.cfi_startproc
+ 402              		@ args = 0, pretend = 0, frame = 0
+ 403              		@ frame_needed = 0, uses_anonymous_args = 0
+ 404 0000 10B5     		push	{r4, lr}
+ 405              		.cfi_def_cfa_offset 8
+ 406              		.cfi_offset 4, -8
+ 407              		.cfi_offset 14, -4
+  13:whackamole.c  ****     int random;
+ 408              		.loc 1 13 0
+ 409 0002 0020     		movs	r0, #0
+ 410 0004 FFF7FEFF 		bl	time
+ 411              	.LVL72:
+ 412 0008 FFF7FEFF 		bl	srand
+ 413              	.LVL73:
+  15:whackamole.c  ****     
+ 414              		.loc 1 15 0
+ 415 000c FFF7FEFF 		bl	ResetBlock
+ 416              	.LVL74:
+ 417              	.L22:
+  19:whackamole.c  ****         flex1 = flex1_Read();
+ 418              		.loc 1 19 0 discriminator 1
+ 419 0010 FFF7FEFF 		bl	flex0_Read
+ 420              	.LVL75:
+ 421 0014 084B     		ldr	r3, .L23
+ 422 0016 1870     		strb	r0, [r3]
+  20:whackamole.c  ****         flex2 = flex2_Read();
+ 423              		.loc 1 20 0 discriminator 1
+ 424 0018 FFF7FEFF 		bl	flex1_Read
+ 425              	.LVL76:
+ 426 001c 074B     		ldr	r3, .L23+4
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 11
+
+
+ 427 001e 1870     		strb	r0, [r3]
+  21:whackamole.c  ****         flex3 = flex3_Read();
+ 428              		.loc 1 21 0 discriminator 1
+ 429 0020 FFF7FEFF 		bl	flex2_Read
+ 430              	.LVL77:
+ 431 0024 064B     		ldr	r3, .L23+8
+ 432 0026 1870     		strb	r0, [r3]
+  22:whackamole.c  ****         random = rand() % 4;
+ 433              		.loc 1 22 0 discriminator 1
+ 434 0028 FFF7FEFF 		bl	flex3_Read
+ 435              	.LVL78:
+ 436 002c 054B     		ldr	r3, .L23+12
+ 437 002e 1870     		strb	r0, [r3]
+  23:whackamole.c  ****         
+ 438              		.loc 1 23 0 discriminator 1
+ 439 0030 FFF7FEFF 		bl	rand
+ 440              	.LVL79:
+ 441 0034 ECE7     		b	.L22
+ 442              	.L24:
+ 443 0036 C046     		.align	2
+ 444              	.L23:
+ 445 0038 00000000 		.word	flex0
+ 446 003c 00000000 		.word	flex1
+ 447 0040 00000000 		.word	flex2
+ 448 0044 00000000 		.word	flex3
+ 449              		.cfi_endproc
+ 450              	.LFE32:
+ 451              		.size	Whackamole, .-Whackamole
+ 452              		.comm	flex3,1,1
+ 453              		.comm	flex2,1,1
+ 454              		.comm	flex1,1,1
+ 455              		.comm	flex0,1,1
+ 456              		.global	LEDS_PER_TILE
+ 457              		.section	.rodata
+ 458              		.align	2
+ 459              		.type	LEDS_PER_TILE, %object
+ 460              		.size	LEDS_PER_TILE, 4
+ 461              	LEDS_PER_TILE:
+ 462 0000 3C000000 		.word	60
+ 463              		.text
+ 464              	.Letext0:
+ 465              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 466              		.file 3 "whackamole.h"
+ 467              		.file 4 "Generated_Source\\PSoC4/StripLights.h"
+ 468              		.file 5 "Generated_Source\\PSoC4/CyLib.h"
+ 469              		.file 6 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 470              		.file 7 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 471              		.file 8 "Generated_Source\\PSoC4/flex0.h"
+ 472              		.file 9 "Generated_Source\\PSoC4/flex1.h"
+ 473              		.file 10 "Generated_Source\\PSoC4/flex2.h"
+ 474              		.file 11 "Generated_Source\\PSoC4/flex3.h"
+ 475              		.section	.debug_info,"",%progbits
+ 476              	.Ldebug_info0:
+ 477 0000 B7050000 		.4byte	0x5b7
+ 478 0004 0400     		.2byte	0x4
+ 479 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 480 000a 04       		.byte	0x4
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 12
+
+
+ 481 000b 01       		.uleb128 0x1
+ 482 000c 6B010000 		.4byte	.LASF45
+ 483 0010 0C       		.byte	0xc
+ 484 0011 4D010000 		.4byte	.LASF46
+ 485 0015 45020000 		.4byte	.LASF47
+ 486 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 487 001d 00000000 		.4byte	0
+ 488 0021 00000000 		.4byte	.Ldebug_line0
+ 489 0025 02       		.uleb128 0x2
+ 490 0026 01       		.byte	0x1
+ 491 0027 06       		.byte	0x6
+ 492 0028 A8020000 		.4byte	.LASF0
+ 493 002c 02       		.uleb128 0x2
+ 494 002d 01       		.byte	0x1
+ 495 002e 08       		.byte	0x8
+ 496 002f 80000000 		.4byte	.LASF1
+ 497 0033 02       		.uleb128 0x2
+ 498 0034 02       		.byte	0x2
+ 499 0035 05       		.byte	0x5
+ 500 0036 3B020000 		.4byte	.LASF2
+ 501 003a 02       		.uleb128 0x2
+ 502 003b 02       		.byte	0x2
+ 503 003c 07       		.byte	0x7
+ 504 003d AB000000 		.4byte	.LASF3
+ 505 0041 02       		.uleb128 0x2
+ 506 0042 04       		.byte	0x4
+ 507 0043 05       		.byte	0x5
+ 508 0044 93020000 		.4byte	.LASF4
+ 509 0048 02       		.uleb128 0x2
+ 510 0049 04       		.byte	0x4
+ 511 004a 07       		.byte	0x7
+ 512 004b 17010000 		.4byte	.LASF5
+ 513 004f 02       		.uleb128 0x2
+ 514 0050 08       		.byte	0x8
+ 515 0051 05       		.byte	0x5
+ 516 0052 0D020000 		.4byte	.LASF6
+ 517 0056 02       		.uleb128 0x2
+ 518 0057 08       		.byte	0x8
+ 519 0058 07       		.byte	0x7
+ 520 0059 36010000 		.4byte	.LASF7
+ 521 005d 03       		.uleb128 0x3
+ 522 005e 04       		.byte	0x4
+ 523 005f 05       		.byte	0x5
+ 524 0060 696E7400 		.ascii	"int\000"
+ 525 0064 02       		.uleb128 0x2
+ 526 0065 04       		.byte	0x4
+ 527 0066 07       		.byte	0x7
+ 528 0067 29010000 		.4byte	.LASF8
+ 529 006b 04       		.uleb128 0x4
+ 530 006c 8D020000 		.4byte	.LASF9
+ 531 0070 02       		.byte	0x2
+ 532 0071 D201     		.2byte	0x1d2
+ 533 0073 2C000000 		.4byte	0x2c
+ 534 0077 04       		.uleb128 0x4
+ 535 0078 10010000 		.4byte	.LASF10
+ 536 007c 02       		.byte	0x2
+ 537 007d D401     		.2byte	0x1d4
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 13
+
+
+ 538 007f 48000000 		.4byte	0x48
+ 539 0083 02       		.uleb128 0x2
+ 540 0084 04       		.byte	0x4
+ 541 0085 04       		.byte	0x4
+ 542 0086 60000000 		.4byte	.LASF11
+ 543 008a 02       		.uleb128 0x2
+ 544 008b 08       		.byte	0x8
+ 545 008c 04       		.byte	0x4
+ 546 008d 32000000 		.4byte	.LASF12
+ 547 0091 02       		.uleb128 0x2
+ 548 0092 01       		.byte	0x1
+ 549 0093 08       		.byte	0x8
+ 550 0094 1B020000 		.4byte	.LASF13
+ 551 0098 02       		.uleb128 0x2
+ 552 0099 04       		.byte	0x4
+ 553 009a 07       		.byte	0x7
+ 554 009b 04020000 		.4byte	.LASF14
+ 555 009f 02       		.uleb128 0x2
+ 556 00a0 08       		.byte	0x8
+ 557 00a1 04       		.byte	0x4
+ 558 00a2 9C020000 		.4byte	.LASF15
+ 559 00a6 05       		.uleb128 0x5
+ 560 00a7 20020000 		.4byte	.LASF24
+ 561 00ab 01       		.byte	0x1
+ 562 00ac 48       		.byte	0x48
+ 563 00ad 00000000 		.4byte	.LFB34
+ 564 00b1 30000000 		.4byte	.LFE34-.LFB34
+ 565 00b5 01       		.uleb128 0x1
+ 566 00b6 9C       		.byte	0x9c
+ 567 00b7 3E010000 		.4byte	0x13e
+ 568 00bb 06       		.uleb128 0x6
+ 569 00bc 5A010000 		.4byte	.LASF16
+ 570 00c0 01       		.byte	0x1
+ 571 00c1 48       		.byte	0x48
+ 572 00c2 5D000000 		.4byte	0x5d
+ 573 00c6 00000000 		.4byte	.LLST0
+ 574 00ca 06       		.uleb128 0x6
+ 575 00cb 0A010000 		.4byte	.LASF17
+ 576 00cf 01       		.byte	0x1
+ 577 00d0 48       		.byte	0x48
+ 578 00d1 77000000 		.4byte	0x77
+ 579 00d5 2C000000 		.4byte	.LLST1
+ 580 00d9 07       		.uleb128 0x7
+ 581 00da 06000000 		.4byte	.LBB2
+ 582 00de 22000000 		.4byte	.LBE2-.LBB2
+ 583 00e2 2E010000 		.4byte	0x12e
+ 584 00e6 08       		.uleb128 0x8
+ 585 00e7 6C656400 		.ascii	"led\000"
+ 586 00eb 01       		.byte	0x1
+ 587 00ec 49       		.byte	0x49
+ 588 00ed 77000000 		.4byte	0x77
+ 589 00f1 58000000 		.4byte	.LLST2
+ 590 00f5 09       		.uleb128 0x9
+ 591 00f6 14000000 		.4byte	.LVL3
+ 592 00fa 36050000 		.4byte	0x536
+ 593 00fe 15010000 		.4byte	0x115
+ 594 0102 0A       		.uleb128 0xa
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 14
+
+
+ 595 0103 01       		.uleb128 0x1
+ 596 0104 50       		.byte	0x50
+ 597 0105 02       		.uleb128 0x2
+ 598 0106 74       		.byte	0x74
+ 599 0107 00       		.sleb128 0
+ 600 0108 0A       		.uleb128 0xa
+ 601 0109 01       		.uleb128 0x1
+ 602 010a 51       		.byte	0x51
+ 603 010b 02       		.uleb128 0x2
+ 604 010c 76       		.byte	0x76
+ 605 010d 00       		.sleb128 0
+ 606 010e 0A       		.uleb128 0xa
+ 607 010f 01       		.uleb128 0x1
+ 608 0110 52       		.byte	0x52
+ 609 0111 02       		.uleb128 0x2
+ 610 0112 75       		.byte	0x75
+ 611 0113 00       		.sleb128 0
+ 612 0114 00       		.byte	0
+ 613 0115 0B       		.uleb128 0xb
+ 614 0116 18000000 		.4byte	.LVL4
+ 615 011a 41050000 		.4byte	0x541
+ 616 011e 0C       		.uleb128 0xc
+ 617 011f 22000000 		.4byte	.LVL5
+ 618 0123 4C050000 		.4byte	0x54c
+ 619 0127 0A       		.uleb128 0xa
+ 620 0128 01       		.uleb128 0x1
+ 621 0129 50       		.byte	0x50
+ 622 012a 01       		.uleb128 0x1
+ 623 012b 31       		.byte	0x31
+ 624 012c 00       		.byte	0
+ 625 012d 00       		.byte	0
+ 626 012e 0C       		.uleb128 0xc
+ 627 012f 2E000000 		.4byte	.LVL7
+ 628 0133 57050000 		.4byte	0x557
+ 629 0137 0A       		.uleb128 0xa
+ 630 0138 01       		.uleb128 0x1
+ 631 0139 50       		.byte	0x50
+ 632 013a 01       		.uleb128 0x1
+ 633 013b 3A       		.byte	0x3a
+ 634 013c 00       		.byte	0
+ 635 013d 00       		.byte	0
+ 636 013e 0D       		.uleb128 0xd
+ 637 013f 66000000 		.4byte	.LASF48
+ 638 0143 01       		.byte	0x1
+ 639 0144 55       		.byte	0x55
+ 640 0145 77000000 		.4byte	0x77
+ 641 0149 00000000 		.4byte	.LFB35
+ 642 014d 64000000 		.4byte	.LFE35-.LFB35
+ 643 0151 01       		.uleb128 0x1
+ 644 0152 9C       		.byte	0x9c
+ 645 0153 32020000 		.4byte	0x232
+ 646 0157 06       		.uleb128 0x6
+ 647 0158 0A010000 		.4byte	.LASF17
+ 648 015c 01       		.byte	0x1
+ 649 015d 55       		.byte	0x55
+ 650 015e 77000000 		.4byte	0x77
+ 651 0162 77000000 		.4byte	.LLST3
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 15
+
+
+ 652 0166 0E       		.uleb128 0xe
+ 653 0167 E1000000 		.4byte	.LASF18
+ 654 016b 01       		.byte	0x1
+ 655 016c 57       		.byte	0x57
+ 656 016d 77000000 		.4byte	0x77
+ 657 0171 A3000000 		.4byte	.LLST4
+ 658 0175 0E       		.uleb128 0xe
+ 659 0176 E8000000 		.4byte	.LASF19
+ 660 017a 01       		.byte	0x1
+ 661 017b 58       		.byte	0x58
+ 662 017c 77000000 		.4byte	0x77
+ 663 0180 C1000000 		.4byte	.LLST5
+ 664 0184 0E       		.uleb128 0xe
+ 665 0185 EF000000 		.4byte	.LASF20
+ 666 0189 01       		.byte	0x1
+ 667 018a 59       		.byte	0x59
+ 668 018b 77000000 		.4byte	0x77
+ 669 018f DF000000 		.4byte	.LLST6
+ 670 0193 0E       		.uleb128 0xe
+ 671 0194 0B000000 		.4byte	.LASF21
+ 672 0198 01       		.byte	0x1
+ 673 0199 5A       		.byte	0x5a
+ 674 019a 77000000 		.4byte	0x77
+ 675 019e FD000000 		.4byte	.LLST7
+ 676 01a2 0E       		.uleb128 0xe
+ 677 01a3 FC000000 		.4byte	.LASF22
+ 678 01a7 01       		.byte	0x1
+ 679 01a8 5B       		.byte	0x5b
+ 680 01a9 77000000 		.4byte	0x77
+ 681 01ad 28010000 		.4byte	.LLST8
+ 682 01b1 0E       		.uleb128 0xe
+ 683 01b2 03010000 		.4byte	.LASF23
+ 684 01b6 01       		.byte	0x1
+ 685 01b7 5C       		.byte	0x5c
+ 686 01b8 77000000 		.4byte	0x77
+ 687 01bc 47010000 		.4byte	.LLST9
+ 688 01c0 09       		.uleb128 0x9
+ 689 01c1 0C000000 		.4byte	.LVL13
+ 690 01c5 62050000 		.4byte	0x562
+ 691 01c9 D4010000 		.4byte	0x1d4
+ 692 01cd 0A       		.uleb128 0xa
+ 693 01ce 01       		.uleb128 0x1
+ 694 01cf 50       		.byte	0x50
+ 695 01d0 02       		.uleb128 0x2
+ 696 01d1 08       		.byte	0x8
+ 697 01d2 48       		.byte	0x48
+ 698 01d3 00       		.byte	0
+ 699 01d4 09       		.uleb128 0x9
+ 700 01d5 14000000 		.4byte	.LVL16
+ 701 01d9 62050000 		.4byte	0x562
+ 702 01dd E7010000 		.4byte	0x1e7
+ 703 01e1 0A       		.uleb128 0xa
+ 704 01e2 01       		.uleb128 0x1
+ 705 01e3 50       		.byte	0x50
+ 706 01e4 01       		.uleb128 0x1
+ 707 01e5 44       		.byte	0x44
+ 708 01e6 00       		.byte	0
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 16
+
+
+ 709 01e7 09       		.uleb128 0x9
+ 710 01e8 1C000000 		.4byte	.LVL19
+ 711 01ec 62050000 		.4byte	0x562
+ 712 01f0 FA010000 		.4byte	0x1fa
+ 713 01f4 0A       		.uleb128 0xa
+ 714 01f5 01       		.uleb128 0x1
+ 715 01f6 50       		.byte	0x50
+ 716 01f7 01       		.uleb128 0x1
+ 717 01f8 31       		.byte	0x31
+ 718 01f9 00       		.byte	0
+ 719 01fa 09       		.uleb128 0x9
+ 720 01fb 24000000 		.4byte	.LVL22
+ 721 01ff 62050000 		.4byte	0x562
+ 722 0203 0E020000 		.4byte	0x20e
+ 723 0207 0A       		.uleb128 0xa
+ 724 0208 01       		.uleb128 0x1
+ 725 0209 50       		.byte	0x50
+ 726 020a 02       		.uleb128 0x2
+ 727 020b 08       		.byte	0x8
+ 728 020c 5E       		.byte	0x5e
+ 729 020d 00       		.byte	0
+ 730 020e 09       		.uleb128 0x9
+ 731 020f 2C000000 		.4byte	.LVL25
+ 732 0213 62050000 		.4byte	0x562
+ 733 0217 21020000 		.4byte	0x221
+ 734 021b 0A       		.uleb128 0xa
+ 735 021c 01       		.uleb128 0x1
+ 736 021d 50       		.byte	0x50
+ 737 021e 01       		.uleb128 0x1
+ 738 021f 4B       		.byte	0x4b
+ 739 0220 00       		.byte	0
+ 740 0221 0C       		.uleb128 0xc
+ 741 0222 34000000 		.4byte	.LVL28
+ 742 0226 62050000 		.4byte	0x562
+ 743 022a 0A       		.uleb128 0xa
+ 744 022b 01       		.uleb128 0x1
+ 745 022c 50       		.byte	0x50
+ 746 022d 02       		.uleb128 0x2
+ 747 022e 08       		.byte	0x8
+ 748 022f 5C       		.byte	0x5c
+ 749 0230 00       		.byte	0
+ 750 0231 00       		.byte	0
+ 751 0232 0F       		.uleb128 0xf
+ 752 0233 55000000 		.4byte	.LASF25
+ 753 0237 01       		.byte	0x1
+ 754 0238 24       		.byte	0x24
+ 755 0239 00000000 		.4byte	.LFB33
+ 756 023d A0000000 		.4byte	.LFE33-.LFB33
+ 757 0241 01       		.uleb128 0x1
+ 758 0242 9C       		.byte	0x9c
+ 759 0243 F7030000 		.4byte	0x3f7
+ 760 0247 0E       		.uleb128 0xe
+ 761 0248 2D020000 		.4byte	.LASF26
+ 762 024c 01       		.byte	0x1
+ 763 024d 26       		.byte	0x26
+ 764 024e 77000000 		.4byte	0x77
+ 765 0252 86010000 		.4byte	.LLST10
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 17
+
+
+ 766 0256 07       		.uleb128 0x7
+ 767 0257 0A000000 		.4byte	.LBB3
+ 768 025b 42000000 		.4byte	.LBE3-.LBB3
+ 769 025f 0A030000 		.4byte	0x30a
+ 770 0263 08       		.uleb128 0x8
+ 771 0264 6900     		.ascii	"i\000"
+ 772 0266 01       		.byte	0x1
+ 773 0267 29       		.byte	0x29
+ 774 0268 5D000000 		.4byte	0x5d
+ 775 026c C5010000 		.4byte	.LLST11
+ 776 0270 09       		.uleb128 0x9
+ 777 0271 16000000 		.4byte	.LVL46
+ 778 0275 A6000000 		.4byte	0xa6
+ 779 0279 88020000 		.4byte	0x288
+ 780 027d 0A       		.uleb128 0xa
+ 781 027e 01       		.uleb128 0x1
+ 782 027f 50       		.byte	0x50
+ 783 0280 01       		.uleb128 0x1
+ 784 0281 30       		.byte	0x30
+ 785 0282 0A       		.uleb128 0xa
+ 786 0283 01       		.uleb128 0x1
+ 787 0284 51       		.byte	0x51
+ 788 0285 01       		.uleb128 0x1
+ 789 0286 30       		.byte	0x30
+ 790 0287 00       		.byte	0
+ 791 0288 09       		.uleb128 0x9
+ 792 0289 1E000000 		.4byte	.LVL47
+ 793 028d A6000000 		.4byte	0xa6
+ 794 0291 A0020000 		.4byte	0x2a0
+ 795 0295 0A       		.uleb128 0xa
+ 796 0296 01       		.uleb128 0x1
+ 797 0297 50       		.byte	0x50
+ 798 0298 01       		.uleb128 0x1
+ 799 0299 31       		.byte	0x31
+ 800 029a 0A       		.uleb128 0xa
+ 801 029b 01       		.uleb128 0x1
+ 802 029c 51       		.byte	0x51
+ 803 029d 01       		.uleb128 0x1
+ 804 029e 30       		.byte	0x30
+ 805 029f 00       		.byte	0
+ 806 02a0 09       		.uleb128 0x9
+ 807 02a1 24000000 		.4byte	.LVL48
+ 808 02a5 57050000 		.4byte	0x557
+ 809 02a9 B3020000 		.4byte	0x2b3
+ 810 02ad 0A       		.uleb128 0xa
+ 811 02ae 01       		.uleb128 0x1
+ 812 02af 50       		.byte	0x50
+ 813 02b0 01       		.uleb128 0x1
+ 814 02b1 3A       		.byte	0x3a
+ 815 02b2 00       		.byte	0
+ 816 02b3 09       		.uleb128 0x9
+ 817 02b4 2E000000 		.4byte	.LVL49
+ 818 02b8 36050000 		.4byte	0x536
+ 819 02bc D2020000 		.4byte	0x2d2
+ 820 02c0 0A       		.uleb128 0xa
+ 821 02c1 01       		.uleb128 0x1
+ 822 02c2 50       		.byte	0x50
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 18
+
+
+ 823 02c3 02       		.uleb128 0x2
+ 824 02c4 74       		.byte	0x74
+ 825 02c5 00       		.sleb128 0
+ 826 02c6 0A       		.uleb128 0xa
+ 827 02c7 01       		.uleb128 0x1
+ 828 02c8 51       		.byte	0x51
+ 829 02c9 01       		.uleb128 0x1
+ 830 02ca 30       		.byte	0x30
+ 831 02cb 0A       		.uleb128 0xa
+ 832 02cc 01       		.uleb128 0x1
+ 833 02cd 52       		.byte	0x52
+ 834 02ce 02       		.uleb128 0x2
+ 835 02cf 75       		.byte	0x75
+ 836 02d0 00       		.sleb128 0
+ 837 02d1 00       		.byte	0
+ 838 02d2 09       		.uleb128 0x9
+ 839 02d3 38000000 		.4byte	.LVL50
+ 840 02d7 36050000 		.4byte	0x536
+ 841 02db F1020000 		.4byte	0x2f1
+ 842 02df 0A       		.uleb128 0xa
+ 843 02e0 01       		.uleb128 0x1
+ 844 02e1 50       		.byte	0x50
+ 845 02e2 02       		.uleb128 0x2
+ 846 02e3 74       		.byte	0x74
+ 847 02e4 00       		.sleb128 0
+ 848 02e5 0A       		.uleb128 0xa
+ 849 02e6 01       		.uleb128 0x1
+ 850 02e7 51       		.byte	0x51
+ 851 02e8 01       		.uleb128 0x1
+ 852 02e9 31       		.byte	0x31
+ 853 02ea 0A       		.uleb128 0xa
+ 854 02eb 01       		.uleb128 0x1
+ 855 02ec 52       		.byte	0x52
+ 856 02ed 02       		.uleb128 0x2
+ 857 02ee 75       		.byte	0x75
+ 858 02ef 00       		.sleb128 0
+ 859 02f0 00       		.byte	0
+ 860 02f1 0B       		.uleb128 0xb
+ 861 02f2 3C000000 		.4byte	.LVL51
+ 862 02f6 41050000 		.4byte	0x541
+ 863 02fa 0C       		.uleb128 0xc
+ 864 02fb 46000000 		.4byte	.LVL52
+ 865 02ff 4C050000 		.4byte	0x54c
+ 866 0303 0A       		.uleb128 0xa
+ 867 0304 01       		.uleb128 0x1
+ 868 0305 50       		.byte	0x50
+ 869 0306 01       		.uleb128 0x1
+ 870 0307 31       		.byte	0x31
+ 871 0308 00       		.byte	0
+ 872 0309 00       		.byte	0
+ 873 030a 07       		.uleb128 0x7
+ 874 030b 54000000 		.4byte	.LBB4
+ 875 030f 42000000 		.4byte	.LBE4-.LBB4
+ 876 0313 BE030000 		.4byte	0x3be
+ 877 0317 08       		.uleb128 0x8
+ 878 0318 6900     		.ascii	"i\000"
+ 879 031a 01       		.byte	0x1
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 19
+
+
+ 880 031b 35       		.byte	0x35
+ 881 031c 5D000000 		.4byte	0x5d
+ 882 0320 E4010000 		.4byte	.LLST12
+ 883 0324 09       		.uleb128 0x9
+ 884 0325 60000000 		.4byte	.LVL58
+ 885 0329 A6000000 		.4byte	0xa6
+ 886 032d 3C030000 		.4byte	0x33c
+ 887 0331 0A       		.uleb128 0xa
+ 888 0332 01       		.uleb128 0x1
+ 889 0333 50       		.byte	0x50
+ 890 0334 01       		.uleb128 0x1
+ 891 0335 30       		.byte	0x30
+ 892 0336 0A       		.uleb128 0xa
+ 893 0337 01       		.uleb128 0x1
+ 894 0338 51       		.byte	0x51
+ 895 0339 01       		.uleb128 0x1
+ 896 033a 30       		.byte	0x30
+ 897 033b 00       		.byte	0
+ 898 033c 09       		.uleb128 0x9
+ 899 033d 68000000 		.4byte	.LVL59
+ 900 0341 A6000000 		.4byte	0xa6
+ 901 0345 54030000 		.4byte	0x354
+ 902 0349 0A       		.uleb128 0xa
+ 903 034a 01       		.uleb128 0x1
+ 904 034b 50       		.byte	0x50
+ 905 034c 01       		.uleb128 0x1
+ 906 034d 31       		.byte	0x31
+ 907 034e 0A       		.uleb128 0xa
+ 908 034f 01       		.uleb128 0x1
+ 909 0350 51       		.byte	0x51
+ 910 0351 01       		.uleb128 0x1
+ 911 0352 30       		.byte	0x30
+ 912 0353 00       		.byte	0
+ 913 0354 09       		.uleb128 0x9
+ 914 0355 6E000000 		.4byte	.LVL60
+ 915 0359 57050000 		.4byte	0x557
+ 916 035d 67030000 		.4byte	0x367
+ 917 0361 0A       		.uleb128 0xa
+ 918 0362 01       		.uleb128 0x1
+ 919 0363 50       		.byte	0x50
+ 920 0364 01       		.uleb128 0x1
+ 921 0365 3A       		.byte	0x3a
+ 922 0366 00       		.byte	0
+ 923 0367 09       		.uleb128 0x9
+ 924 0368 78000000 		.4byte	.LVL61
+ 925 036c 36050000 		.4byte	0x536
+ 926 0370 86030000 		.4byte	0x386
+ 927 0374 0A       		.uleb128 0xa
+ 928 0375 01       		.uleb128 0x1
+ 929 0376 50       		.byte	0x50
+ 930 0377 02       		.uleb128 0x2
+ 931 0378 74       		.byte	0x74
+ 932 0379 00       		.sleb128 0
+ 933 037a 0A       		.uleb128 0xa
+ 934 037b 01       		.uleb128 0x1
+ 935 037c 51       		.byte	0x51
+ 936 037d 01       		.uleb128 0x1
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 20
+
+
+ 937 037e 30       		.byte	0x30
+ 938 037f 0A       		.uleb128 0xa
+ 939 0380 01       		.uleb128 0x1
+ 940 0381 52       		.byte	0x52
+ 941 0382 02       		.uleb128 0x2
+ 942 0383 75       		.byte	0x75
+ 943 0384 00       		.sleb128 0
+ 944 0385 00       		.byte	0
+ 945 0386 09       		.uleb128 0x9
+ 946 0387 82000000 		.4byte	.LVL62
+ 947 038b 36050000 		.4byte	0x536
+ 948 038f A5030000 		.4byte	0x3a5
+ 949 0393 0A       		.uleb128 0xa
+ 950 0394 01       		.uleb128 0x1
+ 951 0395 50       		.byte	0x50
+ 952 0396 02       		.uleb128 0x2
+ 953 0397 74       		.byte	0x74
+ 954 0398 00       		.sleb128 0
+ 955 0399 0A       		.uleb128 0xa
+ 956 039a 01       		.uleb128 0x1
+ 957 039b 51       		.byte	0x51
+ 958 039c 01       		.uleb128 0x1
+ 959 039d 31       		.byte	0x31
+ 960 039e 0A       		.uleb128 0xa
+ 961 039f 01       		.uleb128 0x1
+ 962 03a0 52       		.byte	0x52
+ 963 03a1 02       		.uleb128 0x2
+ 964 03a2 75       		.byte	0x75
+ 965 03a3 00       		.sleb128 0
+ 966 03a4 00       		.byte	0
+ 967 03a5 0B       		.uleb128 0xb
+ 968 03a6 86000000 		.4byte	.LVL63
+ 969 03aa 41050000 		.4byte	0x541
+ 970 03ae 0C       		.uleb128 0xc
+ 971 03af 90000000 		.4byte	.LVL64
+ 972 03b3 4C050000 		.4byte	0x54c
+ 973 03b7 0A       		.uleb128 0xa
+ 974 03b8 01       		.uleb128 0x1
+ 975 03b9 50       		.byte	0x50
+ 976 03ba 01       		.uleb128 0x1
+ 977 03bb 31       		.byte	0x31
+ 978 03bc 00       		.byte	0
+ 979 03bd 00       		.byte	0
+ 980 03be 09       		.uleb128 0x9
+ 981 03bf 08000000 		.4byte	.LVL43
+ 982 03c3 62050000 		.4byte	0x562
+ 983 03c7 D2030000 		.4byte	0x3d2
+ 984 03cb 0A       		.uleb128 0xa
+ 985 03cc 01       		.uleb128 0x1
+ 986 03cd 50       		.byte	0x50
+ 987 03ce 02       		.uleb128 0x2
+ 988 03cf 08       		.byte	0x8
+ 989 03d0 48       		.byte	0x48
+ 990 03d1 00       		.byte	0
+ 991 03d2 09       		.uleb128 0x9
+ 992 03d3 52000000 		.4byte	.LVL54
+ 993 03d7 3E010000 		.4byte	0x13e
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 21
+
+
+ 994 03db E6030000 		.4byte	0x3e6
+ 995 03df 0A       		.uleb128 0xa
+ 996 03e0 01       		.uleb128 0x1
+ 997 03e1 50       		.byte	0x50
+ 998 03e2 02       		.uleb128 0x2
+ 999 03e3 75       		.byte	0x75
+ 1000 03e4 00       		.sleb128 0
+ 1001 03e5 00       		.byte	0
+ 1002 03e6 0C       		.uleb128 0xc
+ 1003 03e7 9C000000 		.4byte	.LVL66
+ 1004 03eb 3E010000 		.4byte	0x13e
+ 1005 03ef 0A       		.uleb128 0xa
+ 1006 03f0 01       		.uleb128 0x1
+ 1007 03f1 50       		.byte	0x50
+ 1008 03f2 02       		.uleb128 0x2
+ 1009 03f3 75       		.byte	0x75
+ 1010 03f4 00       		.sleb128 0
+ 1011 03f5 00       		.byte	0
+ 1012 03f6 00       		.byte	0
+ 1013 03f7 10       		.uleb128 0x10
+ 1014 03f8 F9010000 		.4byte	.LASF49
+ 1015 03fc 01       		.byte	0x1
+ 1016 03fd 67       		.byte	0x67
+ 1017 03fe 00000000 		.4byte	.LFB36
+ 1018 0402 24000000 		.4byte	.LFE36-.LFB36
+ 1019 0406 01       		.uleb128 0x1
+ 1020 0407 9C       		.byte	0x9c
+ 1021 0408 69040000 		.4byte	0x469
+ 1022 040c 09       		.uleb128 0x9
+ 1023 040d 0A000000 		.4byte	.LVL68
+ 1024 0411 A6000000 		.4byte	0xa6
+ 1025 0415 24040000 		.4byte	0x424
+ 1026 0419 0A       		.uleb128 0xa
+ 1027 041a 01       		.uleb128 0x1
+ 1028 041b 50       		.byte	0x50
+ 1029 041c 01       		.uleb128 0x1
+ 1030 041d 30       		.byte	0x30
+ 1031 041e 0A       		.uleb128 0xa
+ 1032 041f 01       		.uleb128 0x1
+ 1033 0420 51       		.byte	0x51
+ 1034 0421 01       		.uleb128 0x1
+ 1035 0422 30       		.byte	0x30
+ 1036 0423 00       		.byte	0
+ 1037 0424 09       		.uleb128 0x9
+ 1038 0425 12000000 		.4byte	.LVL69
+ 1039 0429 A6000000 		.4byte	0xa6
+ 1040 042d 3C040000 		.4byte	0x43c
+ 1041 0431 0A       		.uleb128 0xa
+ 1042 0432 01       		.uleb128 0x1
+ 1043 0433 50       		.byte	0x50
+ 1044 0434 01       		.uleb128 0x1
+ 1045 0435 31       		.byte	0x31
+ 1046 0436 0A       		.uleb128 0xa
+ 1047 0437 01       		.uleb128 0x1
+ 1048 0438 51       		.byte	0x51
+ 1049 0439 01       		.uleb128 0x1
+ 1050 043a 30       		.byte	0x30
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 22
+
+
+ 1051 043b 00       		.byte	0
+ 1052 043c 09       		.uleb128 0x9
+ 1053 043d 1A000000 		.4byte	.LVL70
+ 1054 0441 A6000000 		.4byte	0xa6
+ 1055 0445 54040000 		.4byte	0x454
+ 1056 0449 0A       		.uleb128 0xa
+ 1057 044a 01       		.uleb128 0x1
+ 1058 044b 50       		.byte	0x50
+ 1059 044c 01       		.uleb128 0x1
+ 1060 044d 32       		.byte	0x32
+ 1061 044e 0A       		.uleb128 0xa
+ 1062 044f 01       		.uleb128 0x1
+ 1063 0450 51       		.byte	0x51
+ 1064 0451 01       		.uleb128 0x1
+ 1065 0452 30       		.byte	0x30
+ 1066 0453 00       		.byte	0
+ 1067 0454 0C       		.uleb128 0xc
+ 1068 0455 22000000 		.4byte	.LVL71
+ 1069 0459 A6000000 		.4byte	0xa6
+ 1070 045d 0A       		.uleb128 0xa
+ 1071 045e 01       		.uleb128 0x1
+ 1072 045f 50       		.byte	0x50
+ 1073 0460 01       		.uleb128 0x1
+ 1074 0461 33       		.byte	0x33
+ 1075 0462 0A       		.uleb128 0xa
+ 1076 0463 01       		.uleb128 0x1
+ 1077 0464 51       		.byte	0x51
+ 1078 0465 01       		.uleb128 0x1
+ 1079 0466 30       		.byte	0x30
+ 1080 0467 00       		.byte	0
+ 1081 0468 00       		.byte	0
+ 1082 0469 0F       		.uleb128 0xf
+ 1083 046a B4020000 		.4byte	.LASF27
+ 1084 046e 01       		.byte	0x1
+ 1085 046f 0C       		.byte	0xc
+ 1086 0470 00000000 		.4byte	.LFB32
+ 1087 0474 48000000 		.4byte	.LFE32-.LFB32
+ 1088 0478 01       		.uleb128 0x1
+ 1089 0479 9C       		.byte	0x9c
+ 1090 047a DC040000 		.4byte	0x4dc
+ 1091 047e 11       		.uleb128 0x11
+ 1092 047f 39000000 		.4byte	.LASF50
+ 1093 0483 01       		.byte	0x1
+ 1094 0484 0E       		.byte	0xe
+ 1095 0485 5D000000 		.4byte	0x5d
+ 1096 0489 09       		.uleb128 0x9
+ 1097 048a 08000000 		.4byte	.LVL72
+ 1098 048e 6D050000 		.4byte	0x56d
+ 1099 0492 9C040000 		.4byte	0x49c
+ 1100 0496 0A       		.uleb128 0xa
+ 1101 0497 01       		.uleb128 0x1
+ 1102 0498 50       		.byte	0x50
+ 1103 0499 01       		.uleb128 0x1
+ 1104 049a 30       		.byte	0x30
+ 1105 049b 00       		.byte	0
+ 1106 049c 0B       		.uleb128 0xb
+ 1107 049d 0C000000 		.4byte	.LVL73
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 23
+
+
+ 1108 04a1 78050000 		.4byte	0x578
+ 1109 04a5 0B       		.uleb128 0xb
+ 1110 04a6 10000000 		.4byte	.LVL74
+ 1111 04aa F7030000 		.4byte	0x3f7
+ 1112 04ae 0B       		.uleb128 0xb
+ 1113 04af 14000000 		.4byte	.LVL75
+ 1114 04b3 83050000 		.4byte	0x583
+ 1115 04b7 0B       		.uleb128 0xb
+ 1116 04b8 1C000000 		.4byte	.LVL76
+ 1117 04bc 8E050000 		.4byte	0x58e
+ 1118 04c0 0B       		.uleb128 0xb
+ 1119 04c1 24000000 		.4byte	.LVL77
+ 1120 04c5 99050000 		.4byte	0x599
+ 1121 04c9 0B       		.uleb128 0xb
+ 1122 04ca 2C000000 		.4byte	.LVL78
+ 1123 04ce A4050000 		.4byte	0x5a4
+ 1124 04d2 0B       		.uleb128 0xb
+ 1125 04d3 34000000 		.4byte	.LVL79
+ 1126 04d7 AF050000 		.4byte	0x5af
+ 1127 04db 00       		.byte	0
+ 1128 04dc 12       		.uleb128 0x12
+ 1129 04dd 12000000 		.4byte	.LASF28
+ 1130 04e1 03       		.byte	0x3
+ 1131 04e2 0D       		.byte	0xd
+ 1132 04e3 ED040000 		.4byte	0x4ed
+ 1133 04e7 05       		.uleb128 0x5
+ 1134 04e8 03       		.byte	0x3
+ 1135 04e9 00000000 		.4byte	LEDS_PER_TILE
+ 1136 04ed 13       		.uleb128 0x13
+ 1137 04ee 5D000000 		.4byte	0x5d
+ 1138 04f2 12       		.uleb128 0x12
+ 1139 04f3 C9000000 		.4byte	.LASF29
+ 1140 04f7 03       		.byte	0x3
+ 1141 04f8 0E       		.byte	0xe
+ 1142 04f9 6B000000 		.4byte	0x6b
+ 1143 04fd 05       		.uleb128 0x5
+ 1144 04fe 03       		.byte	0x3
+ 1145 04ff 00000000 		.4byte	flex0
+ 1146 0503 12       		.uleb128 0x12
+ 1147 0504 CF000000 		.4byte	.LASF30
+ 1148 0508 03       		.byte	0x3
+ 1149 0509 0F       		.byte	0xf
+ 1150 050a 6B000000 		.4byte	0x6b
+ 1151 050e 05       		.uleb128 0x5
+ 1152 050f 03       		.byte	0x3
+ 1153 0510 00000000 		.4byte	flex1
+ 1154 0514 12       		.uleb128 0x12
+ 1155 0515 D5000000 		.4byte	.LASF31
+ 1156 0519 03       		.byte	0x3
+ 1157 051a 10       		.byte	0x10
+ 1158 051b 6B000000 		.4byte	0x6b
+ 1159 051f 05       		.uleb128 0x5
+ 1160 0520 03       		.byte	0x3
+ 1161 0521 00000000 		.4byte	flex2
+ 1162 0525 12       		.uleb128 0x12
+ 1163 0526 DB000000 		.4byte	.LASF32
+ 1164 052a 03       		.byte	0x3
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 24
+
+
+ 1165 052b 11       		.byte	0x11
+ 1166 052c 6B000000 		.4byte	0x6b
+ 1167 0530 05       		.uleb128 0x5
+ 1168 0531 03       		.byte	0x3
+ 1169 0532 00000000 		.4byte	flex3
+ 1170 0536 14       		.uleb128 0x14
+ 1171 0537 20000000 		.4byte	.LASF33
+ 1172 053b 20000000 		.4byte	.LASF33
+ 1173 053f 04       		.byte	0x4
+ 1174 0540 23       		.byte	0x23
+ 1175 0541 14       		.uleb128 0x14
+ 1176 0542 99000000 		.4byte	.LASF34
+ 1177 0546 99000000 		.4byte	.LASF34
+ 1178 054a 04       		.byte	0x4
+ 1179 054b 1B       		.byte	0x1b
+ 1180 054c 14       		.uleb128 0x14
+ 1181 054d BF020000 		.4byte	.LASF35
+ 1182 0551 BF020000 		.4byte	.LASF35
+ 1183 0555 04       		.byte	0x4
+ 1184 0556 1A       		.byte	0x1a
+ 1185 0557 14       		.uleb128 0x14
+ 1186 0558 D3020000 		.4byte	.LASF36
+ 1187 055c D3020000 		.4byte	.LASF36
+ 1188 0560 05       		.byte	0x5
+ 1189 0561 D9       		.byte	0xd9
+ 1190 0562 14       		.uleb128 0x14
+ 1191 0563 40000000 		.4byte	.LASF37
+ 1192 0567 40000000 		.4byte	.LASF37
+ 1193 056b 04       		.byte	0x4
+ 1194 056c 27       		.byte	0x27
+ 1195 056d 14       		.uleb128 0x14
+ 1196 056e 66010000 		.4byte	.LASF38
+ 1197 0572 66010000 		.4byte	.LASF38
+ 1198 0576 06       		.byte	0x6
+ 1199 0577 37       		.byte	0x37
+ 1200 0578 14       		.uleb128 0x14
+ 1201 0579 F6000000 		.4byte	.LASF39
+ 1202 057d F6000000 		.4byte	.LASF39
+ 1203 0581 07       		.byte	0x7
+ 1204 0582 96       		.byte	0x96
+ 1205 0583 14       		.uleb128 0x14
+ 1206 0584 BE000000 		.4byte	.LASF40
+ 1207 0588 BE000000 		.4byte	.LASF40
+ 1208 058c 08       		.byte	0x8
+ 1209 058d 32       		.byte	0x32
+ 1210 058e 14       		.uleb128 0x14
+ 1211 058f 75000000 		.4byte	.LASF41
+ 1212 0593 75000000 		.4byte	.LASF41
+ 1213 0597 09       		.byte	0x9
+ 1214 0598 32       		.byte	0x32
+ 1215 0599 14       		.uleb128 0x14
+ 1216 059a 00000000 		.4byte	.LASF42
+ 1217 059e 00000000 		.4byte	.LASF42
+ 1218 05a2 0A       		.byte	0xa
+ 1219 05a3 32       		.byte	0x32
+ 1220 05a4 14       		.uleb128 0x14
+ 1221 05a5 8E000000 		.4byte	.LASF43
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 25
+
+
+ 1222 05a9 8E000000 		.4byte	.LASF43
+ 1223 05ad 0B       		.byte	0xb
+ 1224 05ae 32       		.byte	0x32
+ 1225 05af 14       		.uleb128 0x14
+ 1226 05b0 DB020000 		.4byte	.LASF44
+ 1227 05b4 DB020000 		.4byte	.LASF44
+ 1228 05b8 07       		.byte	0x7
+ 1229 05b9 88       		.byte	0x88
+ 1230 05ba 00       		.byte	0
+ 1231              		.section	.debug_abbrev,"",%progbits
+ 1232              	.Ldebug_abbrev0:
+ 1233 0000 01       		.uleb128 0x1
+ 1234 0001 11       		.uleb128 0x11
+ 1235 0002 01       		.byte	0x1
+ 1236 0003 25       		.uleb128 0x25
+ 1237 0004 0E       		.uleb128 0xe
+ 1238 0005 13       		.uleb128 0x13
+ 1239 0006 0B       		.uleb128 0xb
+ 1240 0007 03       		.uleb128 0x3
+ 1241 0008 0E       		.uleb128 0xe
+ 1242 0009 1B       		.uleb128 0x1b
+ 1243 000a 0E       		.uleb128 0xe
+ 1244 000b 55       		.uleb128 0x55
+ 1245 000c 17       		.uleb128 0x17
+ 1246 000d 11       		.uleb128 0x11
+ 1247 000e 01       		.uleb128 0x1
+ 1248 000f 10       		.uleb128 0x10
+ 1249 0010 17       		.uleb128 0x17
+ 1250 0011 00       		.byte	0
+ 1251 0012 00       		.byte	0
+ 1252 0013 02       		.uleb128 0x2
+ 1253 0014 24       		.uleb128 0x24
+ 1254 0015 00       		.byte	0
+ 1255 0016 0B       		.uleb128 0xb
+ 1256 0017 0B       		.uleb128 0xb
+ 1257 0018 3E       		.uleb128 0x3e
+ 1258 0019 0B       		.uleb128 0xb
+ 1259 001a 03       		.uleb128 0x3
+ 1260 001b 0E       		.uleb128 0xe
+ 1261 001c 00       		.byte	0
+ 1262 001d 00       		.byte	0
+ 1263 001e 03       		.uleb128 0x3
+ 1264 001f 24       		.uleb128 0x24
+ 1265 0020 00       		.byte	0
+ 1266 0021 0B       		.uleb128 0xb
+ 1267 0022 0B       		.uleb128 0xb
+ 1268 0023 3E       		.uleb128 0x3e
+ 1269 0024 0B       		.uleb128 0xb
+ 1270 0025 03       		.uleb128 0x3
+ 1271 0026 08       		.uleb128 0x8
+ 1272 0027 00       		.byte	0
+ 1273 0028 00       		.byte	0
+ 1274 0029 04       		.uleb128 0x4
+ 1275 002a 16       		.uleb128 0x16
+ 1276 002b 00       		.byte	0
+ 1277 002c 03       		.uleb128 0x3
+ 1278 002d 0E       		.uleb128 0xe
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 26
+
+
+ 1279 002e 3A       		.uleb128 0x3a
+ 1280 002f 0B       		.uleb128 0xb
+ 1281 0030 3B       		.uleb128 0x3b
+ 1282 0031 05       		.uleb128 0x5
+ 1283 0032 49       		.uleb128 0x49
+ 1284 0033 13       		.uleb128 0x13
+ 1285 0034 00       		.byte	0
+ 1286 0035 00       		.byte	0
+ 1287 0036 05       		.uleb128 0x5
+ 1288 0037 2E       		.uleb128 0x2e
+ 1289 0038 01       		.byte	0x1
+ 1290 0039 3F       		.uleb128 0x3f
+ 1291 003a 19       		.uleb128 0x19
+ 1292 003b 03       		.uleb128 0x3
+ 1293 003c 0E       		.uleb128 0xe
+ 1294 003d 3A       		.uleb128 0x3a
+ 1295 003e 0B       		.uleb128 0xb
+ 1296 003f 3B       		.uleb128 0x3b
+ 1297 0040 0B       		.uleb128 0xb
+ 1298 0041 27       		.uleb128 0x27
+ 1299 0042 19       		.uleb128 0x19
+ 1300 0043 11       		.uleb128 0x11
+ 1301 0044 01       		.uleb128 0x1
+ 1302 0045 12       		.uleb128 0x12
+ 1303 0046 06       		.uleb128 0x6
+ 1304 0047 40       		.uleb128 0x40
+ 1305 0048 18       		.uleb128 0x18
+ 1306 0049 9742     		.uleb128 0x2117
+ 1307 004b 19       		.uleb128 0x19
+ 1308 004c 01       		.uleb128 0x1
+ 1309 004d 13       		.uleb128 0x13
+ 1310 004e 00       		.byte	0
+ 1311 004f 00       		.byte	0
+ 1312 0050 06       		.uleb128 0x6
+ 1313 0051 05       		.uleb128 0x5
+ 1314 0052 00       		.byte	0
+ 1315 0053 03       		.uleb128 0x3
+ 1316 0054 0E       		.uleb128 0xe
+ 1317 0055 3A       		.uleb128 0x3a
+ 1318 0056 0B       		.uleb128 0xb
+ 1319 0057 3B       		.uleb128 0x3b
+ 1320 0058 0B       		.uleb128 0xb
+ 1321 0059 49       		.uleb128 0x49
+ 1322 005a 13       		.uleb128 0x13
+ 1323 005b 02       		.uleb128 0x2
+ 1324 005c 17       		.uleb128 0x17
+ 1325 005d 00       		.byte	0
+ 1326 005e 00       		.byte	0
+ 1327 005f 07       		.uleb128 0x7
+ 1328 0060 0B       		.uleb128 0xb
+ 1329 0061 01       		.byte	0x1
+ 1330 0062 11       		.uleb128 0x11
+ 1331 0063 01       		.uleb128 0x1
+ 1332 0064 12       		.uleb128 0x12
+ 1333 0065 06       		.uleb128 0x6
+ 1334 0066 01       		.uleb128 0x1
+ 1335 0067 13       		.uleb128 0x13
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 27
+
+
+ 1336 0068 00       		.byte	0
+ 1337 0069 00       		.byte	0
+ 1338 006a 08       		.uleb128 0x8
+ 1339 006b 34       		.uleb128 0x34
+ 1340 006c 00       		.byte	0
+ 1341 006d 03       		.uleb128 0x3
+ 1342 006e 08       		.uleb128 0x8
+ 1343 006f 3A       		.uleb128 0x3a
+ 1344 0070 0B       		.uleb128 0xb
+ 1345 0071 3B       		.uleb128 0x3b
+ 1346 0072 0B       		.uleb128 0xb
+ 1347 0073 49       		.uleb128 0x49
+ 1348 0074 13       		.uleb128 0x13
+ 1349 0075 02       		.uleb128 0x2
+ 1350 0076 17       		.uleb128 0x17
+ 1351 0077 00       		.byte	0
+ 1352 0078 00       		.byte	0
+ 1353 0079 09       		.uleb128 0x9
+ 1354 007a 898201   		.uleb128 0x4109
+ 1355 007d 01       		.byte	0x1
+ 1356 007e 11       		.uleb128 0x11
+ 1357 007f 01       		.uleb128 0x1
+ 1358 0080 31       		.uleb128 0x31
+ 1359 0081 13       		.uleb128 0x13
+ 1360 0082 01       		.uleb128 0x1
+ 1361 0083 13       		.uleb128 0x13
+ 1362 0084 00       		.byte	0
+ 1363 0085 00       		.byte	0
+ 1364 0086 0A       		.uleb128 0xa
+ 1365 0087 8A8201   		.uleb128 0x410a
+ 1366 008a 00       		.byte	0
+ 1367 008b 02       		.uleb128 0x2
+ 1368 008c 18       		.uleb128 0x18
+ 1369 008d 9142     		.uleb128 0x2111
+ 1370 008f 18       		.uleb128 0x18
+ 1371 0090 00       		.byte	0
+ 1372 0091 00       		.byte	0
+ 1373 0092 0B       		.uleb128 0xb
+ 1374 0093 898201   		.uleb128 0x4109
+ 1375 0096 00       		.byte	0
+ 1376 0097 11       		.uleb128 0x11
+ 1377 0098 01       		.uleb128 0x1
+ 1378 0099 31       		.uleb128 0x31
+ 1379 009a 13       		.uleb128 0x13
+ 1380 009b 00       		.byte	0
+ 1381 009c 00       		.byte	0
+ 1382 009d 0C       		.uleb128 0xc
+ 1383 009e 898201   		.uleb128 0x4109
+ 1384 00a1 01       		.byte	0x1
+ 1385 00a2 11       		.uleb128 0x11
+ 1386 00a3 01       		.uleb128 0x1
+ 1387 00a4 31       		.uleb128 0x31
+ 1388 00a5 13       		.uleb128 0x13
+ 1389 00a6 00       		.byte	0
+ 1390 00a7 00       		.byte	0
+ 1391 00a8 0D       		.uleb128 0xd
+ 1392 00a9 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 28
+
+
+ 1393 00aa 01       		.byte	0x1
+ 1394 00ab 3F       		.uleb128 0x3f
+ 1395 00ac 19       		.uleb128 0x19
+ 1396 00ad 03       		.uleb128 0x3
+ 1397 00ae 0E       		.uleb128 0xe
+ 1398 00af 3A       		.uleb128 0x3a
+ 1399 00b0 0B       		.uleb128 0xb
+ 1400 00b1 3B       		.uleb128 0x3b
+ 1401 00b2 0B       		.uleb128 0xb
+ 1402 00b3 27       		.uleb128 0x27
+ 1403 00b4 19       		.uleb128 0x19
+ 1404 00b5 49       		.uleb128 0x49
+ 1405 00b6 13       		.uleb128 0x13
+ 1406 00b7 11       		.uleb128 0x11
+ 1407 00b8 01       		.uleb128 0x1
+ 1408 00b9 12       		.uleb128 0x12
+ 1409 00ba 06       		.uleb128 0x6
+ 1410 00bb 40       		.uleb128 0x40
+ 1411 00bc 18       		.uleb128 0x18
+ 1412 00bd 9742     		.uleb128 0x2117
+ 1413 00bf 19       		.uleb128 0x19
+ 1414 00c0 01       		.uleb128 0x1
+ 1415 00c1 13       		.uleb128 0x13
+ 1416 00c2 00       		.byte	0
+ 1417 00c3 00       		.byte	0
+ 1418 00c4 0E       		.uleb128 0xe
+ 1419 00c5 34       		.uleb128 0x34
+ 1420 00c6 00       		.byte	0
+ 1421 00c7 03       		.uleb128 0x3
+ 1422 00c8 0E       		.uleb128 0xe
+ 1423 00c9 3A       		.uleb128 0x3a
+ 1424 00ca 0B       		.uleb128 0xb
+ 1425 00cb 3B       		.uleb128 0x3b
+ 1426 00cc 0B       		.uleb128 0xb
+ 1427 00cd 49       		.uleb128 0x49
+ 1428 00ce 13       		.uleb128 0x13
+ 1429 00cf 02       		.uleb128 0x2
+ 1430 00d0 17       		.uleb128 0x17
+ 1431 00d1 00       		.byte	0
+ 1432 00d2 00       		.byte	0
+ 1433 00d3 0F       		.uleb128 0xf
+ 1434 00d4 2E       		.uleb128 0x2e
+ 1435 00d5 01       		.byte	0x1
+ 1436 00d6 3F       		.uleb128 0x3f
+ 1437 00d7 19       		.uleb128 0x19
+ 1438 00d8 03       		.uleb128 0x3
+ 1439 00d9 0E       		.uleb128 0xe
+ 1440 00da 3A       		.uleb128 0x3a
+ 1441 00db 0B       		.uleb128 0xb
+ 1442 00dc 3B       		.uleb128 0x3b
+ 1443 00dd 0B       		.uleb128 0xb
+ 1444 00de 8701     		.uleb128 0x87
+ 1445 00e0 19       		.uleb128 0x19
+ 1446 00e1 11       		.uleb128 0x11
+ 1447 00e2 01       		.uleb128 0x1
+ 1448 00e3 12       		.uleb128 0x12
+ 1449 00e4 06       		.uleb128 0x6
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 29
+
+
+ 1450 00e5 40       		.uleb128 0x40
+ 1451 00e6 18       		.uleb128 0x18
+ 1452 00e7 9742     		.uleb128 0x2117
+ 1453 00e9 19       		.uleb128 0x19
+ 1454 00ea 01       		.uleb128 0x1
+ 1455 00eb 13       		.uleb128 0x13
+ 1456 00ec 00       		.byte	0
+ 1457 00ed 00       		.byte	0
+ 1458 00ee 10       		.uleb128 0x10
+ 1459 00ef 2E       		.uleb128 0x2e
+ 1460 00f0 01       		.byte	0x1
+ 1461 00f1 3F       		.uleb128 0x3f
+ 1462 00f2 19       		.uleb128 0x19
+ 1463 00f3 03       		.uleb128 0x3
+ 1464 00f4 0E       		.uleb128 0xe
+ 1465 00f5 3A       		.uleb128 0x3a
+ 1466 00f6 0B       		.uleb128 0xb
+ 1467 00f7 3B       		.uleb128 0x3b
+ 1468 00f8 0B       		.uleb128 0xb
+ 1469 00f9 11       		.uleb128 0x11
+ 1470 00fa 01       		.uleb128 0x1
+ 1471 00fb 12       		.uleb128 0x12
+ 1472 00fc 06       		.uleb128 0x6
+ 1473 00fd 40       		.uleb128 0x40
+ 1474 00fe 18       		.uleb128 0x18
+ 1475 00ff 9742     		.uleb128 0x2117
+ 1476 0101 19       		.uleb128 0x19
+ 1477 0102 01       		.uleb128 0x1
+ 1478 0103 13       		.uleb128 0x13
+ 1479 0104 00       		.byte	0
+ 1480 0105 00       		.byte	0
+ 1481 0106 11       		.uleb128 0x11
+ 1482 0107 34       		.uleb128 0x34
+ 1483 0108 00       		.byte	0
+ 1484 0109 03       		.uleb128 0x3
+ 1485 010a 0E       		.uleb128 0xe
+ 1486 010b 3A       		.uleb128 0x3a
+ 1487 010c 0B       		.uleb128 0xb
+ 1488 010d 3B       		.uleb128 0x3b
+ 1489 010e 0B       		.uleb128 0xb
+ 1490 010f 49       		.uleb128 0x49
+ 1491 0110 13       		.uleb128 0x13
+ 1492 0111 00       		.byte	0
+ 1493 0112 00       		.byte	0
+ 1494 0113 12       		.uleb128 0x12
+ 1495 0114 34       		.uleb128 0x34
+ 1496 0115 00       		.byte	0
+ 1497 0116 03       		.uleb128 0x3
+ 1498 0117 0E       		.uleb128 0xe
+ 1499 0118 3A       		.uleb128 0x3a
+ 1500 0119 0B       		.uleb128 0xb
+ 1501 011a 3B       		.uleb128 0x3b
+ 1502 011b 0B       		.uleb128 0xb
+ 1503 011c 49       		.uleb128 0x49
+ 1504 011d 13       		.uleb128 0x13
+ 1505 011e 3F       		.uleb128 0x3f
+ 1506 011f 19       		.uleb128 0x19
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 30
+
+
+ 1507 0120 02       		.uleb128 0x2
+ 1508 0121 18       		.uleb128 0x18
+ 1509 0122 00       		.byte	0
+ 1510 0123 00       		.byte	0
+ 1511 0124 13       		.uleb128 0x13
+ 1512 0125 26       		.uleb128 0x26
+ 1513 0126 00       		.byte	0
+ 1514 0127 49       		.uleb128 0x49
+ 1515 0128 13       		.uleb128 0x13
+ 1516 0129 00       		.byte	0
+ 1517 012a 00       		.byte	0
+ 1518 012b 14       		.uleb128 0x14
+ 1519 012c 2E       		.uleb128 0x2e
+ 1520 012d 00       		.byte	0
+ 1521 012e 3F       		.uleb128 0x3f
+ 1522 012f 19       		.uleb128 0x19
+ 1523 0130 3C       		.uleb128 0x3c
+ 1524 0131 19       		.uleb128 0x19
+ 1525 0132 6E       		.uleb128 0x6e
+ 1526 0133 0E       		.uleb128 0xe
+ 1527 0134 03       		.uleb128 0x3
+ 1528 0135 0E       		.uleb128 0xe
+ 1529 0136 3A       		.uleb128 0x3a
+ 1530 0137 0B       		.uleb128 0xb
+ 1531 0138 3B       		.uleb128 0x3b
+ 1532 0139 0B       		.uleb128 0xb
+ 1533 013a 00       		.byte	0
+ 1534 013b 00       		.byte	0
+ 1535 013c 00       		.byte	0
+ 1536              		.section	.debug_loc,"",%progbits
+ 1537              	.Ldebug_loc0:
+ 1538              	.LLST0:
+ 1539 0000 00000000 		.4byte	.LVL0
+ 1540 0004 0A000000 		.4byte	.LVL2
+ 1541 0008 0100     		.2byte	0x1
+ 1542 000a 50       		.byte	0x50
+ 1543 000b 0A000000 		.4byte	.LVL2
+ 1544 000f 2E000000 		.4byte	.LVL10
+ 1545 0013 0100     		.2byte	0x1
+ 1546 0015 56       		.byte	0x56
+ 1547 0016 2E000000 		.4byte	.LVL10
+ 1548 001a 30000000 		.4byte	.LFE34
+ 1549 001e 0400     		.2byte	0x4
+ 1550 0020 F3       		.byte	0xf3
+ 1551 0021 01       		.uleb128 0x1
+ 1552 0022 50       		.byte	0x50
+ 1553 0023 9F       		.byte	0x9f
+ 1554 0024 00000000 		.4byte	0
+ 1555 0028 00000000 		.4byte	0
+ 1556              	.LLST1:
+ 1557 002c 00000000 		.4byte	.LVL0
+ 1558 0030 0A000000 		.4byte	.LVL2
+ 1559 0034 0100     		.2byte	0x1
+ 1560 0036 51       		.byte	0x51
+ 1561 0037 0A000000 		.4byte	.LVL2
+ 1562 003b 2E000000 		.4byte	.LVL9
+ 1563 003f 0100     		.2byte	0x1
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 31
+
+
+ 1564 0041 55       		.byte	0x55
+ 1565 0042 2E000000 		.4byte	.LVL9
+ 1566 0046 30000000 		.4byte	.LFE34
+ 1567 004a 0400     		.2byte	0x4
+ 1568 004c F3       		.byte	0xf3
+ 1569 004d 01       		.uleb128 0x1
+ 1570 004e 51       		.byte	0x51
+ 1571 004f 9F       		.byte	0x9f
+ 1572 0050 00000000 		.4byte	0
+ 1573 0054 00000000 		.4byte	0
+ 1574              	.LLST2:
+ 1575 0058 06000000 		.4byte	.LVL1
+ 1576 005c 0A000000 		.4byte	.LVL2
+ 1577 0060 0200     		.2byte	0x2
+ 1578 0062 30       		.byte	0x30
+ 1579 0063 9F       		.byte	0x9f
+ 1580 0064 0A000000 		.4byte	.LVL2
+ 1581 0068 2E000000 		.4byte	.LVL8
+ 1582 006c 0100     		.2byte	0x1
+ 1583 006e 54       		.byte	0x54
+ 1584 006f 00000000 		.4byte	0
+ 1585 0073 00000000 		.4byte	0
+ 1586              	.LLST3:
+ 1587 0077 00000000 		.4byte	.LVL11
+ 1588 007b 08000000 		.4byte	.LVL12
+ 1589 007f 0100     		.2byte	0x1
+ 1590 0081 50       		.byte	0x50
+ 1591 0082 08000000 		.4byte	.LVL12
+ 1592 0086 62000000 		.4byte	.LVL41
+ 1593 008a 0100     		.2byte	0x1
+ 1594 008c 56       		.byte	0x56
+ 1595 008d 62000000 		.4byte	.LVL41
+ 1596 0091 64000000 		.4byte	.LFE35
+ 1597 0095 0400     		.2byte	0x4
+ 1598 0097 F3       		.byte	0xf3
+ 1599 0098 01       		.uleb128 0x1
+ 1600 0099 50       		.byte	0x50
+ 1601 009a 9F       		.byte	0x9f
+ 1602 009b 00000000 		.4byte	0
+ 1603 009f 00000000 		.4byte	0
+ 1604              	.LLST4:
+ 1605 00a3 0E000000 		.4byte	.LVL14
+ 1606 00a7 10000000 		.4byte	.LVL15
+ 1607 00ab 0100     		.2byte	0x1
+ 1608 00ad 50       		.byte	0x50
+ 1609 00ae 10000000 		.4byte	.LVL15
+ 1610 00b2 62000000 		.4byte	.LVL42
+ 1611 00b6 0100     		.2byte	0x1
+ 1612 00b8 57       		.byte	0x57
+ 1613 00b9 00000000 		.4byte	0
+ 1614 00bd 00000000 		.4byte	0
+ 1615              	.LLST5:
+ 1616 00c1 16000000 		.4byte	.LVL17
+ 1617 00c5 18000000 		.4byte	.LVL18
+ 1618 00c9 0100     		.2byte	0x1
+ 1619 00cb 50       		.byte	0x50
+ 1620 00cc 18000000 		.4byte	.LVL18
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 32
+
+
+ 1621 00d0 62000000 		.4byte	.LVL39
+ 1622 00d4 0100     		.2byte	0x1
+ 1623 00d6 54       		.byte	0x54
+ 1624 00d7 00000000 		.4byte	0
+ 1625 00db 00000000 		.4byte	0
+ 1626              	.LLST6:
+ 1627 00df 1E000000 		.4byte	.LVL20
+ 1628 00e3 20000000 		.4byte	.LVL21
+ 1629 00e7 0100     		.2byte	0x1
+ 1630 00e9 50       		.byte	0x50
+ 1631 00ea 20000000 		.4byte	.LVL21
+ 1632 00ee 62000000 		.4byte	.LVL40
+ 1633 00f2 0100     		.2byte	0x1
+ 1634 00f4 55       		.byte	0x55
+ 1635 00f5 00000000 		.4byte	0
+ 1636 00f9 00000000 		.4byte	0
+ 1637              	.LLST7:
+ 1638 00fd 26000000 		.4byte	.LVL23
+ 1639 0101 28000000 		.4byte	.LVL24
+ 1640 0105 0100     		.2byte	0x1
+ 1641 0107 50       		.byte	0x50
+ 1642 0108 28000000 		.4byte	.LVL24
+ 1643 010c 62000000 		.4byte	.LVL38
+ 1644 0110 0200     		.2byte	0x2
+ 1645 0112 7D       		.byte	0x7d
+ 1646 0113 00       		.sleb128 0
+ 1647 0114 62000000 		.4byte	.LVL38
+ 1648 0118 64000000 		.4byte	.LFE35
+ 1649 011c 0200     		.2byte	0x2
+ 1650 011e 91       		.byte	0x91
+ 1651 011f 60       		.sleb128 -32
+ 1652 0120 00000000 		.4byte	0
+ 1653 0124 00000000 		.4byte	0
+ 1654              	.LLST8:
+ 1655 0128 2E000000 		.4byte	.LVL26
+ 1656 012c 30000000 		.4byte	.LVL27
+ 1657 0130 0100     		.2byte	0x1
+ 1658 0132 50       		.byte	0x50
+ 1659 0133 30000000 		.4byte	.LVL27
+ 1660 0137 64000000 		.4byte	.LFE35
+ 1661 013b 0200     		.2byte	0x2
+ 1662 013d 91       		.byte	0x91
+ 1663 013e 64       		.sleb128 -28
+ 1664 013f 00000000 		.4byte	0
+ 1665 0143 00000000 		.4byte	0
+ 1666              	.LLST9:
+ 1667 0147 34000000 		.4byte	.LVL28
+ 1668 014b 50000000 		.4byte	.LVL29
+ 1669 014f 0100     		.2byte	0x1
+ 1670 0151 50       		.byte	0x50
+ 1671 0152 52000000 		.4byte	.LVL30
+ 1672 0156 54000000 		.4byte	.LVL31
+ 1673 015a 0100     		.2byte	0x1
+ 1674 015c 50       		.byte	0x50
+ 1675 015d 56000000 		.4byte	.LVL32
+ 1676 0161 58000000 		.4byte	.LVL33
+ 1677 0165 0100     		.2byte	0x1
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 33
+
+
+ 1678 0167 50       		.byte	0x50
+ 1679 0168 5A000000 		.4byte	.LVL34
+ 1680 016c 5C000000 		.4byte	.LVL35
+ 1681 0170 0100     		.2byte	0x1
+ 1682 0172 50       		.byte	0x50
+ 1683 0173 5E000000 		.4byte	.LVL36
+ 1684 0177 60000000 		.4byte	.LVL37
+ 1685 017b 0100     		.2byte	0x1
+ 1686 017d 50       		.byte	0x50
+ 1687 017e 00000000 		.4byte	0
+ 1688 0182 00000000 		.4byte	0
+ 1689              	.LLST10:
+ 1690 0186 0A000000 		.4byte	.LVL44
+ 1691 018a 0E000000 		.4byte	.LVL45
+ 1692 018e 0100     		.2byte	0x1
+ 1693 0190 50       		.byte	0x50
+ 1694 0191 0E000000 		.4byte	.LVL45
+ 1695 0195 54000000 		.4byte	.LVL55
+ 1696 0199 0100     		.2byte	0x1
+ 1697 019b 55       		.byte	0x55
+ 1698 019c 54000000 		.4byte	.LVL55
+ 1699 01a0 58000000 		.4byte	.LVL57
+ 1700 01a4 0100     		.2byte	0x1
+ 1701 01a6 50       		.byte	0x50
+ 1702 01a7 58000000 		.4byte	.LVL57
+ 1703 01ab 9E000000 		.4byte	.LVL67
+ 1704 01af 0100     		.2byte	0x1
+ 1705 01b1 55       		.byte	0x55
+ 1706 01b2 9E000000 		.4byte	.LVL67
+ 1707 01b6 A0000000 		.4byte	.LFE33
+ 1708 01ba 0100     		.2byte	0x1
+ 1709 01bc 50       		.byte	0x50
+ 1710 01bd 00000000 		.4byte	0
+ 1711 01c1 00000000 		.4byte	0
+ 1712              	.LLST11:
+ 1713 01c5 0A000000 		.4byte	.LVL44
+ 1714 01c9 0E000000 		.4byte	.LVL45
+ 1715 01cd 0200     		.2byte	0x2
+ 1716 01cf 30       		.byte	0x30
+ 1717 01d0 9F       		.byte	0x9f
+ 1718 01d1 0E000000 		.4byte	.LVL45
+ 1719 01d5 56000000 		.4byte	.LVL56
+ 1720 01d9 0100     		.2byte	0x1
+ 1721 01db 54       		.byte	0x54
+ 1722 01dc 00000000 		.4byte	0
+ 1723 01e0 00000000 		.4byte	0
+ 1724              	.LLST12:
+ 1725 01e4 54000000 		.4byte	.LVL55
+ 1726 01e8 58000000 		.4byte	.LVL57
+ 1727 01ec 0200     		.2byte	0x2
+ 1728 01ee 3D       		.byte	0x3d
+ 1729 01ef 9F       		.byte	0x9f
+ 1730 01f0 58000000 		.4byte	.LVL57
+ 1731 01f4 A0000000 		.4byte	.LFE33
+ 1732 01f8 0100     		.2byte	0x1
+ 1733 01fa 54       		.byte	0x54
+ 1734 01fb 00000000 		.4byte	0
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 34
+
+
+ 1735 01ff 00000000 		.4byte	0
+ 1736              		.section	.debug_aranges,"",%progbits
+ 1737 0000 3C000000 		.4byte	0x3c
+ 1738 0004 0200     		.2byte	0x2
+ 1739 0006 00000000 		.4byte	.Ldebug_info0
+ 1740 000a 04       		.byte	0x4
+ 1741 000b 00       		.byte	0
+ 1742 000c 0000     		.2byte	0
+ 1743 000e 0000     		.2byte	0
+ 1744 0010 00000000 		.4byte	.LFB34
+ 1745 0014 30000000 		.4byte	.LFE34-.LFB34
+ 1746 0018 00000000 		.4byte	.LFB35
+ 1747 001c 64000000 		.4byte	.LFE35-.LFB35
+ 1748 0020 00000000 		.4byte	.LFB33
+ 1749 0024 A0000000 		.4byte	.LFE33-.LFB33
+ 1750 0028 00000000 		.4byte	.LFB36
+ 1751 002c 24000000 		.4byte	.LFE36-.LFB36
+ 1752 0030 00000000 		.4byte	.LFB32
+ 1753 0034 48000000 		.4byte	.LFE32-.LFB32
+ 1754 0038 00000000 		.4byte	0
+ 1755 003c 00000000 		.4byte	0
+ 1756              		.section	.debug_ranges,"",%progbits
+ 1757              	.Ldebug_ranges0:
+ 1758 0000 00000000 		.4byte	.LFB34
+ 1759 0004 30000000 		.4byte	.LFE34
+ 1760 0008 00000000 		.4byte	.LFB35
+ 1761 000c 64000000 		.4byte	.LFE35
+ 1762 0010 00000000 		.4byte	.LFB33
+ 1763 0014 A0000000 		.4byte	.LFE33
+ 1764 0018 00000000 		.4byte	.LFB36
+ 1765 001c 24000000 		.4byte	.LFE36
+ 1766 0020 00000000 		.4byte	.LFB32
+ 1767 0024 48000000 		.4byte	.LFE32
+ 1768 0028 00000000 		.4byte	0
+ 1769 002c 00000000 		.4byte	0
+ 1770              		.section	.debug_line,"",%progbits
+ 1771              	.Ldebug_line0:
+ 1772 0000 00020000 		.section	.debug_str,"MS",%progbits,1
+ 1772      02001D01 
+ 1772      00000201 
+ 1772      FB0E0D00 
+ 1772      01010101 
+ 1773              	.LASF42:
+ 1774 0000 666C6578 		.ascii	"flex2_Read\000"
+ 1774      325F5265 
+ 1774      616400
+ 1775              	.LASF21:
+ 1776 000b 636F6C6F 		.ascii	"color4\000"
+ 1776      723400
+ 1777              	.LASF28:
+ 1778 0012 4C454453 		.ascii	"LEDS_PER_TILE\000"
+ 1778      5F504552 
+ 1778      5F54494C 
+ 1778      4500
+ 1779              	.LASF33:
+ 1780 0020 53747269 		.ascii	"StripLights_Pixel\000"
+ 1780      704C6967 
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 35
+
+
+ 1780      6874735F 
+ 1780      50697865 
+ 1780      6C00
+ 1781              	.LASF12:
+ 1782 0032 646F7562 		.ascii	"double\000"
+ 1782      6C6500
+ 1783              	.LASF50:
+ 1784 0039 72616E64 		.ascii	"random\000"
+ 1784      6F6D00
+ 1785              	.LASF37:
+ 1786 0040 53747269 		.ascii	"StripLights_getColor\000"
+ 1786      704C6967 
+ 1786      6874735F 
+ 1786      67657443 
+ 1786      6F6C6F72 
+ 1787              	.LASF25:
+ 1788 0055 52756E50 		.ascii	"RunPattern\000"
+ 1788      61747465 
+ 1788      726E00
+ 1789              	.LASF11:
+ 1790 0060 666C6F61 		.ascii	"float\000"
+ 1790      7400
+ 1791              	.LASF48:
+ 1792 0066 496E6372 		.ascii	"IncrementColor\000"
+ 1792      656D656E 
+ 1792      74436F6C 
+ 1792      6F7200
+ 1793              	.LASF41:
+ 1794 0075 666C6578 		.ascii	"flex1_Read\000"
+ 1794      315F5265 
+ 1794      616400
+ 1795              	.LASF1:
+ 1796 0080 756E7369 		.ascii	"unsigned char\000"
+ 1796      676E6564 
+ 1796      20636861 
+ 1796      7200
+ 1797              	.LASF43:
+ 1798 008e 666C6578 		.ascii	"flex3_Read\000"
+ 1798      335F5265 
+ 1798      616400
+ 1799              	.LASF34:
+ 1800 0099 53747269 		.ascii	"StripLights_Ready\000"
+ 1800      704C6967 
+ 1800      6874735F 
+ 1800      52656164 
+ 1800      7900
+ 1801              	.LASF3:
+ 1802 00ab 73686F72 		.ascii	"short unsigned int\000"
+ 1802      7420756E 
+ 1802      7369676E 
+ 1802      65642069 
+ 1802      6E7400
+ 1803              	.LASF40:
+ 1804 00be 666C6578 		.ascii	"flex0_Read\000"
+ 1804      305F5265 
+ 1804      616400
+ 1805              	.LASF29:
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 36
+
+
+ 1806 00c9 666C6578 		.ascii	"flex0\000"
+ 1806      3000
+ 1807              	.LASF30:
+ 1808 00cf 666C6578 		.ascii	"flex1\000"
+ 1808      3100
+ 1809              	.LASF31:
+ 1810 00d5 666C6578 		.ascii	"flex2\000"
+ 1810      3200
+ 1811              	.LASF32:
+ 1812 00db 666C6578 		.ascii	"flex3\000"
+ 1812      3300
+ 1813              	.LASF18:
+ 1814 00e1 636F6C6F 		.ascii	"color1\000"
+ 1814      723100
+ 1815              	.LASF19:
+ 1816 00e8 636F6C6F 		.ascii	"color2\000"
+ 1816      723200
+ 1817              	.LASF20:
+ 1818 00ef 636F6C6F 		.ascii	"color3\000"
+ 1818      723300
+ 1819              	.LASF39:
+ 1820 00f6 7372616E 		.ascii	"srand\000"
+ 1820      6400
+ 1821              	.LASF22:
+ 1822 00fc 636F6C6F 		.ascii	"color5\000"
+ 1822      723500
+ 1823              	.LASF23:
+ 1824 0103 636F6C6F 		.ascii	"color6\000"
+ 1824      723600
+ 1825              	.LASF17:
+ 1826 010a 636F6C6F 		.ascii	"color\000"
+ 1826      7200
+ 1827              	.LASF10:
+ 1828 0110 75696E74 		.ascii	"uint32\000"
+ 1828      333200
+ 1829              	.LASF5:
+ 1830 0117 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1830      20756E73 
+ 1830      69676E65 
+ 1830      6420696E 
+ 1830      7400
+ 1831              	.LASF8:
+ 1832 0129 756E7369 		.ascii	"unsigned int\000"
+ 1832      676E6564 
+ 1832      20696E74 
+ 1832      00
+ 1833              	.LASF7:
+ 1834 0136 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1834      206C6F6E 
+ 1834      6720756E 
+ 1834      7369676E 
+ 1834      65642069 
+ 1835              	.LASF46:
+ 1836 014d 77686163 		.ascii	"whackamole.c\000"
+ 1836      6B616D6F 
+ 1836      6C652E63 
+ 1836      00
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 37
+
+
+ 1837              	.LASF16:
+ 1838 015a 74696C65 		.ascii	"tile_number\000"
+ 1838      5F6E756D 
+ 1838      62657200 
+ 1839              	.LASF38:
+ 1840 0166 74696D65 		.ascii	"time\000"
+ 1840      00
+ 1841              	.LASF45:
+ 1842 016b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1842      43313120 
+ 1842      352E342E 
+ 1842      31203230 
+ 1842      31363036 
+ 1843 019e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1843      20726576 
+ 1843      6973696F 
+ 1843      6E203233 
+ 1843      37373135 
+ 1844 01d1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1844      66756E63 
+ 1844      74696F6E 
+ 1844      2D736563 
+ 1844      74696F6E 
+ 1845              	.LASF49:
+ 1846 01f9 52657365 		.ascii	"ResetBlock\000"
+ 1846      74426C6F 
+ 1846      636B00
+ 1847              	.LASF14:
+ 1848 0204 73697A65 		.ascii	"sizetype\000"
+ 1848      74797065 
+ 1848      00
+ 1849              	.LASF6:
+ 1850 020d 6C6F6E67 		.ascii	"long long int\000"
+ 1850      206C6F6E 
+ 1850      6720696E 
+ 1850      7400
+ 1851              	.LASF13:
+ 1852 021b 63686172 		.ascii	"char\000"
+ 1852      00
+ 1853              	.LASF24:
+ 1854 0220 53657454 		.ascii	"SetTileColor\000"
+ 1854      696C6543 
+ 1854      6F6C6F72 
+ 1854      00
+ 1855              	.LASF26:
+ 1856 022d 63757272 		.ascii	"current_color\000"
+ 1856      656E745F 
+ 1856      636F6C6F 
+ 1856      7200
+ 1857              	.LASF2:
+ 1858 023b 73686F72 		.ascii	"short int\000"
+ 1858      7420696E 
+ 1858      7400
+ 1859              	.LASF47:
+ 1860 0245 433A5C55 		.ascii	"C:\\Users\\James Sun\\Documents\\Git\\Whackamole\\W"
+ 1860      73657273 
+ 1860      5C4A616D 
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccsKCujc.s 			page 38
+
+
+ 1860      65732053 
+ 1860      756E5C44 
+ 1861 0272 6861636B 		.ascii	"hackamole\\Whackamole.cydsn\000"
+ 1861      616D6F6C 
+ 1861      655C5768 
+ 1861      61636B61 
+ 1861      6D6F6C65 
+ 1862              	.LASF9:
+ 1863 028d 75696E74 		.ascii	"uint8\000"
+ 1863      3800
+ 1864              	.LASF4:
+ 1865 0293 6C6F6E67 		.ascii	"long int\000"
+ 1865      20696E74 
+ 1865      00
+ 1866              	.LASF15:
+ 1867 029c 6C6F6E67 		.ascii	"long double\000"
+ 1867      20646F75 
+ 1867      626C6500 
+ 1868              	.LASF0:
+ 1869 02a8 7369676E 		.ascii	"signed char\000"
+ 1869      65642063 
+ 1869      68617200 
+ 1870              	.LASF27:
+ 1871 02b4 57686163 		.ascii	"Whackamole\000"
+ 1871      6B616D6F 
+ 1871      6C6500
+ 1872              	.LASF35:
+ 1873 02bf 53747269 		.ascii	"StripLights_Trigger\000"
+ 1873      704C6967 
+ 1873      6874735F 
+ 1873      54726967 
+ 1873      67657200 
+ 1874              	.LASF36:
+ 1875 02d3 43794465 		.ascii	"CyDelay\000"
+ 1875      6C617900 
+ 1876              	.LASF44:
+ 1877 02db 72616E64 		.ascii	"rand\000"
+ 1877      00
+ 1878              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

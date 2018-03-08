@@ -1,70 +1,143 @@
+//#include "whackamole.h"
+
+
 #include "project.h"
 #include <stdlib.h>
 #include <time.h>
-
-CY_ISR_PROTO(Button_Interrupt);
-
-void SetBlockColor(int block_number, uint32 color);
+    
+const int LEDS_PER_TILE = 60;
+uint8 button;
+uint8 flex0;
+uint8 flex1;
+uint8 flex2;
+uint8 flex3;
+int currentSet; //0 = fantastic floor, 1 = flood random lights throughout the board
+    
+void FantasticFloor();
+void FancyLights();
 uint32 IncrementColor(uint32 color);
 void RunPattern();
-
-uint8 buttonCheck = 1;
+void SetTileColor(int tile_number, uint32 color);
+void ResetBlock();
+uint32 GetRandomColor();
+    
 
 int main(void)
 {
 	CyGlobalIntEnable; /* Enable global interrupts. */
-	srand(time(NULL)); // seed the randomness with time
+
     //start the interrupts
-    (void) Button_ClearInterrupt();
-//    ISR_Write_StartEx(&ISR_WriteSW1_Interrupt);
 	StripLights_Start();
-	StripLights_Dim(1);
-
-    RunPattern();
-}
-
-/**
-This function will set the lights inside the block number to be a certain color.
-Changes are assumemd to be the first 60 LEDs, 
-The block number is set to be the "y" coordinate in the top down design
-Remember to put a CyDelay after setting colors
-*/
-void SetBlockColor(int block_number, uint32 color) {
-	for (uint32 led = 0; led < 15; led++) {
-		StripLights_Pixel(led, block_number, color);
-		while (StripLights_Ready() == 0);
-		StripLights_Trigger(1);
-	}
-//	CyDelay(10);
-}
-
-/**
-This function will "increment" the color such that it goes through the rainbow
-Then it will return the color as a uint32
-*/
-
-uint32 IncrementColor(uint32 color){
-    //the colors of the rainbow
-	uint32 color1 = StripLights_RED;
-	uint32 color2 = StripLights_ORANGE;
-    uint32 color3 = StripLights_YELLOW;
-    uint32 color4 = StripLights_GREEN;
-    uint32 color5 = StripLights_BLUE;
-    uint32 color6 = StripLights_VIOLET;
+	StripLights_Dim(0);
+    srand(time(NULL)); // seed the randomness with time
     
-    if(color == color1)return color2;
-    else if(color == color2)return color3;
-    else if(color == color3)return color4;
-    else if(color == color4)return color5;
-    else if(color == color5)return color6;
-    else return color1;
+    currentSet = 0; //start with fantastic floor
+    
+    for(;;) {
+        //ResetBlock();
+        //if(!currentSet) FantasticFloor();
+        Board_LED_Write(flex0_Read());
+        
+    
+    }
+    
+//    RunPattern();
+//    FantasticFloor();
 }
+
+/**
+    OOH SHINEY LIGHTSSSS
+*/
+void FancyLights(){
+    for(;;){
+        
+        //First sequence of lights
+        for(int i = 0; i < 4; i++){
+            SetTileColor(i, GetRandomColor());
+            button = Button_Read();
+            //leave function if toggle button is set
+            if(!button){
+                currentSet = 0;
+                return;
+            }
+            CyDelay(800);
+        }
+        
+        //Second sequence
+        for(int k = 0; k < 2; k++){
+            for(int i = 0; i < 4; i++){
+                for(int j = 0; j < 60; j++){
+                    StripLights_Pixel(j, i, GetRandomColor());
+                    while (StripLights_Ready() == 0);
+            	    StripLights_Trigger(1);
+                    CyDelay(30);
+                    
+                    button = Button_Read();
+                    //leave function if toggle button is set
+                    if(!button){
+                        currentSet = 0;
+                        return;
+                    }
+                }
+            }
+        }
+        
+        //Last Sequence
+        uint32 color = StripLights_RED;
+        for(int j = 0; j < 7; j++){
+            for(int i = 0; i < 4; i++){
+                SetTileColor(i, color);
+            }
+            color = IncrementColor(color);
+            CyDelay(100);
+            button = Button_Read();
+            //leave function if toggle button is set
+            if(!button){
+                currentSet = 0;
+                return;
+            }
+        }
+    }
+}
+
+/**
+When a block is pressed, light it up with a random color from the rainbow
+Break and leave function if the p0.7 button is pressed
+*/
+void FantasticFloor(){
+    for(;;){
+        //read the digital inputs
+        button = Button_Read();
+        flex0 = flex0_Read();
+        flex1 = flex1_Read();
+        flex2 = flex2_Read();
+        flex3 = flex3_Read();
+        
+        //leave function if toggle button is set
+        if(!button){
+            currentSet = 1;
+            return;
+        }
+        
+        //otherwise, light the tiles that read flex inputs with a random color
+        if(!flex0)
+            SetTileColor(0, GetRandomColor());
+        if(!flex1)
+            SetTileColor(1, GetRandomColor());
+        if(!flex2)
+            SetTileColor(2, GetRandomColor());
+        if(!flex3)
+            SetTileColor(3, GetRandomColor());
+        
+    }
+}
+
+
 
 /**
 Runs the LED pattern where light moves along the line
 And then goes back, changes colors every time it gets to an edge
 */
-
 void RunPattern(){
     //start the pattern at red
     uint32 current_color = StripLights_RED;
@@ -72,8 +145,8 @@ void RunPattern(){
         //going forward
         for(int i = 0; i < 15; i++){
             //reset the colors for both strips
-        	SetBlockColor(0, 0);
-        	SetBlockColor(1, 0);
+        	SetTileColor(0, 0);
+        	SetTileColor(1, 0);
             CyDelay(10);
         	StripLights_Pixel(i, 0, current_color);
         	StripLights_Pixel(i, 1, current_color);
@@ -83,8 +156,8 @@ void RunPattern(){
         current_color = IncrementColor(current_color);
         //coming back
         for(int i = 13; i >= 1; i--){
-            SetBlockColor(0, 0);
-        	SetBlockColor(1, 0);
+            SetTileColor(0, 0);
+        	SetTileColor(1, 0);
             CyDelay(10);
         	StripLights_Pixel(i, 0, current_color);
         	StripLights_Pixel(i, 1, current_color);
@@ -95,11 +168,73 @@ void RunPattern(){
     }
 }
 
-CY_ISR(Button_Interrupt)
-{
-    /* Clear pin interrupt request bit */
-    (void) Button_ClearInterrupt();
 
-    /* Select write action */
-    buttonCheck = 0;
+/**
+This function will set the lights inside the block number to be a certain color.
+Changes are assumemd to be the first 60 LEDs, 
+The block number is set to be the "y" coordinate in the top down design
+Remember to put a CyDelay after setting colors
+*/
+void SetTileColor(int tile_number, uint32 color) {
+	for (uint32 led = 0; led < LEDS_PER_TILE; led++) {
+		StripLights_Pixel(led, tile_number, color);
+	}
+    while (StripLights_Ready() == 0);
+	StripLights_Trigger(1);
+	CyDelay(10);
+}
+
+/**
+This function will "increment" the color such that it goes through the rainbow
+Then it will return the color as a uint32
+*/
+uint32 IncrementColor(uint32 color){
+    //the colors of the rainbow
+	uint32 color1 = StripLights_RED;
+	uint32 color2 = StripLights_ORANGE;
+    uint32 color3 = StripLights_YELLOW;
+    uint32 color4 = StripLights_GREEN;
+    uint32 color5 = StripLights_BLUE;
+    uint32 color6 = StripLights_VIOLET;
+    uint32 color7 = StripLights_WHITE;
+    
+    if(color == color1)return color2;
+    else if(color == color2)return color3;
+    else if(color == color3)return color4;
+    else if(color == color4)return color5;
+    else if(color == color5)return color6;
+    else if (color == color6) return color7;
+    else return color1;
+}
+
+//Returns a random color
+uint32 GetRandomColor(){
+    int random = rand() % 7;
+    
+    switch(random){
+        case 0:
+            return StripLights_RED;
+        case 1:
+            return StripLights_ORANGE;
+        case 2:
+            return StripLights_YELLOW;
+        case 3:
+            return StripLights_GREEN;
+        case 4:
+            return StripLights_BLUE;
+        case 5:
+            return StripLights_VIOLET;
+        case 6:
+            return StripLights_WHITE;
+        default:
+            return 0;
+    }
+}
+
+//Resets all the tile colors to blank
+void ResetBlock(){
+    SetTileColor(0, 0);
+    SetTileColor(1, 0);
+    SetTileColor(2, 0);
+    SetTileColor(3, 0);
 }

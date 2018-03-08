@@ -30,8 +30,11 @@ void SetBlockColor(int block_number, uint32 color);
 *******************************************************************************/
 int main()
 {
+    //Start lights and initialize the variables for flex sensors
     StripLights_Start();
-    StripLights_Dim(1);
+    StripLights_Dim(0);
+    uint8 buttonStatus = 0;
+    
     uint8 status = STS_CMD_FAIL;
                     LED_RED_Write  (LED_OFF);
                     LED_GREEN_Write(LED_OFF);
@@ -44,15 +47,14 @@ int main()
     I2CS_Start();
 
     CyGlobalIntEnable;
-    uint8 buttonStatus = 0;
+
     /***************************************************************************
     * Main polling loop
     ***************************************************************************/
     for (;;)
     {
         buttonStatus = Button_Read();
-        if(buttonStatus == 0) buttonStatus = 100;
-        else buttonStatus = 99;
+        
         /* Write complete: parse command packet */
         if (0u != (I2CS_I2CSlaveStatus() & I2CS_I2C_SSTAT_WR_CMPLT))
         {
