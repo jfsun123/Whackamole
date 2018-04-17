@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Whackamole\Master">
 <ExpandedNodeIds>
 <v>Whackamole</v>
 <v>Whackamole\Master</v>
@@ -504,10 +504,11 @@
 <name v=".\Slave.cydsn\main.h" />
 <name v=".\Master.cydsn\main.c" />
 <name v=".\Master.cydsn\main.h" />
-<name v=".\Master.cydsn\Generated_Source\PSoC4\I2CM_I2C.h" />
 <name v=".\Master.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Master.cydsn\Master.cydwr" />
 <name v=".\Whackamole.cydsn\main.c" />
 <name v=".\Whackamole.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Whackamole.cydsn\Whackamole.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -515,7 +516,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1098, 495" SelectedTabbedMdiWindow="9bfc3ac9-608e-46fc-98fb-f71175c60b0c"><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\main.c" Guid="377009b3-e2be-41af-9185-c27534f23a07" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\TopDesign\TopDesign.cysch" Guid="8f44f725-68ac-4a59-a7a6-8f68ae66d57c" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\main.h" Guid="d3ce6394-8275-491a-a263-f6d1ea7c23d5" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\main.c" Guid="20b61e97-10dc-4572-bfa7-f9c31d274112" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\main.h" Guid="989b1af1-dc2b-41a7-980b-cf12b1928125" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\Generated_Source\PSoC4\I2CM_I2C.h" Guid="f618bf6d-c96c-4ada-93c0-405bc51a0ff1" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\TopDesign\TopDesign.cysch" Guid="54222a84-0e77-444b-9c91-077698848c3f" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f77fb5c3-ee99-4682-88d0-d4adfec42b80" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\main.c" Guid="9bfc3ac9-608e-46fc-98fb-f71175c60b0c" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\TopDesign\TopDesign.cysch" Guid="5b95a2c0-0495-4a55-8bae-0ebc331bf1ec" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1121, 495" SelectedTabbedMdiWindow="20b61e97-10dc-4572-bfa7-f9c31d274112"><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\main.c" Guid="377009b3-e2be-41af-9185-c27534f23a07" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\TopDesign\TopDesign.cysch" Guid="8f44f725-68ac-4a59-a7a6-8f68ae66d57c" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\main.h" Guid="d3ce6394-8275-491a-a263-f6d1ea7c23d5" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\main.c" Guid="20b61e97-10dc-4572-bfa7-f9c31d274112" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\main.h" Guid="989b1af1-dc2b-41a7-980b-cf12b1928125" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\TopDesign\TopDesign.cysch" Guid="54222a84-0e77-444b-9c91-077698848c3f" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\Master.cydwr" Guid="e7d37023-2f5e-47f0-8a32-fe6d9396fc02" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\main.c" Guid="56e799fa-6026-4d2f-b96c-78ff23b4717b" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\TopDesign\TopDesign.cysch" Guid="2f12545a-5fea-4e0a-82e6-2033a1f3eb2e" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Whackamole.cydwr" Guid="b65d4d6b-59a4-431d-85fa-aaf581d4b13e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

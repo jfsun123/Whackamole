@@ -22,6 +22,9 @@
 #define CY_MAIN_H
 
 #include <project.h>
+#include <stdbool.h>
+#include <time.h>
+#include <stdlib.h>
 
 /***************************************
 *         Function Prototypes
@@ -30,7 +33,10 @@
 /* Function prototypes */
 uint32 CheckSwitchState(void);
 uint32 WriteCommandPacket(uint8 cmd, int cycle);
-uint32 ReadStatusPacket(int cycle);
+uint32 ReadStatusPacket(int cycle, int* pressed);
+void DisplayNumber(int position, int number);
+void playGame();
+void updateTilesAndColors(int tiles[], int colors[]);
 
 
 /***************************************
@@ -40,6 +46,8 @@ uint32 ReadStatusPacket(int cycle);
 /* I2C slave address to communicate with */
 #define I2C_SLAVE_ADDR_0  (0x08u)
 #define I2C_SLAVE_ADDR_1  (0x09u)
+#define I2C_SLAVE_ADDR_2  (0x0Au)
+#define I2C_SLAVE_ADDR_3  (0x0Bu)
 
 /* Buffer and packet size */
 #define BUFFER_SIZE     (32u)

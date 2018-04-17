@@ -14,6 +14,7 @@ uint8 flex3;
 int currentSet; //0 = fantastic floor, 1 = flood random lights throughout the board
     
 void FantasticFloor();
+void EYECANCER();
 void DisplayNumber(int position, int number);
 void FancyLights();
 uint32 IncrementColor(uint32 color);
@@ -29,7 +30,7 @@ int main(void)
 
     //start the interrupts
 	StripLights_Start();
-	StripLights_Dim(1);
+	StripLights_Dim(0);
     srand(time(NULL)); // seed the randomness with time
     
 
@@ -40,7 +41,7 @@ int main(void)
     while (StripLights_Ready() == 0);
 	StripLights_Trigger(1);
 	CyDelay(10);
-    
+//    EYECANCER();
     
     int i = 0;
     while(1){
@@ -247,6 +248,26 @@ uint32 GetRandomColor(){
             return StripLights_WHITE;
         default:
             return 0;
+    }
+}
+
+/*Countdown to epilepsy
+*/
+void EYECANCER(){
+    for(int i = 20; i >= 0; i--){
+        DisplayNumber(0, i / 10);
+        DisplayNumber(1, i % 10);
+        CyDelay(1000);
+    }
+    
+    for(;;){
+        for(int i = 0; i < 15; i++){
+            StripLights_Pixel(i, 0, GetRandomColor());
+            StripLights_Pixel(i, 1, GetRandomColor());
+        }
+        while(StripLights_Ready() == 0);
+        StripLights_Trigger(1);
+        CyDelay(10);
     }
 }
 
