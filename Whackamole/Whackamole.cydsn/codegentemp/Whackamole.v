@@ -1,6 +1,6 @@
 // ======================================================================
 // Whackamole.v generated from TopDesign.cysch
-// 03/07/2018 at 20:22
+// 04/16/2018 at 18:07
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -171,7 +171,7 @@
 `include "C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\WS281xLib.cylib\B_WS2811_v1_3\B_WS2811_v1_3.v"
 `endif
 
-// StripLights_v3_0(Channels=1, ClockSpeedKhz=800, Coord_Wrap=0, Display_Memory=0, Flip_X_Coord=false, Flip_Y_Coord=false, Gamma_Correction=true, Grid_16x16_Columns=2, Grid_16x16_Rows=1, LED_Config=1, LedChannels=1, LEDs_per_Strip=240, Speed=1, String_Wrap_Length=60, Swap_X_Y=false, Transfer_Method=1, WS281x_Type=2, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=StripLights_v3_0, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=StripLights, CY_INSTANCE_SHORT_NAME=StripLights, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=StripLights, )
+// StripLights_v3_0(Channels=1, ClockSpeedKhz=800, Coord_Wrap=0, Display_Memory=0, Flip_X_Coord=false, Flip_Y_Coord=false, Gamma_Correction=true, Grid_16x16_Columns=2, Grid_16x16_Rows=1, LED_Config=1, LedChannels=1, LEDs_per_Strip=60, Speed=1, String_Wrap_Length=15, Swap_X_Y=false, Transfer_Method=1, WS281x_Type=2, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=StripLights_v3_0, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=StripLights, CY_INSTANCE_SHORT_NAME=StripLights, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.1 Update 1, INSTANCE_NAME=StripLights, )
 module StripLights_v3_0_0 (
     rdy,
     S0,

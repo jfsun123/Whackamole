@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
   55 001a 13       		.byte	19
   56 001b 08       		.byte	8
   57 001c 64       		.byte	100
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 2
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 2
 
 
   58 001d 62       		.byte	98
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  112 0053 45       		.byte	69
  113 0054 3E       		.byte	62
  114 0055 00       		.byte	0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 3
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 3
 
 
  115 0056 42       		.byte	66
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  169 008c 00       		.byte	0
  170 008d 08       		.byte	8
  171 008e 14       		.byte	20
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 4
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 4
 
 
  172 008f 22       		.byte	34
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  226 00c5 41       		.byte	65
  227 00c6 51       		.byte	81
  228 00c7 32       		.byte	50
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 5
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 5
 
 
  229 00c8 7F       		.byte	127
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  283 00fe 46       		.byte	70
  284 00ff 46       		.byte	70
  285 0100 49       		.byte	73
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 6
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 6
 
 
  286 0101 49       		.byte	73
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  340 0137 02       		.byte	2
  341 0138 01       		.byte	1
  342 0139 02       		.byte	2
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 7
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 7
 
 
  343 013a 04       		.byte	4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  397 0170 40       		.byte	64
  398 0171 00       		.byte	0
  399 0172 20       		.byte	32
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 8
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 8
 
 
  400 0173 40       		.byte	64
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  454 01a9 3C       		.byte	60
  455 01aa 40       		.byte	64
  456 01ab 40       		.byte	64
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 9
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 9
 
 
  457 01ac 20       		.byte	32
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  511              		.global	StripLights_SetFont
  512              		.code	16
  513              		.thumb_func
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 10
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 10
 
 
  514              		.type	StripLights_SetFont, %function
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
   51:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x01, 0x71, 0x09, 0x05, 0x03,// 7
   52:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x36, 0x49, 0x49, 0x49, 0x36,// 8
   53:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x06, 0x49, 0x49, 0x29, 0x1E,// 9
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 11
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 11
 
 
   54:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x36, 0x36, 0x00, 0x00,// :
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  108:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7C, 0x14, 0x14, 0x14, 0x08,// p
  109:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x08, 0x14, 0x14, 0x18, 0x7C,// q
  110:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7C, 0x08, 0x04, 0x04, 0x08,// r
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 12
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 12
 
 
  111:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x48, 0x54, 0x54, 0x54, 0x20,// s
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  537 0010 0F4A     		ldr	r2, .L6+4
  538 0012 1A60     		str	r2, [r3]
  146:Generated_Source\PSoC4/StripLights_fonts.c ****            StripLights_fontX = StripLights_Font5x7_XSIZE;
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 13
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 13
 
 
  539              		.loc 1 146 0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  581              	.L6:
  582 004c 00000000 		.word	StripLights_fontPtr
  583 0050 00000000 		.word	StripLights_Font5x7
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 14
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 14
 
 
  584 0054 00000000 		.word	StripLights_fontX
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  616 000e 0023     		movs	r3, #0
  617 0010 7B61     		str	r3, [r7, #20]
  181:Generated_Source\PSoC4/StripLights_fonts.c ****     uint32 yStop;
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 15
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 15
 
 
  182:Generated_Source\PSoC4/StripLights_fonts.c ****     
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  658 0054 7A68     		ldr	r2, [r7, #4]
  659 0056 7B69     		ldr	r3, [r7, #20]
  660 0058 D318     		adds	r3, r2, r3
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 16
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 16
 
 
  661 005a 1A78     		ldrb	r2, [r3]
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  705              	.L13:
  206:Generated_Source\PSoC4/StripLights_fonts.c **** 			}
  207:Generated_Source\PSoC4/StripLights_fonts.c ****         }
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 17
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 17
 
 
  208:Generated_Source\PSoC4/StripLights_fonts.c ****         xpos++;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  752              	.LFE33:
  753              		.size	StripLights_PrintString, .-StripLights_PrintString
  754              		.section	.text.StripLights_PutChar,"ax",%progbits
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 18
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 18
 
 
  755              		.align	2
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  784 0018 D21A     		subs	r2, r2, r3
  785 001a 2D4B     		ldr	r3, .L26+4
  786 001c 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 19
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 19
 
 
  787 001e 5343     		muls	r3, r2
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  826 0058 1A68     		ldr	r2, [r3]
  827 005a FB69     		ldr	r3, [r7, #28]
  828 005c D318     		adds	r3, r2, r3
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 20
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 20
 
 
  829 005e 1B78     		ldrb	r3, [r3]
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  870              	.L21:
  250:Generated_Source\PSoC4/StripLights_fonts.c ****         {
  871              		.loc 1 250 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 21
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 21
 
 
  872 00a6 3A6A     		ldr	r2, [r7, #32]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  920 0019 00000000 		.4byte	.Ldebug_ranges0+0
  921 001d 00000000 		.4byte	0
  922 0021 00000000 		.4byte	.Ldebug_line0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 22
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 22
 
 
  923 0025 02       		.uleb128 0x2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  977 008b 41000000 		.4byte	0x41
  978 008f 02       		.uleb128 0x2
  979 0090 04       		.byte	0x4
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 23
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 23
 
 
  980 0091 04       		.byte	0x4
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1034 00fd 91       		.byte	0x91
  1035 00fe 64       		.sleb128 -28
  1036 00ff 07       		.uleb128 0x7
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 24
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 24
 
 
  1037 0100 BB000000 		.4byte	.LASF21
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1091 0161 01       		.uleb128 0x1
  1092 0162 9C       		.byte	0x9c
  1093 0163 FB010000 		.4byte	0x1fb
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 25
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 25
 
 
  1094 0167 07       		.uleb128 0x7
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1148 01c1 91       		.byte	0x91
  1149 01c2 70       		.sleb128 -16
  1150 01c3 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 26
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 26
 
 
  1151 01c4 667000   		.ascii	"fp\000"
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1205 0229 17000000 		.4byte	.LASF31
  1206 022d 01       		.byte	0x1
  1207 022e 15       		.byte	0x15
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 27
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 27
 
 
  1208 022f 83000000 		.4byte	0x83
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1262 0016 0B       		.uleb128 0xb
  1263 0017 0B       		.uleb128 0xb
  1264 0018 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 28
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 28
 
 
  1265 0019 0B       		.uleb128 0xb
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1319 004f 06       		.uleb128 0x6
  1320 0050 40       		.uleb128 0x40
  1321 0051 18       		.uleb128 0x18
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 29
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 29
 
 
  1322 0052 9742     		.uleb128 0x2117
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1376 008a 0B       		.uleb128 0xb
  1377 008b 49       		.uleb128 0x49
  1378 008c 13       		.uleb128 0x13
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 30
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 30
 
 
  1379 008d 02       		.uleb128 0x2
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1433 00c3 49       		.uleb128 0x49
  1434 00c4 13       		.uleb128 0x13
  1435 00c5 00       		.byte	0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 31
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 31
 
 
  1436 00c6 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1486 0000 53747269 		.ascii	"StripLights_fontOffset\000"
  1486      704C6967 
  1486      6874735F 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 32
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 32
 
 
  1486      666F6E74 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1510              	.LASF5:
  1511 00c5 6C6F6E67 		.ascii	"long unsigned int\000"
  1511      20756E73 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 33
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 33
 
 
  1511      69676E65 
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1532              	.LASF7:
  1533 01e3 6C6F6E67 		.ascii	"long long unsigned int\000"
  1533      206C6F6E 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 34
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 34
 
 
  1533      6720756E 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 1
  1559      704C6967 
  1559      6874735F 
  1559      53657446 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccIpofyp.s 			page 35
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccyZAI2g.s 			page 35
 
 
  1559      6F6E7400 

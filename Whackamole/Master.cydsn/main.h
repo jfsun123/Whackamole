@@ -29,8 +29,8 @@
 
 /* Function prototypes */
 uint32 CheckSwitchState(void);
-uint32 WriteCommandPacket(uint8 cmd);
-uint32 ReadStatusPacket(void);
+uint32 WriteCommandPacket(uint8 cmd, int cycle);
+uint32 ReadStatusPacket(int cycle);
 
 
 /***************************************
@@ -38,17 +38,18 @@ uint32 ReadStatusPacket(void);
 ****************************************/
 
 /* I2C slave address to communicate with */
-#define I2C_SLAVE_ADDR  (0x08u)
+#define I2C_SLAVE_ADDR_0  (0x08u)
+#define I2C_SLAVE_ADDR_1  (0x09u)
 
 /* Buffer and packet size */
-#define BUFFER_SIZE     (3u)
+#define BUFFER_SIZE     (32u)
 #define PACKET_SIZE     (BUFFER_SIZE)
 
 /* Packet positions */
 #define PACKET_SOP_POS  (0u)
 #define PACKET_CMD_POS  (1u)
 #define PACKET_STS_POS  (PACKET_CMD_POS)
-#define PACKET_EOP_POS  (2u)
+#define PACKET_EOP_POS  (31u)
 
 /* Start and end of packet markers */
 #define PACKET_SOP      (0x01u)
@@ -61,6 +62,10 @@ uint32 ReadStatusPacket(void);
 /* Command valid status */
 #define TRANSFER_CMPLT    (0x00u)
 #define TRANSFER_ERROR    (0xFFu)
+
+/* Set the LEDS to be on or off*/
+#define LED_ON  (0u)
+#define LED_OFF (1u)
 
 /* Commands set */
 typedef enum 

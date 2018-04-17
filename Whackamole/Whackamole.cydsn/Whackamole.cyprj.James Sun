@@ -87,6 +87,86 @@
 <file name=".\Generated_Source\PSoC4\flex3_aliases.h" />
 <file name=".\Generated_Source\PSoC4\project.h" />
 <file name=".\main.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\StripLights.o">
+<dep name=".\Generated_Source\PSoC4\Board_LED.h" />
+<dep name=".\Generated_Source\PSoC4\Board_LED_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Button.h" />
+<dep name=".\Generated_Source\PSoC4\Button_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\S0.h" />
+<dep name=".\Generated_Source\PSoC4\S0_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights.c" />
+<dep name=".\Generated_Source\PSoC4\StripLights.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_HFCLK.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_StringSel.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_cisr.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_fisr.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_fonts.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<dep name=".\Generated_Source\PSoC4\cyPm.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\flex0.h" />
+<dep name=".\Generated_Source\PSoC4\flex0_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\flex1.h" />
+<dep name=".\Generated_Source\PSoC4\flex1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\flex2.h" />
+<dep name=".\Generated_Source\PSoC4\flex2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\flex3.h" />
+<dep name=".\Generated_Source\PSoC4\flex3_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\project.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\StripLights.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\StripLights_fonts.o">
+<dep name=".\Generated_Source\PSoC4\Board_LED.h" />
+<dep name=".\Generated_Source\PSoC4\Board_LED_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Button.h" />
+<dep name=".\Generated_Source\PSoC4\Button_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\S0.h" />
+<dep name=".\Generated_Source\PSoC4\S0_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_HFCLK.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_StringSel.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_cisr.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_fisr.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_fonts.c" />
+<dep name=".\Generated_Source\PSoC4\StripLights_fonts.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<dep name=".\Generated_Source\PSoC4\cyPm.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\flex0.h" />
+<dep name=".\Generated_Source\PSoC4\flex0_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\flex1.h" />
+<dep name=".\Generated_Source\PSoC4\flex1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\flex2.h" />
+<dep name=".\Generated_Source\PSoC4\flex2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\flex3.h" />
+<dep name=".\Generated_Source\PSoC4\flex3_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\project.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\StripLights_fonts.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -199,46 +279,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\S0_PM.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\StripLights.o">
-<dep name=".\Generated_Source\PSoC4\Board_LED.h" />
-<dep name=".\Generated_Source\PSoC4\Board_LED_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Button.h" />
-<dep name=".\Generated_Source\PSoC4\Button_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
-<dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\S0.h" />
-<dep name=".\Generated_Source\PSoC4\S0_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights.c" />
-<dep name=".\Generated_Source\PSoC4\StripLights.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights_HFCLK.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights_StringSel.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights_cisr.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights_fisr.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights_fonts.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
-<dep name=".\Generated_Source\PSoC4\cyPm.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\flex0.h" />
-<dep name=".\Generated_Source\PSoC4\flex0_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\flex1.h" />
-<dep name=".\Generated_Source\PSoC4\flex1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\flex2.h" />
-<dep name=".\Generated_Source\PSoC4\flex2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\flex3.h" />
-<dep name=".\Generated_Source\PSoC4\flex3_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\project.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\StripLights.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\StripLights_HFCLK.o">
 <dep name=".\Generated_Source\PSoC4\StripLights_HFCLK.c" />
 <dep name=".\Generated_Source\PSoC4\StripLights_HFCLK.h" />
@@ -285,46 +325,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\StripLights_fisr.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\StripLights_fonts.o">
-<dep name=".\Generated_Source\PSoC4\Board_LED.h" />
-<dep name=".\Generated_Source\PSoC4\Board_LED_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Button.h" />
-<dep name=".\Generated_Source\PSoC4\Button_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
-<dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\S0.h" />
-<dep name=".\Generated_Source\PSoC4\S0_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights_HFCLK.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights_StringSel.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights_cisr.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights_fisr.h" />
-<dep name=".\Generated_Source\PSoC4\StripLights_fonts.c" />
-<dep name=".\Generated_Source\PSoC4\StripLights_fonts.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
-<dep name=".\Generated_Source\PSoC4\cyPm.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\flex0.h" />
-<dep name=".\Generated_Source\PSoC4\flex0_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\flex1.h" />
-<dep name=".\Generated_Source\PSoC4\flex1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\flex2.h" />
-<dep name=".\Generated_Source\PSoC4\flex2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\flex3.h" />
-<dep name=".\Generated_Source\PSoC4\flex3_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\project.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\StripLights_fonts.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\cyPm.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -865,7 +865,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.1\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="131649565741505588" />
+<deps_time v="131684008655573804" />
 <top_block v="TopDesign" />
 <last_generation v="1" />
 <pdl_path v="" />
@@ -875,7 +875,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="131649591960940416" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="131684023836904153" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>

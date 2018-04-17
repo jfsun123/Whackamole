@@ -117,6 +117,23 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.scat</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\S0.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\S0.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\S0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\S0_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_fonts.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_fonts.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_HFCLK.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_HFCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_cisr.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_cisr.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_fisr.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_fisr.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_StringSel.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_StringSel.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\StripLights_StringSel_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\Export\ARM_GCC_Generic">

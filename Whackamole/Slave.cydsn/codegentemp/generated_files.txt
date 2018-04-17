@@ -50,6 +50,22 @@
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\Button.h" value="HEADER;;;;;Button" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\Button_aliases.h" value="HEADER;;;;;Button" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\Button_PM.c" value="SOURCE_C;CortexM0;;;;Button" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex0.c" value="SOURCE_C;CortexM0;;;;flex0" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex0.h" value="HEADER;;;;;flex0" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex0_aliases.h" value="HEADER;;;;;flex0" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex0_PM.c" value="SOURCE_C;CortexM0;;;;flex0" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex1.c" value="SOURCE_C;CortexM0;;;;flex1" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex1.h" value="HEADER;;;;;flex1" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex1_aliases.h" value="HEADER;;;;;flex1" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex1_PM.c" value="SOURCE_C;CortexM0;;;;flex1" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex2.c" value="SOURCE_C;CortexM0;;;;flex2" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex2.h" value="HEADER;;;;;flex2" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex2_aliases.h" value="HEADER;;;;;flex2" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex2_PM.c" value="SOURCE_C;CortexM0;;;;flex2" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex3.c" value="SOURCE_C;CortexM0;;;;flex3" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex3.h" value="HEADER;;;;;flex3" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex3_aliases.h" value="HEADER;;;;;flex3" />
+  <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\flex3_PM.c" value="SOURCE_C;CortexM0;;;;flex3" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\I2CS_SCBCLK.c" value="SOURCE_C;CortexM0;;;;I2CS_SCBCLK" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\I2CS_SCBCLK.h" value="HEADER;;;;;I2CS_SCBCLK" />
   <file name="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\codegentemp\I2CS_sda.c" value="SOURCE_C;CortexM0;;;;I2CS_sda" />

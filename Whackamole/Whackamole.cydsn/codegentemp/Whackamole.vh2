@@ -2,7 +2,7 @@
 --	Conversion of Whackamole.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Mar 07 20:22:49 2018
+--	Mon Apr 16 18:07:42 2018
 --
 
 USE cypress.cypress.all;

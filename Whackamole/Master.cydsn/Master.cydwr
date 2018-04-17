@@ -18,6 +18,7 @@
       <Data key="74cbd069-96d1-46de-b032-5f29e3b18053" value="LED_GREEN" />
       <Data key="97bd13f1-c879-4c52-a35f-fdd57642446e/5382e105-1382-4a2e-b9f4-3bb2feba71e0" value="I2CM_sda" />
       <Data key="97bd13f1-c879-4c52-a35f-fdd57642446e/22863ebe-a37b-476f-b252-6e49a8c00b12" value="I2CM_scl" />
+      <Data key="bba5050a-94bc-4231-80a9-574f7dd1df40" value="S0" />
       <Data key="ed092b9b-d398-4703-be89-cebf998501f6" value="LED_RED" />
     </Group>
   </Group>
@@ -1143,6 +1144,11 @@
     <Group key="97bd13f1-c879-4c52-a35f-fdd57642446e/22863ebe-a37b-476f-b252-6e49a8c00b12">
       <Group key="0">
         <Data key="Port Format" value="4,0" />
+      </Group>
+    </Group>
+    <Group key="bba5050a-94bc-4231-80a9-574f7dd1df40">
+      <Group key="0">
+        <Data key="Port Format" value="0,4" />
       </Group>
     </Group>
     <Group key="Unlocked Pins">

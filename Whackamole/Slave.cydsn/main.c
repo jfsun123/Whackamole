@@ -7,8 +7,8 @@ SLAVE
 /* I2C slave read and write buffers */
 uint8 i2cReadBuffer [BUFFER_SIZE] = {PACKET_SOP, STS_CMD_FAIL, PACKET_EOP};
 uint8 i2cWriteBuffer[BUFFER_SIZE];
-void SetBlockColor(int block_number, uint32 color);
-
+void SetTileColor(int block_number, uint32 color);
+uint8 buttonStatus = 0;
 
 /*******************************************************************************
 * Function Name: main
@@ -33,17 +33,19 @@ int main()
     //Start lights and initialize the variables for flex sensors
     StripLights_Start();
     StripLights_Dim(0);
-    uint8 buttonStatus = 0;
+
+    bool isPressed = false;
+    i2cReadBuffer[PACKET_EOP_POS] = PACKET_EOP; //janky way of setting the end packet
     
-    uint8 status = STS_CMD_FAIL;
                     LED_RED_Write  (LED_OFF);
-                    LED_GREEN_Write(LED_OFF);
-                    LED_BLUE_Write (LED_OFF);
+                    LED_GREEN_Write(LED_ON);
+                    LED_BLUE_Write (LED_ON);
 
 
     /* Start I2C slave (SCB mode) */
     I2CS_I2CSlaveInitReadBuf (i2cReadBuffer,  BUFFER_SIZE);
     I2CS_I2CSlaveInitWriteBuf(i2cWriteBuffer, BUFFER_SIZE);
+    I2CS_I2CSlaveSetAddress(0x08u);
     I2CS_Start();
 
     CyGlobalIntEnable;
@@ -52,20 +54,23 @@ int main()
     * Main polling loop
     ***************************************************************************/
     for (;;)
-    {
-        buttonStatus = Button_Read();
-        
+    {   
         /* Write complete: parse command packet */
         if (0u != (I2CS_I2CSlaveStatus() & I2CS_I2C_SSTAT_WR_CMPLT))
         {
-            /* Check packet length */
+//            /* Check packet length */
             if (PACKET_SIZE == I2CS_I2CSlaveGetWriteBufSize())
             {
-                /* Check start and end of packet markers */
+//                /* Check start and end of packet markers */
                 if ((i2cWriteBuffer[PACKET_SOP_POS] == PACKET_SOP) &&
                     (i2cWriteBuffer[PACKET_EOP_POS] == PACKET_EOP))
                 {
-                    status = ExecuteCommand(i2cWriteBuffer[PACKET_CMD_POS]);
+                    int color0 = i2cWriteBuffer[2];
+                    int color1 = i2cWriteBuffer[3];
+                    int color2 = i2cWriteBuffer[4];
+                    int color3 = i2cWriteBuffer[5];
+                    ExecuteCommand(color0, color1, color2, color3);  //CHANGED
+                    
                 }
             }
 
@@ -73,9 +78,13 @@ int main()
             I2CS_I2CSlaveClearWriteBuf();
             (void) I2CS_I2CSlaveClearWriteStatus();
 
-            /* Update read buffer */
-            i2cReadBuffer[PACKET_STS_POS] = buttonStatus;  //used to be status
-            status = STS_CMD_FAIL;
+            /* Update read buffer*/
+            i2cReadBuffer[PACKET_STS_POS] = STS_CMD_DONE;
+            i2cReadBuffer[2] = flex0_Read();
+            i2cReadBuffer[3] = flex1_Read();
+            i2cReadBuffer[4] = flex2_Read();
+            i2cReadBuffer[5] = flex3_Read();
+            //END UPDATE READ BUFFER
         }
 
         /* Read complete: expose buffer to master */
@@ -108,79 +117,27 @@ int main()
 *  - STS_CMD_DONE: command is executed successfully.
 *  - STS_CMD_FAIL: unknown command
 *
+
+
+BIG CHANGES
+Parameters: uint8 array[6]
+Returns the status of the execution. Includes the number of times that the button
+was pressed on the board in binary in an array
 *******************************************************************************/
-uint8 ExecuteCommand(uint32 cmd)
+
+uint8 ExecuteCommand(int color0, int color1, int color2, int color3)
 {
-    uint8 status;
-
-    status = STS_CMD_DONE;
-
-    /* Execute received command */
-    switch (cmd)
-    {
-        case CMD_SET_RED:
-            LED_RED_Write  (LED_ON);
-            LED_GREEN_Write(LED_OFF);
-            LED_BLUE_Write (LED_OFF);
-            SetBlockColor(0, StripLights_RED);
-            break;
-
-        case CMD_SET_GREEN:
-            LED_RED_Write  (LED_OFF);
-            LED_GREEN_Write(LED_ON);
-            LED_BLUE_Write (LED_OFF);
-            SetBlockColor(0, StripLights_GREEN);
-            break;
-
-        case CMD_SET_BLUE:
-            LED_RED_Write  (LED_OFF);
-            LED_GREEN_Write(LED_OFF);
-            LED_BLUE_Write (LED_ON);
-            SetBlockColor(0, StripLights_BLUE);
-            break;
-        case CMD_SET_RED_GREEN:
-            LED_RED_Write  (LED_ON);
-            LED_GREEN_Write(LED_ON);
-            LED_BLUE_Write (LED_OFF);
-            SetBlockColor(0, StripLights_YELLOW);
-            break;
-        case CMD_SET_RED_BLUE:
-            LED_RED_Write  (LED_ON);
-            LED_GREEN_Write(LED_OFF);
-            LED_BLUE_Write (LED_ON);
-            SetBlockColor(0, StripLights_VIOLET);
-            break;
-        case CMD_SET_GREEN_BLUE:
-            LED_RED_Write  (LED_OFF);
-            LED_GREEN_Write(LED_ON);
-            LED_BLUE_Write (LED_ON);
-            SetBlockColor(0, StripLights_TURQUOSE);
-            break;
-        case CMD_SET_RED_GREEN_BLUE:
-            LED_RED_Write  (LED_ON);
-            LED_GREEN_Write(LED_ON);
-            LED_BLUE_Write (LED_ON);
-            SetBlockColor(0, StripLights_DIM_WHITE);
-            break;
-
-        case CMD_SET_OFF:
-                    LED_RED_Write  (LED_OFF);
-                    LED_GREEN_Write(LED_OFF);
-                    LED_BLUE_Write (LED_OFF);
-                    SetBlockColor(0, 0);
-            break;
-
-        default:
-            status = STS_CMD_FAIL;
-            break;
-    }
-  
-    return (status);
+    
+    SetTileColor(0, color0);
+    SetTileColor(1, color1);
+    SetTileColor(2, color2);
+    SetTileColor(3, color3);
+    return (0);
 }
 
 
 
-void SetBlockColor(int block_number, uint32 color) {
+void SetTileColor(int block_number, uint32 color) {
 	for (uint32 led = 0; led < 15; led++) {
 		StripLights_Pixel(led, block_number, color);
 	}

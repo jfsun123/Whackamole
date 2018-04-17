@@ -14,6 +14,7 @@ uint8 flex3;
 int currentSet; //0 = fantastic floor, 1 = flood random lights throughout the board
     
 void FantasticFloor();
+void DisplayNumber(int position, int number);
 void FancyLights();
 uint32 IncrementColor(uint32 color);
 void RunPattern();
@@ -28,20 +29,29 @@ int main(void)
 
     //start the interrupts
 	StripLights_Start();
-	StripLights_Dim(0);
+	StripLights_Dim(1);
     srand(time(NULL)); // seed the randomness with time
     
-    currentSet = 0; //start with fantastic floor
+
     
-    for(;;) {
-        //ResetBlock();
-        //if(!currentSet) FantasticFloor();
-        Board_LED_Write(flex0_Read());
-        
+    for(int i = 0; i < 15; i++){
+        StripLights_Pixel(i, 0, StripLights_BLACK);
+    }
+    while (StripLights_Ready() == 0);
+	StripLights_Trigger(1);
+	CyDelay(10);
     
+    
+    int i = 0;
+    while(1){
+        DisplayNumber(0, i);
+        i++;
+        CyDelay(1000);
+        if(i == 10)
+            i = 0;
     }
     
-//    RunPattern();
+//    ResetBlock();
 //    FantasticFloor();
 }
 
@@ -66,7 +76,7 @@ void FancyLights(){
         //Second sequence
         for(int k = 0; k < 2; k++){
             for(int i = 0; i < 4; i++){
-                for(int j = 0; j < 60; j++){
+                for(int j = 0; j < LEDS_PER_TILE; j++){
                     StripLights_Pixel(j, i, GetRandomColor());
                     while (StripLights_Ready() == 0);
             	    StripLights_Trigger(1);
@@ -116,18 +126,26 @@ void FantasticFloor(){
         //leave function if toggle button is set
         if(!button){
             currentSet = 1;
-            return;
+//            return;
         }
         
         //otherwise, light the tiles that read flex inputs with a random color
         if(!flex0)
             SetTileColor(0, GetRandomColor());
+        else
+            SetTileColor(0, StripLights_DIM_WHITE);
         if(!flex1)
             SetTileColor(1, GetRandomColor());
+        else
+            SetTileColor(1, StripLights_DIM_WHITE);
         if(!flex2)
             SetTileColor(2, GetRandomColor());
+        else
+            SetTileColor(2, StripLights_DIM_WHITE);
         if(!flex3)
             SetTileColor(3, GetRandomColor());
+        else
+            SetTileColor(3, StripLights_DIM_WHITE);
         
     }
 }
@@ -179,6 +197,7 @@ void SetTileColor(int tile_number, uint32 color) {
 	for (uint32 led = 0; led < LEDS_PER_TILE; led++) {
 		StripLights_Pixel(led, tile_number, color);
 	}
+
     while (StripLights_Ready() == 0);
 	StripLights_Trigger(1);
 	CyDelay(10);
@@ -229,6 +248,158 @@ uint32 GetRandomColor(){
         default:
             return 0;
     }
+}
+
+/*This function will display a number on the LEDs on the score display
+Parameters: 
+    position: which block to display it on
+    number: number to be shown
+*/
+void DisplayNumber(int position, int number){
+    int zero[] = {1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1};
+    int one[] = {1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0};
+    int two[] = {1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1};
+    int three[] = {1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1};
+    int four[] = {0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1};
+    int five[] = {1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1};
+    int six[] = {1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1};
+    int seven[] = {0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1};
+    int eight[] = {1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1};
+    int nine[] = {1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1};
+    
+    int arrayLen = 15;
+    if(number == 0){
+            for(int i = 0; i < arrayLen; i++){
+                if(zero[i] == 1){
+                    StripLights_Pixel(i, position, StripLights_WHITE);
+                }
+                else{
+                    StripLights_Pixel(i, position, StripLights_BLACK);
+                }
+            }
+            while (StripLights_Ready() == 0);
+        	StripLights_Trigger(1);
+        	CyDelay(10);
+    }
+    if(number == 1){
+            for(int i = 0; i < arrayLen; i++){
+                if(one[i] == 1){
+                    StripLights_Pixel(i, position, StripLights_WHITE);
+                }
+                else{
+                    StripLights_Pixel(i, position, StripLights_BLACK);
+                }
+            }
+            while (StripLights_Ready() == 0);
+        	StripLights_Trigger(1);
+        	CyDelay(10);
+    }
+    if(number == 2){
+            for(int i = 0; i < arrayLen; i++){
+                if(two[i] == 1){
+                    StripLights_Pixel(i, position, StripLights_WHITE);
+                }
+                else{
+                    StripLights_Pixel(i, position, StripLights_BLACK);
+                }
+            }
+            while (StripLights_Ready() == 0);
+        	StripLights_Trigger(1);
+        	CyDelay(10);
+            
+    }
+    if(number == 3){
+            for(int i = 0; i < arrayLen; i++){
+                if(three[i] == 1){
+                    StripLights_Pixel(i, position, StripLights_WHITE);
+                }
+                else{
+                    StripLights_Pixel(i, position, StripLights_BLACK);
+                }
+            }
+            while (StripLights_Ready() == 0);
+        	StripLights_Trigger(1);
+        	CyDelay(10);
+    }
+    if(number == 4){
+            for(int i = 0; i < arrayLen; i++){
+                if(four[i] == 1){
+                    StripLights_Pixel(i, position, StripLights_WHITE);
+                }
+                else{
+                    StripLights_Pixel(i, position, StripLights_BLACK);
+                }
+            }
+            while (StripLights_Ready() == 0);
+        	StripLights_Trigger(1);
+        	CyDelay(10);
+    }
+    if(number == 5){
+            for(int i = 0; i < arrayLen; i++){
+                if(five[i] == 1){
+                    StripLights_Pixel(i, position, StripLights_WHITE);
+                }
+                else{
+                    StripLights_Pixel(i, position, StripLights_BLACK);
+                }
+            }
+            while (StripLights_Ready() == 0);
+        	StripLights_Trigger(1);
+        	CyDelay(10);
+    }
+    if(number == 6){
+            for(int i = 0; i < arrayLen; i++){
+                if(six[i] == 1){
+                    StripLights_Pixel(i, position, StripLights_WHITE);
+                }
+                else{
+                    StripLights_Pixel(i, position, StripLights_BLACK);
+                }
+            }
+            while (StripLights_Ready() == 0);
+        	StripLights_Trigger(1);
+        	CyDelay(10);
+    }
+    if(number == 7){
+            for(int i = 0; i < arrayLen; i++){
+                if(seven[i] == 1){
+                    StripLights_Pixel(i, position, StripLights_WHITE);
+                }
+                else{
+                    StripLights_Pixel(i, position, StripLights_BLACK);
+                }
+            }
+            while (StripLights_Ready() == 0);
+        	StripLights_Trigger(1);
+        	CyDelay(10);
+    }   
+    if(number == 8){
+            for(int i = 0; i < arrayLen; i++){
+                if(eight[i] == 1){
+                    StripLights_Pixel(i, position, StripLights_WHITE);
+                }
+                else{
+                    StripLights_Pixel(i, position, StripLights_BLACK);
+                }
+            }
+            while (StripLights_Ready() == 0);
+        	StripLights_Trigger(1);
+        	CyDelay(10);
+    }
+    if(number == 9){
+            for(int i = 0; i < arrayLen; i++){
+                if(nine[i] == 1){
+                    StripLights_Pixel(i, position, StripLights_WHITE);
+                }
+                else{
+                    StripLights_Pixel(i, position, StripLights_BLACK);
+                }
+            }
+            while (StripLights_Ready() == 0);
+        	StripLights_Trigger(1);
+        	CyDelay(10);
+    }
+
 }
 
 //Resets all the tile colors to blank

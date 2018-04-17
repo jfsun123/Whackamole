@@ -1,0 +1,2049 @@
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"StripLights_fonts.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.comm	StripLights_fontPtr,4,4
+  20              		.comm	StripLights_fontX,4,4
+  21              		.comm	StripLights_fontY,4,4
+  22              		.comm	StripLights_fontOffset,4,4
+  23              		.global	StripLights_Font5x7
+  24              		.section	.rodata
+  25              		.align	2
+  26              		.type	StripLights_Font5x7, %object
+  27              		.size	StripLights_Font5x7, 480
+  28              	StripLights_Font5x7:
+  29 0000 00       		.byte	0
+  30 0001 00       		.byte	0
+  31 0002 00       		.byte	0
+  32 0003 00       		.byte	0
+  33 0004 00       		.byte	0
+  34 0005 00       		.byte	0
+  35 0006 00       		.byte	0
+  36 0007 5F       		.byte	95
+  37 0008 00       		.byte	0
+  38 0009 00       		.byte	0
+  39 000a 00       		.byte	0
+  40 000b 07       		.byte	7
+  41 000c 00       		.byte	0
+  42 000d 07       		.byte	7
+  43 000e 00       		.byte	0
+  44 000f 14       		.byte	20
+  45 0010 7F       		.byte	127
+  46 0011 14       		.byte	20
+  47 0012 7F       		.byte	127
+  48 0013 14       		.byte	20
+  49 0014 24       		.byte	36
+  50 0015 2A       		.byte	42
+  51 0016 7F       		.byte	127
+  52 0017 2A       		.byte	42
+  53 0018 12       		.byte	18
+  54 0019 23       		.byte	35
+  55 001a 13       		.byte	19
+  56 001b 08       		.byte	8
+  57 001c 64       		.byte	100
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 2
+
+
+  58 001d 62       		.byte	98
+  59 001e 36       		.byte	54
+  60 001f 49       		.byte	73
+  61 0020 55       		.byte	85
+  62 0021 22       		.byte	34
+  63 0022 50       		.byte	80
+  64 0023 00       		.byte	0
+  65 0024 05       		.byte	5
+  66 0025 03       		.byte	3
+  67 0026 00       		.byte	0
+  68 0027 00       		.byte	0
+  69 0028 00       		.byte	0
+  70 0029 1C       		.byte	28
+  71 002a 22       		.byte	34
+  72 002b 41       		.byte	65
+  73 002c 00       		.byte	0
+  74 002d 00       		.byte	0
+  75 002e 41       		.byte	65
+  76 002f 22       		.byte	34
+  77 0030 1C       		.byte	28
+  78 0031 00       		.byte	0
+  79 0032 08       		.byte	8
+  80 0033 2A       		.byte	42
+  81 0034 1C       		.byte	28
+  82 0035 2A       		.byte	42
+  83 0036 08       		.byte	8
+  84 0037 08       		.byte	8
+  85 0038 08       		.byte	8
+  86 0039 3E       		.byte	62
+  87 003a 08       		.byte	8
+  88 003b 08       		.byte	8
+  89 003c 00       		.byte	0
+  90 003d 50       		.byte	80
+  91 003e 30       		.byte	48
+  92 003f 00       		.byte	0
+  93 0040 00       		.byte	0
+  94 0041 08       		.byte	8
+  95 0042 08       		.byte	8
+  96 0043 08       		.byte	8
+  97 0044 08       		.byte	8
+  98 0045 08       		.byte	8
+  99 0046 00       		.byte	0
+ 100 0047 60       		.byte	96
+ 101 0048 60       		.byte	96
+ 102 0049 00       		.byte	0
+ 103 004a 00       		.byte	0
+ 104 004b 20       		.byte	32
+ 105 004c 10       		.byte	16
+ 106 004d 08       		.byte	8
+ 107 004e 04       		.byte	4
+ 108 004f 02       		.byte	2
+ 109 0050 3E       		.byte	62
+ 110 0051 51       		.byte	81
+ 111 0052 49       		.byte	73
+ 112 0053 45       		.byte	69
+ 113 0054 3E       		.byte	62
+ 114 0055 00       		.byte	0
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 3
+
+
+ 115 0056 42       		.byte	66
+ 116 0057 7F       		.byte	127
+ 117 0058 40       		.byte	64
+ 118 0059 00       		.byte	0
+ 119 005a 42       		.byte	66
+ 120 005b 61       		.byte	97
+ 121 005c 51       		.byte	81
+ 122 005d 49       		.byte	73
+ 123 005e 46       		.byte	70
+ 124 005f 21       		.byte	33
+ 125 0060 41       		.byte	65
+ 126 0061 45       		.byte	69
+ 127 0062 4B       		.byte	75
+ 128 0063 31       		.byte	49
+ 129 0064 18       		.byte	24
+ 130 0065 14       		.byte	20
+ 131 0066 12       		.byte	18
+ 132 0067 7F       		.byte	127
+ 133 0068 10       		.byte	16
+ 134 0069 27       		.byte	39
+ 135 006a 45       		.byte	69
+ 136 006b 45       		.byte	69
+ 137 006c 45       		.byte	69
+ 138 006d 39       		.byte	57
+ 139 006e 3C       		.byte	60
+ 140 006f 4A       		.byte	74
+ 141 0070 49       		.byte	73
+ 142 0071 49       		.byte	73
+ 143 0072 30       		.byte	48
+ 144 0073 01       		.byte	1
+ 145 0074 71       		.byte	113
+ 146 0075 09       		.byte	9
+ 147 0076 05       		.byte	5
+ 148 0077 03       		.byte	3
+ 149 0078 36       		.byte	54
+ 150 0079 49       		.byte	73
+ 151 007a 49       		.byte	73
+ 152 007b 49       		.byte	73
+ 153 007c 36       		.byte	54
+ 154 007d 06       		.byte	6
+ 155 007e 49       		.byte	73
+ 156 007f 49       		.byte	73
+ 157 0080 29       		.byte	41
+ 158 0081 1E       		.byte	30
+ 159 0082 00       		.byte	0
+ 160 0083 36       		.byte	54
+ 161 0084 36       		.byte	54
+ 162 0085 00       		.byte	0
+ 163 0086 00       		.byte	0
+ 164 0087 00       		.byte	0
+ 165 0088 56       		.byte	86
+ 166 0089 36       		.byte	54
+ 167 008a 00       		.byte	0
+ 168 008b 00       		.byte	0
+ 169 008c 00       		.byte	0
+ 170 008d 08       		.byte	8
+ 171 008e 14       		.byte	20
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 4
+
+
+ 172 008f 22       		.byte	34
+ 173 0090 41       		.byte	65
+ 174 0091 14       		.byte	20
+ 175 0092 14       		.byte	20
+ 176 0093 14       		.byte	20
+ 177 0094 14       		.byte	20
+ 178 0095 14       		.byte	20
+ 179 0096 41       		.byte	65
+ 180 0097 22       		.byte	34
+ 181 0098 14       		.byte	20
+ 182 0099 08       		.byte	8
+ 183 009a 00       		.byte	0
+ 184 009b 02       		.byte	2
+ 185 009c 01       		.byte	1
+ 186 009d 51       		.byte	81
+ 187 009e 09       		.byte	9
+ 188 009f 06       		.byte	6
+ 189 00a0 32       		.byte	50
+ 190 00a1 49       		.byte	73
+ 191 00a2 79       		.byte	121
+ 192 00a3 41       		.byte	65
+ 193 00a4 3E       		.byte	62
+ 194 00a5 7E       		.byte	126
+ 195 00a6 11       		.byte	17
+ 196 00a7 11       		.byte	17
+ 197 00a8 11       		.byte	17
+ 198 00a9 7E       		.byte	126
+ 199 00aa 7F       		.byte	127
+ 200 00ab 49       		.byte	73
+ 201 00ac 49       		.byte	73
+ 202 00ad 49       		.byte	73
+ 203 00ae 36       		.byte	54
+ 204 00af 3E       		.byte	62
+ 205 00b0 41       		.byte	65
+ 206 00b1 41       		.byte	65
+ 207 00b2 41       		.byte	65
+ 208 00b3 22       		.byte	34
+ 209 00b4 7F       		.byte	127
+ 210 00b5 41       		.byte	65
+ 211 00b6 41       		.byte	65
+ 212 00b7 22       		.byte	34
+ 213 00b8 1C       		.byte	28
+ 214 00b9 7F       		.byte	127
+ 215 00ba 49       		.byte	73
+ 216 00bb 49       		.byte	73
+ 217 00bc 49       		.byte	73
+ 218 00bd 41       		.byte	65
+ 219 00be 7F       		.byte	127
+ 220 00bf 09       		.byte	9
+ 221 00c0 09       		.byte	9
+ 222 00c1 01       		.byte	1
+ 223 00c2 01       		.byte	1
+ 224 00c3 3E       		.byte	62
+ 225 00c4 41       		.byte	65
+ 226 00c5 41       		.byte	65
+ 227 00c6 51       		.byte	81
+ 228 00c7 32       		.byte	50
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 5
+
+
+ 229 00c8 7F       		.byte	127
+ 230 00c9 08       		.byte	8
+ 231 00ca 08       		.byte	8
+ 232 00cb 08       		.byte	8
+ 233 00cc 7F       		.byte	127
+ 234 00cd 00       		.byte	0
+ 235 00ce 41       		.byte	65
+ 236 00cf 7F       		.byte	127
+ 237 00d0 41       		.byte	65
+ 238 00d1 00       		.byte	0
+ 239 00d2 20       		.byte	32
+ 240 00d3 40       		.byte	64
+ 241 00d4 41       		.byte	65
+ 242 00d5 3F       		.byte	63
+ 243 00d6 01       		.byte	1
+ 244 00d7 7F       		.byte	127
+ 245 00d8 08       		.byte	8
+ 246 00d9 14       		.byte	20
+ 247 00da 22       		.byte	34
+ 248 00db 41       		.byte	65
+ 249 00dc 7F       		.byte	127
+ 250 00dd 40       		.byte	64
+ 251 00de 40       		.byte	64
+ 252 00df 40       		.byte	64
+ 253 00e0 40       		.byte	64
+ 254 00e1 7F       		.byte	127
+ 255 00e2 02       		.byte	2
+ 256 00e3 04       		.byte	4
+ 257 00e4 02       		.byte	2
+ 258 00e5 7F       		.byte	127
+ 259 00e6 7F       		.byte	127
+ 260 00e7 04       		.byte	4
+ 261 00e8 08       		.byte	8
+ 262 00e9 10       		.byte	16
+ 263 00ea 7F       		.byte	127
+ 264 00eb 3E       		.byte	62
+ 265 00ec 41       		.byte	65
+ 266 00ed 41       		.byte	65
+ 267 00ee 41       		.byte	65
+ 268 00ef 3E       		.byte	62
+ 269 00f0 7F       		.byte	127
+ 270 00f1 09       		.byte	9
+ 271 00f2 09       		.byte	9
+ 272 00f3 09       		.byte	9
+ 273 00f4 06       		.byte	6
+ 274 00f5 3E       		.byte	62
+ 275 00f6 41       		.byte	65
+ 276 00f7 51       		.byte	81
+ 277 00f8 21       		.byte	33
+ 278 00f9 5E       		.byte	94
+ 279 00fa 7F       		.byte	127
+ 280 00fb 09       		.byte	9
+ 281 00fc 19       		.byte	25
+ 282 00fd 29       		.byte	41
+ 283 00fe 46       		.byte	70
+ 284 00ff 46       		.byte	70
+ 285 0100 49       		.byte	73
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 6
+
+
+ 286 0101 49       		.byte	73
+ 287 0102 49       		.byte	73
+ 288 0103 31       		.byte	49
+ 289 0104 01       		.byte	1
+ 290 0105 01       		.byte	1
+ 291 0106 7F       		.byte	127
+ 292 0107 01       		.byte	1
+ 293 0108 01       		.byte	1
+ 294 0109 3F       		.byte	63
+ 295 010a 40       		.byte	64
+ 296 010b 40       		.byte	64
+ 297 010c 40       		.byte	64
+ 298 010d 3F       		.byte	63
+ 299 010e 1F       		.byte	31
+ 300 010f 20       		.byte	32
+ 301 0110 40       		.byte	64
+ 302 0111 20       		.byte	32
+ 303 0112 1F       		.byte	31
+ 304 0113 7F       		.byte	127
+ 305 0114 20       		.byte	32
+ 306 0115 18       		.byte	24
+ 307 0116 20       		.byte	32
+ 308 0117 7F       		.byte	127
+ 309 0118 63       		.byte	99
+ 310 0119 14       		.byte	20
+ 311 011a 08       		.byte	8
+ 312 011b 14       		.byte	20
+ 313 011c 63       		.byte	99
+ 314 011d 03       		.byte	3
+ 315 011e 04       		.byte	4
+ 316 011f 78       		.byte	120
+ 317 0120 04       		.byte	4
+ 318 0121 03       		.byte	3
+ 319 0122 61       		.byte	97
+ 320 0123 51       		.byte	81
+ 321 0124 49       		.byte	73
+ 322 0125 45       		.byte	69
+ 323 0126 43       		.byte	67
+ 324 0127 00       		.byte	0
+ 325 0128 00       		.byte	0
+ 326 0129 7F       		.byte	127
+ 327 012a 41       		.byte	65
+ 328 012b 41       		.byte	65
+ 329 012c 02       		.byte	2
+ 330 012d 04       		.byte	4
+ 331 012e 08       		.byte	8
+ 332 012f 10       		.byte	16
+ 333 0130 20       		.byte	32
+ 334 0131 41       		.byte	65
+ 335 0132 41       		.byte	65
+ 336 0133 7F       		.byte	127
+ 337 0134 00       		.byte	0
+ 338 0135 00       		.byte	0
+ 339 0136 04       		.byte	4
+ 340 0137 02       		.byte	2
+ 341 0138 01       		.byte	1
+ 342 0139 02       		.byte	2
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 7
+
+
+ 343 013a 04       		.byte	4
+ 344 013b 40       		.byte	64
+ 345 013c 40       		.byte	64
+ 346 013d 40       		.byte	64
+ 347 013e 40       		.byte	64
+ 348 013f 40       		.byte	64
+ 349 0140 00       		.byte	0
+ 350 0141 01       		.byte	1
+ 351 0142 02       		.byte	2
+ 352 0143 04       		.byte	4
+ 353 0144 00       		.byte	0
+ 354 0145 20       		.byte	32
+ 355 0146 54       		.byte	84
+ 356 0147 54       		.byte	84
+ 357 0148 54       		.byte	84
+ 358 0149 78       		.byte	120
+ 359 014a 7F       		.byte	127
+ 360 014b 48       		.byte	72
+ 361 014c 44       		.byte	68
+ 362 014d 44       		.byte	68
+ 363 014e 38       		.byte	56
+ 364 014f 38       		.byte	56
+ 365 0150 44       		.byte	68
+ 366 0151 44       		.byte	68
+ 367 0152 44       		.byte	68
+ 368 0153 20       		.byte	32
+ 369 0154 38       		.byte	56
+ 370 0155 44       		.byte	68
+ 371 0156 44       		.byte	68
+ 372 0157 48       		.byte	72
+ 373 0158 7F       		.byte	127
+ 374 0159 38       		.byte	56
+ 375 015a 54       		.byte	84
+ 376 015b 54       		.byte	84
+ 377 015c 54       		.byte	84
+ 378 015d 18       		.byte	24
+ 379 015e 08       		.byte	8
+ 380 015f 7E       		.byte	126
+ 381 0160 09       		.byte	9
+ 382 0161 01       		.byte	1
+ 383 0162 02       		.byte	2
+ 384 0163 08       		.byte	8
+ 385 0164 14       		.byte	20
+ 386 0165 54       		.byte	84
+ 387 0166 54       		.byte	84
+ 388 0167 3C       		.byte	60
+ 389 0168 7F       		.byte	127
+ 390 0169 08       		.byte	8
+ 391 016a 04       		.byte	4
+ 392 016b 04       		.byte	4
+ 393 016c 78       		.byte	120
+ 394 016d 00       		.byte	0
+ 395 016e 44       		.byte	68
+ 396 016f 7D       		.byte	125
+ 397 0170 40       		.byte	64
+ 398 0171 00       		.byte	0
+ 399 0172 20       		.byte	32
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 8
+
+
+ 400 0173 40       		.byte	64
+ 401 0174 44       		.byte	68
+ 402 0175 3D       		.byte	61
+ 403 0176 00       		.byte	0
+ 404 0177 00       		.byte	0
+ 405 0178 7F       		.byte	127
+ 406 0179 10       		.byte	16
+ 407 017a 28       		.byte	40
+ 408 017b 44       		.byte	68
+ 409 017c 00       		.byte	0
+ 410 017d 41       		.byte	65
+ 411 017e 7F       		.byte	127
+ 412 017f 40       		.byte	64
+ 413 0180 00       		.byte	0
+ 414 0181 7C       		.byte	124
+ 415 0182 04       		.byte	4
+ 416 0183 18       		.byte	24
+ 417 0184 04       		.byte	4
+ 418 0185 78       		.byte	120
+ 419 0186 7C       		.byte	124
+ 420 0187 08       		.byte	8
+ 421 0188 04       		.byte	4
+ 422 0189 04       		.byte	4
+ 423 018a 78       		.byte	120
+ 424 018b 38       		.byte	56
+ 425 018c 44       		.byte	68
+ 426 018d 44       		.byte	68
+ 427 018e 44       		.byte	68
+ 428 018f 38       		.byte	56
+ 429 0190 7C       		.byte	124
+ 430 0191 14       		.byte	20
+ 431 0192 14       		.byte	20
+ 432 0193 14       		.byte	20
+ 433 0194 08       		.byte	8
+ 434 0195 08       		.byte	8
+ 435 0196 14       		.byte	20
+ 436 0197 14       		.byte	20
+ 437 0198 18       		.byte	24
+ 438 0199 7C       		.byte	124
+ 439 019a 7C       		.byte	124
+ 440 019b 08       		.byte	8
+ 441 019c 04       		.byte	4
+ 442 019d 04       		.byte	4
+ 443 019e 08       		.byte	8
+ 444 019f 48       		.byte	72
+ 445 01a0 54       		.byte	84
+ 446 01a1 54       		.byte	84
+ 447 01a2 54       		.byte	84
+ 448 01a3 20       		.byte	32
+ 449 01a4 04       		.byte	4
+ 450 01a5 3F       		.byte	63
+ 451 01a6 44       		.byte	68
+ 452 01a7 40       		.byte	64
+ 453 01a8 20       		.byte	32
+ 454 01a9 3C       		.byte	60
+ 455 01aa 40       		.byte	64
+ 456 01ab 40       		.byte	64
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 9
+
+
+ 457 01ac 20       		.byte	32
+ 458 01ad 7C       		.byte	124
+ 459 01ae 1C       		.byte	28
+ 460 01af 20       		.byte	32
+ 461 01b0 40       		.byte	64
+ 462 01b1 20       		.byte	32
+ 463 01b2 1C       		.byte	28
+ 464 01b3 3C       		.byte	60
+ 465 01b4 40       		.byte	64
+ 466 01b5 30       		.byte	48
+ 467 01b6 40       		.byte	64
+ 468 01b7 3C       		.byte	60
+ 469 01b8 44       		.byte	68
+ 470 01b9 28       		.byte	40
+ 471 01ba 10       		.byte	16
+ 472 01bb 28       		.byte	40
+ 473 01bc 44       		.byte	68
+ 474 01bd 0C       		.byte	12
+ 475 01be 50       		.byte	80
+ 476 01bf 50       		.byte	80
+ 477 01c0 50       		.byte	80
+ 478 01c1 3C       		.byte	60
+ 479 01c2 44       		.byte	68
+ 480 01c3 64       		.byte	100
+ 481 01c4 54       		.byte	84
+ 482 01c5 4C       		.byte	76
+ 483 01c6 44       		.byte	68
+ 484 01c7 00       		.byte	0
+ 485 01c8 08       		.byte	8
+ 486 01c9 36       		.byte	54
+ 487 01ca 41       		.byte	65
+ 488 01cb 00       		.byte	0
+ 489 01cc 00       		.byte	0
+ 490 01cd 00       		.byte	0
+ 491 01ce 7F       		.byte	127
+ 492 01cf 00       		.byte	0
+ 493 01d0 00       		.byte	0
+ 494 01d1 00       		.byte	0
+ 495 01d2 41       		.byte	65
+ 496 01d3 36       		.byte	54
+ 497 01d4 08       		.byte	8
+ 498 01d5 00       		.byte	0
+ 499 01d6 08       		.byte	8
+ 500 01d7 08       		.byte	8
+ 501 01d8 2A       		.byte	42
+ 502 01d9 1C       		.byte	28
+ 503 01da 08       		.byte	8
+ 504 01db 08       		.byte	8
+ 505 01dc 1C       		.byte	28
+ 506 01dd 2A       		.byte	42
+ 507 01de 08       		.byte	8
+ 508 01df 08       		.byte	8
+ 509              		.section	.text.StripLights_SetFont,"ax",%progbits
+ 510              		.align	2
+ 511              		.global	StripLights_SetFont
+ 512              		.code	16
+ 513              		.thumb_func
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 10
+
+
+ 514              		.type	StripLights_SetFont, %function
+ 515              	StripLights_SetFont:
+ 516              	.LFB32:
+ 517              		.file 1 "Generated_Source\\PSoC4\\StripLights_fonts.c"
+   1:Generated_Source\PSoC4/StripLights_fonts.c **** /* ========================================
+   2:Generated_Source\PSoC4/StripLights_fonts.c ****  *
+   3:Generated_Source\PSoC4/StripLights_fonts.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:Generated_Source\PSoC4/StripLights_fonts.c ****  * All Rights Reserved
+   5:Generated_Source\PSoC4/StripLights_fonts.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:Generated_Source\PSoC4/StripLights_fonts.c ****  *
+   7:Generated_Source\PSoC4/StripLights_fonts.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:Generated_Source\PSoC4/StripLights_fonts.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:Generated_Source\PSoC4/StripLights_fonts.c ****  *
+  10:Generated_Source\PSoC4/StripLights_fonts.c ****  * ========================================
+  11:Generated_Source\PSoC4/StripLights_fonts.c **** */
+  12:Generated_Source\PSoC4/StripLights_fonts.c **** #include <project.h>
+  13:Generated_Source\PSoC4/StripLights_fonts.c **** #include "cytypes.h"
+  14:Generated_Source\PSoC4/StripLights_fonts.c **** #include "stdlib.h"
+  15:Generated_Source\PSoC4/StripLights_fonts.c **** #include "cyfitter.h"
+  16:Generated_Source\PSoC4/StripLights_fonts.c **** #include "StripLights.h"
+  17:Generated_Source\PSoC4/StripLights_fonts.c **** #include "StripLights_fonts.h"
+  18:Generated_Source\PSoC4/StripLights_fonts.c **** 
+  19:Generated_Source\PSoC4/StripLights_fonts.c **** uint8 const * StripLights_fontPtr;
+  20:Generated_Source\PSoC4/StripLights_fonts.c **** int32 StripLights_fontX;
+  21:Generated_Source\PSoC4/StripLights_fonts.c **** int32 StripLights_fontY;
+  22:Generated_Source\PSoC4/StripLights_fonts.c **** int32 StripLights_fontOffset;
+  23:Generated_Source\PSoC4/StripLights_fonts.c **** 
+  24:Generated_Source\PSoC4/StripLights_fonts.c **** 
+  25:Generated_Source\PSoC4/StripLights_fonts.c **** // standard ascii 5x7 font
+  26:Generated_Source\PSoC4/StripLights_fonts.c **** // defines ascii characters 0x20-0x7F (32-127)
+  27:Generated_Source\PSoC4/StripLights_fonts.c **** const uint8 StripLights_Font5x7[] = {
+  28:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x00, 0x00, 0x00, 0x00,// (space)
+  29:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x00, 0x5F, 0x00, 0x00,// !
+  30:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x07, 0x00, 0x07, 0x00,// "
+  31:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x14, 0x7F, 0x14, 0x7F, 0x14,// #
+  32:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x24, 0x2A, 0x7F, 0x2A, 0x12,// $
+  33:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x23, 0x13, 0x08, 0x64, 0x62,// %
+  34:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x36, 0x49, 0x55, 0x22, 0x50,// &
+  35:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x05, 0x03, 0x00, 0x00,// '
+  36:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x1C, 0x22, 0x41, 0x00,// (
+  37:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x41, 0x22, 0x1C, 0x00,// )
+  38:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x08, 0x2A, 0x1C, 0x2A, 0x08,// *
+  39:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x08, 0x08, 0x3E, 0x08, 0x08,// +
+  40:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x50, 0x30, 0x00, 0x00,// ,
+  41:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x08, 0x08, 0x08, 0x08, 0x08,// -
+  42:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x60, 0x60, 0x00, 0x00,// .
+  43:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x20, 0x10, 0x08, 0x04, 0x02,// /
+  44:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x3E, 0x51, 0x49, 0x45, 0x3E,// 0
+  45:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x42, 0x7F, 0x40, 0x00,// 1
+  46:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x42, 0x61, 0x51, 0x49, 0x46,// 2
+  47:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x21, 0x41, 0x45, 0x4B, 0x31,// 3
+  48:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x18, 0x14, 0x12, 0x7F, 0x10,// 4
+  49:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x27, 0x45, 0x45, 0x45, 0x39,// 5
+  50:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x3C, 0x4A, 0x49, 0x49, 0x30,// 6
+  51:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x01, 0x71, 0x09, 0x05, 0x03,// 7
+  52:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x36, 0x49, 0x49, 0x49, 0x36,// 8
+  53:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x06, 0x49, 0x49, 0x29, 0x1E,// 9
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 11
+
+
+  54:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x36, 0x36, 0x00, 0x00,// :
+  55:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x56, 0x36, 0x00, 0x00,// ;
+  56:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x08, 0x14, 0x22, 0x41,// <
+  57:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x14, 0x14, 0x14, 0x14, 0x14,// =
+  58:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x41, 0x22, 0x14, 0x08, 0x00,// >
+  59:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x02, 0x01, 0x51, 0x09, 0x06,// ?
+  60:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x32, 0x49, 0x79, 0x41, 0x3E,// @
+  61:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7E, 0x11, 0x11, 0x11, 0x7E,// A
+  62:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x49, 0x49, 0x49, 0x36,// B
+  63:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x3E, 0x41, 0x41, 0x41, 0x22,// C
+  64:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x41, 0x41, 0x22, 0x1C,// D
+  65:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x49, 0x49, 0x49, 0x41,// E
+  66:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x09, 0x09, 0x01, 0x01,// F
+  67:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x3E, 0x41, 0x41, 0x51, 0x32,// G
+  68:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x08, 0x08, 0x08, 0x7F,// H
+  69:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x41, 0x7F, 0x41, 0x00,// I
+  70:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x20, 0x40, 0x41, 0x3F, 0x01,// J
+  71:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x08, 0x14, 0x22, 0x41,// K
+  72:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x40, 0x40, 0x40, 0x40,// L
+  73:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x02, 0x04, 0x02, 0x7F,// M
+  74:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x04, 0x08, 0x10, 0x7F,// N
+  75:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x3E, 0x41, 0x41, 0x41, 0x3E,// O
+  76:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x09, 0x09, 0x09, 0x06,// P
+  77:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x3E, 0x41, 0x51, 0x21, 0x5E,// Q
+  78:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x09, 0x19, 0x29, 0x46,// R
+  79:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x46, 0x49, 0x49, 0x49, 0x31,// S
+  80:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x01, 0x01, 0x7F, 0x01, 0x01,// T
+  81:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x3F, 0x40, 0x40, 0x40, 0x3F,// U
+  82:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x1F, 0x20, 0x40, 0x20, 0x1F,// V
+  83:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x20, 0x18, 0x20, 0x7F,// W
+  84:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x63, 0x14, 0x08, 0x14, 0x63,// X
+  85:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x03, 0x04, 0x78, 0x04, 0x03,// Y
+  86:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x61, 0x51, 0x49, 0x45, 0x43,// Z
+  87:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x00, 0x7F, 0x41, 0x41,// [
+  88:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x02, 0x04, 0x08, 0x10, 0x20,// "\"
+  89:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x41, 0x41, 0x7F, 0x00, 0x00,// ]
+  90:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x04, 0x02, 0x01, 0x02, 0x04,// ^
+  91:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x40, 0x40, 0x40, 0x40, 0x40,// _
+  92:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x01, 0x02, 0x04, 0x00,// `
+  93:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x20, 0x54, 0x54, 0x54, 0x78,// a
+  94:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x48, 0x44, 0x44, 0x38,// b
+  95:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x38, 0x44, 0x44, 0x44, 0x20,// c
+  96:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x38, 0x44, 0x44, 0x48, 0x7F,// d
+  97:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x38, 0x54, 0x54, 0x54, 0x18,// e
+  98:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x08, 0x7E, 0x09, 0x01, 0x02,// f
+  99:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x08, 0x14, 0x54, 0x54, 0x3C,// g
+ 100:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7F, 0x08, 0x04, 0x04, 0x78,// h
+ 101:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x44, 0x7D, 0x40, 0x00,// i
+ 102:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x20, 0x40, 0x44, 0x3D, 0x00,// j
+ 103:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x7F, 0x10, 0x28, 0x44,// k
+ 104:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x41, 0x7F, 0x40, 0x00,// l
+ 105:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7C, 0x04, 0x18, 0x04, 0x78,// m
+ 106:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7C, 0x08, 0x04, 0x04, 0x78,// n
+ 107:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x38, 0x44, 0x44, 0x44, 0x38,// o
+ 108:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7C, 0x14, 0x14, 0x14, 0x08,// p
+ 109:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x08, 0x14, 0x14, 0x18, 0x7C,// q
+ 110:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x7C, 0x08, 0x04, 0x04, 0x08,// r
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 12
+
+
+ 111:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x48, 0x54, 0x54, 0x54, 0x20,// s
+ 112:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x04, 0x3F, 0x44, 0x40, 0x20,// t
+ 113:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x3C, 0x40, 0x40, 0x20, 0x7C,// u
+ 114:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x1C, 0x20, 0x40, 0x20, 0x1C,// v
+ 115:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x3C, 0x40, 0x30, 0x40, 0x3C,// w
+ 116:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x44, 0x28, 0x10, 0x28, 0x44,// x
+ 117:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x0C, 0x50, 0x50, 0x50, 0x3C,// y
+ 118:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x44, 0x64, 0x54, 0x4C, 0x44,// z
+ 119:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x08, 0x36, 0x41, 0x00,// {
+ 120:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x00, 0x7F, 0x00, 0x00,// |
+ 121:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x00, 0x41, 0x36, 0x08, 0x00,// }
+ 122:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x08, 0x08, 0x2A, 0x1C, 0x08,// ->
+ 123:Generated_Source\PSoC4/StripLights_fonts.c **** 	0x08, 0x1C, 0x2A, 0x08, 0x08 // <-
+ 124:Generated_Source\PSoC4/StripLights_fonts.c **** };
+ 125:Generated_Source\PSoC4/StripLights_fonts.c **** 
+ 126:Generated_Source\PSoC4/StripLights_fonts.c **** 
+ 127:Generated_Source\PSoC4/StripLights_fonts.c **** /*******************************************************************************
+ 128:Generated_Source\PSoC4/StripLights_fonts.c **** * Function Name: StripLights_SetFont
+ 129:Generated_Source\PSoC4/StripLights_fonts.c **** ********************************************************************************
+ 130:Generated_Source\PSoC4/StripLights_fonts.c **** * Summary:
+ 131:Generated_Source\PSoC4/StripLights_fonts.c **** *   Set the specific font.  (Only one font supported at this time.)
+ 132:Generated_Source\PSoC4/StripLights_fonts.c **** *
+ 133:Generated_Source\PSoC4/StripLights_fonts.c **** * Parameters:  
+ 134:Generated_Source\PSoC4/StripLights_fonts.c **** *  uint32 font: Font to be selected 
+ 135:Generated_Source\PSoC4/StripLights_fonts.c **** *
+ 136:Generated_Source\PSoC4/StripLights_fonts.c **** * Return: 
+ 137:Generated_Source\PSoC4/StripLights_fonts.c **** *  void
+ 138:Generated_Source\PSoC4/StripLights_fonts.c **** *
+ 139:Generated_Source\PSoC4/StripLights_fonts.c **** *******************************************************************************/
+ 140:Generated_Source\PSoC4/StripLights_fonts.c **** void StripLights_SetFont( uint32 font)
+ 141:Generated_Source\PSoC4/StripLights_fonts.c **** {
+ 518              		.loc 1 141 0
+ 519              		.cfi_startproc
+ 520              		@ args = 0, pretend = 0, frame = 8
+ 521              		@ frame_needed = 1, uses_anonymous_args = 0
+ 522 0000 80B5     		push	{r7, lr}
+ 523              		.cfi_def_cfa_offset 8
+ 524              		.cfi_offset 7, -8
+ 525              		.cfi_offset 14, -4
+ 526 0002 82B0     		sub	sp, sp, #8
+ 527              		.cfi_def_cfa_offset 16
+ 528 0004 00AF     		add	r7, sp, #0
+ 529              		.cfi_def_cfa_register 7
+ 530 0006 7860     		str	r0, [r7, #4]
+ 142:Generated_Source\PSoC4/StripLights_fonts.c ****     switch(font)
+ 531              		.loc 1 142 0
+ 532 0008 7B68     		ldr	r3, [r7, #4]
+ 533 000a 002B     		cmp	r3, #0
+ 534 000c 0CD1     		bne	.L5
+ 143:Generated_Source\PSoC4/StripLights_fonts.c ****     {
+ 144:Generated_Source\PSoC4/StripLights_fonts.c ****        case StripLights_FONT_5X7:
+ 145:Generated_Source\PSoC4/StripLights_fonts.c ****            StripLights_fontPtr = StripLights_Font5x7;
+ 535              		.loc 1 145 0
+ 536 000e 0F4B     		ldr	r3, .L6
+ 537 0010 0F4A     		ldr	r2, .L6+4
+ 538 0012 1A60     		str	r2, [r3]
+ 146:Generated_Source\PSoC4/StripLights_fonts.c ****            StripLights_fontX = StripLights_Font5x7_XSIZE;
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 13
+
+
+ 539              		.loc 1 146 0
+ 540 0014 0F4B     		ldr	r3, .L6+8
+ 541 0016 0522     		movs	r2, #5
+ 542 0018 1A60     		str	r2, [r3]
+ 147:Generated_Source\PSoC4/StripLights_fonts.c ****            StripLights_fontY = StripLights_Font5x7_YSIZE;
+ 543              		.loc 1 147 0
+ 544 001a 0F4B     		ldr	r3, .L6+12
+ 545 001c 0722     		movs	r2, #7
+ 546 001e 1A60     		str	r2, [r3]
+ 148:Generated_Source\PSoC4/StripLights_fonts.c ****            StripLights_fontOffset = StripLights_Font5x7_OFFSET;
+ 547              		.loc 1 148 0
+ 548 0020 0E4B     		ldr	r3, .L6+16
+ 549 0022 2022     		movs	r2, #32
+ 550 0024 1A60     		str	r2, [r3]
+ 149:Generated_Source\PSoC4/StripLights_fonts.c ****            break;
+ 551              		.loc 1 149 0
+ 552 0026 0CE0     		b	.L4
+ 553              	.L5:
+ 150:Generated_Source\PSoC4/StripLights_fonts.c ****            
+ 151:Generated_Source\PSoC4/StripLights_fonts.c ****        default:
+ 152:Generated_Source\PSoC4/StripLights_fonts.c ****            StripLights_fontPtr = StripLights_Font5x7;
+ 554              		.loc 1 152 0
+ 555 0028 084B     		ldr	r3, .L6
+ 556 002a 094A     		ldr	r2, .L6+4
+ 557 002c 1A60     		str	r2, [r3]
+ 153:Generated_Source\PSoC4/StripLights_fonts.c ****            StripLights_fontX = StripLights_Font5x7_XSIZE;
+ 558              		.loc 1 153 0
+ 559 002e 094B     		ldr	r3, .L6+8
+ 560 0030 0522     		movs	r2, #5
+ 561 0032 1A60     		str	r2, [r3]
+ 154:Generated_Source\PSoC4/StripLights_fonts.c ****            StripLights_fontY = StripLights_Font5x7_YSIZE;
+ 562              		.loc 1 154 0
+ 563 0034 084B     		ldr	r3, .L6+12
+ 564 0036 0722     		movs	r2, #7
+ 565 0038 1A60     		str	r2, [r3]
+ 155:Generated_Source\PSoC4/StripLights_fonts.c ****            StripLights_fontOffset = StripLights_Font5x7_OFFSET;
+ 566              		.loc 1 155 0
+ 567 003a 084B     		ldr	r3, .L6+16
+ 568 003c 2022     		movs	r2, #32
+ 569 003e 1A60     		str	r2, [r3]
+ 156:Generated_Source\PSoC4/StripLights_fonts.c ****            break;
+ 570              		.loc 1 156 0
+ 571 0040 C046     		nop
+ 572              	.L4:
+ 157:Generated_Source\PSoC4/StripLights_fonts.c ****     }
+ 158:Generated_Source\PSoC4/StripLights_fonts.c **** }
+ 573              		.loc 1 158 0
+ 574 0042 C046     		nop
+ 575 0044 BD46     		mov	sp, r7
+ 576 0046 02B0     		add	sp, sp, #8
+ 577              		@ sp needed
+ 578 0048 80BD     		pop	{r7, pc}
+ 579              	.L7:
+ 580 004a C046     		.align	2
+ 581              	.L6:
+ 582 004c 00000000 		.word	StripLights_fontPtr
+ 583 0050 00000000 		.word	StripLights_Font5x7
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 14
+
+
+ 584 0054 00000000 		.word	StripLights_fontX
+ 585 0058 00000000 		.word	StripLights_fontY
+ 586 005c 00000000 		.word	StripLights_fontOffset
+ 587              		.cfi_endproc
+ 588              	.LFE32:
+ 589              		.size	StripLights_SetFont, .-StripLights_SetFont
+ 590              		.section	.text.StripLights_PrintString,"ax",%progbits
+ 591              		.align	2
+ 592              		.global	StripLights_PrintString
+ 593              		.code	16
+ 594              		.thumb_func
+ 595              		.type	StripLights_PrintString, %function
+ 596              	StripLights_PrintString:
+ 597              	.LFB33:
+ 159:Generated_Source\PSoC4/StripLights_fonts.c **** 
+ 160:Generated_Source\PSoC4/StripLights_fonts.c **** 
+ 161:Generated_Source\PSoC4/StripLights_fonts.c **** /*******************************************************************************
+ 162:Generated_Source\PSoC4/StripLights_fonts.c **** * Function Name: StripLights_PrintString
+ 163:Generated_Source\PSoC4/StripLights_fonts.c **** ********************************************************************************
+ 164:Generated_Source\PSoC4/StripLights_fonts.c **** * Summary:
+ 165:Generated_Source\PSoC4/StripLights_fonts.c **** *   Print string at the given location.
+ 166:Generated_Source\PSoC4/StripLights_fonts.c **** *
+ 167:Generated_Source\PSoC4/StripLights_fonts.c **** * Parameters:  
+ 168:Generated_Source\PSoC4/StripLights_fonts.c **** *  uint32 xpos: X location at which to start string.
+ 169:Generated_Source\PSoC4/StripLights_fonts.c **** *  uint32 ypos: Upper Y location to place string.
+ 170:Generated_Source\PSoC4/StripLights_fonts.c **** *  char * theString:  The string to print.
+ 171:Generated_Source\PSoC4/StripLights_fonts.c **** *  uint32 fg: The forground fount color.
+ 172:Generated_Source\PSoC4/StripLights_fonts.c **** *  uint32 bg: Background color
+ 173:Generated_Source\PSoC4/StripLights_fonts.c **** *
+ 174:Generated_Source\PSoC4/StripLights_fonts.c **** * Return: 
+ 175:Generated_Source\PSoC4/StripLights_fonts.c **** *  void
+ 176:Generated_Source\PSoC4/StripLights_fonts.c **** *
+ 177:Generated_Source\PSoC4/StripLights_fonts.c **** *******************************************************************************/
+ 178:Generated_Source\PSoC4/StripLights_fonts.c **** void StripLights_PrintString(int32 xpos, int32 ypos, char * theString, uint32 fg, uint32 bg)
+ 179:Generated_Source\PSoC4/StripLights_fonts.c **** {
+ 598              		.loc 1 179 0
+ 599              		.cfi_startproc
+ 600              		@ args = 4, pretend = 0, frame = 24
+ 601              		@ frame_needed = 1, uses_anonymous_args = 0
+ 602 0000 90B5     		push	{r4, r7, lr}
+ 603              		.cfi_def_cfa_offset 12
+ 604              		.cfi_offset 4, -12
+ 605              		.cfi_offset 7, -8
+ 606              		.cfi_offset 14, -4
+ 607 0002 89B0     		sub	sp, sp, #36
+ 608              		.cfi_def_cfa_offset 48
+ 609 0004 02AF     		add	r7, sp, #8
+ 610              		.cfi_def_cfa 7, 40
+ 611 0006 F860     		str	r0, [r7, #12]
+ 612 0008 B960     		str	r1, [r7, #8]
+ 613 000a 7A60     		str	r2, [r7, #4]
+ 614 000c 3B60     		str	r3, [r7]
+ 180:Generated_Source\PSoC4/StripLights_fonts.c ****     uint32 strPos = 0;
+ 615              		.loc 1 180 0
+ 616 000e 0023     		movs	r3, #0
+ 617 0010 7B61     		str	r3, [r7, #20]
+ 181:Generated_Source\PSoC4/StripLights_fonts.c ****     uint32 yStop;
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 15
+
+
+ 182:Generated_Source\PSoC4/StripLights_fonts.c ****     
+ 183:Generated_Source\PSoC4/StripLights_fonts.c ****     yStop = ypos + StripLights_fontY;
+ 618              		.loc 1 183 0
+ 619 0012 364B     		ldr	r3, .L17
+ 620 0014 1A68     		ldr	r2, [r3]
+ 621 0016 BB68     		ldr	r3, [r7, #8]
+ 622 0018 D318     		adds	r3, r2, r3
+ 623 001a 3B61     		str	r3, [r7, #16]
+ 184:Generated_Source\PSoC4/StripLights_fonts.c ****     if(yStop > StripLights_MAX_Y) yStop = StripLights_MAX_Y;
+ 624              		.loc 1 184 0
+ 625 001c 3B69     		ldr	r3, [r7, #16]
+ 626 001e 002B     		cmp	r3, #0
+ 627 0020 46D0     		beq	.L10
+ 628              		.loc 1 184 0 is_stmt 0 discriminator 1
+ 629 0022 0023     		movs	r3, #0
+ 630 0024 3B61     		str	r3, [r7, #16]
+ 185:Generated_Source\PSoC4/StripLights_fonts.c ****     
+ 186:Generated_Source\PSoC4/StripLights_fonts.c ****     while(theString[strPos] != 0)
+ 631              		.loc 1 186 0 is_stmt 1 discriminator 1
+ 632 0026 43E0     		b	.L10
+ 633              	.L14:
+ 187:Generated_Source\PSoC4/StripLights_fonts.c ****     {
+ 188:Generated_Source\PSoC4/StripLights_fonts.c **** 		// Print character
+ 189:Generated_Source\PSoC4/StripLights_fonts.c ****         if(fg == StripLights_COLORWHEEL_FONT)
+ 634              		.loc 1 189 0
+ 635 0028 3A68     		ldr	r2, [r7]
+ 636 002a 8023     		movs	r3, #128
+ 637 002c 1B06     		lsls	r3, r3, #24
+ 638 002e 9A42     		cmp	r2, r3
+ 639 0030 10D1     		bne	.L11
+ 190:Generated_Source\PSoC4/StripLights_fonts.c ****         {
+ 191:Generated_Source\PSoC4/StripLights_fonts.c ****             StripLights_PutChar(xpos, ypos, theString[strPos], StripLights_ColorInc(1), bg);
+ 640              		.loc 1 191 0
+ 641 0032 7A68     		ldr	r2, [r7, #4]
+ 642 0034 7B69     		ldr	r3, [r7, #20]
+ 643 0036 D318     		adds	r3, r2, r3
+ 644 0038 1C78     		ldrb	r4, [r3]
+ 645 003a 0120     		movs	r0, #1
+ 646 003c FFF7FEFF 		bl	StripLights_ColorInc
+ 647 0040 0200     		movs	r2, r0
+ 648 0042 B968     		ldr	r1, [r7, #8]
+ 649 0044 F868     		ldr	r0, [r7, #12]
+ 650 0046 BB6A     		ldr	r3, [r7, #40]
+ 651 0048 0093     		str	r3, [sp]
+ 652 004a 1300     		movs	r3, r2
+ 653 004c 2200     		movs	r2, r4
+ 654 004e FFF7FEFF 		bl	StripLights_PutChar
+ 655 0052 0BE0     		b	.L12
+ 656              	.L11:
+ 192:Generated_Source\PSoC4/StripLights_fonts.c ****         }
+ 193:Generated_Source\PSoC4/StripLights_fonts.c ****         else
+ 194:Generated_Source\PSoC4/StripLights_fonts.c ****         {
+ 195:Generated_Source\PSoC4/StripLights_fonts.c ****             StripLights_PutChar(xpos, ypos, theString[strPos], fg, bg);
+ 657              		.loc 1 195 0
+ 658 0054 7A68     		ldr	r2, [r7, #4]
+ 659 0056 7B69     		ldr	r3, [r7, #20]
+ 660 0058 D318     		adds	r3, r2, r3
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 16
+
+
+ 661 005a 1A78     		ldrb	r2, [r3]
+ 662 005c 3C68     		ldr	r4, [r7]
+ 663 005e B968     		ldr	r1, [r7, #8]
+ 664 0060 F868     		ldr	r0, [r7, #12]
+ 665 0062 BB6A     		ldr	r3, [r7, #40]
+ 666 0064 0093     		str	r3, [sp]
+ 667 0066 2300     		movs	r3, r4
+ 668 0068 FFF7FEFF 		bl	StripLights_PutChar
+ 669              	.L12:
+ 196:Generated_Source\PSoC4/StripLights_fonts.c ****         }
+ 197:Generated_Source\PSoC4/StripLights_fonts.c ****         strPos++;   // Advance to next character
+ 670              		.loc 1 197 0
+ 671 006c 7B69     		ldr	r3, [r7, #20]
+ 672 006e 0133     		adds	r3, r3, #1
+ 673 0070 7B61     		str	r3, [r7, #20]
+ 198:Generated_Source\PSoC4/StripLights_fonts.c ****         xpos += StripLights_fontX;  // Advance to next x location for next character
+ 674              		.loc 1 198 0
+ 675 0072 1F4B     		ldr	r3, .L17+4
+ 676 0074 1B68     		ldr	r3, [r3]
+ 677 0076 FA68     		ldr	r2, [r7, #12]
+ 678 0078 D318     		adds	r3, r2, r3
+ 679 007a FB60     		str	r3, [r7, #12]
+ 199:Generated_Source\PSoC4/StripLights_fonts.c **** 		
+ 200:Generated_Source\PSoC4/StripLights_fonts.c **** 		// If not last character clear out area between characters.
+ 201:Generated_Source\PSoC4/StripLights_fonts.c ****         if(theString[strPos] != 0)
+ 680              		.loc 1 201 0
+ 681 007c 7A68     		ldr	r2, [r7, #4]
+ 682 007e 7B69     		ldr	r3, [r7, #20]
+ 683 0080 D318     		adds	r3, r2, r3
+ 684 0082 1B78     		ldrb	r3, [r3]
+ 685 0084 002B     		cmp	r3, #0
+ 686 0086 10D0     		beq	.L13
+ 202:Generated_Source\PSoC4/StripLights_fonts.c ****         {
+ 203:Generated_Source\PSoC4/StripLights_fonts.c **** 			if(bg != StripLights_TRANS_BG)
+ 687              		.loc 1 203 0
+ 688 0088 BA6A     		ldr	r2, [r7, #40]
+ 689 008a FF23     		movs	r3, #255
+ 690 008c 1B06     		lsls	r3, r3, #24
+ 691 008e 9A42     		cmp	r2, r3
+ 692 0090 0BD0     		beq	.L13
+ 204:Generated_Source\PSoC4/StripLights_fonts.c **** 			{
+ 205:Generated_Source\PSoC4/StripLights_fonts.c **** 			     StripLights_DrawLine(xpos, ypos, xpos, ypos+StripLights_fontY, bg);
+ 693              		.loc 1 205 0
+ 694 0092 164B     		ldr	r3, .L17
+ 695 0094 1A68     		ldr	r2, [r3]
+ 696 0096 BB68     		ldr	r3, [r7, #8]
+ 697 0098 D418     		adds	r4, r2, r3
+ 698 009a FA68     		ldr	r2, [r7, #12]
+ 699 009c B968     		ldr	r1, [r7, #8]
+ 700 009e F868     		ldr	r0, [r7, #12]
+ 701 00a0 BB6A     		ldr	r3, [r7, #40]
+ 702 00a2 0093     		str	r3, [sp]
+ 703 00a4 2300     		movs	r3, r4
+ 704 00a6 FFF7FEFF 		bl	StripLights_DrawLine
+ 705              	.L13:
+ 206:Generated_Source\PSoC4/StripLights_fonts.c **** 			}
+ 207:Generated_Source\PSoC4/StripLights_fonts.c ****         }
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 17
+
+
+ 208:Generated_Source\PSoC4/StripLights_fonts.c ****         xpos++;
+ 706              		.loc 1 208 0
+ 707 00aa FB68     		ldr	r3, [r7, #12]
+ 708 00ac 0133     		adds	r3, r3, #1
+ 709 00ae FB60     		str	r3, [r7, #12]
+ 710              	.L10:
+ 186:Generated_Source\PSoC4/StripLights_fonts.c ****     {
+ 711              		.loc 1 186 0
+ 712 00b0 7A68     		ldr	r2, [r7, #4]
+ 713 00b2 7B69     		ldr	r3, [r7, #20]
+ 714 00b4 D318     		adds	r3, r2, r3
+ 715 00b6 1B78     		ldrb	r3, [r3]
+ 716 00b8 002B     		cmp	r3, #0
+ 717 00ba B5D1     		bne	.L14
+ 209:Generated_Source\PSoC4/StripLights_fonts.c ****     }
+ 210:Generated_Source\PSoC4/StripLights_fonts.c **** 	if(bg != StripLights_TRANS_BG)
+ 718              		.loc 1 210 0
+ 719 00bc BA6A     		ldr	r2, [r7, #40]
+ 720 00be FF23     		movs	r3, #255
+ 721 00c0 1B06     		lsls	r3, r3, #24
+ 722 00c2 9A42     		cmp	r2, r3
+ 723 00c4 0ED0     		beq	.L16
+ 211:Generated_Source\PSoC4/StripLights_fonts.c **** 	{
+ 212:Generated_Source\PSoC4/StripLights_fonts.c ****         StripLights_DrawLine(xpos-1, ypos, xpos-1, ypos+StripLights_fontY, bg);
+ 724              		.loc 1 212 0
+ 725 00c6 FB68     		ldr	r3, [r7, #12]
+ 726 00c8 581E     		subs	r0, r3, #1
+ 727 00ca FB68     		ldr	r3, [r7, #12]
+ 728 00cc 5C1E     		subs	r4, r3, #1
+ 729 00ce 074B     		ldr	r3, .L17
+ 730 00d0 1A68     		ldr	r2, [r3]
+ 731 00d2 BB68     		ldr	r3, [r7, #8]
+ 732 00d4 D218     		adds	r2, r2, r3
+ 733 00d6 B968     		ldr	r1, [r7, #8]
+ 734 00d8 BB6A     		ldr	r3, [r7, #40]
+ 735 00da 0093     		str	r3, [sp]
+ 736 00dc 1300     		movs	r3, r2
+ 737 00de 2200     		movs	r2, r4
+ 738 00e0 FFF7FEFF 		bl	StripLights_DrawLine
+ 739              	.L16:
+ 213:Generated_Source\PSoC4/StripLights_fonts.c **** 	}
+ 214:Generated_Source\PSoC4/StripLights_fonts.c **** }
+ 740              		.loc 1 214 0
+ 741 00e4 C046     		nop
+ 742 00e6 BD46     		mov	sp, r7
+ 743 00e8 07B0     		add	sp, sp, #28
+ 744              		@ sp needed
+ 745 00ea 90BD     		pop	{r4, r7, pc}
+ 746              	.L18:
+ 747              		.align	2
+ 748              	.L17:
+ 749 00ec 00000000 		.word	StripLights_fontY
+ 750 00f0 00000000 		.word	StripLights_fontX
+ 751              		.cfi_endproc
+ 752              	.LFE33:
+ 753              		.size	StripLights_PrintString, .-StripLights_PrintString
+ 754              		.section	.text.StripLights_PutChar,"ax",%progbits
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 18
+
+
+ 755              		.align	2
+ 756              		.global	StripLights_PutChar
+ 757              		.code	16
+ 758              		.thumb_func
+ 759              		.type	StripLights_PutChar, %function
+ 760              	StripLights_PutChar:
+ 761              	.LFB34:
+ 215:Generated_Source\PSoC4/StripLights_fonts.c **** 
+ 216:Generated_Source\PSoC4/StripLights_fonts.c **** /*******************************************************************************
+ 217:Generated_Source\PSoC4/StripLights_fonts.c **** * Function Name: StripLights_PutChar
+ 218:Generated_Source\PSoC4/StripLights_fonts.c **** ********************************************************************************
+ 219:Generated_Source\PSoC4/StripLights_fonts.c **** * Summary:
+ 220:Generated_Source\PSoC4/StripLights_fonts.c **** *   Print character at the given location.
+ 221:Generated_Source\PSoC4/StripLights_fonts.c **** *
+ 222:Generated_Source\PSoC4/StripLights_fonts.c **** * Parameters:  
+ 223:Generated_Source\PSoC4/StripLights_fonts.c **** *  uint32 xpos: X location at which to start string.
+ 224:Generated_Source\PSoC4/StripLights_fonts.c **** *  uint32 ypos: Upper Y location to place string.
+ 225:Generated_Source\PSoC4/StripLights_fonts.c **** *  char theChar:  The character to print.
+ 226:Generated_Source\PSoC4/StripLights_fonts.c **** *  uint32 fg: The forground fount color.
+ 227:Generated_Source\PSoC4/StripLights_fonts.c **** *  uint32 bg: Background color
+ 228:Generated_Source\PSoC4/StripLights_fonts.c **** *
+ 229:Generated_Source\PSoC4/StripLights_fonts.c **** * Return: 
+ 230:Generated_Source\PSoC4/StripLights_fonts.c **** *  void
+ 231:Generated_Source\PSoC4/StripLights_fonts.c **** *
+ 232:Generated_Source\PSoC4/StripLights_fonts.c **** *******************************************************************************/
+ 233:Generated_Source\PSoC4/StripLights_fonts.c **** void StripLights_PutChar(int32 xpos, int32 ypos, uint8 theChar, uint32 fg, uint32 bg)
+ 234:Generated_Source\PSoC4/StripLights_fonts.c **** {
+ 762              		.loc 1 234 0
+ 763              		.cfi_startproc
+ 764              		@ args = 4, pretend = 0, frame = 40
+ 765              		@ frame_needed = 1, uses_anonymous_args = 0
+ 766 0000 80B5     		push	{r7, lr}
+ 767              		.cfi_def_cfa_offset 8
+ 768              		.cfi_offset 7, -8
+ 769              		.cfi_offset 14, -4
+ 770 0002 8AB0     		sub	sp, sp, #40
+ 771              		.cfi_def_cfa_offset 48
+ 772 0004 00AF     		add	r7, sp, #0
+ 773              		.cfi_def_cfa_register 7
+ 774 0006 F860     		str	r0, [r7, #12]
+ 775 0008 B960     		str	r1, [r7, #8]
+ 776 000a 3B60     		str	r3, [r7]
+ 777 000c FB1D     		adds	r3, r7, #7
+ 778 000e 1A70     		strb	r2, [r3]
+ 235:Generated_Source\PSoC4/StripLights_fonts.c ****     int32 x,y, fp;
+ 236:Generated_Source\PSoC4/StripLights_fonts.c ****     uint8 mask;
+ 237:Generated_Source\PSoC4/StripLights_fonts.c ****     int32 yStop, xStop;
+ 238:Generated_Source\PSoC4/StripLights_fonts.c ****    
+ 239:Generated_Source\PSoC4/StripLights_fonts.c ****     fp = (theChar - StripLights_fontOffset) * StripLights_fontX;
+ 779              		.loc 1 239 0
+ 780 0010 FB1D     		adds	r3, r7, #7
+ 781 0012 1A78     		ldrb	r2, [r3]
+ 782 0014 2D4B     		ldr	r3, .L26
+ 783 0016 1B68     		ldr	r3, [r3]
+ 784 0018 D21A     		subs	r2, r2, r3
+ 785 001a 2D4B     		ldr	r3, .L26+4
+ 786 001c 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 19
+
+
+ 787 001e 5343     		muls	r3, r2
+ 788 0020 FB61     		str	r3, [r7, #28]
+ 240:Generated_Source\PSoC4/StripLights_fonts.c ****    
+ 241:Generated_Source\PSoC4/StripLights_fonts.c ****     xStop = xpos + StripLights_fontX;
+ 789              		.loc 1 241 0
+ 790 0022 2B4B     		ldr	r3, .L26+4
+ 791 0024 1B68     		ldr	r3, [r3]
+ 792 0026 FA68     		ldr	r2, [r7, #12]
+ 793 0028 D318     		adds	r3, r2, r3
+ 794 002a 7B61     		str	r3, [r7, #20]
+ 242:Generated_Source\PSoC4/StripLights_fonts.c **** //    if(xStop > StripLights_MAX_X) xStop = StripLights_MAX_X;
+ 243:Generated_Source\PSoC4/StripLights_fonts.c **** //   
+ 244:Generated_Source\PSoC4/StripLights_fonts.c ****     yStop = ypos + StripLights_fontY;
+ 795              		.loc 1 244 0
+ 796 002c 294B     		ldr	r3, .L26+8
+ 797 002e 1B68     		ldr	r3, [r3]
+ 798 0030 BA68     		ldr	r2, [r7, #8]
+ 799 0032 D318     		adds	r3, r2, r3
+ 800 0034 3B61     		str	r3, [r7, #16]
+ 245:Generated_Source\PSoC4/StripLights_fonts.c **** //    if(yStop > StripLights_MAX_Y) yStop = StripLights_MAX_Y;
+ 246:Generated_Source\PSoC4/StripLights_fonts.c ****    
+ 247:Generated_Source\PSoC4/StripLights_fonts.c ****     for( x = xpos; x < xStop; x++)
+ 801              		.loc 1 247 0
+ 802 0036 FB68     		ldr	r3, [r7, #12]
+ 803 0038 7B62     		str	r3, [r7, #36]
+ 804 003a 3EE0     		b	.L20
+ 805              	.L25:
+ 248:Generated_Source\PSoC4/StripLights_fonts.c ****     {
+ 249:Generated_Source\PSoC4/StripLights_fonts.c ****         mask = 0x01;
+ 806              		.loc 1 249 0
+ 807 003c 1B23     		movs	r3, #27
+ 808 003e FB18     		adds	r3, r7, r3
+ 809 0040 0122     		movs	r2, #1
+ 810 0042 1A70     		strb	r2, [r3]
+ 250:Generated_Source\PSoC4/StripLights_fonts.c ****         for(y = ypos; y <= yStop; y++)
+ 811              		.loc 1 250 0
+ 812 0044 BB68     		ldr	r3, [r7, #8]
+ 813 0046 3B62     		str	r3, [r7, #32]
+ 814 0048 2DE0     		b	.L21
+ 815              	.L24:
+ 251:Generated_Source\PSoC4/StripLights_fonts.c ****         {
+ 252:Generated_Source\PSoC4/StripLights_fonts.c ****             if((y >= 0) && (x >= 0))
+ 816              		.loc 1 252 0
+ 817 004a 3B6A     		ldr	r3, [r7, #32]
+ 818 004c 002B     		cmp	r3, #0
+ 819 004e 20DB     		blt	.L22
+ 820              		.loc 1 252 0 is_stmt 0 discriminator 1
+ 821 0050 7B6A     		ldr	r3, [r7, #36]
+ 822 0052 002B     		cmp	r3, #0
+ 823 0054 1DDB     		blt	.L22
+ 253:Generated_Source\PSoC4/StripLights_fonts.c ****             {
+ 254:Generated_Source\PSoC4/StripLights_fonts.c ****                 if(mask & StripLights_fontPtr[fp])
+ 824              		.loc 1 254 0 is_stmt 1
+ 825 0056 204B     		ldr	r3, .L26+12
+ 826 0058 1A68     		ldr	r2, [r3]
+ 827 005a FB69     		ldr	r3, [r7, #28]
+ 828 005c D318     		adds	r3, r2, r3
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 20
+
+
+ 829 005e 1B78     		ldrb	r3, [r3]
+ 830 0060 1B22     		movs	r2, #27
+ 831 0062 BA18     		adds	r2, r7, r2
+ 832 0064 1278     		ldrb	r2, [r2]
+ 833 0066 1340     		ands	r3, r2
+ 834 0068 DBB2     		uxtb	r3, r3
+ 835 006a 002B     		cmp	r3, #0
+ 836 006c 06D0     		beq	.L23
+ 255:Generated_Source\PSoC4/StripLights_fonts.c ****                 { 
+ 256:Generated_Source\PSoC4/StripLights_fonts.c **** 				     StripLights_Pixel( x, y, fg);
+ 837              		.loc 1 256 0
+ 838 006e 3A68     		ldr	r2, [r7]
+ 839 0070 396A     		ldr	r1, [r7, #32]
+ 840 0072 7B6A     		ldr	r3, [r7, #36]
+ 841 0074 1800     		movs	r0, r3
+ 842 0076 FFF7FEFF 		bl	StripLights_Pixel
+ 843 007a 0AE0     		b	.L22
+ 844              	.L23:
+ 257:Generated_Source\PSoC4/StripLights_fonts.c ****                 }
+ 258:Generated_Source\PSoC4/StripLights_fonts.c ****                 else
+ 259:Generated_Source\PSoC4/StripLights_fonts.c ****                 {
+ 260:Generated_Source\PSoC4/StripLights_fonts.c **** 					if(bg != StripLights_TRANS_BG)
+ 845              		.loc 1 260 0
+ 846 007c 3A6B     		ldr	r2, [r7, #48]
+ 847 007e FF23     		movs	r3, #255
+ 848 0080 1B06     		lsls	r3, r3, #24
+ 849 0082 9A42     		cmp	r2, r3
+ 850 0084 05D0     		beq	.L22
+ 261:Generated_Source\PSoC4/StripLights_fonts.c **** 					{
+ 262:Generated_Source\PSoC4/StripLights_fonts.c **** 				        StripLights_Pixel( x, y, bg);
+ 851              		.loc 1 262 0
+ 852 0086 3A6B     		ldr	r2, [r7, #48]
+ 853 0088 396A     		ldr	r1, [r7, #32]
+ 854 008a 7B6A     		ldr	r3, [r7, #36]
+ 855 008c 1800     		movs	r0, r3
+ 856 008e FFF7FEFF 		bl	StripLights_Pixel
+ 857              	.L22:
+ 263:Generated_Source\PSoC4/StripLights_fonts.c **** 					}
+ 264:Generated_Source\PSoC4/StripLights_fonts.c ****                 }
+ 265:Generated_Source\PSoC4/StripLights_fonts.c ****             }
+ 266:Generated_Source\PSoC4/StripLights_fonts.c ****             mask = mask << 1;
+ 858              		.loc 1 266 0 discriminator 2
+ 859 0092 1B23     		movs	r3, #27
+ 860 0094 FA18     		adds	r2, r7, r3
+ 861 0096 1B23     		movs	r3, #27
+ 862 0098 FB18     		adds	r3, r7, r3
+ 863 009a 1B78     		ldrb	r3, [r3]
+ 864 009c DB18     		adds	r3, r3, r3
+ 865 009e 1370     		strb	r3, [r2]
+ 250:Generated_Source\PSoC4/StripLights_fonts.c ****         {
+ 866              		.loc 1 250 0 discriminator 2
+ 867 00a0 3B6A     		ldr	r3, [r7, #32]
+ 868 00a2 0133     		adds	r3, r3, #1
+ 869 00a4 3B62     		str	r3, [r7, #32]
+ 870              	.L21:
+ 250:Generated_Source\PSoC4/StripLights_fonts.c ****         {
+ 871              		.loc 1 250 0 is_stmt 0 discriminator 1
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 21
+
+
+ 872 00a6 3A6A     		ldr	r2, [r7, #32]
+ 873 00a8 3B69     		ldr	r3, [r7, #16]
+ 874 00aa 9A42     		cmp	r2, r3
+ 875 00ac CDDD     		ble	.L24
+ 267:Generated_Source\PSoC4/StripLights_fonts.c ****         }
+ 268:Generated_Source\PSoC4/StripLights_fonts.c ****         fp++;
+ 876              		.loc 1 268 0 is_stmt 1 discriminator 2
+ 877 00ae FB69     		ldr	r3, [r7, #28]
+ 878 00b0 0133     		adds	r3, r3, #1
+ 879 00b2 FB61     		str	r3, [r7, #28]
+ 247:Generated_Source\PSoC4/StripLights_fonts.c ****     {
+ 880              		.loc 1 247 0 discriminator 2
+ 881 00b4 7B6A     		ldr	r3, [r7, #36]
+ 882 00b6 0133     		adds	r3, r3, #1
+ 883 00b8 7B62     		str	r3, [r7, #36]
+ 884              	.L20:
+ 247:Generated_Source\PSoC4/StripLights_fonts.c ****     {
+ 885              		.loc 1 247 0 is_stmt 0 discriminator 1
+ 886 00ba 7A6A     		ldr	r2, [r7, #36]
+ 887 00bc 7B69     		ldr	r3, [r7, #20]
+ 888 00be 9A42     		cmp	r2, r3
+ 889 00c0 BCDB     		blt	.L25
+ 269:Generated_Source\PSoC4/StripLights_fonts.c ****     }
+ 270:Generated_Source\PSoC4/StripLights_fonts.c **** }
+ 890              		.loc 1 270 0 is_stmt 1
+ 891 00c2 C046     		nop
+ 892 00c4 BD46     		mov	sp, r7
+ 893 00c6 0AB0     		add	sp, sp, #40
+ 894              		@ sp needed
+ 895 00c8 80BD     		pop	{r7, pc}
+ 896              	.L27:
+ 897 00ca C046     		.align	2
+ 898              	.L26:
+ 899 00cc 00000000 		.word	StripLights_fontOffset
+ 900 00d0 00000000 		.word	StripLights_fontX
+ 901 00d4 00000000 		.word	StripLights_fontY
+ 902 00d8 00000000 		.word	StripLights_fontPtr
+ 903              		.cfi_endproc
+ 904              	.LFE34:
+ 905              		.size	StripLights_PutChar, .-StripLights_PutChar
+ 906              		.text
+ 907              	.Letext0:
+ 908              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 909              		.section	.debug_info,"",%progbits
+ 910              	.Ldebug_info0:
+ 911 0000 6E020000 		.4byte	0x26e
+ 912 0004 0400     		.2byte	0x4
+ 913 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 914 000a 04       		.byte	0x4
+ 915 000b 01       		.uleb128 0x1
+ 916 000c 56010000 		.4byte	.LASF34
+ 917 0010 0C       		.byte	0xc
+ 918 0011 FD000000 		.4byte	.LASF35
+ 919 0015 B2000000 		.4byte	.LASF36
+ 920 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 921 001d 00000000 		.4byte	0
+ 922 0021 00000000 		.4byte	.Ldebug_line0
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 22
+
+
+ 923 0025 02       		.uleb128 0x2
+ 924 0026 01       		.byte	0x1
+ 925 0027 06       		.byte	0x6
+ 926 0028 5B020000 		.4byte	.LASF0
+ 927 002c 02       		.uleb128 0x2
+ 928 002d 01       		.byte	0x1
+ 929 002e 08       		.byte	0x8
+ 930 002f 6A000000 		.4byte	.LASF1
+ 931 0033 02       		.uleb128 0x2
+ 932 0034 02       		.byte	0x2
+ 933 0035 05       		.byte	0x5
+ 934 0036 31020000 		.4byte	.LASF2
+ 935 003a 02       		.uleb128 0x2
+ 936 003b 02       		.byte	0x2
+ 937 003c 07       		.byte	0x7
+ 938 003d 42000000 		.4byte	.LASF3
+ 939 0041 02       		.uleb128 0x2
+ 940 0042 04       		.byte	0x4
+ 941 0043 05       		.byte	0x5
+ 942 0044 41020000 		.4byte	.LASF4
+ 943 0048 02       		.uleb128 0x2
+ 944 0049 04       		.byte	0x4
+ 945 004a 07       		.byte	0x7
+ 946 004b 82000000 		.4byte	.LASF5
+ 947 004f 02       		.uleb128 0x2
+ 948 0050 08       		.byte	0x8
+ 949 0051 05       		.byte	0x5
+ 950 0052 0A020000 		.4byte	.LASF6
+ 951 0056 02       		.uleb128 0x2
+ 952 0057 08       		.byte	0x8
+ 953 0058 07       		.byte	0x7
+ 954 0059 E4010000 		.4byte	.LASF7
+ 955 005d 03       		.uleb128 0x3
+ 956 005e 04       		.byte	0x4
+ 957 005f 05       		.byte	0x5
+ 958 0060 696E7400 		.ascii	"int\000"
+ 959 0064 02       		.uleb128 0x2
+ 960 0065 04       		.byte	0x4
+ 961 0066 07       		.byte	0x7
+ 962 0067 49010000 		.4byte	.LASF8
+ 963 006b 04       		.uleb128 0x4
+ 964 006c 3B020000 		.4byte	.LASF9
+ 965 0070 02       		.byte	0x2
+ 966 0071 D201     		.2byte	0x1d2
+ 967 0073 2C000000 		.4byte	0x2c
+ 968 0077 04       		.uleb128 0x4
+ 969 0078 3C010000 		.4byte	.LASF10
+ 970 007c 02       		.byte	0x2
+ 971 007d D401     		.2byte	0x1d4
+ 972 007f 48000000 		.4byte	0x48
+ 973 0083 04       		.uleb128 0x4
+ 974 0084 94000000 		.4byte	.LASF11
+ 975 0088 02       		.byte	0x2
+ 976 0089 D701     		.2byte	0x1d7
+ 977 008b 41000000 		.4byte	0x41
+ 978 008f 02       		.uleb128 0x2
+ 979 0090 04       		.byte	0x4
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 23
+
+
+ 980 0091 04       		.byte	0x4
+ 981 0092 64000000 		.4byte	.LASF12
+ 982 0096 02       		.uleb128 0x2
+ 983 0097 08       		.byte	0x8
+ 984 0098 04       		.byte	0x4
+ 985 0099 F6000000 		.4byte	.LASF13
+ 986 009d 02       		.uleb128 0x2
+ 987 009e 01       		.byte	0x1
+ 988 009f 08       		.byte	0x8
+ 989 00a0 4A020000 		.4byte	.LASF14
+ 990 00a4 02       		.uleb128 0x2
+ 991 00a5 08       		.byte	0x8
+ 992 00a6 04       		.byte	0x4
+ 993 00a7 4F020000 		.4byte	.LASF15
+ 994 00ab 02       		.uleb128 0x2
+ 995 00ac 04       		.byte	0x4
+ 996 00ad 07       		.byte	0x7
+ 997 00ae 01020000 		.4byte	.LASF16
+ 998 00b2 05       		.uleb128 0x5
+ 999 00b3 04       		.byte	0x4
+ 1000 00b4 9D000000 		.4byte	0x9d
+ 1001 00b8 06       		.uleb128 0x6
+ 1002 00b9 79020000 		.4byte	.LASF17
+ 1003 00bd 01       		.byte	0x1
+ 1004 00be 8C       		.byte	0x8c
+ 1005 00bf 00000000 		.4byte	.LFB32
+ 1006 00c3 60000000 		.4byte	.LFE32-.LFB32
+ 1007 00c7 01       		.uleb128 0x1
+ 1008 00c8 9C       		.byte	0x9c
+ 1009 00c9 DC000000 		.4byte	0xdc
+ 1010 00cd 07       		.uleb128 0x7
+ 1011 00ce 7D000000 		.4byte	.LASF19
+ 1012 00d2 01       		.byte	0x1
+ 1013 00d3 8C       		.byte	0x8c
+ 1014 00d4 77000000 		.4byte	0x77
+ 1015 00d8 02       		.uleb128 0x2
+ 1016 00d9 91       		.byte	0x91
+ 1017 00da 74       		.sleb128 -12
+ 1018 00db 00       		.byte	0
+ 1019 00dc 08       		.uleb128 0x8
+ 1020 00dd 9A000000 		.4byte	.LASF18
+ 1021 00e1 01       		.byte	0x1
+ 1022 00e2 B2       		.byte	0xb2
+ 1023 00e3 00000000 		.4byte	.LFB33
+ 1024 00e7 F4000000 		.4byte	.LFE33-.LFB33
+ 1025 00eb 01       		.uleb128 0x1
+ 1026 00ec 9C       		.byte	0x9c
+ 1027 00ed 52010000 		.4byte	0x152
+ 1028 00f1 07       		.uleb128 0x7
+ 1029 00f2 3D000000 		.4byte	.LASF20
+ 1030 00f6 01       		.byte	0x1
+ 1031 00f7 B2       		.byte	0xb2
+ 1032 00f8 83000000 		.4byte	0x83
+ 1033 00fc 02       		.uleb128 0x2
+ 1034 00fd 91       		.byte	0x91
+ 1035 00fe 64       		.sleb128 -28
+ 1036 00ff 07       		.uleb128 0x7
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 24
+
+
+ 1037 0100 78000000 		.4byte	.LASF21
+ 1038 0104 01       		.byte	0x1
+ 1039 0105 B2       		.byte	0xb2
+ 1040 0106 83000000 		.4byte	0x83
+ 1041 010a 02       		.uleb128 0x2
+ 1042 010b 91       		.byte	0x91
+ 1043 010c 60       		.sleb128 -32
+ 1044 010d 07       		.uleb128 0x7
+ 1045 010e 8D020000 		.4byte	.LASF22
+ 1046 0112 01       		.byte	0x1
+ 1047 0113 B2       		.byte	0xb2
+ 1048 0114 B2000000 		.4byte	0xb2
+ 1049 0118 02       		.uleb128 0x2
+ 1050 0119 91       		.byte	0x91
+ 1051 011a 5C       		.sleb128 -36
+ 1052 011b 09       		.uleb128 0x9
+ 1053 011c 666700   		.ascii	"fg\000"
+ 1054 011f 01       		.byte	0x1
+ 1055 0120 B2       		.byte	0xb2
+ 1056 0121 77000000 		.4byte	0x77
+ 1057 0125 02       		.uleb128 0x2
+ 1058 0126 91       		.byte	0x91
+ 1059 0127 58       		.sleb128 -40
+ 1060 0128 09       		.uleb128 0x9
+ 1061 0129 626700   		.ascii	"bg\000"
+ 1062 012c 01       		.byte	0x1
+ 1063 012d B2       		.byte	0xb2
+ 1064 012e 77000000 		.4byte	0x77
+ 1065 0132 02       		.uleb128 0x2
+ 1066 0133 91       		.byte	0x91
+ 1067 0134 00       		.sleb128 0
+ 1068 0135 0A       		.uleb128 0xa
+ 1069 0136 55000000 		.4byte	.LASF23
+ 1070 013a 01       		.byte	0x1
+ 1071 013b B4       		.byte	0xb4
+ 1072 013c 77000000 		.4byte	0x77
+ 1073 0140 02       		.uleb128 0x2
+ 1074 0141 91       		.byte	0x91
+ 1075 0142 6C       		.sleb128 -20
+ 1076 0143 0A       		.uleb128 0xa
+ 1077 0144 43010000 		.4byte	.LASF24
+ 1078 0148 01       		.byte	0x1
+ 1079 0149 B5       		.byte	0xb5
+ 1080 014a 77000000 		.4byte	0x77
+ 1081 014e 02       		.uleb128 0x2
+ 1082 014f 91       		.byte	0x91
+ 1083 0150 68       		.sleb128 -24
+ 1084 0151 00       		.byte	0
+ 1085 0152 08       		.uleb128 0x8
+ 1086 0153 1D020000 		.4byte	.LASF25
+ 1087 0157 01       		.byte	0x1
+ 1088 0158 E9       		.byte	0xe9
+ 1089 0159 00000000 		.4byte	.LFB34
+ 1090 015d DC000000 		.4byte	.LFE34-.LFB34
+ 1091 0161 01       		.uleb128 0x1
+ 1092 0162 9C       		.byte	0x9c
+ 1093 0163 FB010000 		.4byte	0x1fb
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 25
+
+
+ 1094 0167 07       		.uleb128 0x7
+ 1095 0168 3D000000 		.4byte	.LASF20
+ 1096 016c 01       		.byte	0x1
+ 1097 016d E9       		.byte	0xe9
+ 1098 016e 83000000 		.4byte	0x83
+ 1099 0172 02       		.uleb128 0x2
+ 1100 0173 91       		.byte	0x91
+ 1101 0174 5C       		.sleb128 -36
+ 1102 0175 07       		.uleb128 0x7
+ 1103 0176 78000000 		.4byte	.LASF21
+ 1104 017a 01       		.byte	0x1
+ 1105 017b E9       		.byte	0xe9
+ 1106 017c 83000000 		.4byte	0x83
+ 1107 0180 02       		.uleb128 0x2
+ 1108 0181 91       		.byte	0x91
+ 1109 0182 58       		.sleb128 -40
+ 1110 0183 07       		.uleb128 0x7
+ 1111 0184 5C000000 		.4byte	.LASF26
+ 1112 0188 01       		.byte	0x1
+ 1113 0189 E9       		.byte	0xe9
+ 1114 018a 6B000000 		.4byte	0x6b
+ 1115 018e 02       		.uleb128 0x2
+ 1116 018f 91       		.byte	0x91
+ 1117 0190 57       		.sleb128 -41
+ 1118 0191 09       		.uleb128 0x9
+ 1119 0192 666700   		.ascii	"fg\000"
+ 1120 0195 01       		.byte	0x1
+ 1121 0196 E9       		.byte	0xe9
+ 1122 0197 77000000 		.4byte	0x77
+ 1123 019b 02       		.uleb128 0x2
+ 1124 019c 91       		.byte	0x91
+ 1125 019d 50       		.sleb128 -48
+ 1126 019e 09       		.uleb128 0x9
+ 1127 019f 626700   		.ascii	"bg\000"
+ 1128 01a2 01       		.byte	0x1
+ 1129 01a3 E9       		.byte	0xe9
+ 1130 01a4 77000000 		.4byte	0x77
+ 1131 01a8 02       		.uleb128 0x2
+ 1132 01a9 91       		.byte	0x91
+ 1133 01aa 00       		.sleb128 0
+ 1134 01ab 0B       		.uleb128 0xb
+ 1135 01ac 7800     		.ascii	"x\000"
+ 1136 01ae 01       		.byte	0x1
+ 1137 01af EB       		.byte	0xeb
+ 1138 01b0 83000000 		.4byte	0x83
+ 1139 01b4 02       		.uleb128 0x2
+ 1140 01b5 91       		.byte	0x91
+ 1141 01b6 74       		.sleb128 -12
+ 1142 01b7 0B       		.uleb128 0xb
+ 1143 01b8 7900     		.ascii	"y\000"
+ 1144 01ba 01       		.byte	0x1
+ 1145 01bb EB       		.byte	0xeb
+ 1146 01bc 83000000 		.4byte	0x83
+ 1147 01c0 02       		.uleb128 0x2
+ 1148 01c1 91       		.byte	0x91
+ 1149 01c2 70       		.sleb128 -16
+ 1150 01c3 0B       		.uleb128 0xb
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 26
+
+
+ 1151 01c4 667000   		.ascii	"fp\000"
+ 1152 01c7 01       		.byte	0x1
+ 1153 01c8 EB       		.byte	0xeb
+ 1154 01c9 83000000 		.4byte	0x83
+ 1155 01cd 02       		.uleb128 0x2
+ 1156 01ce 91       		.byte	0x91
+ 1157 01cf 6C       		.sleb128 -20
+ 1158 01d0 0A       		.uleb128 0xa
+ 1159 01d1 18020000 		.4byte	.LASF27
+ 1160 01d5 01       		.byte	0x1
+ 1161 01d6 EC       		.byte	0xec
+ 1162 01d7 6B000000 		.4byte	0x6b
+ 1163 01db 02       		.uleb128 0x2
+ 1164 01dc 91       		.byte	0x91
+ 1165 01dd 6B       		.sleb128 -21
+ 1166 01de 0A       		.uleb128 0xa
+ 1167 01df 43010000 		.4byte	.LASF24
+ 1168 01e3 01       		.byte	0x1
+ 1169 01e4 ED       		.byte	0xed
+ 1170 01e5 83000000 		.4byte	0x83
+ 1171 01e9 02       		.uleb128 0x2
+ 1172 01ea 91       		.byte	0x91
+ 1173 01eb 60       		.sleb128 -32
+ 1174 01ec 0A       		.uleb128 0xa
+ 1175 01ed FB010000 		.4byte	.LASF28
+ 1176 01f1 01       		.byte	0x1
+ 1177 01f2 ED       		.byte	0xed
+ 1178 01f3 83000000 		.4byte	0x83
+ 1179 01f7 02       		.uleb128 0x2
+ 1180 01f8 91       		.byte	0x91
+ 1181 01f9 64       		.sleb128 -28
+ 1182 01fa 00       		.byte	0
+ 1183 01fb 0C       		.uleb128 0xc
+ 1184 01fc 28010000 		.4byte	.LASF29
+ 1185 0200 01       		.byte	0x1
+ 1186 0201 13       		.byte	0x13
+ 1187 0202 0C020000 		.4byte	0x20c
+ 1188 0206 05       		.uleb128 0x5
+ 1189 0207 03       		.byte	0x3
+ 1190 0208 00000000 		.4byte	StripLights_fontPtr
+ 1191 020c 05       		.uleb128 0x5
+ 1192 020d 04       		.byte	0x4
+ 1193 020e 12020000 		.4byte	0x212
+ 1194 0212 0D       		.uleb128 0xd
+ 1195 0213 6B000000 		.4byte	0x6b
+ 1196 0217 0C       		.uleb128 0xc
+ 1197 0218 67020000 		.4byte	.LASF30
+ 1198 021c 01       		.byte	0x1
+ 1199 021d 14       		.byte	0x14
+ 1200 021e 83000000 		.4byte	0x83
+ 1201 0222 05       		.uleb128 0x5
+ 1202 0223 03       		.byte	0x3
+ 1203 0224 00000000 		.4byte	StripLights_fontX
+ 1204 0228 0C       		.uleb128 0xc
+ 1205 0229 17000000 		.4byte	.LASF31
+ 1206 022d 01       		.byte	0x1
+ 1207 022e 15       		.byte	0x15
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 27
+
+
+ 1208 022f 83000000 		.4byte	0x83
+ 1209 0233 05       		.uleb128 0x5
+ 1210 0234 03       		.byte	0x3
+ 1211 0235 00000000 		.4byte	StripLights_fontY
+ 1212 0239 0C       		.uleb128 0xc
+ 1213 023a 00000000 		.4byte	.LASF32
+ 1214 023e 01       		.byte	0x1
+ 1215 023f 16       		.byte	0x16
+ 1216 0240 83000000 		.4byte	0x83
+ 1217 0244 05       		.uleb128 0x5
+ 1218 0245 03       		.byte	0x3
+ 1219 0246 00000000 		.4byte	StripLights_fontOffset
+ 1220 024a 0E       		.uleb128 0xe
+ 1221 024b 12020000 		.4byte	0x212
+ 1222 024f 5B020000 		.4byte	0x25b
+ 1223 0253 0F       		.uleb128 0xf
+ 1224 0254 AB000000 		.4byte	0xab
+ 1225 0258 DF01     		.2byte	0x1df
+ 1226 025a 00       		.byte	0
+ 1227 025b 0C       		.uleb128 0xc
+ 1228 025c 29000000 		.4byte	.LASF33
+ 1229 0260 01       		.byte	0x1
+ 1230 0261 1B       		.byte	0x1b
+ 1231 0262 6C020000 		.4byte	0x26c
+ 1232 0266 05       		.uleb128 0x5
+ 1233 0267 03       		.byte	0x3
+ 1234 0268 00000000 		.4byte	StripLights_Font5x7
+ 1235 026c 0D       		.uleb128 0xd
+ 1236 026d 4A020000 		.4byte	0x24a
+ 1237 0271 00       		.byte	0
+ 1238              		.section	.debug_abbrev,"",%progbits
+ 1239              	.Ldebug_abbrev0:
+ 1240 0000 01       		.uleb128 0x1
+ 1241 0001 11       		.uleb128 0x11
+ 1242 0002 01       		.byte	0x1
+ 1243 0003 25       		.uleb128 0x25
+ 1244 0004 0E       		.uleb128 0xe
+ 1245 0005 13       		.uleb128 0x13
+ 1246 0006 0B       		.uleb128 0xb
+ 1247 0007 03       		.uleb128 0x3
+ 1248 0008 0E       		.uleb128 0xe
+ 1249 0009 1B       		.uleb128 0x1b
+ 1250 000a 0E       		.uleb128 0xe
+ 1251 000b 55       		.uleb128 0x55
+ 1252 000c 17       		.uleb128 0x17
+ 1253 000d 11       		.uleb128 0x11
+ 1254 000e 01       		.uleb128 0x1
+ 1255 000f 10       		.uleb128 0x10
+ 1256 0010 17       		.uleb128 0x17
+ 1257 0011 00       		.byte	0
+ 1258 0012 00       		.byte	0
+ 1259 0013 02       		.uleb128 0x2
+ 1260 0014 24       		.uleb128 0x24
+ 1261 0015 00       		.byte	0
+ 1262 0016 0B       		.uleb128 0xb
+ 1263 0017 0B       		.uleb128 0xb
+ 1264 0018 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 28
+
+
+ 1265 0019 0B       		.uleb128 0xb
+ 1266 001a 03       		.uleb128 0x3
+ 1267 001b 0E       		.uleb128 0xe
+ 1268 001c 00       		.byte	0
+ 1269 001d 00       		.byte	0
+ 1270 001e 03       		.uleb128 0x3
+ 1271 001f 24       		.uleb128 0x24
+ 1272 0020 00       		.byte	0
+ 1273 0021 0B       		.uleb128 0xb
+ 1274 0022 0B       		.uleb128 0xb
+ 1275 0023 3E       		.uleb128 0x3e
+ 1276 0024 0B       		.uleb128 0xb
+ 1277 0025 03       		.uleb128 0x3
+ 1278 0026 08       		.uleb128 0x8
+ 1279 0027 00       		.byte	0
+ 1280 0028 00       		.byte	0
+ 1281 0029 04       		.uleb128 0x4
+ 1282 002a 16       		.uleb128 0x16
+ 1283 002b 00       		.byte	0
+ 1284 002c 03       		.uleb128 0x3
+ 1285 002d 0E       		.uleb128 0xe
+ 1286 002e 3A       		.uleb128 0x3a
+ 1287 002f 0B       		.uleb128 0xb
+ 1288 0030 3B       		.uleb128 0x3b
+ 1289 0031 05       		.uleb128 0x5
+ 1290 0032 49       		.uleb128 0x49
+ 1291 0033 13       		.uleb128 0x13
+ 1292 0034 00       		.byte	0
+ 1293 0035 00       		.byte	0
+ 1294 0036 05       		.uleb128 0x5
+ 1295 0037 0F       		.uleb128 0xf
+ 1296 0038 00       		.byte	0
+ 1297 0039 0B       		.uleb128 0xb
+ 1298 003a 0B       		.uleb128 0xb
+ 1299 003b 49       		.uleb128 0x49
+ 1300 003c 13       		.uleb128 0x13
+ 1301 003d 00       		.byte	0
+ 1302 003e 00       		.byte	0
+ 1303 003f 06       		.uleb128 0x6
+ 1304 0040 2E       		.uleb128 0x2e
+ 1305 0041 01       		.byte	0x1
+ 1306 0042 3F       		.uleb128 0x3f
+ 1307 0043 19       		.uleb128 0x19
+ 1308 0044 03       		.uleb128 0x3
+ 1309 0045 0E       		.uleb128 0xe
+ 1310 0046 3A       		.uleb128 0x3a
+ 1311 0047 0B       		.uleb128 0xb
+ 1312 0048 3B       		.uleb128 0x3b
+ 1313 0049 0B       		.uleb128 0xb
+ 1314 004a 27       		.uleb128 0x27
+ 1315 004b 19       		.uleb128 0x19
+ 1316 004c 11       		.uleb128 0x11
+ 1317 004d 01       		.uleb128 0x1
+ 1318 004e 12       		.uleb128 0x12
+ 1319 004f 06       		.uleb128 0x6
+ 1320 0050 40       		.uleb128 0x40
+ 1321 0051 18       		.uleb128 0x18
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 29
+
+
+ 1322 0052 9742     		.uleb128 0x2117
+ 1323 0054 19       		.uleb128 0x19
+ 1324 0055 01       		.uleb128 0x1
+ 1325 0056 13       		.uleb128 0x13
+ 1326 0057 00       		.byte	0
+ 1327 0058 00       		.byte	0
+ 1328 0059 07       		.uleb128 0x7
+ 1329 005a 05       		.uleb128 0x5
+ 1330 005b 00       		.byte	0
+ 1331 005c 03       		.uleb128 0x3
+ 1332 005d 0E       		.uleb128 0xe
+ 1333 005e 3A       		.uleb128 0x3a
+ 1334 005f 0B       		.uleb128 0xb
+ 1335 0060 3B       		.uleb128 0x3b
+ 1336 0061 0B       		.uleb128 0xb
+ 1337 0062 49       		.uleb128 0x49
+ 1338 0063 13       		.uleb128 0x13
+ 1339 0064 02       		.uleb128 0x2
+ 1340 0065 18       		.uleb128 0x18
+ 1341 0066 00       		.byte	0
+ 1342 0067 00       		.byte	0
+ 1343 0068 08       		.uleb128 0x8
+ 1344 0069 2E       		.uleb128 0x2e
+ 1345 006a 01       		.byte	0x1
+ 1346 006b 3F       		.uleb128 0x3f
+ 1347 006c 19       		.uleb128 0x19
+ 1348 006d 03       		.uleb128 0x3
+ 1349 006e 0E       		.uleb128 0xe
+ 1350 006f 3A       		.uleb128 0x3a
+ 1351 0070 0B       		.uleb128 0xb
+ 1352 0071 3B       		.uleb128 0x3b
+ 1353 0072 0B       		.uleb128 0xb
+ 1354 0073 27       		.uleb128 0x27
+ 1355 0074 19       		.uleb128 0x19
+ 1356 0075 11       		.uleb128 0x11
+ 1357 0076 01       		.uleb128 0x1
+ 1358 0077 12       		.uleb128 0x12
+ 1359 0078 06       		.uleb128 0x6
+ 1360 0079 40       		.uleb128 0x40
+ 1361 007a 18       		.uleb128 0x18
+ 1362 007b 9642     		.uleb128 0x2116
+ 1363 007d 19       		.uleb128 0x19
+ 1364 007e 01       		.uleb128 0x1
+ 1365 007f 13       		.uleb128 0x13
+ 1366 0080 00       		.byte	0
+ 1367 0081 00       		.byte	0
+ 1368 0082 09       		.uleb128 0x9
+ 1369 0083 05       		.uleb128 0x5
+ 1370 0084 00       		.byte	0
+ 1371 0085 03       		.uleb128 0x3
+ 1372 0086 08       		.uleb128 0x8
+ 1373 0087 3A       		.uleb128 0x3a
+ 1374 0088 0B       		.uleb128 0xb
+ 1375 0089 3B       		.uleb128 0x3b
+ 1376 008a 0B       		.uleb128 0xb
+ 1377 008b 49       		.uleb128 0x49
+ 1378 008c 13       		.uleb128 0x13
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 30
+
+
+ 1379 008d 02       		.uleb128 0x2
+ 1380 008e 18       		.uleb128 0x18
+ 1381 008f 00       		.byte	0
+ 1382 0090 00       		.byte	0
+ 1383 0091 0A       		.uleb128 0xa
+ 1384 0092 34       		.uleb128 0x34
+ 1385 0093 00       		.byte	0
+ 1386 0094 03       		.uleb128 0x3
+ 1387 0095 0E       		.uleb128 0xe
+ 1388 0096 3A       		.uleb128 0x3a
+ 1389 0097 0B       		.uleb128 0xb
+ 1390 0098 3B       		.uleb128 0x3b
+ 1391 0099 0B       		.uleb128 0xb
+ 1392 009a 49       		.uleb128 0x49
+ 1393 009b 13       		.uleb128 0x13
+ 1394 009c 02       		.uleb128 0x2
+ 1395 009d 18       		.uleb128 0x18
+ 1396 009e 00       		.byte	0
+ 1397 009f 00       		.byte	0
+ 1398 00a0 0B       		.uleb128 0xb
+ 1399 00a1 34       		.uleb128 0x34
+ 1400 00a2 00       		.byte	0
+ 1401 00a3 03       		.uleb128 0x3
+ 1402 00a4 08       		.uleb128 0x8
+ 1403 00a5 3A       		.uleb128 0x3a
+ 1404 00a6 0B       		.uleb128 0xb
+ 1405 00a7 3B       		.uleb128 0x3b
+ 1406 00a8 0B       		.uleb128 0xb
+ 1407 00a9 49       		.uleb128 0x49
+ 1408 00aa 13       		.uleb128 0x13
+ 1409 00ab 02       		.uleb128 0x2
+ 1410 00ac 18       		.uleb128 0x18
+ 1411 00ad 00       		.byte	0
+ 1412 00ae 00       		.byte	0
+ 1413 00af 0C       		.uleb128 0xc
+ 1414 00b0 34       		.uleb128 0x34
+ 1415 00b1 00       		.byte	0
+ 1416 00b2 03       		.uleb128 0x3
+ 1417 00b3 0E       		.uleb128 0xe
+ 1418 00b4 3A       		.uleb128 0x3a
+ 1419 00b5 0B       		.uleb128 0xb
+ 1420 00b6 3B       		.uleb128 0x3b
+ 1421 00b7 0B       		.uleb128 0xb
+ 1422 00b8 49       		.uleb128 0x49
+ 1423 00b9 13       		.uleb128 0x13
+ 1424 00ba 3F       		.uleb128 0x3f
+ 1425 00bb 19       		.uleb128 0x19
+ 1426 00bc 02       		.uleb128 0x2
+ 1427 00bd 18       		.uleb128 0x18
+ 1428 00be 00       		.byte	0
+ 1429 00bf 00       		.byte	0
+ 1430 00c0 0D       		.uleb128 0xd
+ 1431 00c1 26       		.uleb128 0x26
+ 1432 00c2 00       		.byte	0
+ 1433 00c3 49       		.uleb128 0x49
+ 1434 00c4 13       		.uleb128 0x13
+ 1435 00c5 00       		.byte	0
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 31
+
+
+ 1436 00c6 00       		.byte	0
+ 1437 00c7 0E       		.uleb128 0xe
+ 1438 00c8 01       		.uleb128 0x1
+ 1439 00c9 01       		.byte	0x1
+ 1440 00ca 49       		.uleb128 0x49
+ 1441 00cb 13       		.uleb128 0x13
+ 1442 00cc 01       		.uleb128 0x1
+ 1443 00cd 13       		.uleb128 0x13
+ 1444 00ce 00       		.byte	0
+ 1445 00cf 00       		.byte	0
+ 1446 00d0 0F       		.uleb128 0xf
+ 1447 00d1 21       		.uleb128 0x21
+ 1448 00d2 00       		.byte	0
+ 1449 00d3 49       		.uleb128 0x49
+ 1450 00d4 13       		.uleb128 0x13
+ 1451 00d5 2F       		.uleb128 0x2f
+ 1452 00d6 05       		.uleb128 0x5
+ 1453 00d7 00       		.byte	0
+ 1454 00d8 00       		.byte	0
+ 1455 00d9 00       		.byte	0
+ 1456              		.section	.debug_aranges,"",%progbits
+ 1457 0000 2C000000 		.4byte	0x2c
+ 1458 0004 0200     		.2byte	0x2
+ 1459 0006 00000000 		.4byte	.Ldebug_info0
+ 1460 000a 04       		.byte	0x4
+ 1461 000b 00       		.byte	0
+ 1462 000c 0000     		.2byte	0
+ 1463 000e 0000     		.2byte	0
+ 1464 0010 00000000 		.4byte	.LFB32
+ 1465 0014 60000000 		.4byte	.LFE32-.LFB32
+ 1466 0018 00000000 		.4byte	.LFB33
+ 1467 001c F4000000 		.4byte	.LFE33-.LFB33
+ 1468 0020 00000000 		.4byte	.LFB34
+ 1469 0024 DC000000 		.4byte	.LFE34-.LFB34
+ 1470 0028 00000000 		.4byte	0
+ 1471 002c 00000000 		.4byte	0
+ 1472              		.section	.debug_ranges,"",%progbits
+ 1473              	.Ldebug_ranges0:
+ 1474 0000 00000000 		.4byte	.LFB32
+ 1475 0004 60000000 		.4byte	.LFE32
+ 1476 0008 00000000 		.4byte	.LFB33
+ 1477 000c F4000000 		.4byte	.LFE33
+ 1478 0010 00000000 		.4byte	.LFB34
+ 1479 0014 DC000000 		.4byte	.LFE34
+ 1480 0018 00000000 		.4byte	0
+ 1481 001c 00000000 		.4byte	0
+ 1482              		.section	.debug_line,"",%progbits
+ 1483              	.Ldebug_line0:
+ 1484 0000 EE000000 		.section	.debug_str,"MS",%progbits,1
+ 1484      02004E00 
+ 1484      00000201 
+ 1484      FB0E0D00 
+ 1484      01010101 
+ 1485              	.LASF32:
+ 1486 0000 53747269 		.ascii	"StripLights_fontOffset\000"
+ 1486      704C6967 
+ 1486      6874735F 
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 32
+
+
+ 1486      666F6E74 
+ 1486      4F666673 
+ 1487              	.LASF31:
+ 1488 0017 53747269 		.ascii	"StripLights_fontY\000"
+ 1488      704C6967 
+ 1488      6874735F 
+ 1488      666F6E74 
+ 1488      5900
+ 1489              	.LASF33:
+ 1490 0029 53747269 		.ascii	"StripLights_Font5x7\000"
+ 1490      704C6967 
+ 1490      6874735F 
+ 1490      466F6E74 
+ 1490      35783700 
+ 1491              	.LASF20:
+ 1492 003d 78706F73 		.ascii	"xpos\000"
+ 1492      00
+ 1493              	.LASF3:
+ 1494 0042 73686F72 		.ascii	"short unsigned int\000"
+ 1494      7420756E 
+ 1494      7369676E 
+ 1494      65642069 
+ 1494      6E7400
+ 1495              	.LASF23:
+ 1496 0055 73747250 		.ascii	"strPos\000"
+ 1496      6F7300
+ 1497              	.LASF26:
+ 1498 005c 74686543 		.ascii	"theChar\000"
+ 1498      68617200 
+ 1499              	.LASF12:
+ 1500 0064 666C6F61 		.ascii	"float\000"
+ 1500      7400
+ 1501              	.LASF1:
+ 1502 006a 756E7369 		.ascii	"unsigned char\000"
+ 1502      676E6564 
+ 1502      20636861 
+ 1502      7200
+ 1503              	.LASF21:
+ 1504 0078 79706F73 		.ascii	"ypos\000"
+ 1504      00
+ 1505              	.LASF19:
+ 1506 007d 666F6E74 		.ascii	"font\000"
+ 1506      00
+ 1507              	.LASF5:
+ 1508 0082 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1508      20756E73 
+ 1508      69676E65 
+ 1508      6420696E 
+ 1508      7400
+ 1509              	.LASF11:
+ 1510 0094 696E7433 		.ascii	"int32\000"
+ 1510      3200
+ 1511              	.LASF18:
+ 1512 009a 53747269 		.ascii	"StripLights_PrintString\000"
+ 1512      704C6967 
+ 1512      6874735F 
+ 1512      5072696E 
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 33
+
+
+ 1512      74537472 
+ 1513              	.LASF36:
+ 1514 00b2 433A5C55 		.ascii	"C:\\Users\\James Sun\\Documents\\Git\\Whackamole\\W"
+ 1514      73657273 
+ 1514      5C4A616D 
+ 1514      65732053 
+ 1514      756E5C44 
+ 1515 00df 6861636B 		.ascii	"hackamole\\Master.cydsn\000"
+ 1515      616D6F6C 
+ 1515      655C4D61 
+ 1515      73746572 
+ 1515      2E637964 
+ 1516              	.LASF13:
+ 1517 00f6 646F7562 		.ascii	"double\000"
+ 1517      6C6500
+ 1518              	.LASF35:
+ 1519 00fd 47656E65 		.ascii	"Generated_Source\\PSoC4\\StripLights_fonts.c\000"
+ 1519      72617465 
+ 1519      645F536F 
+ 1519      75726365 
+ 1519      5C50536F 
+ 1520              	.LASF29:
+ 1521 0128 53747269 		.ascii	"StripLights_fontPtr\000"
+ 1521      704C6967 
+ 1521      6874735F 
+ 1521      666F6E74 
+ 1521      50747200 
+ 1522              	.LASF10:
+ 1523 013c 75696E74 		.ascii	"uint32\000"
+ 1523      333200
+ 1524              	.LASF24:
+ 1525 0143 7953746F 		.ascii	"yStop\000"
+ 1525      7000
+ 1526              	.LASF8:
+ 1527 0149 756E7369 		.ascii	"unsigned int\000"
+ 1527      676E6564 
+ 1527      20696E74 
+ 1527      00
+ 1528              	.LASF34:
+ 1529 0156 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1529      43313120 
+ 1529      352E342E 
+ 1529      31203230 
+ 1529      31363036 
+ 1530 0189 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1530      20726576 
+ 1530      6973696F 
+ 1530      6E203233 
+ 1530      37373135 
+ 1531 01bc 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1531      66756E63 
+ 1531      74696F6E 
+ 1531      2D736563 
+ 1531      74696F6E 
+ 1532              	.LASF7:
+ 1533 01e4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1533      206C6F6E 
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 34
+
+
+ 1533      6720756E 
+ 1533      7369676E 
+ 1533      65642069 
+ 1534              	.LASF28:
+ 1535 01fb 7853746F 		.ascii	"xStop\000"
+ 1535      7000
+ 1536              	.LASF16:
+ 1537 0201 73697A65 		.ascii	"sizetype\000"
+ 1537      74797065 
+ 1537      00
+ 1538              	.LASF6:
+ 1539 020a 6C6F6E67 		.ascii	"long long int\000"
+ 1539      206C6F6E 
+ 1539      6720696E 
+ 1539      7400
+ 1540              	.LASF27:
+ 1541 0218 6D61736B 		.ascii	"mask\000"
+ 1541      00
+ 1542              	.LASF25:
+ 1543 021d 53747269 		.ascii	"StripLights_PutChar\000"
+ 1543      704C6967 
+ 1543      6874735F 
+ 1543      50757443 
+ 1543      68617200 
+ 1544              	.LASF2:
+ 1545 0231 73686F72 		.ascii	"short int\000"
+ 1545      7420696E 
+ 1545      7400
+ 1546              	.LASF9:
+ 1547 023b 75696E74 		.ascii	"uint8\000"
+ 1547      3800
+ 1548              	.LASF4:
+ 1549 0241 6C6F6E67 		.ascii	"long int\000"
+ 1549      20696E74 
+ 1549      00
+ 1550              	.LASF14:
+ 1551 024a 63686172 		.ascii	"char\000"
+ 1551      00
+ 1552              	.LASF15:
+ 1553 024f 6C6F6E67 		.ascii	"long double\000"
+ 1553      20646F75 
+ 1553      626C6500 
+ 1554              	.LASF0:
+ 1555 025b 7369676E 		.ascii	"signed char\000"
+ 1555      65642063 
+ 1555      68617200 
+ 1556              	.LASF30:
+ 1557 0267 53747269 		.ascii	"StripLights_fontX\000"
+ 1557      704C6967 
+ 1557      6874735F 
+ 1557      666F6E74 
+ 1557      5800
+ 1558              	.LASF17:
+ 1559 0279 53747269 		.ascii	"StripLights_SetFont\000"
+ 1559      704C6967 
+ 1559      6874735F 
+ 1559      53657446 
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccAWUAKL.s 			page 35
+
+
+ 1559      6F6E7400 
+ 1560              	.LASF22:
+ 1561 028d 74686553 		.ascii	"theString\000"
+ 1561      7472696E 
+ 1561      6700
+ 1562              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

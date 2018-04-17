@@ -1,5 +1,5 @@
 # Master
-# 2018-03-07 03:03:20Z
+# 2018-04-17 00:18:29Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
@@ -10,3 +10,4 @@ set_io "\I2CM:sda(0)\" iocell 4 1
 set_io "\I2CM:scl(0)\" iocell 4 0
 set_io "LED_RED(0)" iocell 1 6
 set_io "LED_GREEN(0)" iocell 0 2
+set_io "S0(0)" iocell 0 4

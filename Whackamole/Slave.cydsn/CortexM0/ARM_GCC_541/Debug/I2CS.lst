@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
   16:Generated_Source\PSoC4/I2CS.c **** *******************************************************************************/
   17:Generated_Source\PSoC4/I2CS.c **** 
   18:Generated_Source\PSoC4/I2CS.c **** #include "I2CS_PVT.h"
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 2
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 2
 
 
   19:Generated_Source\PSoC4/I2CS.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
   73:Generated_Source\PSoC4/I2CS.c **** *  and set to 1 the first time SCB_Start() is called. This allows 
   74:Generated_Source\PSoC4/I2CS.c **** *  the component to restart without reinitialization after the first 
   75:Generated_Source\PSoC4/I2CS.c **** *  call to the I2CS_Start() routine.
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 3
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 3
 
 
   76:Generated_Source\PSoC4/I2CS.c **** *
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
   45              		.cfi_def_cfa_offset 8
   46              		.cfi_offset 7, -8
   47              		.cfi_offset 14, -4
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 4
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 4
 
 
   48 0002 00AF     		add	r7, sp, #0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  159:Generated_Source\PSoC4/I2CS.c **** *  For I2C and EZI2C modes the interrupt is internal and mandatory for 
  160:Generated_Source\PSoC4/I2CS.c **** *  operation. For SPI and UART modes the interrupt can be configured as none, 
  161:Generated_Source\PSoC4/I2CS.c **** *  internal or external.
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 5
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 5
 
 
  162:Generated_Source\PSoC4/I2CS.c **** *  The I2CS configuration should be not changed when the component
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
   91 001a C046     		nop
   92 001c BD46     		mov	sp, r7
   93              		@ sp needed
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 6
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 6
 
 
   94 001e 80BD     		pop	{r7, pc}
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  126 000c FFF7FEFF 		bl	I2CS_Init
  215:Generated_Source\PSoC4/I2CS.c ****         I2CS_initVar = 1u; /* Component was initialized */
  127              		.loc 1 215 0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 7
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 7
 
 
  128 0010 034B     		ldr	r3, .L7
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  157              		@ frame_needed = 1, uses_anonymous_args = 0
  158 0000 80B5     		push	{r7, lr}
  159              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 8
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 8
 
 
  160              		.cfi_offset 7, -8
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  190              	.L10:
  191 002c 00000640 		.word	1074135040
  192 0030 880F0640 		.word	1074139016
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 9
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 9
 
 
  193              		.cfi_endproc
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  286:Generated_Source\PSoC4/I2CS.c ****     rxFifoCtrl |= ((uint32) (I2CS_RX_FIFO_CTRL_TRIGGER_LEVEL_MASK & level));
  226              		.loc 1 286 0
  227 0016 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 10
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 10
 
 
  228 0018 0722     		movs	r2, #7
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  263              		.cfi_def_cfa_offset 8
  264              		.cfi_offset 7, -8
  265              		.cfi_offset 14, -4
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 11
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 11
 
 
  266 0002 84B0     		sub	sp, sp, #16
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  311              	.LFB6:
  315:Generated_Source\PSoC4/I2CS.c **** 
  316:Generated_Source\PSoC4/I2CS.c **** 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 12
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 12
 
 
  317:Generated_Source\PSoC4/I2CS.c **** #if (I2CS_SCB_IRQ_INTERNAL)
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  337              	.L19:
  338 0018 00000000 		.word	I2CS_customIntrHandler
  339              		.cfi_endproc
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 13
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 13
 
 
  340              	.LFE6:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  368              	.LFE7:
  369              		.size	I2CS_ScbEnableIntr, .-I2CS_ScbEnableIntr
  370              		.section	.text.I2CS_ScbModePostEnable,"ax",%progbits
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 14
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 14
 
 
  371              		.align	2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  388 0004 C046     		nop
  389 0006 BD46     		mov	sp, r7
  390              		@ sp needed
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 15
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 15
 
 
  391 0008 80BD     		pop	{r7, pc}
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  442:Generated_Source\PSoC4/I2CS.c ****     }
  443:Generated_Source\PSoC4/I2CS.c **** #elif (I2CS_SCB_MODE_I2C_CONST_CFG)
  444:Generated_Source\PSoC4/I2CS.c ****     I2CS_I2CStop();
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 16
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 16
 
 
  412              		.loc 1 444 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  481:Generated_Source\PSoC4/I2CS.c ****         uint32 i;
  482:Generated_Source\PSoC4/I2CS.c ****         
  483:Generated_Source\PSoC4/I2CS.c ****     #if (!I2CS_CY_SCBIP_V1)
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 17
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 17
 
 
  484:Generated_Source\PSoC4/I2CS.c ****         uint32 pinsInBuf = 0u;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  538:Generated_Source\PSoC4/I2CS.c ****         #if (I2CS_TX_SDA_MISO_PIN)
  539:Generated_Source\PSoC4/I2CS.c ****             hsiomSel[I2CS_TX_SDA_MISO_PIN_INDEX] = I2CS_TX_SDA_MISO_HSIOM_SEL_SPI;
  540:Generated_Source\PSoC4/I2CS.c ****         #endif /* (I2CS_TX_SDA_MISO_PIN) */
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 18
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 18
 
 
  541:Generated_Source\PSoC4/I2CS.c ****         
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  595:Generated_Source\PSoC4/I2CS.c ****                 /* Disable input buffers */
  596:Generated_Source\PSoC4/I2CS.c ****             #if (I2CS_RX_SCL_MOSI_PIN)
  597:Generated_Source\PSoC4/I2CS.c ****                 pinsInBuf |= I2CS_RX_SCL_MOSI_PIN_MASK;
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 19
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 19
 
 
  598:Generated_Source\PSoC4/I2CS.c ****             #elif (I2CS_RX_WAKE_SCL_MOSI_PIN)
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  652:Generated_Source\PSoC4/I2CS.c ****                     #endif /* (I2CS_SCLK_PIN) */
  653:Generated_Source\PSoC4/I2CS.c ****                     }
  654:Generated_Source\PSoC4/I2CS.c **** 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 20
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 20
 
 
  655:Generated_Source\PSoC4/I2CS.c ****                     if (0u != (I2CS_UART_RTS_PIN_ENABLE & uartEnableMask))
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  709:Generated_Source\PSoC4/I2CS.c **** 
  710:Generated_Source\PSoC4/I2CS.c ****     #if (I2CS_TX_SDA_MISO_PIN)
  711:Generated_Source\PSoC4/I2CS.c ****         I2CS_SET_HSIOM_SEL(I2CS_TX_SDA_MISO_HSIOM_REG,
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 21
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 21
 
 
  712:Generated_Source\PSoC4/I2CS.c ****                                        I2CS_TX_SDA_MISO_HSIOM_MASK,
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  766:Generated_Source\PSoC4/I2CS.c ****                                        I2CS_SS2_HSIOM_MASK,
  767:Generated_Source\PSoC4/I2CS.c ****                                        I2CS_SS2_HSIOM_POS,
  768:Generated_Source\PSoC4/I2CS.c ****                                        hsiomSel[I2CS_SS2_PIN_INDEX]);
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 22
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 22
 
 
  769:Generated_Source\PSoC4/I2CS.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  806:Generated_Source\PSoC4/I2CS.c ****             (0u == (I2CS_I2C_CTRL_REG & I2CS_I2C_CTRL_S_NOT_READY_ADDR_NACK)))
  447              		.loc 1 806 0 discriminator 1
  448 0010 0D4B     		ldr	r3, .L26+4
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 23
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 23
 
 
  449 0012 1A68     		ldr	r2, [r3]
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  494              	.Ldebug_info0:
  495 0000 F9010000 		.4byte	0x1f9
  496 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 24
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 24
 
 
  497 0006 00000000 		.4byte	.Ldebug_abbrev0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  551 0073 2C000000 		.4byte	0x2c
  552 0077 04       		.uleb128 0x4
  553 0078 C4010000 		.4byte	.LASF10
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 25
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 25
 
 
  554 007c 02       		.byte	0x2
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  608 00e7 00000000 		.4byte	.LFB2
  609 00eb 24000000 		.4byte	.LFE2-.LFB2
  610 00ef 01       		.uleb128 0x1
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 26
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 26
 
 
  611 00f0 9C       		.byte	0x9c
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  665 0161 01       		.byte	0x1
  666 0162 3201     		.2byte	0x132
  667 0164 77000000 		.4byte	0x77
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 27
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 27
 
 
  668 0168 02       		.uleb128 0x2
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  722 01da 0F       		.uleb128 0xf
  723 01db A8000000 		.4byte	.LASF32
  724 01df 01       		.byte	0x1
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 28
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 28
 
 
  725 01e0 51       		.byte	0x51
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  779 0026 08       		.uleb128 0x8
  780 0027 00       		.byte	0
  781 0028 00       		.byte	0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 29
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 29
 
 
  782 0029 04       		.uleb128 0x4
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  836 005f 18       		.uleb128 0x18
  837 0060 9642     		.uleb128 0x2116
  838 0062 19       		.uleb128 0x19
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 30
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 30
 
 
  839 0063 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  893 009a 18       		.uleb128 0x18
  894 009b 00       		.byte	0
  895 009c 00       		.byte	0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 31
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 31
 
 
  896 009d 0C       		.uleb128 0xc
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  950 00d5 19       		.uleb128 0x19
  951 00d6 11       		.uleb128 0x11
  952 00d7 01       		.uleb128 0x1
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 32
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 32
 
 
  953 00d8 12       		.uleb128 0x12
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  1007 0060 00000000 		.4byte	.LFB10
  1008 0064 54000000 		.4byte	.LFE10-.LFB10
  1009 0068 00000000 		.4byte	0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 33
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 33
 
 
  1010 006c 00000000 		.4byte	0
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  1049      536C6176 
  1049      654E6163 
  1049      6B47656E 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 34
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 34
 
 
  1050              	.LASF23:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  1072      43313120 
  1072      352E342E 
  1072      31203230 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 35
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 35
 
 
  1072      31363036 
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 1
  1094 0220 73697A65 		.ascii	"sizetype\000"
  1094      74797065 
  1094      00
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccjL8u7S.s 			page 36
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\cc5APYLf.s 			page 36
 
 
  1095              	.LASF6:

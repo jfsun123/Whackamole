@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2018-03-07T03:13:52Z")
+ (DATE "2018-04-13T03:06:26Z")
  (DESIGN "Slave")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -122,6 +122,10 @@
     (INTERCONNECT S0\(0\).pad_out S0\(0\)_PAD (0.000:0.000:0.000))
     (INTERCONNECT S0\(0\)_PAD S0\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT Button\(0\)_PAD Button\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT flex0\(0\)_PAD flex0\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT flex1\(0\)_PAD flex1\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT flex2\(0\)_PAD flex2\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT flex3\(0\)_PAD flex3\(0\).pad_in (0.000:0.000:0.000))
    )
   )
  )

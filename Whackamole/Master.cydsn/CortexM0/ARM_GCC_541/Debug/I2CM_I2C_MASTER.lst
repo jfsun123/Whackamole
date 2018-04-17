@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
   19:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** #include "I2CM_PVT.h"
   20:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** #include "I2CM_I2C_PVT.h"
   21:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 2
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 2
 
 
   22:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** #if(I2CM_I2C_MASTER_CONST)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
   76:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** * \return
   77:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *  Error status.
   78:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *  - I2CM_I2C_MSTR_NO_ERROR - Function complete without error. 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 3
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 3
 
 
   79:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *    The master started the transfer.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
   62 001a 1B78     		ldrb	r3, [r3]
   63 001c DBB2     		uxtb	r3, r3
   64 001e 102B     		cmp	r3, #16
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 4
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 4
 
 
   65 0020 0CD1     		bne	.L3
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  122:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****             /* Unexpected FSM state: exit */
  123:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****         }
  124:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****     }
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 5
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 5
 
 
  125:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  144:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****         I2CM_mstrStatus &= (uint16) ~I2CM_I2C_MSTAT_WR_CMPLT;
  140              		.loc 1 144 0
  141 0090 164B     		ldr	r3, .L9+8
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 6
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 6
 
 
  142 0092 1B88     		ldrh	r3, [r3]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  163:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****             I2CM_I2C_MASTER_GENERATE_START;
  178              		.loc 1 163 0
  179 00cc 124B     		ldr	r3, .L9+52
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 7
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 7
 
 
  180 00ce 0222     		movs	r2, #2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  176:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *
  177:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *  Automatically reads an entire buffer of data from a slave device.
  178:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *  Once the data transfer is initiated by this function, further data transfer
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 8
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 8
 
 
  179:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *  is handled by the included ISR.
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  214:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** 
  215:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****     if(NULL != rdData)
  241              		.loc 1 215 0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 9
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 9
 
 
  242 0012 BB68     		ldr	r3, [r7, #8]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  283 0050 9AB2     		uxth	r2, r3
  284 0052 2B4B     		ldr	r3, .L21+8
  285 0054 1A80     		strh	r2, [r3]
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 10
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 10
 
 
  229:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****                               errStatus  =  I2CM_I2C_MSTR_NO_ERROR;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  316 0080 FB68     		ldr	r3, [r7, #12]
  317 0082 5B00     		lsls	r3, r3, #1
  318 0084 FF22     		movs	r2, #255
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 11
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 11
 
 
  319 0086 1340     		ands	r3, r2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  355              		.loc 1 270 0
  356 00c2 164B     		ldr	r3, .L21+36
  357 00c4 0822     		movs	r2, #8
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 12
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 12
 
 
  358 00c6 1A60     		str	r2, [r3]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  393              	.L22:
  394              		.align	2
  395              	.L21:
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 13
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 13
 
 
  396 00f8 00000000 		.word	I2CM_state
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  320:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *   - I2CM_I2C_MSTR_ERR_LB_NAK - Error condition: Last byte was 
  321:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *     NAKed.
  322:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *   - I2CM_I2C_MSTR_ERR_ARB_LOST - Error condition: Master lost 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 14
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 14
 
 
  323:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *     arbitration.
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  450 0022 1340     		ands	r3, r2
  451 0024 02D0     		beq	.L25
  347:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****         {
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 15
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 15
 
 
  348:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****             errStatus = I2CM_I2C_MSTR_BUS_BUSY;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  485              	.L27:
  369:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****             }
  370:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 16
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 16
 
 
  371:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****             /* TX and RX FIFO have to be EMPTY */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  517 0086 1CE0     		b	.L30
  518              	.L29:
  394:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****             }
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 17
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 17
 
 
  395:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****             else if(I2CM_CHECK_INTR_MASTER(I2CM_INTR_MASTER_I2C_NACK))
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  558 00c0 FB60     		str	r3, [r7, #12]
  559              	.L30:
  410:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****             }
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 18
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 18
 
 
  411:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  598 0100 000F0640 		.word	1074138880
  599 0104 17030000 		.word	791
  600 0108 68000640 		.word	1074135144
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 19
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 19
 
 
  601 010c 00000640 		.word	1074135040
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  622              		.cfi_def_cfa_offset 24
  623 0004 00AF     		add	r7, sp, #0
  624              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 20
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 20
 
 
  625 0006 7860     		str	r0, [r7, #4]
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  661 003e 1A70     		strb	r2, [r3]
  478:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****                       slaveAddress |= I2CM_I2C_READ_FLAG;
  662              		.loc 1 478 0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 21
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 21
 
 
  663 0040 7B68     		ldr	r3, [r7, #4]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  694 006c FF33     		adds	r3, r3, #255
  695 006e 1340     		ands	r3, r2
  696 0070 F9D0     		beq	.L41
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 22
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 22
 
 
  502:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****                                                   I2CM_INTR_MASTER_I2C_NACK     |
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  731 00a4 BB60     		str	r3, [r7, #8]
  522:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****                          resetIp   = I2CM_I2C_RESET_ERROR;
  732              		.loc 1 522 0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 23
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 23
 
 
  733 00a6 0123     		movs	r3, #1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  770 00e0 0A43     		orrs	r2, r1
  771 00e2 1A60     		str	r2, [r3]
  772              	.L37:
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 24
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 24
 
 
  540:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****         }
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  566:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *  For read transaction, at least one byte has to be read before ReStart 
  567:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *  generation.
  568:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 25
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 25
 
 
  569:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** * \globalvars
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  835              		.loc 1 588 0 is_stmt 0 discriminator 1
  836 002a 1822     		movs	r2, #24
  837 002c 00E0     		b	.L52
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 26
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 26
 
 
  838              	.L51:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  875 005e 0123     		movs	r3, #1
  876 0060 7B60     		str	r3, [r7, #4]
  877 0062 04E0     		b	.L55
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 27
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 27
 
 
  878              	.L56:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  623:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****         }
  624:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****     }
  625:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 28
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 28
 
 
  626:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****     return(errStatus);
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  653:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** uint32 I2CM_I2CMasterWriteByte(uint32 theByte)
  654:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** {
  942              		.loc 1 654 0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 29
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 29
 
 
  943              		.cfi_startproc
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  668:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****                                                   I2CM_INTR_MASTER_I2C_ARB_LOST |
  669:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****                                                   I2CM_INTR_MASTER_I2C_BUS_ERROR))
  670:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****         {
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 30
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 30
 
 
  671:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****             /* Wait until byte has been transferred */
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1021 006a 144B     		ldr	r3, .L68
  1022 006c 1022     		movs	r2, #16
  1023 006e 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 31
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 31
 
 
  688:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****                          errStatus = I2CM_I2C_MSTR_ERR_ARB_LOST;
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1059 00a2 1A60     		str	r2, [r3]
  1060 00a4 084B     		ldr	r3, .L68+12
  1061 00a6 084A     		ldr	r2, .L68+12
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 32
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 32
 
 
  1062 00a8 1268     		ldr	r2, [r2]
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  729:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *     The master will notify slave that transfer is completed.
  730:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *
  731:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** * \return
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 33
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 33
 
 
  732:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *  Byte read from the slave. In case of error the MSB of returned data 
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1125 0022 1B68     		ldr	r3, [r3]
  1126 0024 0422     		movs	r2, #4
  1127 0026 1340     		ands	r3, r2
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 34
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 34
 
 
  1128 0028 05D1     		bne	.L72
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  774:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****                 /* NACK is generated by Stop or ReStart command */
  775:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****                 I2CM_state = I2CM_I2C_FSM_MSTR_HALT;
  1162              		.loc 1 775 0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 35
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 35
 
 
  1163 005a 0C4B     		ldr	r3, .L78
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1204 00a4 00000640 		.word	1074135040
  1205              		.cfi_endproc
  1206              	.LFE6:
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 36
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 36
 
 
  1207              		.size	I2CM_I2CMasterReadByte, .-I2CM_I2CMasterReadByte
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1234              	.L83:
  1235 000e C046     		.align	2
  1236              	.L82:
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 37
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 37
 
 
  1237 0010 00000000 		.word	I2CM_mstrRdBufIndex
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1264 000a BD46     		mov	sp, r7
  1265              		@ sp needed
  1266 000c 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 38
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 38
 
 
  1267              	.L87:
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1301 0012 1B88     		ldrh	r3, [r3]
  1302 0014 9BB2     		uxth	r3, r3
  1303 0016 0122     		movs	r2, #1
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 39
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 39
 
 
  1304 0018 9343     		bics	r3, r2
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1339              		.cfi_offset 14, -4
  1340 0002 00AF     		add	r7, sp, #0
  1341              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 40
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 40
 
 
  882:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****     I2CM_DisableInt();  /* Lock from interruption */
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  896:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *
  897:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** * \return
  898:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *  Current status of I2C master. This status incorporates status constants. 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 41
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 41
 
 
  899:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** *  Each constant is a bit field value. The value returned may have multiple 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  938:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****     status = (uint32) I2CM_mstrStatus;
  1397              		.loc 1 938 0
  1398 000c 0B4B     		ldr	r3, .L97
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 42
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 42
 
 
  1399 000e 1B88     		ldrh	r3, [r3]
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1442              	I2CM_I2CMasterClearStatus:
  1443              	.LFB12:
  950:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 43
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 43
 
 
  951:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** 
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  978:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****     return(status);
  1471              		.loc 1 978 0
  1472 0020 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 44
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 44
 
 
  979:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** }
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1494              		.loc 1 1011 0
  1495              		.cfi_startproc
  1496              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 45
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 45
 
 
  1497              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1532 0030 5208     		lsrs	r2, r2, #1
  1533 0032 1A60     		str	r2, [r3]
 1031:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 46
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 46
 
 
 1032:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****     if(0u != (status & I2CM_I2C_STATUS_M_READ))
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1568 006e 1A60     		str	r2, [r3]
 1052:Generated_Source\PSoC4/I2CM_I2C_MASTER.c **** 
 1053:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****     /* Enable SCB block */
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 47
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 47
 
 
 1054:Generated_Source\PSoC4/I2CM_I2C_MASTER.c ****     I2CM_CTRL_REG |= (uint32) I2CM_CTRL_ENABLED;
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1605              		.text
  1606              	.Letext0:
  1607              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 48
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 48
 
 
  1608              		.file 3 "Generated_Source\\PSoC4\\I2CM_I2C_PVT.h"
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1662 0067 0B020000 		.4byte	.LASF8
  1663 006b 04       		.uleb128 0x4
  1664 006c 2A010000 		.4byte	.LASF9
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 49
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 49
 
 
  1665 0070 02       		.byte	0x2
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1719 00e6 07       		.uleb128 0x7
  1720 00e7 D6020000 		.4byte	.LASF18
  1721 00eb 01       		.byte	0x1
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 50
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 50
 
 
  1722 00ec 62       		.byte	0x62
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1776 0152 D1       		.byte	0xd1
  1777 0153 83000000 		.4byte	0x83
  1778 0157 02       		.uleb128 0x2
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 51
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 51
 
 
  1779 0158 91       		.byte	0x91
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1833 01bd D4010000 		.4byte	.LASF26
  1834 01c1 01       		.byte	0x1
  1835 01c2 4E01     		.2byte	0x14e
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 52
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 52
 
 
  1836 01c4 83000000 		.4byte	0x83
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1890 0230 74       		.sleb128 -12
  1891 0231 0D       		.uleb128 0xd
  1892 0232 86010000 		.4byte	.LASF24
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 53
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 53
 
 
  1893 0236 01       		.byte	0x1
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  1947 02a8 01       		.byte	0x1
  1948 02a9 8F02     		.2byte	0x28f
  1949 02ab 83000000 		.4byte	0x83
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 54
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 54
 
 
  1950 02af 02       		.uleb128 0x2
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2004 0321 14000000 		.4byte	.LFE8-.LFB8
  2005 0325 01       		.uleb128 0x1
  2006 0326 9C       		.byte	0x9c
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 55
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 55
 
 
  2007 0327 10       		.uleb128 0x10
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2061 039f 11       		.uleb128 0x11
  2062 03a0 BC030000 		.4byte	.LASF54
  2063 03a4 01       		.byte	0x1
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 56
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 56
 
 
  2064 03a5 F203     		.2byte	0x3f2
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2118 0416 00000000 		.4byte	I2CM_mstrRdBufSize
  2119 041a 13       		.uleb128 0x13
  2120 041b 2F000000 		.4byte	.LASF46
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 57
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 57
 
 
  2121 041f 01       		.byte	0x1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2175 000d 11       		.uleb128 0x11
  2176 000e 01       		.uleb128 0x1
  2177 000f 10       		.uleb128 0x10
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 58
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 58
 
 
  2178 0010 17       		.uleb128 0x17
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2232 0046 3B       		.uleb128 0x3b
  2233 0047 0B       		.uleb128 0xb
  2234 0048 27       		.uleb128 0x27
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 59
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 59
 
 
  2235 0049 19       		.uleb128 0x19
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2289 0080 49       		.uleb128 0x49
  2290 0081 13       		.uleb128 0x13
  2291 0082 02       		.uleb128 0x2
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 60
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 60
 
 
  2292 0083 18       		.uleb128 0x18
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2346 00ba 0D       		.uleb128 0xd
  2347 00bb 34       		.uleb128 0x34
  2348 00bc 00       		.byte	0
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 61
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 61
 
 
  2349 00bd 03       		.uleb128 0x3
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2403 00f4 11       		.uleb128 0x11
  2404 00f5 01       		.uleb128 0x1
  2405 00f6 12       		.uleb128 0x12
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 62
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 62
 
 
  2406 00f7 06       		.uleb128 0x6
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2460 0130 00       		.byte	0
  2461 0131 12       		.uleb128 0x12
  2462 0132 34       		.uleb128 0x34
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 63
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 63
 
 
  2463 0133 00       		.byte	0
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2517 0044 A8000000 		.4byte	.LFE6-.LFB6
  2518 0048 00000000 		.4byte	.LFB7
  2519 004c 14000000 		.4byte	.LFE7-.LFB7
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 64
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 64
 
 
  2520 0050 00000000 		.4byte	.LFB8
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2570 0000 72656733 		.ascii	"reg32\000"
  2570      3200
  2571              	.LASF22:
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 65
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 65
 
 
  2572 0006 4932434D 		.ascii	"I2CM_I2CMasterReadBuf\000"
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2592      72537461 
  2592      74757300 
  2593              	.LASF12:
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 66
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 66
 
 
  2594 00de 666C6F61 		.ascii	"float\000"
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2615      5F493243 
  2615      4D617374 
  2615      65725772 
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 67
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 67
 
 
  2615      69746542 
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2637      74696F6E 
  2638              	.LASF7:
  2639 02ba 6C6F6E67 		.ascii	"long long unsigned int\000"
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 68
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 68
 
 
  2639      206C6F6E 
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 1
  2661      7400
  2662              	.LASF31:
  2663 036a 74686542 		.ascii	"theByte\000"
-ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccpi9SeN.s 			page 69
+ARM GAS  C:\Users\JAMESS~1\AppData\Local\Temp\ccCinBdj.s 			page 69
 
 
  2663      79746500 

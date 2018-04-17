@@ -28,7 +28,7 @@
 *         Function Prototypes
 ****************************************/
 
-uint8 ExecuteCommand(uint32 cmd);
+uint8 ExecuteCommand(int color0, int color1, int color2, int color3);
 
 
 /***************************************
@@ -36,14 +36,14 @@ uint8 ExecuteCommand(uint32 cmd);
 ****************************************/
 
 /* Buffer and packet size */
-#define BUFFER_SIZE     (3u)
+#define BUFFER_SIZE     (32u)
 #define PACKET_SIZE     (BUFFER_SIZE)
 
 /* Packet positions */
 #define PACKET_SOP_POS  (0u)
 #define PACKET_CMD_POS  (1u)
 #define PACKET_STS_POS  (PACKET_CMD_POS)
-#define PACKET_EOP_POS  (2u)
+#define PACKET_EOP_POS  (31u)
 
 /* Start and end of packet markers */
 #define PACKET_SOP      (0x01u)
@@ -76,7 +76,7 @@ CMD_SET_BLUE,
 #define LED_OFF (1u)
 
 /* Set LED RED color */
-
+#include <stdbool.h>
 
 #endif /* (CY_MAIN_H) */
 

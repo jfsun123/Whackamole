@@ -13,9 +13,10 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Whackamole\Slave\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Whackamole</v>
+<v>Whackamole\Master</v>
 <v>Whackamole\Master\TopDesign</v>
 <v>Whackamole\Master\Master.cydwr</v>
 <v>Whackamole\Master\Master.cydwr\Pins</v>
@@ -32,7 +33,6 @@
 <v>Whackamole\Master\Source Files\main.c</v>
 <v>Whackamole\Master\Generated_Source\PSoC4</v>
 <v>Whackamole\Master\SCB_I2cCommMaster.pdf</v>
-<v>Whackamole\Slave</v>
 <v>Whackamole\Slave\TopDesign</v>
 <v>Whackamole\Slave\Slave.cydwr</v>
 <v>Whackamole\Slave\Slave.cydwr\Pins</v>
@@ -48,6 +48,8 @@
 <v>Whackamole\Slave\Source Files</v>
 <v>Whackamole\Slave\Source Files\main.c</v>
 <v>Whackamole\Slave\BCP_Master_I2cCmd.iic</v>
+<v>Whackamole\Slave\Generated_Source</v>
+<v>Whackamole\Slave\Generated_Source\PSoC4</v>
 <v>Whackamole\Slave\SCB_I2cCommSlave.pdf</v>
 <v>Whackamole\Whackamole</v>
 <v>Whackamole\Whackamole\TopDesign</v>
@@ -68,24 +70,23 @@
 <VisibleNodeIds>
 <v>Whackamole</v>
 <v>Whackamole\Master</v>
+<v>Whackamole\Master\TopDesign</v>
+<v>Whackamole\Master\Master.cydwr</v>
+<v>Whackamole\Master\Master.cydwr\Pins</v>
+<v>Whackamole\Master\Master.cydwr\Analog</v>
+<v>Whackamole\Master\Master.cydwr\Clocks</v>
+<v>Whackamole\Master\Master.cydwr\Interrupts</v>
+<v>Whackamole\Master\Master.cydwr\System</v>
+<v>Whackamole\Master\Master.cydwr\Directives</v>
+<v>Whackamole\Master\Master.cydwr\Flash Security</v>
+<v>Whackamole\Master\Header Files</v>
+<v>Whackamole\Master\Header Files\cyapicallbacks.h</v>
+<v>Whackamole\Master\Header Files\main.h</v>
+<v>Whackamole\Master\Source Files</v>
+<v>Whackamole\Master\Source Files\main.c</v>
+<v>Whackamole\Master\Generated_Source</v>
+<v>Whackamole\Master\SCB_I2cCommMaster.pdf</v>
 <v>Whackamole\Slave</v>
-<v>Whackamole\Slave\TopDesign</v>
-<v>Whackamole\Slave\Slave.cydwr</v>
-<v>Whackamole\Slave\Slave.cydwr\Pins</v>
-<v>Whackamole\Slave\Slave.cydwr\Analog</v>
-<v>Whackamole\Slave\Slave.cydwr\Clocks</v>
-<v>Whackamole\Slave\Slave.cydwr\Interrupts</v>
-<v>Whackamole\Slave\Slave.cydwr\System</v>
-<v>Whackamole\Slave\Slave.cydwr\Directives</v>
-<v>Whackamole\Slave\Slave.cydwr\Flash Security</v>
-<v>Whackamole\Slave\Header Files</v>
-<v>Whackamole\Slave\Header Files\cyapicallbacks.h</v>
-<v>Whackamole\Slave\Header Files\main.h</v>
-<v>Whackamole\Slave\Source Files</v>
-<v>Whackamole\Slave\Source Files\main.c</v>
-<v>Whackamole\Slave\BCP_Master_I2cCmd.iic</v>
-<v>Whackamole\Slave\Generated_Source</v>
-<v>Whackamole\Slave\SCB_I2cCommSlave.pdf</v>
 <v>Whackamole\Whackamole</v>
 <v>Whackamole\Whackamole\TopDesign</v>
 <v>Whackamole\Whackamole\Whackamole.cydwr</v>
@@ -224,6 +225,15 @@
 <v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_RED.lst</v>
 <v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_RED_PM.lst</v>
 <v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\S0.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\S0_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_cisr.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fisr.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fonts.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_HFCLK.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel_PM.lst</v>
 <v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.elf</v>
 <v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.hex</v>
 <v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.map</v>
@@ -246,6 +256,14 @@
 <v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 <v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\flex0.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\flex0_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\flex1.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\flex1_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\flex2.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\flex2_PM.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\flex3.lst</v>
+<v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\flex3_PM.lst</v>
 <v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS.lst</v>
 <v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_BOOT.lst</v>
 <v>Whackamole\Slave\CortexM0\ARM_GCC_541\Debug\Listing Files\I2CS_I2C.lst</v>
@@ -358,9 +376,9 @@
 <v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_RED.lst</v>
 <v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_RED_PM.lst</v>
 <v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.elf</v>
-<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.hex</v>
-<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Master.map</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\S0.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\S0_PM.lst</v>
+<v>Whackamole\Master\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -379,6 +397,7 @@
 <v>Whackamole\Master\System Reference Guides\cy_lfclk_v1_20</v>
 <v>Whackamole\Master\cy_pins_v2_20</v>
 <v>Whackamole\Master\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Whackamole\Master\Gnd_v1_0.pdf</v>
 <v>Whackamole\Master\LED_v1_0</v>
 <v>Whackamole\Master\LED_v1_0\LED_v1_0.pdf</v>
 <v>Whackamole\Master\Power_v1_0</v>
@@ -386,6 +405,7 @@
 <v>Whackamole\Master\Resistor_v1_0</v>
 <v>Whackamole\Master\Resistor_v1_0\Resistor_v1_0.pdf</v>
 <v>Whackamole\Master\SCB_P4_v3_20.pdf</v>
+<v>Whackamole\Master\StripLights_v3_0.pdf</v>
 <v>Whackamole\Slave</v>
 <v>Whackamole\Slave\PSoC 4 Architecture TRM</v>
 <v>Whackamole\Slave\PSoC 4200 Family Datasheet</v>
@@ -425,6 +445,7 @@
 <v>Whackamole\Master\System Reference Guides\cy_lfclk_v1_20</v>
 <v>Whackamole\Master\cy_pins_v2_20</v>
 <v>Whackamole\Master\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Whackamole\Master\Gnd_v1_0.pdf</v>
 <v>Whackamole\Master\LED_v1_0</v>
 <v>Whackamole\Master\LED_v1_0\LED_v1_0.pdf</v>
 <v>Whackamole\Master\Power_v1_0</v>
@@ -432,6 +453,7 @@
 <v>Whackamole\Master\Resistor_v1_0</v>
 <v>Whackamole\Master\Resistor_v1_0\Resistor_v1_0.pdf</v>
 <v>Whackamole\Master\SCB_P4_v3_20.pdf</v>
+<v>Whackamole\Master\StripLights_v3_0.pdf</v>
 <v>Whackamole\Slave</v>
 <v>Whackamole\Slave\PSoC 4 Architecture TRM</v>
 <v>Whackamole\Slave\PSoC 4200 Family Datasheet</v>
@@ -450,8 +472,6 @@
 <v>Whackamole\Slave\SCB_P4_v3_20.pdf</v>
 <v>Whackamole\Slave\StripLights_v3_0.pdf</v>
 <v>Whackamole\Whackamole</v>
-<v>Whackamole\Whackamole\PSoC 4 Architecture TRM</v>
-<v>Whackamole\Whackamole\PSoC 4200 Family Datasheet</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -465,6 +485,9 @@
 <dictName v=".\SCB_I2cCommSlave01.cydsn\SCB_I2cCommSlave01.cyprj">
 <listName />
 </dictName>
+<dictName v=".\Master.cydsn\Master.cyprj">
+<listName />
+</dictName>
 </CyGuid_70084457-cd6a-4593-9ed0-7f6eeb432dc2>
 </dataGuid>
 <dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
@@ -476,16 +499,15 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Slave.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Slave.cydsn\main.c" />
-<name v=".\Slave.cydsn\Slave.cydwr" />
-<name v=".\Master.cydsn\Master.cydwr" />
+<name v=".\Slave.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Slave.cydsn\main.h" />
 <name v=".\Master.cydsn\main.c" />
+<name v=".\Master.cydsn\main.h" />
+<name v=".\Master.cydsn\Generated_Source\PSoC4\I2CM_I2C.h" />
 <name v=".\Master.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Whackamole.cydsn\main.c" />
-<name v=".\Whackamole.cydsn\Whackamole.cydwr" />
 <name v=".\Whackamole.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Whackamole.cydsn\Generated_Source\PSoC4\Board_LED.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -493,7 +515,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1055, 495" SelectedTabbedMdiWindow="fb8c1c9c-994f-40ed-83aa-7d94f86019f8"><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\TopDesign\TopDesign.cysch" Guid="bc510118-4a36-4bf6-9413-58153620fd08" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\main.c" Guid="68c9caa2-6af2-435c-9751-a7b9d51eebfe" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\Slave.cydwr" Guid="e3739c79-f15a-460e-ab70-2780728bb10a" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\Master.cydwr" Guid="011437dd-904e-4b85-b0a4-93756dcb2ef5" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\main.c" Guid="2e352803-8c3e-4d3a-a002-9fbe4c9fac39" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\TopDesign\TopDesign.cysch" Guid="fb8c1c9c-994f-40ed-83aa-7d94f86019f8" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\main.c" Guid="3e1285b5-7218-4ffe-af5c-221e0cd6f376" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Whackamole.cydwr" Guid="ad1a4ab8-d610-4eae-be86-b9f7264cede0" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\TopDesign\TopDesign.cysch" Guid="632b1cff-6509-45af-b931-3ac20202e538" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\Generated_Source\PSoC4\Board_LED.c" Guid="2869007e-ab71-4149-be6f-7469a0d9644f" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1098, 495" SelectedTabbedMdiWindow="9bfc3ac9-608e-46fc-98fb-f71175c60b0c"><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\main.c" Guid="377009b3-e2be-41af-9185-c27534f23a07" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\TopDesign\TopDesign.cysch" Guid="8f44f725-68ac-4a59-a7a6-8f68ae66d57c" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Slave.cydsn\main.h" Guid="d3ce6394-8275-491a-a263-f6d1ea7c23d5" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\main.c" Guid="20b61e97-10dc-4572-bfa7-f9c31d274112" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\main.h" Guid="989b1af1-dc2b-41a7-980b-cf12b1928125" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\Generated_Source\PSoC4\I2CM_I2C.h" Guid="f618bf6d-c96c-4ada-93c0-405bc51a0ff1" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Master.cydsn\TopDesign\TopDesign.cysch" Guid="54222a84-0e77-444b-9c91-077698848c3f" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f77fb5c3-ee99-4682-88d0-d4adfec42b80" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\main.c" Guid="9bfc3ac9-608e-46fc-98fb-f71175c60b0c" /><DocumentWindow Key="C:\Users\James Sun\Documents\Git\Whackamole\Whackamole\Whackamole.cydsn\TopDesign\TopDesign.cysch" Guid="5b95a2c0-0495-4a55-8bae-0ebc331bf1ec" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

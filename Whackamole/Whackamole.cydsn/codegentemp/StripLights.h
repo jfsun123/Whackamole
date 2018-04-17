@@ -145,11 +145,11 @@ CY_ISR_PROTO(StripLights_FISR);
 
 
 #if (StripLights_LED_LAYOUT == StripLights_LED_LAYOUT_STANDARD)
-    #define StripLights_COLUMNS      240
+    #define StripLights_COLUMNS      60
     #define StripLights_ROWS         1
     #define StripLights_TOTAL_LEDS   (StripLights_COLUMNS*StripLights_ROWS)
 
-    #define StripLights_ARRAY_COLS   (int32)(240)
+    #define StripLights_ARRAY_COLS   (int32)(60)
     #define StripLights_ARRAY_ROWS   (int32)(1)    
     
     #define StripLights_MIN_X        (int32)0u
@@ -159,11 +159,11 @@ CY_ISR_PROTO(StripLights_FISR);
     
 #elif (StripLights_LED_LAYOUT == StripLights_LED_LAYOUT_SPIRAL)
 
-    #define StripLights_COLUMNS      60  
-    #define StripLights_ROWS         ((240 +  (60 - 1 ))/(60 ) )
-    #define StripLights_TOTAL_LEDS   240
+    #define StripLights_COLUMNS      15  
+    #define StripLights_ROWS         ((60 +  (15 - 1 ))/(15 ) )
+    #define StripLights_TOTAL_LEDS   60
 
-    #define StripLights_ARRAY_COLS   (int32)(240 + 60)
+    #define StripLights_ARRAY_COLS   (int32)(60 + 15)
     #define StripLights_ARRAY_ROWS   (int32)(1u)  
     
     #define StripLights_MIN_X        (int32)0u
